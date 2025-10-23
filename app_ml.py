@@ -16,6 +16,18 @@ import json
 import joblib
 from datetime import datetime
 import io
+import os
+from dotenv import load_dotenv
+from openai import OpenAI
+
+# Load environment variables
+load_dotenv()
+
+# USD to PHP conversion rate (approximate)
+USD_TO_PHP = 56.0  # 1 USD = 56 PHP (as of 2025)
+
+# Import Philippine location data
+from ph_locations import PH_REGIONS, REGION_NAMES
 
 # Add model paths
 MODEL_PATH = Path("model/Final_Transform")
@@ -65,9 +77,6 @@ def load_ml_models():
             features = json.load(f)['features']
         
         models['features'] = features
-        
-        st.sidebar.success(f"✅ All 3 Models Loaded ({len(features)} features)")
-        st.sidebar.info("📊 Predicting: People, Houses, Cost")
         
         return models
     except Exception as e:
@@ -176,6 +185,17 @@ def load_historical_impact_data():
         return None
 
 
+@st.cache_data
+def load_historical_storm_data():
+    """Load historical storm summary data from ph_storm_summary.csv."""
+    try:
+        storm_df = pd.read_csv(MODEL_PATH / "Storm_data" / "ph_storm_summary.csv")
+        return storm_df
+    except Exception as e:
+        st.warning(f"Could not load storm summary data: {e}")
+        return None
+
+
 def add_historical_features(features_df: pd.DataFrame) -> pd.DataFrame:
     """Add historical impact features based on province history."""
     hist_stats = load_historical_impact_data()
@@ -197,17 +217,319 @@ def add_historical_features(features_df: pd.DataFrame) -> pd.DataFrame:
     return features_df
 
 
+def generate_lgu_insights(results_df, storm_name, year, selected_province=None):
+    """Generate LGU recommendations using OpenAI API based on prediction results."""
+    try:
+        # Configure OpenAI API
+        api_key = os.getenv('OPENAI_API_KEY')
+        if not api_key:
+            return None
+        
+        client = OpenAI(api_key=api_key)
+        
+        # Prepare data summary
+        high_risk_provinces = results_df[results_df['Impact_Probability_Persons'] > 30]
+        total_affected = results_df['Predicted_Affected_Persons'].sum()
+        total_houses = results_df['Predicted_Houses_Damaged'].sum()
+        total_cost_usd = results_df['Predicted_Economic_Cost_USD'].sum()
+        total_cost_php = total_cost_usd * USD_TO_PHP
+        
+        # Create province-specific context if selected
+        province_context = ""
+        if selected_province:
+            province_data = results_df[results_df['Province'] == selected_province]
+            if not province_data.empty:
+                p = province_data.iloc[0]
+                cost_php = p['Predicted_Economic_Cost_USD'] * USD_TO_PHP
+                province_context = f"""
+FOCUS PROVINCE: {selected_province}
+- Risk Level: {p['Risk_Category']}
+- Impact Probability: {p['Impact_Probability_Persons']:.1f}%
+- Predicted People Affected: {int(p['Predicted_Affected_Persons']):,}
+- Predicted Houses Damaged: {int(p['Predicted_Houses_Damaged']):,}
+- Economic Cost: ₱{cost_php/1e6:.2f}M PHP
+"""
+        
+        # Base context for all queries
+        base_context = f"""TYPHOON: {storm_name} ({year})
+
+PREDICTED IMPACT SUMMARY:
+- High Risk Provinces (>30% probability): {len(high_risk_provinces)} provinces
+- Total People Affected: {int(total_affected):,}
+- Total Houses Damaged: {int(total_houses):,}
+- Total Economic Cost: ₱{total_cost_php/1e6:.1f}M PHP
+
+TOP 5 MOST AFFECTED PROVINCES:
+{chr(10).join([f"- {row['Province']}: {row['Impact_Probability_Persons']:.1f}% probability, {int(row['Predicted_Affected_Persons']):,} people, {int(row['Predicted_Houses_Damaged']):,} houses" for _, row in results_df.head(5).iterrows()])}
+{province_context}"""
+
+        # Generate four separate responses for each aspect
+        # Make system prompt emphasize specificity to the province
+        if selected_province:
+            system_prompt = f"You are a disaster management expert advising the Local Government Unit of {selected_province}. Provide clear, direct, SPECIFIC answers for {selected_province} only - not generic nationwide advice. Use actual numbers from the data provided. Write in plain text with simple numbered lists. Do NOT use markdown formatting, asterisks, or special characters."
+        else:
+            system_prompt = "You are a disaster management expert advising Local Government Units in the Philippines. Provide clear, direct answers without markdown formatting, asterisks, or special characters. Write in plain text with simple numbered lists."
+        
+        insights = {}
+        
+        # Question 1: Pre-Impact Preparations
+        if selected_province:
+            prompt1 = f"""{base_context}
+
+Based on the predicted {int(results_df[results_df['Province'] == selected_province].iloc[0]['Predicted_Affected_Persons']):,} people affected and {int(results_df[results_df['Province'] == selected_province].iloc[0]['Predicted_Houses_Damaged']):,} houses damaged in {selected_province}, what SPECIFIC actions should the {selected_province} LGU take in the next 24-48 hours? Give concrete numbers for evacuations, shelters needed, and communication steps tailored to {selected_province}."""
+        else:
+            prompt1 = f"""{base_context}
+
+What specific actions should LGUs take in the next 24-48 hours before the typhoon hits? Focus on evacuation, resource positioning, and communication."""
+        
+        response1 = client.chat.completions.create(
+            model="gpt-4o-mini",
+            messages=[
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": prompt1}
+            ],
+            temperature=0.7,
+            max_tokens=400
+        )
+        insights['preparation'] = response1.choices[0].message.content
+        
+        # Question 2: Response Operations
+        if selected_province:
+            prompt2 = f"""{base_context}
+
+During the typhoon impact in {selected_province}, what should emergency response teams prioritize? Be SPECIFIC to {selected_province}'s predicted impact levels. Give concrete deployment numbers and priority areas within {selected_province}."""
+        else:
+            prompt2 = f"""{base_context}
+
+What should emergency response teams prioritize during the typhoon impact? Cover response priorities, deployment, and safety protocols."""
+        
+        response2 = client.chat.completions.create(
+            model="gpt-4o-mini",
+            messages=[
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": prompt2}
+            ],
+            temperature=0.7,
+            max_tokens=400
+        )
+        insights['response'] = response2.choices[0].message.content
+        
+        # Question 3: Post-Impact Recovery
+        if selected_province:
+            prompt3 = f"""{base_context}
+
+In the first 72 hours after the typhoon hits {selected_province}, what are the critical recovery actions? Use the specific numbers: {int(results_df[results_df['Province'] == selected_province].iloc[0]['Predicted_Affected_Persons']):,} people and {int(results_df[results_df['Province'] == selected_province].iloc[0]['Predicted_Houses_Damaged']):,} houses. Give CONCRETE steps for {selected_province} only."""
+        else:
+            prompt3 = f"""{base_context}
+
+What are the critical recovery actions in the first 72 hours after the typhoon? Include assessment, relief distribution, and infrastructure restoration."""
+        
+        response3 = client.chat.completions.create(
+            model="gpt-4o-mini",
+            messages=[
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": prompt3}
+            ],
+            temperature=0.7,
+            max_tokens=400
+        )
+        insights['recovery'] = response3.choices[0].message.content
+        
+        # Question 4: Resource Requirements
+        if selected_province:
+            cost_php = results_df[results_df['Province'] == selected_province].iloc[0]['Predicted_Economic_Cost_USD'] * USD_TO_PHP
+            prompt4 = f"""{base_context}
+
+For {selected_province} specifically, what resources, supplies, and personnel are needed? The predicted economic cost is ₱{cost_php/1e6:.2f}M. Give SPECIFIC quantities (food packs, water, medical supplies, personnel) needed for {int(results_df[results_df['Province'] == selected_province].iloc[0]['Predicted_Affected_Persons']):,} affected people in {selected_province}."""
+        else:
+            prompt4 = f"""{base_context}
+
+What specific resources, supplies, and personnel does the LGU need to prepare? Include quantities and budget considerations."""
+        
+        response4 = client.chat.completions.create(
+            model="gpt-4o-mini",
+            messages=[
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": prompt4}
+            ],
+            temperature=0.7,
+            max_tokens=400
+        )
+        insights['resources'] = response4.choices[0].message.content
+        
+        return insights
+        
+    except Exception as e:
+        st.error(f"Error generating LGU insights: {str(e)}")
+        return None
+
+
 def display_ml_results(results_df, storm_name, year, track_df):
     """Display ML prediction results with visualizations."""
     
     # Summary metrics
     st.subheader(f"📊 Prediction Summary: {storm_name} ({year})")
     
+    # Check if user has selected a province
+    selected_province = st.session_state.get('selected_province', None)
+    
+    # LGU Action Plan at the TOP - with separate sections
+    st.markdown("---")
+    st.subheader("💡 LGU Action Plan")
+    
+    with st.spinner("🧠 Generating disaster management recommendations..."):
+        lgu_insights = generate_lgu_insights(results_df, storm_name, year, selected_province)
+    
+    if lgu_insights:
+        # Create four columns for the four aspects
+        col1, col2 = st.columns(2)
+        
+        with col1:
+            st.markdown("### 🚨 Pre-Impact (24-48hrs)")
+            st.markdown(
+                f"""
+                <div style="height: 300px; overflow-y: auto; padding: 15px; color: #000;
+                            border: 1px solid #d1ecf1; border-radius: 5px; background-color: #d1ecf1;">
+                    {lgu_insights['preparation']}
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
+            
+            st.markdown("### 🏥 Post-Impact (First 72hrs)")
+            st.markdown(
+                f"""
+                <div style="height: 300px; overflow-y: auto; padding: 15px; color: #000;
+                            border: 1px solid #d4edda; border-radius: 5px; background-color: #d4edda;">
+                    {lgu_insights['recovery']}
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
+        
+        with col2:
+            st.markdown("### ⚡ During Impact")
+            st.markdown(
+                f"""
+                <div style="height: 300px; overflow-y: auto; padding: 15px; color: #000000;
+                            border: 1px solid #fff3cd; border-radius: 5px; background-color: #fff3cd;">
+                    {lgu_insights['response']}
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
+            
+            st.markdown("### 📦 Resources Needed")
+            st.markdown(
+                f"""
+                <div style="height: 300px; overflow-y: auto; padding: 15px; color: #000000;
+                            border: 1px solid #f8d7da; border-radius: 5px; background-color: #f8d7da;">
+                    {lgu_insights['resources']}
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
+        
+        # Add download as PDF option
+        st.markdown("---")
+        try:
+            from reportlab.lib.pagesizes import letter
+            from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
+            from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer
+            from reportlab.lib.units import inch
+            from io import BytesIO
+            
+            # Create PDF in memory
+            pdf_buffer = BytesIO()
+            doc = SimpleDocTemplate(pdf_buffer, pagesize=letter)
+            story = []
+            styles = getSampleStyleSheet()
+            
+            # Title
+            title_style = ParagraphStyle(
+                'CustomTitle',
+                parent=styles['Heading1'],
+                fontSize=16,
+                textColor='darkblue',
+                spaceAfter=20
+            )
+            story.append(Paragraph(f"LGU Action Plan: {storm_name} ({year})", title_style))
+            story.append(Spacer(1, 0.3*inch))
+            
+            # Add each section
+            section_style = ParagraphStyle(
+                'SectionTitle',
+                parent=styles['Heading2'],
+                fontSize=14,
+                textColor='darkred',
+                spaceAfter=10
+            )
+            
+            sections = [
+                ("Pre-Impact Preparations (24-48 hours)", lgu_insights['preparation']),
+                ("Response Operations (During Impact)", lgu_insights['response']),
+                ("Post-Impact Recovery (First 72 hours)", lgu_insights['recovery']),
+                ("Resource Requirements", lgu_insights['resources'])
+            ]
+            
+            for title, content in sections:
+                story.append(Paragraph(title, section_style))
+                for line in content.split('\n'):
+                    if line.strip():
+                        story.append(Paragraph(line.strip(), styles['Normal']))
+                story.append(Spacer(1, 0.2*inch))
+            
+            doc.build(story)
+            pdf_buffer.seek(0)
+            
+            st.download_button(
+                label="📥 Download Complete Action Plan (PDF)",
+                data=pdf_buffer,
+                file_name=f"LGU_Action_Plan_{storm_name}_{year}.pdf",
+                mime="application/pdf",
+                help="Download this action plan as PDF for offline reference"
+            )
+        except ImportError:
+            # Fallback to text if reportlab not available
+            full_text = f"""LGU Action Plan: {storm_name} ({year})
+
+PRE-IMPACT PREPARATIONS (24-48 HOURS):
+{lgu_insights['preparation']}
+
+RESPONSE OPERATIONS (DURING IMPACT):
+{lgu_insights['response']}
+
+POST-IMPACT RECOVERY (FIRST 72 HOURS):
+{lgu_insights['recovery']}
+
+RESOURCE REQUIREMENTS:
+{lgu_insights['resources']}
+"""
+            st.download_button(
+                label="📥 Download Complete Action Plan (TXT)",
+                data=full_text,
+                file_name=f"LGU_Action_Plan_{storm_name}_{year}.txt",
+                mime="text/plain",
+                help="Download this action plan for offline reference"
+            )
+    else:
+        st.warning("⚠️ Could not generate LGU insights. Please check your OPENAI_API_KEY in .env file.")
+    
+    st.markdown("---")
+    
+    # Get user province data if available
+    user_province_data = None
+    if selected_province:
+        user_data = results_df[results_df['Province'] == selected_province]
+        if not user_data.empty:
+            user_province_data = user_data.iloc[0]
+    
+    # Display overall summary first
     col1, col2, col3, col4 = st.columns(4)
     
     with col1:
-        high_risk = len(results_df[results_df['Impact_Probability_Persons'] > 60])
-        st.metric("High Risk Provinces (>60%)", high_risk)
+        high_risk = len(results_df[results_df['Impact_Probability_Persons'] > 30])
+        st.metric("High Risk Provinces (>30%)", high_risk)
     
     with col2:
         total_affected = results_df['Predicted_Affected_Persons'].sum()
@@ -218,194 +540,94 @@ def display_ml_results(results_df, storm_name, year, track_df):
         st.metric("Total Houses Damaged", f"{total_houses:,.0f}")
     
     with col4:
-        total_cost = results_df['Predicted_Economic_Cost_USD'].sum()
-        st.metric("Total Economic Cost", f"${total_cost/1e6:.1f}M")
+        total_cost_usd = results_df['Predicted_Economic_Cost_USD'].sum()
+        total_cost_php = total_cost_usd * USD_TO_PHP
+        st.metric("Total Economic Cost", f"₱{total_cost_php/1e6:.1f}M")
     
-    # Tabs for different views
-    tab1, tab2, tab3, tab4 = st.tabs(["📋 Top Provinces", "🗺️ Risk Map", "📊 Charts", "💾 Export"])
-    
-    with tab1:
-        st.subheader("Top 20 Provinces at Risk")
+    # Show detailed insights for selected province
+    if user_province_data is not None:
+        st.markdown("---")
+        st.subheader(f"🎯 Impact on Your Province: **{selected_province}**")
         
+        # Create columns for province-specific metrics
+        pcol1, pcol2, pcol3, pcol4, pcol5 = st.columns(5)
+        
+        with pcol1:
+            risk_cat = user_province_data['Risk_Category']
+            risk_emoji = {
+                'Low': '🟢',
+                'Moderate': '🟡',
+                'High': '🟠',
+                'Very High': '🔴'
+            }.get(risk_cat, '⚪')
+            st.metric("Risk Level", f"{risk_emoji} {risk_cat}")
+        
+        with pcol2:
+            prob = user_province_data['Impact_Probability_Persons']
+            st.metric("Impact Probability", f"{prob:.1f}%")
+        
+        with pcol3:
+            people = user_province_data['Predicted_Affected_Persons']
+            st.metric("People Affected", f"{people:,.0f}")
+        
+        with pcol4:
+            houses = user_province_data['Predicted_Houses_Damaged']
+            st.metric("Houses Damaged", f"{houses:,.0f}")
+        
+        with pcol5:
+            cost_usd = user_province_data['Predicted_Economic_Cost_USD']
+            cost_php = cost_usd * USD_TO_PHP
+            st.metric("Economic Cost", f"₱{cost_php/1e6:.2f}M")
+        
+        # Contextual insights based on risk level
+        # Updated thresholds: 30% is HIGH RISK
+        if prob > 50:
+            st.error(f"⚠️ **SEVERE IMPACT WARNING for {selected_province}**")
+            st.write(f"- {storm_name} poses a **very high risk** to your province")
+            st.write(f"- Expected to affect **{people:,.0f} people** and damage **{houses:,.0f} houses**")
+            st.write(f"- Immediate preparation and evacuation planning recommended")
+        elif prob > 30:
+            st.warning(f"⚠️ **HIGH IMPACT ALERT for {selected_province}**")
+            st.write(f"- {storm_name} poses a **high risk** to your province")
+            st.write(f"- Estimated **{people:,.0f} people** may be affected")
+            st.write(f"- Prepare emergency supplies and monitor storm updates closely")
+        elif prob > 20:
+            st.info(f"ℹ️ **MODERATE IMPACT EXPECTED for {selected_province}**")
+            st.write(f"- {storm_name} may cause **moderate impact** in your province")
+            st.write(f"- Stay alert and follow local weather advisories")
+        else:
+            st.success(f"**Impact Assessment for {selected_province}**")
+            st.write(f"- {storm_name} is expected to have **minimal impact** on your province")
+            st.write(f"- Continue monitoring but no immediate action required")
+        
+        # Show province ranking
+        province_rank = results_df[results_df['Province'] == selected_province].index[0] + 1
+        total_provinces = len(results_df)
+        st.write(f"📊 **Province Ranking**: #{province_rank} out of {total_provinces} provinces (ranked by impact probability)")
+    
+    st.markdown("---")
+    
+    # Dropdown 1: Top Provinces at Risk
+    with st.expander("🔥 Top Provinces at Risk", expanded=True):
         display_cols = ['Province', 'Risk_Category', 'Impact_Probability_Persons', 
                        'Predicted_Affected_Persons', 'Predicted_Houses_Damaged', 'Predicted_Economic_Cost_USD']
         
         top_20 = results_df.head(20)[display_cols].copy()
-        top_20['Predicted_Economic_Cost_USD'] = top_20['Predicted_Economic_Cost_USD'].apply(lambda x: f"${x/1e6:.2f}M")
-        top_20.columns = ['Province', 'Risk', 'Impact %', 'People', 'Houses', 'Cost (USD)']
+        top_20['Predicted_Economic_Cost_PHP'] = top_20['Predicted_Economic_Cost_USD'].apply(lambda x: f"₱{x*USD_TO_PHP/1e6:.2f}M")
+        top_20 = top_20.drop('Predicted_Economic_Cost_USD', axis=1)
+        top_20.columns = ['Province', 'Risk', 'Impact %', 'People', 'Houses', 'Cost (PHP)']
         
         # Style the dataframe
-        # Streamlit expects width/height as int or None. Avoid passing strings like 'stretch'.
+        styled_df = top_20.style.background_gradient(subset=['Impact %'], cmap='Reds')
+        
         st.dataframe(
-            top_20.style.background_gradient(subset=['Impact %'], cmap='Reds'),
-            width=None,
+            styled_df,
+            width='stretch',
             height=600
         )
     
-    with tab2:
-        st.subheader("Interactive Risk Map")
-        # Load province coordinates robustly and render a Folium map even if some data is missing
-        try:
-            # Try a few common filenames for locations
-            possible_paths = [
-                MODEL_PATH / "Location_data" / "locations_latlng.csv",
-                MODEL_PATH / "Location_data" / "locations.csv",
-                MODEL_PATH / "Location_data" / "locations_latlng_all.csv"
-            ]
-
-            loc_df = None
-            for p in possible_paths:
-                if p.exists():
-                    loc_df = pd.read_csv(p)
-                    break
-
-            if loc_df is None:
-                st.warning("Location coordinates file not found. Showing base map only.")
-                loc_df = pd.DataFrame(columns=['Province', 'LAT', 'LON'])
-
-            # Normalize column names (case-insensitive)
-            cols_lower = {c.lower(): c for c in loc_df.columns}
-
-            lat_col = None
-            lon_col = None
-            province_col = None
-
-            for candidate in ['lat', 'latitude', 'lat_deg', 'y']:
-                if candidate in cols_lower:
-                    lat_col = cols_lower[candidate]
-                    break
-
-            for candidate in ['lon', 'lng', 'longitude', 'lon_deg', 'x']:
-                if candidate in cols_lower:
-                    lon_col = cols_lower[candidate]
-                    break
-
-            for candidate in ['province', 'prov', 'name', 'region']:
-                if candidate in cols_lower:
-                    province_col = cols_lower[candidate]
-                    break
-
-            # If we found lat/lon, standardize to LAT/LON
-            if lat_col and lon_col:
-                loc_df = loc_df.rename(columns={lat_col: 'LAT', lon_col: 'LON'})
-            else:
-                # Ensure columns exist but may be empty
-                if 'LAT' not in loc_df.columns:
-                    loc_df['LAT'] = np.nan
-                if 'LON' not in loc_df.columns:
-                    loc_df['LON'] = np.nan
-
-            if province_col and province_col != 'Province':
-                loc_df = loc_df.rename(columns={province_col: 'Province'})
-
-            # Merge with results (left join keeps all provinces in results)
-            map_data = results_df.merge(loc_df, on='Province', how='left')
-
-            # Create map centered on Philippines (use CartoDB positron for a clean basemap)
-            m = folium.Map(
-                location=[12.8797, 121.7740],
-                zoom_start=6,
-                tiles='CartoDB positron',
-                max_bounds=True
-            )
-
-            # Attempt to draw storm track if track_df available
-            track_points = []
-            if track_df is not None and not track_df.empty:
-                for idx, row in track_df.iterrows():
-                    # Support multiple possible column names for coordinates
-                    lat = row.get('LAT') or row.get('Lat') or row.get('lat') or row.get('latitude')
-                    lon = row.get('LON') or row.get('Lon') or row.get('lon') or row.get('longitude')
-                    try:
-                        lat_f = float(lat)
-                        lon_f = float(lon)
-                        track_points.append([lat_f, lon_f])
-
-                        hours_ahead = idx * 6
-                        if hours_ahead <= 24:
-                            uncertainty_km = 50 + (hours_ahead / 24) * 50
-                        elif hours_ahead <= 48:
-                            uncertainty_km = 100 + ((hours_ahead - 24) / 24) * 100
-                        elif hours_ahead <= 72:
-                            uncertainty_km = 200 + ((hours_ahead - 48) / 24) * 100
-                        else:
-                            uncertainty_km = 300 + ((hours_ahead - 72) / 48) * 100
-
-                        uncertainty_km = min(uncertainty_km, 400)
-
-                        folium.Circle(location=[lat_f, lon_f], radius=uncertainty_km * 1000,
-                                      color='red', fill=True, fillColor='red', fillOpacity=0.1,
-                                      weight=1, opacity=0.3).add_to(m)
-
-                        folium.CircleMarker(location=[lat_f, lon_f], radius=5, color='darkred',
-                                            fill=True, fillColor='red', fillOpacity=0.9, weight=2,
-                                            popup=folium.Popup(f"<b>Forecast Point {idx + 1}</b><br>Time: +{hours_ahead}h",
-                                                               max_width=200)).add_to(m)
-                    except Exception:
-                        # Skip invalid points
-                        continue
-
-                if len(track_points) > 1:
-                    folium.PolyLine(locations=track_points, color='red', weight=3, opacity=0.7).add_to(m)
-
-            # Add province markers for rows with valid LAT/LON
-            valid_coords = map_data[pd.notna(map_data['LAT']) & pd.notna(map_data['LON'])]
-            st.info(f"Map: {len(valid_coords)} provinces with coordinates available")
-
-            for _, row in valid_coords.iterrows():
-                try:
-                    lat = float(row['LAT'])
-                    lon = float(row['LON'])
-                except Exception:
-                    continue
-
-                prob = row.get('Impact_Probability_Persons', 0)
-                if prob > 70:
-                    color = 'darkred'; radius = 12
-                elif prob > 50:
-                    color = 'orange'; radius = 10
-                elif prob > 30:
-                    color = 'yellow'; radius = 8
-                else:
-                    color = 'green'; radius = 6
-
-                folium.CircleMarker(location=[lat, lon], radius=radius, color=color, fill=True,
-                                    fillColor=color, fillOpacity=0.6,
-                                    popup=folium.Popup(
-                                        f"<b>{row.get('Province', 'Unknown')}</b><br>"
-                                        f"Risk: {row.get('Risk_Category', 'Unknown')}<br>"
-                                        f"Impact: {prob:.1f}%<br>"
-                                        f"People: {row.get('Predicted_Affected_Persons', 0):,.0f}<br>"
-                                        f"Houses: {row.get('Predicted_Houses_Damaged', 0):,.0f}<br>"
-                                        f"Cost: ${row.get('Predicted_Economic_Cost_USD', 0)/1e6:.2f}M",
-                                        max_width=250)).add_to(m)
-
-            # If no valid coords, show a warning but still render the base map
-            if valid_coords.empty:
-                st.warning("No province coordinates found - showing base map. Check Location_data/locations_latlng.csv")
-
-            st_folium(m, width=1200, height=600)
-
-        except Exception as e:
-            st.error(f"Map error: {str(e)}")
-    
-    with tab3:
-        st.subheader("Impact Analysis Charts")
-        # Ensure Risk_Category exists and has no missing/categorical values that can break plotting
-        if 'Risk_Category' not in results_df.columns:
-            results_df['Risk_Category'] = 'Unknown'
-        else:
-            # If Risk_Category is a pandas Categorical, adding a new category is required before fillna
-            if pd.api.types.is_categorical_dtype(results_df['Risk_Category']):
-                try:
-                    results_df['Risk_Category'] = results_df['Risk_Category'].cat.add_categories(['Unknown'])
-                except Exception:
-                    # Fallback: convert to string/object to allow fillna
-                    results_df['Risk_Category'] = results_df['Risk_Category'].astype(object)
-
-            # Now safely fill missing values and ensure strings
-            results_df['Risk_Category'] = results_df['Risk_Category'].fillna('Unknown').astype(str)
-
+    # Dropdown 2: Impact Analysis Charts
+    with st.expander("📊 Impact Analysis Charts", expanded=False):
         col1, col2 = st.columns(2)
         
         with col1:
@@ -416,9 +638,7 @@ def display_ml_results(results_df, storm_name, year, track_df):
                 y='Predicted_Affected_Persons',
                 color='Risk_Category',
                 title='Top 15 Provinces: People Affected',
-                color_discrete_map={
-                    'Low': 'green', 'Moderate': 'yellow', 'High': 'orange', 'Very High': 'red', 'Unknown': 'lightgray'
-                }
+                color_discrete_map={'Low': 'green', 'Moderate': 'yellow', 'High': 'orange', 'Very High': 'red'}
             )
             fig1.update_xaxes(tickangle=45)
             st.plotly_chart(fig1, use_container_width=True)
@@ -431,26 +651,24 @@ def display_ml_results(results_df, storm_name, year, track_df):
                 y='Predicted_Houses_Damaged',
                 color='Risk_Category',
                 title='Top 15 Provinces: Houses Damaged',
-                color_discrete_map={
-                    'Low': 'green', 'Moderate': 'yellow', 'High': 'orange', 'Very High': 'red', 'Unknown': 'lightgray'
-                }
+                color_discrete_map={'Low': 'green', 'Moderate': 'yellow', 'High': 'orange', 'Very High': 'red'}
             )
             fig2.update_xaxes(tickangle=45)
             st.plotly_chart(fig2, use_container_width=True)
         
         # Chart 3: Economic cost
+        results_df_chart = results_df.head(15).copy()
+        results_df_chart['Cost_PHP'] = results_df_chart['Predicted_Economic_Cost_USD'] * USD_TO_PHP
         fig3 = px.bar(
-            results_df.head(15),
+            results_df_chart,
             x='Province',
-            y='Predicted_Economic_Cost_USD',
+            y='Cost_PHP',
             color='Risk_Category',
-            title='Top 15 Provinces: Economic Cost (USD)',
-            color_discrete_map={
-                'Low': 'green', 'Moderate': 'yellow', 'High': 'orange', 'Very High': 'red', 'Unknown': 'lightgray'
-            }
+            title='Top 15 Provinces: Economic Cost (PHP)',
+            color_discrete_map={'Low': 'green', 'Moderate': 'yellow', 'High': 'orange', 'Very High': 'red'}
         )
         fig3.update_xaxes(tickangle=45)
-        fig3.update_yaxes(title='Cost (USD)')
+        fig3.update_yaxes(title='Cost (PHP)')
         st.plotly_chart(fig3, use_container_width=True)
         
         # Chart 4: Risk distribution
@@ -460,44 +678,23 @@ def display_ml_results(results_df, storm_name, year, track_df):
             names=risk_dist.index,
             title='Distribution of Risk Levels',
             color=risk_dist.index,
-            color_discrete_map={
-                'Low': 'green', 'Moderate': 'yellow', 'High': 'orange', 'Very High': 'red', 'Unknown': 'lightgray'
-            }
+            color_discrete_map={'Low': 'green', 'Moderate': 'yellow', 'High': 'orange', 'Very High': 'red'}
         )
         st.plotly_chart(fig4, use_container_width=True)
-    
-    with tab4:
-        st.subheader("Export Predictions")
-        
-        # Prepare export
-        export_df = results_df.copy()
-        export_df['Storm'] = storm_name
-        export_df['Year'] = year
-        export_df['Generated'] = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-        
-        csv_data = export_df.to_csv(index=False)
-        
-        st.download_button(
-            label="📥 Download Predictions (CSV)",
-            data=csv_data,
-            file_name=f"predictions_{storm_name}_{year}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv",
-            mime="text/csv"
-        )
-        # Show export dataframe inside the Export tab
-        st.dataframe(export_df, width=None)
 
 
 def main():
     """Main Streamlit application."""
     
     st.set_page_config(
-        page_title="🌪️ Philippines Typhoon Impact Predictor (ML)",
+        page_title="Typhoon Impact Predictor",
         page_icon="🌪️",
         layout="wide",
         initial_sidebar_state="expanded"
     )
     
     # Initialize session state for results persistence
+    # Persistent memory that survives across reruns of the ap
     if 'results_df' not in st.session_state:
         st.session_state.results_df = None
     if 'storm_name' not in st.session_state:
@@ -509,15 +706,393 @@ def main():
     if 'prediction_time' not in st.session_state:
         st.session_state.prediction_time = None
     
-    st.title("🌪️ Philippines Typhoon Impact Predictor")
+    st.title("Typhoon Impact Predictor")
     st.markdown("""
     **AI-Powered Storm Impact Prediction System**  
     Predicts humanitarian and infrastructure impacts using real-time JTWC forecasts and trained ML models.
-    
-    📊 **Models**: Dual two-stage cascades (Persons Affected + Houses Damaged)  
-    🎯 **Accuracy**: 99.8% F1 Score on test data  
-    🕐 **Lead Time**: 24-120 hours before landfall
     """)
+    
+    # Location selector
+    st.subheader("Enter your location")
+    
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        selected_region = st.selectbox(
+            "Select Your Region",
+            options=REGION_NAMES,
+            index=0,
+            help="Choose your region in the Philippines"
+        )
+    
+    with col2:
+        # Get provinces for selected region
+        provinces_in_region = PH_REGIONS[selected_region]
+        selected_province = st.selectbox(
+            "Select Your Province",
+            options=provinces_in_region,
+            index=0,
+            help="Choose your province"
+        )
+    
+    # Store selected province in session state for prediction summary
+    if 'selected_province' not in st.session_state or st.session_state.selected_province != selected_province:
+        st.session_state.selected_province = selected_province
+
+        
+    # Display map with selected province highlighted
+    try:
+        loc_df = pd.read_csv(MODEL_PATH / "Location_data" / "locations_latlng.csv")
+        
+        # Get coordinates for selected province
+        province_data = loc_df[loc_df['Province'] == selected_province]
+        
+        if not province_data.empty:
+            province_lat = province_data.iloc[0]['Lat']
+            province_lng = province_data.iloc[0]['Lng']
+                     
+            # Create map centered on selected province with appropriate zoom
+            # If predictions exist, zoom out to show storm track, otherwise zoom in on province
+            if st.session_state.results_df is not None and st.session_state.track_df is not None:
+                # Zoom out to show both province and storm track
+                province_map = folium.Map(
+                    location=[province_lat, province_lng],
+                    zoom_start=7,
+                    tiles='CartoDB positron',
+                    prefer_canvas=True
+                )
+            else:
+                # Zoom in on selected province
+                province_map = folium.Map(
+                    location=[province_lat, province_lng],
+                    zoom_start=9,
+                    tiles='CartoDB positron',
+                    prefer_canvas=True
+                )
+            
+            # Add marker for selected province (highlighted)
+            folium.Marker(
+                location=[province_lat, province_lng],
+                popup=folium.Popup(
+                    f"<b>YOUR LOCATION</b><br>{selected_province}<br>{selected_region}",
+                    max_width=200
+                ),
+                icon=folium.Icon(color='red', icon='home', prefix='fa')
+            ).add_to(province_map)
+            
+            # Add circle to highlight the selected province
+            folium.Circle(
+                location=[province_lat, province_lng],
+                radius=30000,  # 30km radius
+                color='red',
+                fill=True,
+                fillColor='red',
+                fillOpacity=0.3,
+                weight=3
+            ).add_to(province_map)
+            
+            # OVERLAY: If ML predictions exist, add them to the map
+            if st.session_state.results_df is not None and st.session_state.track_df is not None:
+                with st.spinner("🗺️ Updating map with storm track and impact predictions..."):
+                    results_df = st.session_state.results_df
+                    track_df = st.session_state.track_df
+                    
+                    # Merge results with coordinates
+                    map_data = results_df.merge(loc_df, left_on='Province', right_on='Province', how='left')
+                
+                # Add storm track
+                track_points = []
+                for idx, row in track_df.iterrows():
+                    track_points.append([row['LAT'], row['LON']])
+                    
+                    # Calculate uncertainty radius
+                    hours_ahead = idx * 6
+                    if hours_ahead <= 24:
+                        uncertainty_km = 50 + (hours_ahead / 24) * 50
+                    elif hours_ahead <= 48:
+                        uncertainty_km = 100 + ((hours_ahead - 24) / 24) * 100
+                    elif hours_ahead <= 72:
+                        uncertainty_km = 200 + ((hours_ahead - 48) / 24) * 100
+                    else:
+                        uncertainty_km = 300 + ((hours_ahead - 72) / 48) * 100
+                    
+                    uncertainty_km = min(uncertainty_km, 400)
+                    
+                    # Add uncertainty cone
+                    folium.Circle(
+                        location=[row['LAT'], row['LON']],
+                        radius=uncertainty_km * 1000,
+                        color='orange',
+                        fill=True,
+                        fillColor='orange',
+                        fillOpacity=0.1,
+                        weight=1,
+                        opacity=0.3
+                    ).add_to(province_map)
+                    
+                    # Add forecast point marker
+                    folium.CircleMarker(
+                        location=[row['LAT'], row['LON']],
+                        radius=5,
+                        color='darkorange',
+                        fill=True,
+                        fillColor='orange',
+                        fillOpacity=0.9,
+                        weight=2,
+                        popup=folium.Popup(
+                            f"<b>Forecast Point {idx + 1}</b><br>"
+                            f"Time: +{hours_ahead}h<br>"
+                            f"Intensity: {row.get('INTENSITY', 'N/A')} kt<br>"
+                            f"Uncertainty: ±{uncertainty_km:.0f} km",
+                            max_width=200
+                        )
+                    ).add_to(province_map)
+                
+                # Draw storm track line
+                if len(track_points) > 1:
+                    folium.PolyLine(
+                        locations=track_points,
+                        color='orange',
+                        weight=3,
+                        opacity=0.8,
+                        popup="Storm Track"
+                    ).add_to(province_map)
+                
+                # Add province risk markers
+                for _, row in map_data.iterrows():
+                    if pd.notna(row.get('Lat')) and pd.notna(row.get('Lng')):
+                        prob = row['Impact_Probability_Persons']
+                        
+                        # Skip selected province (already highlighted)
+                        if row['Province'] == selected_province:
+                            continue
+                        
+                        # Determine color and size based on probability
+                        # 30% is already high-risk (red)
+                        if prob > 50:
+                            color = 'darkred'
+                            radius = 10
+                        elif prob > 30:
+                            color = 'red'
+                            radius = 9
+                        elif prob > 20:
+                            color = 'orange'
+                            radius = 7
+                        elif prob > 10:
+                            color = 'yellow'
+                            radius = 5
+                        else:
+                            color = 'lightgray'
+                            radius = 4
+                        
+                        # Add province marker
+                        folium.CircleMarker(
+                            location=[row['Lat'], row['Lng']],
+                            radius=radius,
+                            color=color,
+                            fill=True,
+                            fillColor=color,
+                            fillOpacity=0.6,
+                            popup=folium.Popup(
+                                f"<b>{row['Province']}</b><br>"
+                                f"Risk: {row['Risk_Category']}<br>"
+                                f"Impact Prob: {prob:.1f}%<br>"
+                                f"People: {row['Predicted_Affected_Persons']:,.0f}",
+                                max_width=250
+                            )
+                            ).add_to(province_map)
+            
+            # Display the map with proper sizing
+            st_folium(province_map, width=1200, height=600, returned_objects=[])
+            
+            # Historical Storm Insights for Selected Province
+            st.subheader(f"📊 Historical Storm Impact: {selected_province} (2010-2024)")
+            
+            # Load impact data for the province
+            try:
+                impact_df = pd.read_csv(MODEL_PATH / "Impact_data" / "people_affected_all_years.csv")
+                province_impacts = impact_df[impact_df['Province'] == selected_province].copy()
+                
+                if not province_impacts.empty:
+                    # Load storm summary to get category information
+                    storm_df = load_historical_storm_data()
+                    
+                    # Merge to get storm details
+                    if storm_df is not None:
+                        province_impacts = province_impacts.merge(
+                            storm_df[['Year', 'PH_Name', 'Peak_Category', 'Peak_Windspeed_kmh']],
+                            left_on=['Year', 'Storm'],
+                            right_on=['Year', 'PH_Name'],
+                            how='left'
+                        )
+                    
+                    # Calculate statistics
+                    total_storms = len(province_impacts)
+                    total_affected = province_impacts['Affected'].sum()
+                    avg_affected = province_impacts['Affected'].mean()
+                    max_affected = province_impacts['Affected'].max()
+                    worst_storm = province_impacts.loc[province_impacts['Affected'].idxmax(), 'Storm']
+                    worst_year = province_impacts.loc[province_impacts['Affected'].idxmax(), 'Year']
+                    
+                    # Display key metrics
+                    col1, col2, col3, col4 = st.columns(4)
+                    
+                    with col1:
+                        st.metric("Storms Impacted", total_storms)
+                    
+                    with col2:
+                        st.metric("Total People Affected", f"{total_affected:,.0f}")
+                    
+                    with col3:
+                        st.metric("Average per Storm", f"{avg_affected:,.0f}")
+                    
+                    with col4:
+                        st.metric("Worst Storm", f"{worst_storm} ({worst_year})")
+                    
+                    # Note: Using expanders instead of tabs below
+                    
+                    # Impact Over Time Expander
+                    with st.expander("📈 Impact Over Time", expanded=False):
+                        # Timeline of impacts
+                        yearly_impact = province_impacts.groupby('Year').agg({
+                            'Affected': 'sum',
+                            'Storm': 'count'
+                        }).reset_index()
+                        yearly_impact.columns = ['Year', 'Total_Affected', 'Storm_Count']
+                        
+                        fig1 = go.Figure()
+                        fig1.add_trace(go.Bar(
+                            x=yearly_impact['Year'],
+                            y=yearly_impact['Total_Affected'],
+                            name='People Affected',
+                            marker_color='indianred',
+                            hovertemplate='Year: %{x}<br>Affected: %{y:,.0f}<extra></extra>'
+                        ))
+                        
+                        fig1.update_layout(
+                            title=f'People Affected in {selected_province} by Year',
+                            xaxis_title='Year',
+                            yaxis_title='People Affected',
+                            hovermode='x unified'
+                        )
+                        st.plotly_chart(fig1, use_container_width=True)
+                        
+                        # Number of storms per year
+                        fig2 = px.bar(
+                            yearly_impact,
+                            x='Year',
+                            y='Storm_Count',
+                            title=f'Number of Storms Impacting {selected_province} per Year',
+                            labels={'Storm_Count': 'Number of Storms'},
+                            color='Storm_Count',
+                            color_continuous_scale='Reds'
+                        )
+                        st.plotly_chart(fig2, use_container_width=True)
+                    
+                    with st.expander("🌪️ Worst Storms", expanded=False):
+                        # Top 10 worst storms
+                        st.write(f"**Top 10 Most Damaging Storms in {selected_province}:**")
+                        
+                        worst_storms = province_impacts.nlargest(10, 'Affected')[
+                            ['Year', 'Storm', 'Peak_Category', 'Affected', 'Peak_Windspeed_kmh']
+                        ].copy()
+                        
+                        # Format for display
+                        st.dataframe(
+                            worst_storms,
+                            hide_index=True,
+                            column_config={
+                                'Year': 'Year',
+                                'Storm': 'Storm Name',
+                                'Peak_Category': 'Category',
+                                'Affected': st.column_config.NumberColumn(
+                                    'People Affected',
+                                    format='%d'
+                                ),
+                                'Peak_Windspeed_kmh': st.column_config.NumberColumn(
+                                    'Wind Speed',
+                                    format='%d km/h'
+                                )
+                            },
+                            use_container_width=True
+                        )
+                        
+                        # Chart of worst storms
+                        fig3 = px.bar(
+                            worst_storms.head(10),
+                            x='Storm',
+                            y='Affected',
+                            color='Peak_Category',
+                            title=f'Top 10 Most Damaging Storms',
+                            labels={'Affected': 'People Affected'}
+                        )
+                        fig3.update_xaxes(tickangle=45)
+                        st.plotly_chart(fig3, use_container_width=True)
+                    
+                    with st.expander(" Statistics", expanded=False):
+                        # Statistical summary
+                        st.write(f"**Impact Statistics for {selected_province}:**")
+                        
+                        col1, col2 = st.columns(2)
+                        
+                        with col1:
+                            st.metric("Total Storms (2010-2024)", total_storms)
+                            st.metric("Total People Affected", f"{total_affected:,.0f}")
+                            st.metric("Average Affected per Storm", f"{avg_affected:,.0f}")
+                            st.metric("Maximum in Single Storm", f"{max_affected:,.0f}")
+                        
+                        with col2:
+                            # Category breakdown
+                            if 'Peak_Category' in province_impacts.columns:
+                                category_dist = province_impacts['Peak_Category'].value_counts()
+                                
+                                st.write("**Storm Categories:**")
+                                for cat, count in category_dist.items():
+                                    if cat is not None and str(cat) != 'nan':
+                                        st.write(f"- {cat}: {count}")
+                            
+                            # Calculate risk level
+                            avg_storms_per_year = total_storms / 15  # 2010-2024 = 15 years
+                            st.metric("Average Storms per Year", f"{avg_storms_per_year:.1f}")
+                            
+                            if avg_storms_per_year > 5:
+                                risk_level = "🔴 Very High"
+                            elif avg_storms_per_year > 3:
+                                risk_level = "🟠 High"
+                            elif avg_storms_per_year > 1:
+                                risk_level = "🟡 Moderate"
+                            else:
+                                risk_level = "🟢 Low"
+                            
+                            st.info(f"**Historical Risk Level**: {risk_level}")
+                    
+                    # Display ML prediction results if available (after historical data)
+                    if st.session_state.results_df is not None:
+                        st.markdown("---")
+                        display_ml_results(
+                            st.session_state.results_df,
+                            st.session_state.storm_name,
+                            st.session_state.year,
+                            st.session_state.track_df
+                        )
+    
+                
+                else:
+                    st.info(f"ℹ️ No historical storm impact data found for {selected_province} in our records (2010-2024).")
+                    st.write("This could mean:")
+                    st.write("- The province has been fortunate to avoid major impacts")
+                    st.write("- Impact data was not recorded for this location")
+                    st.write("- The province name may differ in historical records")
+            
+            except Exception as e:
+                st.warning(f"⚠️ Could not load historical impact data: {str(e)}")
+        
+        else:
+            st.warning(f"⚠️ Coordinates not found for {selected_province}")
+    except Exception as e:
+        st.warning(f"Could not load map: {str(e)}")
+    
+    st.markdown("---")
     
     if not MODEL_AVAILABLE:
         st.error(f"⚠️ Model pipeline not found. Import error: {IMPORT_ERROR}")
@@ -530,264 +1105,346 @@ def main():
         return
     
     # Sidebar storm input
-    st.sidebar.header("🌪️ Storm Input")
+    st.sidebar.header("🌪️ Storm Forecast")
     
-    input_method = st.sidebar.radio(
-        "Storm Data Source",
-        ["📁 Sample Forecast (FENGSHEN 2025)", "📝 JTWC Bulletin (Text)", "🔗 Live JTWC (Storm ID)"]
-    )
+    # Initialize session state for trigger
+    if 'trigger_prediction' not in st.session_state:
+        st.session_state.trigger_prediction = False
     
+    # Load storm list
+    try:
+        storm_list_file = MODEL_PATH / "forecasts" / "storm_list.json"
+        if storm_list_file.exists():
+            with open(storm_list_file, 'r') as f:
+                storm_config = json.load(f)
+                recent_storms = storm_config['recent_storms']
+        else:
+            recent_storms = []
+    except Exception as e:
+        st.sidebar.error(f"Could not load storm list: {e}")
+        recent_storms = []
+    
+    # Initialize variables
     storm_bulletin = None
     storm_id = None
+    selected_storm_name = None
+    selected_storm_date = None
+    run_prediction = False
     
-    if input_method == "📁 Sample Forecast (FENGSHEN 2025)":
-        sample_file = MODEL_PATH / "storm_forecast.txt"
-        if sample_file.exists():
-            with open(sample_file, 'r') as f:
+    # Section 1: Historical Storms
+    st.sidebar.subheader("📋 Historical Storms")
+    
+    if recent_storms:
+        # Create dropdown options with storm names and dates
+        storm_options = [f"{s['ph_name']} ({s['date']})" for s in recent_storms]
+        selected_storm_display = st.sidebar.selectbox(
+            "Select a storm to analyze",
+            options=storm_options,
+            index=0,
+            help="Choose from 10 recent Philippine storms (2023-2024)"
+        )
+        
+        # Extract the selected storm data
+        selected_index = storm_options.index(selected_storm_display)
+        storm_data = recent_storms[selected_index]
+        
+        # Load storm bulletin
+        forecast_file = MODEL_PATH / storm_data['file']
+        if forecast_file.exists():
+            with open(forecast_file, 'r') as f:
                 storm_bulletin = f.read()
-            st.sidebar.success("✅ Sample forecast loaded!")
-        else:
-            st.sidebar.error("❌ Sample file not found")
-    
-    elif input_method == "📝 JTWC Bulletin (Text)":
-        st.sidebar.info("Paste JTWC bulletin text (from https://www.metoc.navy.mil/jtwc/)")
-        storm_bulletin = st.sidebar.text_area(
-            "JTWC Bulletin",
-            height=200,
-            placeholder="Paste full JTWC warning text here..."
-        )
-    
-    elif input_method == "🔗 Live JTWC (Storm ID)":
-        storm_id = st.sidebar.text_input(
-            "JTWC Storm ID",
-            value="wp3025",
-            help="Format: wp[number][year] (e.g., wp3025 = Western Pacific storm 30, 2025)"
-        )
+            selected_storm_name = storm_data['ph_name']
+            selected_storm_date = storm_data['date']
+        
+        # Analyze Impact button
+        if st.sidebar.button("🚀 Analyze Impact", type="primary", use_container_width=True):
+            run_prediction = True
+    else:
+        st.sidebar.warning("⚠️ No historical storms available")
     
     st.sidebar.markdown("---")
     
-    # Run prediction button
-    if st.sidebar.button("🚀 Run ML Prediction", type="primary"):
+    # Section 2: Live Forecast
+    st.sidebar.subheader("🌐 Live Forecast")
+    
+    if st.sidebar.button("📡 Obtain Live Forecast", type="secondary", use_container_width=True):
+        # Try to load a live forecast file (you can create one for current active storms)
+        live_forecast_file = MODEL_PATH / "forecasts" / "live_forecast.txt"
         
-        with st.spinner("🔄 Loading ML models..."):
-            models = load_ml_models()
+        if live_forecast_file.exists():
+            with open(live_forecast_file, 'r') as f:
+                storm_bulletin = f.read()
+            
+            # Parse to get storm name
+            try:
+                temp_file = Path("temp_bulletin.txt")
+                with open(temp_file, 'w') as f:
+                    f.write(storm_bulletin)
+                temp_track = parse_jtwc_forecast(str(temp_file))
+                temp_file.unlink()
+                
+                live_storm_name = temp_track['PHNAME'].iloc[0] if 'PHNAME' in temp_track.columns else "MARIA"
+                live_storm_date = datetime.now().strftime("%b %d, %Y")
+                
+                selected_storm_name = live_storm_name
+                selected_storm_date = live_storm_date
+                
+                st.sidebar.success(f"🔴 **LIVE: Typhoon {live_storm_name}**\n\n{live_storm_date}")
+                run_prediction = True
+            except Exception as e:
+                st.sidebar.error(f"Error parsing live forecast: {e}")
+        else:
+            # No live forecast file, use the most recent historical storm
+            if recent_storms:
+                # Get the most recent storm (first in list)
+                latest_storm = recent_storms[0]
+                
+                forecast_file = MODEL_PATH / latest_storm['file']
+                if forecast_file.exists():
+                    with open(forecast_file, 'r') as f:
+                        storm_bulletin = f.read()
+                    selected_storm_name = latest_storm['ph_name']
+                    selected_storm_date = latest_storm['date']
+                    
+                    st.sidebar.success(f"📡 **Latest Storm: {latest_storm['ph_name']}**\n\n{latest_storm['category']} | {latest_storm['date']}")
+                    run_prediction = True
+                else:
+                    st.sidebar.error("❌ Could not load latest storm data")
+            else:
+                st.sidebar.warning("⚠️ No storm data available")
+    
+    st.sidebar.markdown("---")
+    
+    # Section 3: Advanced Options (collapsible)
+    with st.sidebar.expander("⚙️ Advanced Options"):
+        st.write("**Manual Input Methods:**")
+        
+        manual_method = st.radio(
+            "Choose input method",
+            ["JTWC Storm ID", "Paste Bulletin Text"],
+            label_visibility="collapsed"
+        )
+        
+        if manual_method == "JTWC Storm ID":
+            storm_id = st.text_input(
+                "Enter Storm ID",
+                value="wp3025",
+                help="Format: wp[number][year] (e.g., wp3025)"
+            )
+            
+            if st.button("Fetch Storm Data"):
+                run_prediction = True
+                selected_storm_name = storm_id.upper()
+        
+        elif manual_method == "Paste Bulletin Text":
+            st.info("Paste JTWC bulletin from https://www.metoc.navy.mil/jtwc/")
+            storm_bulletin = st.text_area(
+                "JTWC Bulletin",
+                height=200,
+                placeholder="Paste full JTWC warning text here..."
+            )
+            
+            if st.button("Analyze Bulletin"):
+                if storm_bulletin:
+                    run_prediction = True
+                    selected_storm_name = "CUSTOM"
+                else:
+                    st.warning("Please paste bulletin text first")
+    
+    # Run prediction if triggered
+    if run_prediction:
+        # Create a single progress container in the sidebar
+        progress_container = st.sidebar.empty()
+        
+        with progress_container:
+            with st.spinner("🔄 Loading ML models..."):
+                models = load_ml_models()
         
         if models is None:
-            st.error("❌ Failed to load models")
+            st.sidebar.error("❌ Failed to load models")
             return
         
         try:
             # STEP 1: Parse storm forecast
-            with st.spinner("📡 Parsing storm forecast..."):
-                if storm_bulletin:
-                    # Save bulletin to temp file
-                    temp_file = Path("temp_bulletin.txt")
-                    with open(temp_file, 'w') as f:
-                        f.write(storm_bulletin)
-                    track_df = parse_jtwc_forecast(str(temp_file))
-                    temp_file.unlink()  # Delete temp file
-                elif storm_id:
-                    # Fetch live
-                    import requests
-                    url = f"https://www.metoc.navy.mil/jtwc/products/{storm_id}web.txt"
-                    response = requests.get(url, timeout=10)
-                    response.raise_for_status()
+            with progress_container:
+                with st.spinner("📡 Step 1/4: Analyzing storm track and intensity..."):
+                    if storm_bulletin:
+                        # Save bulletin to temp file
+                        temp_file = Path("temp_bulletin.txt")
+                        with open(temp_file, 'w') as f:
+                            f.write(storm_bulletin)
+                        track_df = parse_jtwc_forecast(str(temp_file))
+                        temp_file.unlink()  # Delete temp file
+                    elif storm_id:
+                        # Fetch live
+                        import requests
+                        url = f"https://www.metoc.navy.mil/jtwc/products/{storm_id}web.txt"
+                        response = requests.get(url, timeout=10)
+                        response.raise_for_status()
+                        
+                        temp_file = Path("temp_bulletin.txt")
+                        with open(temp_file, 'w') as f:
+                            f.write(response.text)
+                        track_df = parse_jtwc_forecast(str(temp_file))
+                        temp_file.unlink()
+                    else:
+                        st.sidebar.error("❌ No storm data provided")
+                        return
                     
-                    temp_file = Path("temp_bulletin.txt")
-                    with open(temp_file, 'w') as f:
-                        f.write(response.text)
-                    track_df = parse_jtwc_forecast(str(temp_file))
-                    temp_file.unlink()
-                else:
-                    st.error("No storm data provided")
-                    return
-                
-                # Extract storm info from track dataframe
-                year = int(track_df['SEASON'].iloc[0]) if 'SEASON' in track_df.columns else datetime.now().year
-                storm_name = track_df['PHNAME'].iloc[0] if 'PHNAME' in track_df.columns else "UNKNOWN"
+                    # Extract storm info from track dataframe
+                    year = int(track_df['SEASON'].iloc[0]) if 'SEASON' in track_df.columns else datetime.now().year
+                    
+                    # Use the name from sidebar first, then try parsing from bulletin
+                    if selected_storm_name and selected_storm_name not in ["CUSTOM", ""]:
+                        storm_name = selected_storm_name
+                    elif 'PHNAME' in track_df.columns and pd.notna(track_df['PHNAME'].iloc[0]):
+                        storm_name = track_df['PHNAME'].iloc[0]
+                    elif 'NAME' in track_df.columns and pd.notna(track_df['NAME'].iloc[0]):
+                        storm_name = track_df['NAME'].iloc[0]
+                    else:
+                        storm_name = f"Storm-{year}-{datetime.now().strftime('%m%d')}"
             
-            st.success(f"✅ Storm: {storm_name} ({year})")
+            st.sidebar.success(f"✅ Storm: {storm_name} ({year})")
             
             # STEP 2: Fetch weather forecasts
-            with st.spinner("🌦️ Fetching weather forecasts for provinces..."):
-                # Extract date range from track
-                start_date = track_df['datetime'].min().strftime('%Y-%m-%d')
-                end_date = track_df['datetime'].max().strftime('%Y-%m-%d')
-                
-                # Call weather forecast with correct parameters
-                weather_df = fetch_weather_forecast(
-                    start_date=start_date,
-                    end_date=end_date,
-                    locations_file=str(MODEL_PATH / "Location_data" / "locations_latlng.csv")
-                )
-                
-                # Standardize column name for consistency
-                if 'province' in weather_df.columns:
-                    weather_df.rename(columns={'province': 'Province'}, inplace=True)
-            
-            st.success(f"✅ Weather data fetched for {len(weather_df['Province'].unique())} provinces")
+            with progress_container:
+                with st.spinner("🌦️ Step 2/4: Gathering weather data for all provinces..."):
+                    # Extract date range from track
+                    start_date = track_df['datetime'].min().strftime('%Y-%m-%d')
+                    end_date = track_df['datetime'].max().strftime('%Y-%m-%d')
+                    
+                    # Call weather forecast with correct parameters
+                    weather_df = fetch_weather_forecast(
+                        start_date=start_date,
+                        end_date=end_date,
+                        locations_file=str(MODEL_PATH / "Location_data" / "locations_latlng.csv")
+                    )
+                    
+                    # Standardize column name for consistency
+                    if 'province' in weather_df.columns:
+                        weather_df.rename(columns={'province': 'Province'}, inplace=True)
             
             # STEP 3: Engineer features
-            with st.spinner("🔧 Engineering features (75+ features per province)..."):
-                # Save temporary files in expected locations
-                import shutil
-                
-                # Create temp directories
-                temp_weather_dir = MODEL_PATH / "Weather_location_data" / str(year)
-                temp_weather_dir.mkdir(parents=True, exist_ok=True)
-                
-                # Save weather data (convert Province back to lowercase for pipeline compatibility)
-                weather_file = temp_weather_dir / f"{year}_{storm_name}.csv"
-                weather_to_save = weather_df.copy()
-                if 'Province' in weather_to_save.columns:
-                    weather_to_save.rename(columns={'Province': 'province'}, inplace=True)
-                weather_to_save.to_csv(weather_file, index=False)
-                
-                # Append track to storm data temporarily
-                storm_data_file = MODEL_PATH / "Storm_data" / "ph_storm_data.csv"
-                original_storm_data = pd.read_csv(storm_data_file)
-                combined_storm_data = pd.concat([original_storm_data, track_df], ignore_index=True)
-                
-                # Backup and save
-                backup_file = storm_data_file.with_suffix('.csv.backup')
-                shutil.copy(storm_data_file, backup_file)
-                combined_storm_data.to_csv(storm_data_file, index=False)
-                
-                try:
-                    # Run feature pipeline
-                    pipeline = StormFeaturePipeline(base_dir=MODEL_PATH)
-                    features_df = pipeline.process_storm(year, storm_name, verbose=False)
-                finally:
-                    # Restore original storm data
-                    shutil.copy(backup_file, storm_data_file)
-                    backup_file.unlink()
-                    # Clean up temp weather file
-                    if weather_file.exists():
-                        weather_file.unlink()
-            
-            st.success(f"✅ Features extracted: {features_df.shape[1]} features × {features_df.shape[0]} provinces")
-            
-            # SAFETY CHECK: Distance-based filter
-            if 'min_distance_km' in features_df.columns:
-                closest_distance = features_df['min_distance_km'].min()
-                st.info(f"📏 **Distance Check:** Closest approach to any province: {closest_distance:.0f} km")
-                
-                if closest_distance > 500:
-                    st.warning(f"⚠️ **Storm is {closest_distance:.0f} km from nearest Philippine province**")
-                    st.error("🚫 **No significant impact expected** - Storm is too far from the Philippines (>500 km)")
-                    st.info("The system will not generate impact predictions for storms outside Philippine area of responsibility.")
+            with progress_container:
+                with st.spinner("🔧 Step 3/4: Engineering storm impact features..."):
+                    # Save temporary files in expected locations
+                    import shutil
                     
-                    # Create zero-impact results
-                    results_df = pd.DataFrame({
-                        'Province': features_df['Province'].astype(str),
-                        'Impact_Probability_Persons': 0.0,
-                        'Predicted_Affected_Persons': 0,
-                        'Impact_Probability_Houses': 0.0,
-                        'Predicted_Houses_Damaged': 0,
-                        'Impact_Probability_Cost': 0.0,
-                        'Predicted_Economic_Cost_USD': 0
-                    })
-                    results_df['Risk_Category'] = 'Low'
+                    # Create temp directories
+                    temp_weather_dir = MODEL_PATH / "Weather_location_data" / str(year)
+                    temp_weather_dir.mkdir(parents=True, exist_ok=True)
                     
-                    # Store in session state
-                    st.session_state.results_df = results_df
-                    st.session_state.storm_name = storm_name
-                    st.session_state.year = year
-                    st.session_state.track_df = track_df
-                    st.session_state.prediction_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                    # Save weather data (convert Province back to lowercase for pipeline compatibility)
+                    weather_file = temp_weather_dir / f"{year}_{storm_name}.csv"
+                    weather_to_save = weather_df.copy()
+                    if 'Province' in weather_to_save.columns:
+                        weather_to_save.rename(columns={'Province': 'province'}, inplace=True)
+                    weather_to_save.to_csv(weather_file, index=False)
                     
-                    st.success("✅ Analysis complete - No impact predicted")
-                    return  # Skip ML prediction
+                    # Append track to storm data temporarily
+                    storm_data_file = MODEL_PATH / "Storm_data" / "ph_storm_data.csv"
+                    original_storm_data = pd.read_csv(storm_data_file)
+                    combined_storm_data = pd.concat([original_storm_data, track_df], ignore_index=True)
+                    
+                    # Backup and save
+                    backup_file = storm_data_file.with_suffix('.csv.backup')
+                    shutil.copy(storm_data_file, backup_file)
+                    combined_storm_data.to_csv(storm_data_file, index=False)
+                    
+                    try:
+                        # Run feature pipeline
+                        pipeline = StormFeaturePipeline(base_dir=MODEL_PATH)
+                        features_df = pipeline.process_storm(year, storm_name, verbose=False)
+                    finally:
+                        # Restore original storm data
+                        shutil.copy(backup_file, storm_data_file)
+                        backup_file.unlink()
+                        # Clean up temp weather file
+                        if weather_file.exists():
+                            weather_file.unlink()
             
             # STEP 4: Make predictions
-            with st.spinner("🤖 Running ML predictions (3 models: people, houses, cost)..."):
-                # The minimal models only need 6 features (no prefixes or complex engineering)
-                required_features = models['features']
-                
-                # Check which features we have
-                available_features = [f for f in required_features if f in features_df.columns]
-                missing_features = [f for f in required_features if f not in features_df.columns]
-                
-                if missing_features:
-                    st.warning(f"⚠️ Missing {len(missing_features)} features: {missing_features}")
-                    st.info("Filling with median values from training data...")
-                    # Use sensible defaults based on training data medians
-                    defaults = {
-                        'min_distance_km': 150.0,
-                        'max_wind_gust_kmh': 80.0,
-                        'total_precipitation_mm': 100.0,
-                        'max_wind_in_track_kt': 60.0,
-                        'hours_under_100km': 12.0,
-                        'Population': 1000000
-                    }
-                    for feat in missing_features:
-                        features_df[feat] = defaults.get(feat, 0)
-                
-                # Select only the 6 required features in correct order
-                X = features_df[required_features].copy()
-                
-                # Handle any remaining NaN values
-                X = X.fillna(X.median())
-                
-                # DEBUG: Show what we're predicting with
-                st.write("📊 **Feature Summary:**")
-                st.write(f"- Total provinces: {len(X)}")
-                st.write(f"- Features used: {', '.join(required_features)}")
-                
-                with st.expander("🔍 Debug: Feature Statistics"):
-                    stats_df = X.describe().T
-                    stats_df['median'] = X.median()
-                    st.dataframe(stats_df)
-                
-                # Make predictions for ALL THREE impact types
-                predictions = {}
-                
-                for impact_type in ['people', 'houses', 'cost']:
-                    # Get probability
-                    prob = models[impact_type]['classifier'].predict_proba(X)[:, 1]
+            with progress_container:
+                with st.spinner("🤖 Step 4/4: Computing impact predictions..."):
+                    # SAFETY CHECK: Distance-based filter
+                    if 'min_distance_km' in features_df.columns:
+                        closest_distance = features_df['min_distance_km'].min()
+                        
+                        if closest_distance > 500:
+                            st.sidebar.warning(f"⚠️ Storm is over {closest_distance:.0f} km from Philippines")
+                            
+                            # Create zero-impact results
+                            results_df = pd.DataFrame({
+                                'Province': features_df['Province'].astype(str),
+                                'Impact_Probability_Persons': 0.0,
+                                'Predicted_Affected_Persons': 0,
+                                'Impact_Probability_Houses': 0.0,
+                                'Predicted_Houses_Damaged': 0,
+                                'Impact_Probability_Cost': 0.0,
+                                'Predicted_Economic_Cost_USD': 0
+                            })
+                            results_df['Risk_Category'] = 'Low'
+                            
+                            # Store in session state
+                            st.session_state.results_df = results_df
+                            st.session_state.storm_name = storm_name
+                            st.session_state.year = year
+                            st.session_state.track_df = track_df
+                            st.session_state.prediction_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                            
+                            progress_container.empty()
+                            st.sidebar.success("✅ Analysis complete - No impact predicted")
+                            return  # Skip ML prediction
                     
-                    # Always predict values (not just for high probability)
-                    # Use a lower threshold (10%) for when to apply predictions
-                    pred_values = np.zeros(len(X))
-                    prediction_mask = prob > 0.10  # Lower threshold - predict if >10% probability
+                    # The minimal models only need 6 features (no prefixes or complex engineering)
+                    required_features = models['features']
                     
-                    if prediction_mask.sum() > 0:
-                        pred_log = models[impact_type]['regressor'].predict(X[prediction_mask])
-                        pred_values[prediction_mask] = np.expm1(pred_log)
+                    # Check which features we have
+                    available_features = [f for f in required_features if f in features_df.columns]
+                    missing_features = [f for f in required_features if f not in features_df.columns]
                     
-                    # For very low probabilities, scale down the prediction
-                    pred_values = pred_values * (prob / prob.max())  # Scale by relative probability
+                    if missing_features:
+                        # Use sensible defaults based on training data medians
+                        defaults = {
+                            'min_distance_km': 150.0,
+                            'max_wind_gust_kmh': 80.0,
+                            'total_precipitation_mm': 100.0,
+                            'max_wind_in_track_kt': 60.0,
+                            'hours_under_100km': 12.0,
+                            'Population': 1000000
+                        }
+                        for feat in missing_features:
+                            features_df[feat] = defaults.get(feat, 0)
                     
-                    predictions[impact_type] = {
-                        'probability': prob,
-                        'values': pred_values
-                    }
-                
-                # DEBUG: Show prediction statistics for each type
-                st.write("🎯 **Prediction Statistics:**")
-                
-                col1, col2, col3 = st.columns(3)
-                
-                with col1:
-                    st.write("**PEOPLE AFFECTED:**")
-                    prob_people = predictions['people']['probability']
-                    st.write(f"- Range: {prob_people.min():.1%} to {prob_people.max():.1%}")
-                    st.write(f"- Median: {np.median(prob_people):.1%}")
-                    st.write(f"- Provinces >10%: {(prob_people > 0.1).sum()}")
-                
-                with col2:
-                    st.write("**HOUSES DAMAGED:**")
-                    prob_houses = predictions['houses']['probability']
-                    st.write(f"- Range: {prob_houses.min():.1%} to {prob_houses.max():.1%}")
-                    st.write(f"- Median: {np.median(prob_houses):.1%}")
-                    st.write(f"- Provinces >10%: {(prob_houses > 0.1).sum()}")
-                
-                with col3:
-                    st.write("**ECONOMIC COST:**")
-                    prob_cost = predictions['cost']['probability']
-                    st.write(f"- Range: {prob_cost.min():.1%} to {prob_cost.max():.1%}")
-                    st.write(f"- Median: {np.median(prob_cost):.1%}")
-                    st.write(f"- Provinces >10%: {(prob_cost > 0.1).sum()}")
+                    # Select only the 6 required features in correct order
+                    X = features_df[required_features].copy()
+                    
+                    # Handle any remaining NaN values
+                    X = X.fillna(X.median())
+                    
+                    # Make predictions for ALL THREE impact types
+                    predictions = {}
+                    
+                    for impact_type in ['people', 'houses', 'cost']:
+                        # Get probability
+                        prob = models[impact_type]['classifier'].predict_proba(X)[:, 1]
+                        
+                        # Always predict values (not just for high probability)
+                        # Use a lower threshold (10%) for when to apply predictions
+                        pred_values = np.zeros(len(X))
+                        prediction_mask = prob > 0.10  # Lower threshold - predict if >10% probability
+                        
+                        if prediction_mask.sum() > 0:
+                            pred_log = models[impact_type]['regressor'].predict(X[prediction_mask])
+                            pred_values[prediction_mask] = np.expm1(pred_log)
+                        
+                        # For very low probabilities, scale down the prediction
+                        pred_values = pred_values * (prob / prob.max())  # Scale by relative probability
+                        
+                        predictions[impact_type] = {
+                            'probability': prob,
+                            'values': pred_values
+                        }
             
             # STEP 5: Create results dataframe
             results_df = pd.DataFrame({
@@ -801,9 +1458,10 @@ def main():
             })
             
             # Add risk category (based on people probability)
+            # Lowered thresholds: 30% is already High Risk
             results_df['Risk_Category'] = pd.cut(
                 results_df['Impact_Probability_Persons'],
-                bins=[0, 20, 40, 60, 100],
+                bins=[0, 10, 20, 30, 100],
                 labels=['Low', 'Moderate', 'High', 'Very High']
             )
             
@@ -816,12 +1474,18 @@ def main():
             st.session_state.track_df = track_df
             st.session_state.prediction_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
             
-            st.success("✅ Predictions complete!")
+            # Clear progress indicator and show success
+            progress_container.empty()
+            st.sidebar.success("✅ Predictions complete!")
+            
+            # Trigger rerun to display results immediately
+            st.rerun()
             
         except Exception as e:
-            st.error(f"❌ Prediction error: {str(e)}")
+            progress_container.empty()
+            st.sidebar.error(f"❌ Prediction error: {str(e)}")
             import traceback
-            st.code(traceback.format_exc())
+            st.sidebar.code(traceback.format_exc())
     
     # Clear results button (only show if results exist)
     if st.session_state.results_df is not None:
@@ -831,53 +1495,10 @@ def main():
             st.session_state.year = None
             st.session_state.track_df = None
             st.rerun()
-    
-    # Display results if available in session state
-    if st.session_state.results_df is not None:
-        # Show which storm results are displayed
-        st.info(f"📊 Showing predictions for: **{st.session_state.storm_name} ({st.session_state.year})** | Generated: {st.session_state.prediction_time}")
-        
-        display_ml_results(
-            st.session_state.results_df,
-            st.session_state.storm_name,
-            st.session_state.year,
-            st.session_state.track_df
-        )
-    
-    else:
-        # Show instructions
-        st.info("""
-        ### 🚀 How to Use:
-        
-        1. **Select storm data source** in the sidebar:
-           - 📁 **Sample Forecast**: Use pre-loaded FENGSHEN 2025 example
-           - 📝 **JTWC Bulletin**: Paste bulletin text from JTWC website
-           - 🔗 **Live JTWC**: Enter storm ID to fetch real-time data
-        
-        2. **Click "Run ML Prediction"** to start analysis
-        
-        3. **View results** in interactive tabs:
-           - Top 20 at-risk provinces
-           - Interactive risk map
-           - Impact analysis charts
-           - Export predictions to CSV
-        
-        ### 📚 About the Models:
-        
-        - **Training Data**: 2010-2024 Philippine storm impacts
-        - **Features**: 75+ engineered features (distance, weather, intensity, motion)
-        - **Architecture**: Two-stage cascade (classifier → regressor)
-        - **Output**: Province-level predictions for persons affected and houses damaged
-        """)
-    
-    # Footer
-    st.markdown("---")
-    st.markdown("""
-    <div style='text-align: center; color: gray;'>
-    Philippines Typhoon Impact Predictor | ML-Powered | Built with Streamlit
-    </div>
-    """, unsafe_allow_html=True)
 
 
 if __name__ == "__main__":
     main()
+
+
+

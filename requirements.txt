@@ -21,3 +21,8 @@ geopandas==1.1.1          # latest known release at time of check :contentRefere
 
 # HTTP Requests
 requests==2.31.0          # (you may check for newer; 2.31.0 is fine)
+
+# Environment Variables and AI
+python-dotenv>=1.0.0      # Load environment variables from .env
+openai>=1.0.0             # OpenAI API for LGU insights generation
+reportlab>=4.0.0          # PDF generation for LGU action plans
