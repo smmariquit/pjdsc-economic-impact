@@ -1344,7 +1344,13 @@ def main():
                     # Append track to storm data temporarily
                     storm_data_file = MODEL_PATH / "Storm_data" / "ph_storm_data.csv"
                     original_storm_data = pd.read_csv(storm_data_file)
-                    combined_storm_data = pd.concat([original_storm_data, track_df], ignore_index=True)
+                    
+                    # Ensure track_df has the correct storm name and year
+                    track_df_to_save = track_df.copy()
+                    track_df_to_save['PHNAME'] = storm_name
+                    track_df_to_save['SEASON'] = year
+                    
+                    combined_storm_data = pd.concat([original_storm_data, track_df_to_save], ignore_index=True)
                     
                     # Backup and save
                     backup_file = storm_data_file.with_suffix('.csv.backup')
