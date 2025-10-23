@@ -377,6 +377,146 @@ def display_ml_results(results_df, storm_name, year, track_df):
     st.markdown("---")
     st.subheader("💡 LGU Action Plan")
     
+    with st.spinner("🧠 Generating disaster management recommendations..."):
+        lgu_insights = generate_lgu_insights(results_df, storm_name, year, selected_province)
+    
+    if lgu_insights:
+        # Create four columns for the four aspects
+        col1, col2 = st.columns(2)
+        
+        with col1:
+            st.markdown("### 🚨 Pre-Impact (24-48hrs)")
+            st.markdown(
+                f"""
+                <div style="height: 300px; overflow-y: auto; padding: 15px; color: #000;
+                            border: 1px solid #d1ecf1; border-radius: 5px; background-color: #d1ecf1;">
+                    {lgu_insights['preparation']}
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
+            
+            st.markdown("### 🏥 Post-Impact (First 72hrs)")
+            st.markdown(
+                f"""
+                <div style="height: 300px; overflow-y: auto; padding: 15px; color: #000;
+                            border: 1px solid #d4edda; border-radius: 5px; background-color: #d4edda;">
+                    {lgu_insights['recovery']}
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
+        
+        with col2:
+            st.markdown("### ⚡ During Impact")
+            st.markdown(
+                f"""
+                <div style="height: 300px; overflow-y: auto; padding: 15px; color: #000000;
+                            border: 1px solid #fff3cd; border-radius: 5px; background-color: #fff3cd;">
+                    {lgu_insights['response']}
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
+            
+            st.markdown("### 📦 Resources Needed")
+            st.markdown(
+                f"""
+                <div style="height: 300px; overflow-y: auto; padding: 15px; color: #000000;
+                            border: 1px solid #f8d7da; border-radius: 5px; background-color: #f8d7da;">
+                    {lgu_insights['resources']}
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
+        
+        # Add download as PDF option
+        st.markdown("---")
+        try:
+            from reportlab.lib.pagesizes import letter
+            from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
+            from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer
+            from reportlab.lib.units import inch
+            from io import BytesIO
+            
+            # Create PDF in memory
+            pdf_buffer = BytesIO()
+            doc = SimpleDocTemplate(pdf_buffer, pagesize=letter)
+            story = []
+            styles = getSampleStyleSheet()
+            
+            # Title
+            title_style = ParagraphStyle(
+                'CustomTitle',
+                parent=styles['Heading1'],
+                fontSize=16,
+                textColor='darkblue',
+                spaceAfter=20
+            )
+            story.append(Paragraph(f"LGU Action Plan: {storm_name} ({year})", title_style))
+            story.append(Spacer(1, 0.3*inch))
+            
+            # Add each section
+            section_style = ParagraphStyle(
+                'SectionTitle',
+                parent=styles['Heading2'],
+                fontSize=14,
+                textColor='darkred',
+                spaceAfter=10
+            )
+            
+            sections = [
+                ("Pre-Impact Preparations (24-48 hours)", lgu_insights['preparation']),
+                ("Response Operations (During Impact)", lgu_insights['response']),
+                ("Post-Impact Recovery (First 72 hours)", lgu_insights['recovery']),
+                ("Resource Requirements", lgu_insights['resources'])
+            ]
+            
+            for title, content in sections:
+                story.append(Paragraph(title, section_style))
+                for line in content.split('\n'):
+                    if line.strip():
+                        story.append(Paragraph(line.strip(), styles['Normal']))
+                story.append(Spacer(1, 0.2*inch))
+            
+            doc.build(story)
+            pdf_buffer.seek(0)
+            
+            st.download_button(
+                label="📥 Download Complete Action Plan (PDF)",
+                data=pdf_buffer,
+                file_name=f"LGU_Action_Plan_{storm_name}_{year}.pdf",
+                mime="application/pdf",
+                help="Download this action plan as PDF for offline reference"
+            )
+        except ImportError:
+            # Fallback to text if reportlab not available
+            full_text = f"""LGU Action Plan: {storm_name} ({year})
+
+PRE-IMPACT PREPARATIONS (24-48 HOURS):
+{lgu_insights['preparation']}
+
+RESPONSE OPERATIONS (DURING IMPACT):
+{lgu_insights['response']}
+
+POST-IMPACT RECOVERY (FIRST 72 HOURS):
+{lgu_insights['recovery']}
+
+RESOURCE REQUIREMENTS:
+{lgu_insights['resources']}
+"""
+            st.download_button(
+                label="📥 Download Complete Action Plan (TXT)",
+                data=full_text,
+                file_name=f"LGU_Action_Plan_{storm_name}_{year}.txt",
+                mime="text/plain",
+                help="Download this action plan for offline reference"
+            )
+    else:
+        st.warning("⚠️ Could not generate LGU insights. Please check your OPENAI_API_KEY in .env file.")
+    
+    st.markdown("---")
+    
     # Get user province data if available
     user_province_data = None
     if selected_province:
@@ -1350,147 +1490,6 @@ def main():
             progress_container.empty()
             st.sidebar.success("✅ Predictions complete!")
             
-            # COMMENTED OUT: GPT-based LGU insights generation
-            # with st.spinner("🧠 Generating disaster management recommendations..."):
-            #     lgu_insights = generate_lgu_insights(results_df, storm_name, year, selected_province)
-
-            if False:  # lgu_insights:
-                # Create four columns for the four aspects
-                col1, col2 = st.columns(2)
-                
-                with col1:
-                    st.markdown("### 🚨 Pre-Impact (24-48hrs)")
-                    st.markdown(
-                        f"""
-                        <div style="height: 300px; overflow-y: auto; padding: 15px; color: #000;
-                                    border: 1px solid #d1ecf1; border-radius: 5px; background-color: #d1ecf1;">
-                            {lgu_insights['preparation']}
-                        </div>
-                        """,
-                        unsafe_allow_html=True
-                    )
-                    
-                    st.markdown("### 🏥 Post-Impact (First 72hrs)")
-                    st.markdown(
-                        f"""
-                        <div style="height: 300px; overflow-y: auto; padding: 15px; color: #000;
-                                    border: 1px solid #d4edda; border-radius: 5px; background-color: #d4edda;">
-                            {lgu_insights['recovery']}
-                        </div>
-                        """,
-                        unsafe_allow_html=True
-                    )
-                
-                with col2:
-                    st.markdown("### ⚡ During Impact")
-                    st.markdown(
-                        f"""
-                        <div style="height: 300px; overflow-y: auto; padding: 15px; color: #000000;
-                                    border: 1px solid #fff3cd; border-radius: 5px; background-color: #fff3cd;">
-                            {lgu_insights['response']}
-                        </div>
-                        """,
-                        unsafe_allow_html=True
-                    )
-                    
-                    st.markdown("### 📦 Resources Needed")
-                    st.markdown(
-                        f"""
-                        <div style="height: 300px; overflow-y: auto; padding: 15px; color: #000000;
-                                    border: 1px solid #f8d7da; border-radius: 5px; background-color: #f8d7da;">
-                            {lgu_insights['resources']}
-                        </div>
-                        """,
-                        unsafe_allow_html=True
-                    )
-                
-                # Add download as PDF option
-                st.markdown("---")
-                try:
-                    from reportlab.lib.pagesizes import letter
-                    from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
-                    from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer
-                    from reportlab.lib.units import inch
-                    from io import BytesIO
-                    
-                    # Create PDF in memory
-                    pdf_buffer = BytesIO()
-                    doc = SimpleDocTemplate(pdf_buffer, pagesize=letter)
-                    story = []
-                    styles = getSampleStyleSheet()
-                    
-                    # Title
-                    title_style = ParagraphStyle(
-                        'CustomTitle',
-                        parent=styles['Heading1'],
-                        fontSize=16,
-                        textColor='darkblue',
-                        spaceAfter=20
-                    )
-                    story.append(Paragraph(f"LGU Action Plan: {storm_name} ({year})", title_style))
-                    story.append(Spacer(1, 0.3*inch))
-                    
-                    # Add each section
-                    section_style = ParagraphStyle(
-                        'SectionTitle',
-                        parent=styles['Heading2'],
-                        fontSize=14,
-                        textColor='darkred',
-                        spaceAfter=10
-                    )
-                    
-                    sections = [
-                        ("Pre-Impact Preparations (24-48 hours)", lgu_insights['preparation']),
-                        ("Response Operations (During Impact)", lgu_insights['response']),
-                        ("Post-Impact Recovery (First 72 hours)", lgu_insights['recovery']),
-                        ("Resource Requirements", lgu_insights['resources'])
-                    ]
-                    
-                    for title, content in sections:
-                        story.append(Paragraph(title, section_style))
-                        for line in content.split('\n'):
-                            if line.strip():
-                                story.append(Paragraph(line.strip(), styles['Normal']))
-                        story.append(Spacer(1, 0.2*inch))
-                    
-                    doc.build(story)
-                    pdf_buffer.seek(0)
-                    
-                    st.download_button(
-                        label="📥 Download Complete Action Plan (PDF)",
-                        data=pdf_buffer,
-                        file_name=f"LGU_Action_Plan_{storm_name}_{year}.pdf",
-                        mime="application/pdf",
-                        help="Download this action plan as PDF for offline reference"
-                    )
-                except ImportError:
-                    # Fallback to text if reportlab not available
-                    full_text = f"""LGU Action Plan: {storm_name} ({year})
-
-        PRE-IMPACT PREPARATIONS (24-48 HOURS):
-        {lgu_insights['preparation']}
-
-        RESPONSE OPERATIONS (DURING IMPACT):
-        {lgu_insights['response']}
-
-        POST-IMPACT RECOVERY (FIRST 72 HOURS):
-        {lgu_insights['recovery']}
-
-        RESOURCE REQUIREMENTS:
-        {lgu_insights['resources']}
-        """
-                    st.download_button(
-                        label="📥 Download Complete Action Plan (TXT)",
-                        data=full_text,
-                        file_name=f"LGU_Action_Plan_{storm_name}_{year}.txt",
-                        mime="text/plain",
-                        help="Download this action plan for offline reference"
-                    )
-            # else:
-            #     st.warning("⚠️ Could not generate LGU insights. Please check your OPENAI_API_KEY in .env file.")
-            # 
-            # st.markdown("---")
-                    
             # Trigger rerun to display results immediately
             st.rerun()
             
