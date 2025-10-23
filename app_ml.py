@@ -758,7 +758,7 @@ def main():
                 province_map = folium.Map(
                     location=[province_lat, province_lng],
                     zoom_start=7,
-                    tiles='CartoDB positron',
+                    tiles='OpenStreetMap',
                     prefer_canvas=True
                 )
             else:
@@ -766,7 +766,7 @@ def main():
                 province_map = folium.Map(
                     location=[province_lat, province_lng],
                     zoom_start=9,
-                    tiles='CartoDB positron',
+                    tiles='OpenStreetMap',
                     prefer_canvas=True
                 )
             
@@ -903,7 +903,11 @@ def main():
                             ).add_to(province_map)
             
             # Display the map with proper sizing
-            st_folium(province_map, width=1200, height=600, returned_objects=[])
+            try:
+                st_folium(province_map, width=1200, height=600, returned_objects=[])
+            except Exception as e:
+                st.error(f"Map rendering error: {str(e)}")
+                st.info("Map data is available but there was an issue displaying it. Try refreshing the page.")
             
             # Historical Storm Insights for Selected Province
             st.subheader(f"📊 Historical Storm Impact: {selected_province} (2010-2024)")

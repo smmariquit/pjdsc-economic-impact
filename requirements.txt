@@ -13,9 +13,10 @@ matplotlib==3.9.3         # latest version compatible with numpy 1.x
 # Streamlit and Visualization
 streamlit==1.41.1         # stable version compatible with Python 3.13
 plotly==5.17.0            # (you may check if there's newer minor)  
-folium==0.15.0            # (you may check if there's newer)  
-streamlit-folium==0.15.0  # (you may check compatibility with newer streamlit)
+folium==0.14.0            # Stable version for Streamlit Cloud
+streamlit-folium==0.14.0  # Matching version with folium
 branca==0.6.0             # Required by folium
+jinja2==3.1.2             # Required by folium for rendering
 
 # HTTP Requests
 requests==2.31.0          # (you may check for newer; 2.31.0 is fine)
