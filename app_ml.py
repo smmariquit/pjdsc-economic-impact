@@ -1303,6 +1303,10 @@ def main():
                         storm_name = track_df['NAME'].iloc[0]
                     else:
                         storm_name = f"Storm-{year}-{datetime.now().strftime('%m%d')}"
+                    
+                    # CRITICAL: Add storm name and year to track_df NOW (before any processing)
+                    track_df['PHNAME'] = storm_name
+                    track_df['SEASON'] = year
             
             st.sidebar.success(f"✅ Storm: {storm_name} ({year})")
             
@@ -1345,12 +1349,8 @@ def main():
                     storm_data_file = MODEL_PATH / "Storm_data" / "ph_storm_data.csv"
                     original_storm_data = pd.read_csv(storm_data_file)
                     
-                    # Ensure track_df has the correct storm name and year
-                    track_df_to_save = track_df.copy()
-                    track_df_to_save['PHNAME'] = storm_name
-                    track_df_to_save['SEASON'] = year
-                    
-                    combined_storm_data = pd.concat([original_storm_data, track_df_to_save], ignore_index=True)
+                    # track_df already has PHNAME and SEASON set earlier
+                    combined_storm_data = pd.concat([original_storm_data, track_df], ignore_index=True)
                     
                     # Backup and save
                     backup_file = storm_data_file.with_suffix('.csv.backup')
