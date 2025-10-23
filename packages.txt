@@ -1,5 +1,1 @@
-libodbc2
-libodbcinst2
-unixodbc-common
-libgdal-dev
-libspatialindex-dev
+
