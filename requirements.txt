@@ -1,9 +1,23 @@
-streamlit==1.28.1
+# Core ML and Data Science
 pandas==2.1.3
 numpy==1.24.3
+scikit-learn==1.3.2
+joblib==1.3.2
+
+# Streamlit and Visualization
+streamlit==1.28.1
+plotly==5.17.0
 folium==0.15.0
 streamlit-folium==0.15.0
-plotly==5.17.0
+
+# Geographic and Spatial
 geopandas==0.14.1
+
+# Scientific Computing
 scipy==1.11.4
+
+# HTTP Requests
 requests==2.31.0
+
+# Optional: XGBoost (if you want to use the original optimized models)
+# xgboost==2.0.3
