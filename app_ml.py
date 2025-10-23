@@ -373,14 +373,14 @@ def display_ml_results(results_df, storm_name, year, track_df):
     # Check if user has selected a province
     selected_province = st.session_state.get('selected_province', None)
     
-    # LGU Action Plan at the TOP - with separate sections
-    st.markdown("---")
-    st.subheader("💡 LGU Action Plan")
+    # COMMENTED OUT: LGU Action Plan section (GPT-generated recommendations)
+    # st.markdown("---")
+    # st.subheader("💡 LGU Action Plan")
+    # 
+    # with st.spinner("🧠 Generating disaster management recommendations..."):
+    #     lgu_insights = generate_lgu_insights(results_df, storm_name, year, selected_province)
     
-    with st.spinner("🧠 Generating disaster management recommendations..."):
-        lgu_insights = generate_lgu_insights(results_df, storm_name, year, selected_province)
-    
-    if lgu_insights:
+    if False:  # lgu_insights:
         # Create four columns for the four aspects
         col1, col2 = st.columns(2)
         
@@ -512,10 +512,10 @@ RESOURCE REQUIREMENTS:
                 mime="text/plain",
                 help="Download this action plan for offline reference"
             )
-    else:
-        st.warning("⚠️ Could not generate LGU insights. Please check your OPENAI_API_KEY in .env file.")
-    
-    st.markdown("---")
+    # else:
+    #     st.warning("⚠️ Could not generate LGU insights. Please check your OPENAI_API_KEY in .env file.")
+    # 
+    # st.markdown("---")
     
     # Get user province data if available
     user_province_data = None
@@ -622,7 +622,7 @@ RESOURCE REQUIREMENTS:
         
         st.dataframe(
             styled_df,
-            width='stretch',
+            use_container_width=True,
             height=600
         )
     
