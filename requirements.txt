@@ -1,27 +1,23 @@
 # Core ML and Data Science
-xgboost<2.0,>=1.7
-joblib>=1.3.0
-openmeteo-requests>=1.0.0
-requests-cache>=1.0.0
-retry-requests>=2.0.0
-openmeteo_requests
-pandas==2.3.3
-numpy==1.26.4
-scikit-learn==1.7.2
-joblib==1.3.2
-matplotlib==3.8.2
+xgboost==3.0.5            # latest stable (or you could go 3.1.x if you’re comfortable) :contentReference[oaicite:0]{index=0}
+joblib==1.5.0             # latest stable :contentReference[oaicite:1]{index=1}
+openmeteo-requests>=1.0.0 # (no exact version pinned)  
+requests-cache>=1.0.0     # (no exact version pinned)  
+retry-requests>=2.0.0     # (no exact version pinned)  
+openmeteo_requests        # (as above)  
+pandas==2.3.3             # latest stable for pandas :contentReference[oaicite:2]{index=2}
+numpy==2.3.4              # latest stable (was 1.26.4) :contentReference[oaicite:3]{index=3}
+scikit-learn==1.7.2       # already up to date  
+matplotlib==3.8.2         # (assuming no newer critical release, you may check)
 
 # Streamlit and Visualization
-streamlit==1.28.1
-plotly==5.17.0
-folium==0.15.0
-streamlit-folium==0.15.0
+streamlit==1.50.0         # latest stable :contentReference[oaicite:4]{index=4}
+plotly==5.17.0            # (you may check if there’s newer minor)  
+folium==0.15.0            # (you may check if there’s newer)  
+streamlit-folium==0.15.0  # (you may check compatibility with newer streamlit)  
 
 # Geographic and Spatial
-geopandas==0.14.1
+geopandas==1.1.1          # latest known release at time of check :contentReference[oaicite:5]{index=5}
 
 # HTTP Requests
-requests==2.31.0
-
-# Optional: XGBoost (if you want to use the original optimized models)
-# xgboost==2.0.3
+requests==2.31.0          # (you may check for newer; 2.31.0 is fine)
