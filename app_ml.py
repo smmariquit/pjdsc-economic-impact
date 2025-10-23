@@ -1348,10 +1348,11 @@ def main():
             progress_container.empty()
             st.sidebar.success("✅ Predictions complete!")
             
-            with st.spinner("🧠 Generating disaster management recommendations..."):
-                lgu_insights = generate_lgu_insights(results_df, storm_name, year, selected_province)
+            # COMMENTED OUT: GPT-based LGU insights generation
+            # with st.spinner("🧠 Generating disaster management recommendations..."):
+            #     lgu_insights = generate_lgu_insights(results_df, storm_name, year, selected_province)
 
-            if lgu_insights:
+            if False:  # lgu_insights:
                 # Create four columns for the four aspects
                 col1, col2 = st.columns(2)
                 
@@ -1483,10 +1484,10 @@ def main():
                         mime="text/plain",
                         help="Download this action plan for offline reference"
                     )
-            else:
-                st.warning("⚠️ Could not generate LGU insights. Please check your OPENAI_API_KEY in .env file.")
-            
-            st.markdown("---")
+            # else:
+            #     st.warning("⚠️ Could not generate LGU insights. Please check your OPENAI_API_KEY in .env file.")
+            # 
+            # st.markdown("---")
                     
             # Trigger rerun to display results immediately
             st.rerun()
