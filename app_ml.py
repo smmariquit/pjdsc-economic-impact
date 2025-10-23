@@ -237,7 +237,7 @@ def display_ml_results(results_df, storm_name, year, track_df):
         # Style the dataframe
         st.dataframe(
             top_20.style.background_gradient(subset=['Impact %'], cmap='Reds'),
-            width='stretch',
+            use_container_width=True,
             height=600
         )
     
