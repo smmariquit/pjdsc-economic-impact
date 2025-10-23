@@ -17,7 +17,9 @@ folium==0.15.0            # (you may check if there's newer)
 streamlit-folium==0.15.0  # (you may check compatibility with newer streamlit)
 
 # Geographic and Spatial
-geopandas==1.1.1          # latest known release at time of check :contentReference[oaicite:5]{index=5}
+geopandas==0.14.4         # Stable version for Streamlit Cloud
+shapely==2.0.4            # Compatible with geopandas
+pyproj==3.6.1             # Geographic projections
 
 # HTTP Requests
 requests==2.31.0          # (you may check for newer; 2.31.0 is fine)
