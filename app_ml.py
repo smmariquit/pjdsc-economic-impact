@@ -377,9 +377,6 @@ def display_ml_results(results_df, storm_name, year, track_df):
     st.markdown("---")
     st.subheader("💡 LGU Action Plan")
     
-    with st.spinner("🧠 Generating disaster management recommendations..."):
-        lgu_insights = generate_lgu_insights(results_df, storm_name, year, selected_province)
-    
     if lgu_insights:
         # Create four columns for the four aspects
         col1, col2 = st.columns(2)
@@ -1487,6 +1484,9 @@ def main():
             # Clear progress indicator and show success
             progress_container.empty()
             st.sidebar.success("✅ Predictions complete!")
+            
+            with st.spinner("🧠 Generating disaster management recommendations..."):
+                lgu_insights = generate_lgu_insights(results_df, storm_name, year, selected_province)
             
             # Trigger rerun to display results immediately
             st.rerun()
