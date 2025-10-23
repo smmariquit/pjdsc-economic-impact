@@ -52,8 +52,21 @@ def fetch_weather_forecast(
     retry_session = retry(cache_session, retries=5, backoff_factor=0.2)
     openmeteo = openmeteo_requests.Client(session=retry_session)
     
-    # API endpoint and variables
-    url = "https://api.open-meteo.com/v1/forecast"
+    # Determine if we need historical or forecast API
+    # Forecast API: up to 16 days in the future
+    # Historical API: past dates up to a few days ago
+    start_dt_check = pd.to_datetime(start_date)
+    today = pd.Timestamp.now().normalize()
+    
+    # Use historical API if start date is more than 5 days in the past
+    is_historical = (today - start_dt_check).days > 5
+    
+    if is_historical:
+        url = "https://archive-api.open-meteo.com/v1/archive"
+        print(f"   Using HISTORICAL weather API (dates are in the past)")
+    else:
+        url = "https://api.open-meteo.com/v1/forecast"
+        print(f"   Using FORECAST weather API (dates are current/future)")
     
     # Weather variables (must match training data!)
     daily_variables = [
