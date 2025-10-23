@@ -235,138 +235,177 @@ def display_ml_results(results_df, storm_name, year, track_df):
         top_20.columns = ['Province', 'Risk', 'Impact %', 'People', 'Houses', 'Cost (USD)']
         
         # Style the dataframe
+        # Streamlit expects width/height as int or None. Avoid passing strings like 'stretch'.
         st.dataframe(
             top_20.style.background_gradient(subset=['Impact %'], cmap='Reds'),
-            width='stretch',
+            width=None,
             height=600
         )
     
     with tab2:
         st.subheader("Interactive Risk Map")
-        
-        # Load province coordinates
+        # Load province coordinates robustly and render a Folium map even if some data is missing
         try:
-            loc_df = pd.read_csv(MODEL_PATH / "Location_data" / "locations_latlng.csv")
-            
-            # Standardize column names
-            loc_df = loc_df.rename(columns={'Lat': 'LAT', 'Lng': 'LON'})
-            
-            # Merge with results
-            map_data = results_df.merge(loc_df, left_on='Province', right_on='Province', how='left')
-            
-            # Create map centered on Philippines
+            # Try a few common filenames for locations
+            possible_paths = [
+                MODEL_PATH / "Location_data" / "locations_latlng.csv",
+                MODEL_PATH / "Location_data" / "locations.csv",
+                MODEL_PATH / "Location_data" / "locations_latlng_all.csv"
+            ]
+
+            loc_df = None
+            for p in possible_paths:
+                if p.exists():
+                    loc_df = pd.read_csv(p)
+                    break
+
+            if loc_df is None:
+                st.warning("Location coordinates file not found. Showing base map only.")
+                loc_df = pd.DataFrame(columns=['Province', 'LAT', 'LON'])
+
+            # Normalize column names (case-insensitive)
+            cols_lower = {c.lower(): c for c in loc_df.columns}
+
+            lat_col = None
+            lon_col = None
+            province_col = None
+
+            for candidate in ['lat', 'latitude', 'lat_deg', 'y']:
+                if candidate in cols_lower:
+                    lat_col = cols_lower[candidate]
+                    break
+
+            for candidate in ['lon', 'lng', 'longitude', 'lon_deg', 'x']:
+                if candidate in cols_lower:
+                    lon_col = cols_lower[candidate]
+                    break
+
+            for candidate in ['province', 'prov', 'name', 'region']:
+                if candidate in cols_lower:
+                    province_col = cols_lower[candidate]
+                    break
+
+            # If we found lat/lon, standardize to LAT/LON
+            if lat_col and lon_col:
+                loc_df = loc_df.rename(columns={lat_col: 'LAT', lon_col: 'LON'})
+            else:
+                # Ensure columns exist but may be empty
+                if 'LAT' not in loc_df.columns:
+                    loc_df['LAT'] = np.nan
+                if 'LON' not in loc_df.columns:
+                    loc_df['LON'] = np.nan
+
+            if province_col and province_col != 'Province':
+                loc_df = loc_df.rename(columns={province_col: 'Province'})
+
+            # Merge with results (left join keeps all provinces in results)
+            map_data = results_df.merge(loc_df, on='Province', how='left')
+
+            # Create map centered on Philippines (use CartoDB positron for a clean basemap)
             m = folium.Map(
-                location=[12.8797, 121.7740], 
+                location=[12.8797, 121.7740],
                 zoom_start=6,
-                min_zoom=5,
-                max_zoom=10,
-                tiles='CartoDB positron',  # Clean, minimal basemap
-                max_bounds=True  # Restrict panning
+                tiles='CartoDB positron',
+                max_bounds=True
             )
-            
-            # Add storm track with cone of uncertainty
+
+            # Attempt to draw storm track if track_df available
             track_points = []
-            for idx, row in track_df.iterrows():
-                track_points.append([row['LAT'], row['LON']])
-                
-                # Calculate uncertainty radius (increases with forecast time)
-                # Typical NHC error: ~100km at 24h, ~200km at 48h, ~300km at 72h, ~400km at 120h
-                hours_ahead = idx * 6  # Assuming 6-hour intervals
-                if hours_ahead <= 24:
-                    uncertainty_km = 50 + (hours_ahead / 24) * 50  # 50-100 km
-                elif hours_ahead <= 48:
-                    uncertainty_km = 100 + ((hours_ahead - 24) / 24) * 100  # 100-200 km
-                elif hours_ahead <= 72:
-                    uncertainty_km = 200 + ((hours_ahead - 48) / 24) * 100  # 200-300 km
+            if track_df is not None and not track_df.empty:
+                for idx, row in track_df.iterrows():
+                    # Support multiple possible column names for coordinates
+                    lat = row.get('LAT') or row.get('Lat') or row.get('lat') or row.get('latitude')
+                    lon = row.get('LON') or row.get('Lon') or row.get('lon') or row.get('longitude')
+                    try:
+                        lat_f = float(lat)
+                        lon_f = float(lon)
+                        track_points.append([lat_f, lon_f])
+
+                        hours_ahead = idx * 6
+                        if hours_ahead <= 24:
+                            uncertainty_km = 50 + (hours_ahead / 24) * 50
+                        elif hours_ahead <= 48:
+                            uncertainty_km = 100 + ((hours_ahead - 24) / 24) * 100
+                        elif hours_ahead <= 72:
+                            uncertainty_km = 200 + ((hours_ahead - 48) / 24) * 100
+                        else:
+                            uncertainty_km = 300 + ((hours_ahead - 72) / 48) * 100
+
+                        uncertainty_km = min(uncertainty_km, 400)
+
+                        folium.Circle(location=[lat_f, lon_f], radius=uncertainty_km * 1000,
+                                      color='red', fill=True, fillColor='red', fillOpacity=0.1,
+                                      weight=1, opacity=0.3).add_to(m)
+
+                        folium.CircleMarker(location=[lat_f, lon_f], radius=5, color='darkred',
+                                            fill=True, fillColor='red', fillOpacity=0.9, weight=2,
+                                            popup=folium.Popup(f"<b>Forecast Point {idx + 1}</b><br>Time: +{hours_ahead}h",
+                                                               max_width=200)).add_to(m)
+                    except Exception:
+                        # Skip invalid points
+                        continue
+
+                if len(track_points) > 1:
+                    folium.PolyLine(locations=track_points, color='red', weight=3, opacity=0.7).add_to(m)
+
+            # Add province markers for rows with valid LAT/LON
+            valid_coords = map_data[pd.notna(map_data['LAT']) & pd.notna(map_data['LON'])]
+            st.info(f"Map: {len(valid_coords)} provinces with coordinates available")
+
+            for _, row in valid_coords.iterrows():
+                try:
+                    lat = float(row['LAT'])
+                    lon = float(row['LON'])
+                except Exception:
+                    continue
+
+                prob = row.get('Impact_Probability_Persons', 0)
+                if prob > 70:
+                    color = 'darkred'; radius = 12
+                elif prob > 50:
+                    color = 'orange'; radius = 10
+                elif prob > 30:
+                    color = 'yellow'; radius = 8
                 else:
-                    uncertainty_km = 300 + ((hours_ahead - 72) / 48) * 100  # 300-400 km
-                
-                uncertainty_km = min(uncertainty_km, 400)  # Cap at 400km
-                
-                # Add uncertainty cone (circle)
-                folium.Circle(
-                    location=[row['LAT'], row['LON']],
-                    radius=uncertainty_km * 1000,  # Convert to meters
-                    color='red',
-                    fill=True,
-                    fillColor='red',
-                    fillOpacity=0.1,
-                    weight=1,
-                    opacity=0.3
-                ).add_to(m)
-                
-                # Add center point marker
-                folium.CircleMarker(
-                    location=[row['LAT'], row['LON']],
-                    radius=5,
-                    color='darkred',
-                    fill=True,
-                    fillColor='red',
-                    fillOpacity=0.9,
-                    weight=2,
-                    popup=folium.Popup(
-                        f"<b>Forecast Point {idx + 1}</b><br>"
-                        f"Time: +{hours_ahead}h<br>"
-                        f"Intensity: {row.get('INTENSITY', 'N/A')} kt<br>"
-                        f"Uncertainty: ±{uncertainty_km:.0f} km",
-                        max_width=200
-                    )
-                ).add_to(m)
-            
-            # Draw track line connecting points
-            if len(track_points) > 1:
-                folium.PolyLine(
-                    locations=track_points,
-                    color='red',
-                    weight=3,
-                    opacity=0.7,
-                    popup="Storm Track"
-                ).add_to(m)
-            
-            # Add province markers
-            for _, row in map_data.iterrows():
-                if pd.notna(row.get('LAT')) and pd.notna(row.get('LON')):
-                    prob = row['Impact_Probability_Persons']
-                    
-                    if prob > 70:
-                        color = 'darkred'
-                        radius = 12
-                    elif prob > 50:
-                        color = 'orange'
-                        radius = 10
-                    elif prob > 30:
-                        color = 'yellow'
-                        radius = 8
-                    else:
-                        color = 'green'
-                        radius = 6
-                    
-                    folium.CircleMarker(
-                        location=[row['LAT'], row['LON']],
-                        radius=radius,
-                        color=color,
-                        fill=True,
-                        fillColor=color,
-                        fillOpacity=0.6,
-                        popup=folium.Popup(
-                            f"<b>{row['Province']}</b><br>"
-                            f"Risk: {row['Risk_Category']}<br>"
-                            f"Impact: {prob:.1f}%<br>"
-                            f"People: {row['Predicted_Affected_Persons']:,.0f}<br>"
-                            f"Houses: {row['Predicted_Houses_Damaged']:,.0f}<br>"
-                            f"Cost: ${row['Predicted_Economic_Cost_USD']/1e6:.2f}M",
-                            max_width=250
-                        )
-                    ).add_to(m)
-            
+                    color = 'green'; radius = 6
+
+                folium.CircleMarker(location=[lat, lon], radius=radius, color=color, fill=True,
+                                    fillColor=color, fillOpacity=0.6,
+                                    popup=folium.Popup(
+                                        f"<b>{row.get('Province', 'Unknown')}</b><br>"
+                                        f"Risk: {row.get('Risk_Category', 'Unknown')}<br>"
+                                        f"Impact: {prob:.1f}%<br>"
+                                        f"People: {row.get('Predicted_Affected_Persons', 0):,.0f}<br>"
+                                        f"Houses: {row.get('Predicted_Houses_Damaged', 0):,.0f}<br>"
+                                        f"Cost: ${row.get('Predicted_Economic_Cost_USD', 0)/1e6:.2f}M",
+                                        max_width=250)).add_to(m)
+
+            # If no valid coords, show a warning but still render the base map
+            if valid_coords.empty:
+                st.warning("No province coordinates found - showing base map. Check Location_data/locations_latlng.csv")
+
             st_folium(m, width=1200, height=600)
-            
+
         except Exception as e:
             st.error(f"Map error: {str(e)}")
     
     with tab3:
         st.subheader("Impact Analysis Charts")
-        
+        # Ensure Risk_Category exists and has no missing/categorical values that can break plotting
+        if 'Risk_Category' not in results_df.columns:
+            results_df['Risk_Category'] = 'Unknown'
+        else:
+            # If Risk_Category is a pandas Categorical, adding a new category is required before fillna
+            if pd.api.types.is_categorical_dtype(results_df['Risk_Category']):
+                try:
+                    results_df['Risk_Category'] = results_df['Risk_Category'].cat.add_categories(['Unknown'])
+                except Exception:
+                    # Fallback: convert to string/object to allow fillna
+                    results_df['Risk_Category'] = results_df['Risk_Category'].astype(object)
+
+            # Now safely fill missing values and ensure strings
+            results_df['Risk_Category'] = results_df['Risk_Category'].fillna('Unknown').astype(str)
+
         col1, col2 = st.columns(2)
         
         with col1:
@@ -377,7 +416,9 @@ def display_ml_results(results_df, storm_name, year, track_df):
                 y='Predicted_Affected_Persons',
                 color='Risk_Category',
                 title='Top 15 Provinces: People Affected',
-                color_discrete_map={'Low': 'green', 'Moderate': 'yellow', 'High': 'orange', 'Very High': 'red'}
+                color_discrete_map={
+                    'Low': 'green', 'Moderate': 'yellow', 'High': 'orange', 'Very High': 'red', 'Unknown': 'lightgray'
+                }
             )
             fig1.update_xaxes(tickangle=45)
             st.plotly_chart(fig1, use_container_width=True)
@@ -390,7 +431,9 @@ def display_ml_results(results_df, storm_name, year, track_df):
                 y='Predicted_Houses_Damaged',
                 color='Risk_Category',
                 title='Top 15 Provinces: Houses Damaged',
-                color_discrete_map={'Low': 'green', 'Moderate': 'yellow', 'High': 'orange', 'Very High': 'red'}
+                color_discrete_map={
+                    'Low': 'green', 'Moderate': 'yellow', 'High': 'orange', 'Very High': 'red', 'Unknown': 'lightgray'
+                }
             )
             fig2.update_xaxes(tickangle=45)
             st.plotly_chart(fig2, use_container_width=True)
@@ -402,7 +445,9 @@ def display_ml_results(results_df, storm_name, year, track_df):
             y='Predicted_Economic_Cost_USD',
             color='Risk_Category',
             title='Top 15 Provinces: Economic Cost (USD)',
-            color_discrete_map={'Low': 'green', 'Moderate': 'yellow', 'High': 'orange', 'Very High': 'red'}
+            color_discrete_map={
+                'Low': 'green', 'Moderate': 'yellow', 'High': 'orange', 'Very High': 'red', 'Unknown': 'lightgray'
+            }
         )
         fig3.update_xaxes(tickangle=45)
         fig3.update_yaxes(title='Cost (USD)')
@@ -415,7 +460,9 @@ def display_ml_results(results_df, storm_name, year, track_df):
             names=risk_dist.index,
             title='Distribution of Risk Levels',
             color=risk_dist.index,
-            color_discrete_map={'Low': 'green', 'Moderate': 'yellow', 'High': 'orange', 'Very High': 'red'}
+            color_discrete_map={
+                'Low': 'green', 'Moderate': 'yellow', 'High': 'orange', 'Very High': 'red', 'Unknown': 'lightgray'
+            }
         )
         st.plotly_chart(fig4, use_container_width=True)
     
@@ -436,8 +483,8 @@ def display_ml_results(results_df, storm_name, year, track_df):
             file_name=f"predictions_{storm_name}_{year}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv",
             mime="text/csv"
         )
-        
-        st.dataframe(export_df, width='stretch')
+        # Show export dataframe inside the Export tab
+        st.dataframe(export_df, width=None)
 
 
 def main():
