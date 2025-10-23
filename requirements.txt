@@ -15,11 +15,7 @@ streamlit==1.41.1         # stable version compatible with Python 3.13
 plotly==5.17.0            # (you may check if there's newer minor)  
 folium==0.15.0            # (you may check if there's newer)  
 streamlit-folium==0.15.0  # (you may check compatibility with newer streamlit)
-
-# Geographic and Spatial
-geopandas==0.14.4         # Stable version for Streamlit Cloud
-shapely==2.0.4            # Compatible with geopandas
-pyproj==3.6.1             # Geographic projections
+branca==0.6.0             # Required by folium
 
 # HTTP Requests
 requests==2.31.0          # (you may check for newer; 2.31.0 is fine)
