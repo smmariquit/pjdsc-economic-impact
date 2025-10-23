@@ -13,9 +13,6 @@ streamlit-folium==0.15.0
 # Geographic and Spatial
 geopandas==0.14.1
 
-# Scientific Computing
-scipy==1.11.4
-
 # HTTP Requests
 requests==2.31.0
 
