@@ -1,0 +1,15 @@
+Duplicates in Structured_data/2021/Fabian/SitRep_20/affected_population_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    RIZAL: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Rizal: 2 rows
+Duplicates in Structured_data/2021/Fabian/SitRep_20/damage_to_agriculture_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    RIZAL: 3 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Rizal: 3 rows
+Duplicates in Structured_data/2021/Fabian/SitRep_20/infrastructure_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    RIZAL: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Rizal: 2 rows

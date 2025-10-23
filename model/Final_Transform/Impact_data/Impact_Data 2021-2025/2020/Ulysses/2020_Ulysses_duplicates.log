@@ -1,0 +1,13 @@
+Duplicates in Structured_data/2020/Ulysses/SitRep_029/infrastructure_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    LAGUNA: 2 rows
+    MARINDUQUE: 3 rows
+    NUEVA VIZCAYA: 3 rows
+    QUEZON: 3 rows
+    QUIRINO: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Laguna: 2 rows
+    Marinduque: 3 rows
+    Nueva Vizcaya: 3 rows
+    Quezon: 3 rows
+    Quirino: 2 rows

@@ -1,0 +1,7 @@
+Duplicates in Structured_data/2024/Gener/SitRep_011/affected_population_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    ISABELA: 2 rows
+    SIQUIJOR: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Isabela: 2 rows
+    Siquijor: 2 rows

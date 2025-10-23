@@ -1,0 +1,10 @@
+Duplicates in Structured_data/2021/Maring/SitRep_37/affected_population_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    LA UNION: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    La Union: 2 rows
+Duplicates in Structured_data/2021/Maring/SitRep_37/damage_to_houses_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    QUEZON: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Quezon: 2 rows

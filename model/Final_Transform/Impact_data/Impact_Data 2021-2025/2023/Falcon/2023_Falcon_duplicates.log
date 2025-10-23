@@ -1,0 +1,50 @@
+Duplicates in Structured_data/2023/Falcon/SitRep_036/affected_population_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    ISABELA: 2 rows
+    RIZAL: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Isabela: 2 rows
+    Rizal: 2 rows
+Duplicates in Structured_data/2023/Falcon/SitRep_036/damage_to_houses_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    ISABELA: 2 rows
+    QUIRINO: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Isabela: 2 rows
+    Quirino: 2 rows
+Duplicates in Structured_data/2023/Falcon/SitRep_036/damage_to_agriculture_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    ISABELA: 2 rows
+    QUEZON: 2 rows
+    RIZAL: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Isabela: 2 rows
+    Quezon: 2 rows
+    Rizal: 2 rows
+Duplicates in Structured_data/2023/Falcon/SitRep_036/infrastructure_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    ABRA: 2 rows
+    ALBAY: 2 rows
+    APAYAO: 2 rows
+    BATAAN: 2 rows
+    BENGUET: 2 rows
+    BULACAN: 2 rows
+    CAMARINES NORTE: 2 rows
+    KALINGA: 2 rows
+    MASBATE: 2 rows
+    OCCIDENTAL MINDORO: 2 rows
+    RIZAL: 2 rows
+    TARLAC: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Abra: 2 rows
+    Albay: 2 rows
+    Apayao: 2 rows
+    Bataan: 2 rows
+    Benguet: 2 rows
+    Bulacan: 2 rows
+    Camarines Norte: 2 rows
+    Kalinga: 2 rows
+    Masbate: 2 rows
+    Occidental Mindoro: 2 rows
+    Rizal: 2 rows
+    Tarlac: 2 rows

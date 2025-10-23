@@ -1,0 +1,686 @@
+=== 2020 / Ambo ===
+Duplicates in Structured_data/2020/Ambo/SitRep_015/affected_population_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    AURORA: 2 rows
+    NORTHERN SAMAR: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Aurora: 2 rows
+    Northern Samar: 2 rows
+
+=== 2020 / Quinta ===
+Duplicates in Structured_data/2020/Quinta/SitRep_011/infrastructure_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    CAMARINES SUR: 3 rows
+    CATANDUANES: 3 rows
+    MARINDUQUE: 4 rows
+    OCCIDENTAL MINDORO: 6 rows
+    ORIENTAL MINDORO: 7 rows
+    RIZAL: 2 rows
+    ROMBLON: 3 rows
+    SORSOGON: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Camarines Sur: 3 rows
+    Catanduanes: 3 rows
+    Marinduque: 4 rows
+    Occidental Mindoro: 6 rows
+    Oriental Mindoro: 7 rows
+    Rizal: 2 rows
+    Romblon: 3 rows
+    Sorsogon: 2 rows
+
+=== 2020 / Rolly ===
+Duplicates in Structured_data/2020/Rolly/SitRep_012/infrastructure_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    ALBAY: 6 rows
+    BATANGAS: 2 rows
+    CAMARINES NORTE: 3 rows
+    CAMARINES SUR: 4 rows
+    CATANDUANES: 5 rows
+    MARINDUQUE: 2 rows
+    MASBATE: 2 rows
+    ORIENTAL MINDORO: 3 rows
+    QUEZON: 2 rows
+    SORSOGON: 3 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Albay: 6 rows
+    Batangas: 2 rows
+    Camarines Norte: 3 rows
+    Camarines Sur: 4 rows
+    Catanduanes: 5 rows
+    Marinduque: 2 rows
+    Masbate: 2 rows
+    Oriental Mindoro: 3 rows
+    Quezon: 2 rows
+    Sorsogon: 3 rows
+
+=== 2020 / Ulysses ===
+Duplicates in Structured_data/2020/Ulysses/SitRep_029/infrastructure_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    LAGUNA: 2 rows
+    MARINDUQUE: 3 rows
+    NUEVA VIZCAYA: 3 rows
+    QUEZON: 3 rows
+    QUIRINO: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Laguna: 2 rows
+    Marinduque: 3 rows
+    Nueva Vizcaya: 3 rows
+    Quezon: 3 rows
+    Quirino: 2 rows
+
+=== 2021 / Dante ===
+Duplicates in Structured_data/2021/Dante/SitRep_013/damage_to_houses_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    BILIRAN: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Biliran: 2 rows
+
+=== 2021 / Fabian ===
+Duplicates in Structured_data/2021/Fabian/SitRep_20/affected_population_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    RIZAL: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Rizal: 2 rows
+Duplicates in Structured_data/2021/Fabian/SitRep_20/damage_to_agriculture_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    RIZAL: 3 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Rizal: 3 rows
+Duplicates in Structured_data/2021/Fabian/SitRep_20/infrastructure_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    RIZAL: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Rizal: 2 rows
+
+=== 2021 / Jolina ===
+Duplicates in Structured_data/2021/Jolina/SitRep_016/affected_population_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    BILIRAN: 2 rows
+    QUEZON: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Biliran: 2 rows
+    Quezon: 2 rows
+Duplicates in Structured_data/2021/Jolina/SitRep_016/damage_to_houses_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    BILIRAN: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Biliran: 2 rows
+Duplicates in Structured_data/2021/Jolina/SitRep_016/damage_to_agriculture_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    QUEZON: 2 rows
+    RIZAL: 2 rows
+    ROMBLON: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Quezon: 2 rows
+    Rizal: 2 rows
+    Romblon: 2 rows
+
+=== 2021 / Maring ===
+Duplicates in Structured_data/2021/Maring/SitRep_37/affected_population_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    LA UNION: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    La Union: 2 rows
+Duplicates in Structured_data/2021/Maring/SitRep_37/damage_to_houses_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    QUEZON: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Quezon: 2 rows
+
+=== 2021 / Odette ===
+Duplicates in Structured_data/2021/Odette/SitRep_046/affected_population_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    BOHOL: 2 rows
+    LEYTE: 2 rows
+    SIQUIJOR: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Bohol: 2 rows
+    Leyte: 2 rows
+    Siquijor: 2 rows
+Duplicates in Structured_data/2021/Odette/SitRep_046/damage_to_houses_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    LEYTE: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Leyte: 2 rows
+Duplicates in Structured_data/2021/Odette/SitRep_046/damage_to_agriculture_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    BOHOL: 2 rows
+    CEBU: 2 rows
+    NEGROS ORIENTAL: 2 rows
+    QUEZON: 3 rows
+    SIQUIJOR: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Bohol: 2 rows
+    Cebu: 2 rows
+    Negros Oriental: 2 rows
+    Quezon: 3 rows
+    Siquijor: 2 rows
+Duplicates in Structured_data/2021/Odette/SitRep_046/infrastructure_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    BOHOL: 7 rows
+    RIZAL: 23 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Bohol: 7 rows
+    Rizal: 23 rows
+
+=== 2022 / Florita ===
+Duplicates in Structured_data/2022/Florita/SitRep_009/affected_population_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    RIZAL: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Rizal: 2 rows
+
+=== 2022 / Karding ===
+Duplicates in Structured_data/2022/Karding/SitRep_015/affected_population_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    QUEZON: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Quezon: 2 rows
+Duplicates in Structured_data/2022/Karding/SitRep_015/damage_to_houses_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    QUEZON: 2 rows
+    RIZAL: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Quezon: 2 rows
+    Rizal: 2 rows
+
+=== 2022 / Paeng ===
+Duplicates in Structured_data/2022/Paeng/SitRep_030/affected_population_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    AURORA: 2 rows
+    BILIRAN: 2 rows
+    ISABELA: 2 rows
+    LEYTE: 2 rows
+    QUEZON: 2 rows
+    QUIRINO: 2 rows
+    RIZAL: 2 rows
+    ROMBLON: 2 rows
+    SARANGANI: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Aurora: 2 rows
+    Biliran: 2 rows
+    Isabela: 2 rows
+    Leyte: 2 rows
+    Quezon: 2 rows
+    Quirino: 2 rows
+    Rizal: 2 rows
+    Romblon: 2 rows
+    Sarangani: 2 rows
+Duplicates in Structured_data/2022/Paeng/SitRep_030/damage_to_houses_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    ISABELA: 2 rows
+    QUEZON: 3 rows
+    RIZAL: 3 rows
+    ROMBLON: 2 rows
+    SARANGANI: 2 rows
+    SULTAN KUDARAT: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Isabela: 2 rows
+    Quezon: 3 rows
+    Rizal: 3 rows
+    Romblon: 2 rows
+    Sarangani: 2 rows
+    Sultan Kudarat: 2 rows
+Duplicates in Structured_data/2022/Paeng/SitRep_030/damage_to_agriculture_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    AURORA: 2 rows
+    ISABELA: 2 rows
+    QUEZON: 2 rows
+    RIZAL: 2 rows
+    ROMBLON: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Aurora: 2 rows
+    Isabela: 2 rows
+    Quezon: 2 rows
+    Rizal: 2 rows
+    Romblon: 2 rows
+Duplicates in Structured_data/2022/Paeng/SitRep_030/infrastructure_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    AURORA: 2 rows
+    QUEZON: 2 rows
+    RIZAL: 3 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Aurora: 2 rows
+    Quezon: 2 rows
+    Rizal: 3 rows
+
+=== 2023 / Egay ===
+Duplicates in Structured_data/2023/Egay/SitRep_016/affected_population_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    ISABELA: 2 rows
+    RIZAL: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Isabela: 2 rows
+    Rizal: 2 rows
+Duplicates in Structured_data/2023/Egay/SitRep_016/damage_to_houses_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    ISABELA: 2 rows
+    QUIRINO: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Isabela: 2 rows
+    Quirino: 2 rows
+Duplicates in Structured_data/2023/Egay/SitRep_016/damage_to_agriculture_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    QUEZON: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Quezon: 2 rows
+Duplicates in Structured_data/2023/Egay/SitRep_016/infrastructure_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    ABRA: 2 rows
+    ALBAY: 2 rows
+    APAYAO: 2 rows
+    BENGUET: 2 rows
+    CAMARINES NORTE: 2 rows
+    KALINGA: 2 rows
+    MASBATE: 2 rows
+    OCCIDENTAL MINDORO: 2 rows
+    RIZAL: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Abra: 2 rows
+    Albay: 2 rows
+    Apayao: 2 rows
+    Benguet: 2 rows
+    Camarines Norte: 2 rows
+    Kalinga: 2 rows
+    Masbate: 2 rows
+    Occidental Mindoro: 2 rows
+    Rizal: 2 rows
+
+=== 2023 / Falcon ===
+Duplicates in Structured_data/2023/Falcon/SitRep_036/affected_population_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    ISABELA: 2 rows
+    RIZAL: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Isabela: 2 rows
+    Rizal: 2 rows
+Duplicates in Structured_data/2023/Falcon/SitRep_036/damage_to_houses_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    ISABELA: 2 rows
+    QUIRINO: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Isabela: 2 rows
+    Quirino: 2 rows
+Duplicates in Structured_data/2023/Falcon/SitRep_036/damage_to_agriculture_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    ISABELA: 2 rows
+    QUEZON: 2 rows
+    RIZAL: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Isabela: 2 rows
+    Quezon: 2 rows
+    Rizal: 2 rows
+Duplicates in Structured_data/2023/Falcon/SitRep_036/infrastructure_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    ABRA: 2 rows
+    ALBAY: 2 rows
+    APAYAO: 2 rows
+    BATAAN: 2 rows
+    BENGUET: 2 rows
+    BULACAN: 2 rows
+    CAMARINES NORTE: 2 rows
+    KALINGA: 2 rows
+    MASBATE: 2 rows
+    OCCIDENTAL MINDORO: 2 rows
+    RIZAL: 2 rows
+    TARLAC: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Abra: 2 rows
+    Albay: 2 rows
+    Apayao: 2 rows
+    Bataan: 2 rows
+    Benguet: 2 rows
+    Bulacan: 2 rows
+    Camarines Norte: 2 rows
+    Kalinga: 2 rows
+    Masbate: 2 rows
+    Occidental Mindoro: 2 rows
+    Rizal: 2 rows
+    Tarlac: 2 rows
+
+=== 2023 / Goring ===
+Duplicates in Structured_data/2023/Goring/SitRep_006/affected_population_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    ISABELA: 2 rows
+    RIZAL: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Isabela: 2 rows
+    Rizal: 2 rows
+
+=== 2023 / Hanna ===
+Duplicates in Structured_data/2023/Hanna/SitRep_011/affected_population_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    ISABELA: 2 rows
+    RIZAL: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Isabela: 2 rows
+    Rizal: 2 rows
+Duplicates in Structured_data/2023/Hanna/SitRep_011/damage_to_agriculture_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    AURORA: 2 rows
+    ISABELA: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Aurora: 2 rows
+    Isabela: 2 rows
+
+=== 2023 / Ineng ===
+Duplicates in Structured_data/2023/Ineng/SitRep_016/affected_population_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    ISABELA: 2 rows
+    RIZAL: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Isabela: 2 rows
+    Rizal: 2 rows
+Duplicates in Structured_data/2023/Ineng/SitRep_016/damage_to_agriculture_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    ISABELA: 2 rows
+    RIZAL: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Isabela: 2 rows
+    Rizal: 2 rows
+
+=== 2024 / Aghon ===
+Duplicates in Structured_data/2024/Aghon/SitRep_012/affected_population_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    ROMBLON: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Romblon: 2 rows
+
+=== 2024 / Butchoy ===
+Duplicates in Structured_data/2024/Butchoy/SitRep_010/affected_population_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    ROMBLON: 2 rows
+    SARANGANI: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Romblon: 2 rows
+    Sarangani: 2 rows
+Duplicates in Structured_data/2024/Butchoy/SitRep_010/damage_to_houses_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    SARANGANI: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Sarangani: 2 rows
+
+=== 2024 / Carina ===
+Duplicates in Structured_data/2024/Carina/SitRep_046/affected_population_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    AKLAN: 2 rows
+    LA UNION: 2 rows
+    RIZAL: 2 rows
+    ROMBLON: 2 rows
+    SARANGANI: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Aklan: 2 rows
+    La Union: 2 rows
+    Rizal: 2 rows
+    Romblon: 2 rows
+    Sarangani: 2 rows
+Duplicates in Structured_data/2024/Carina/SitRep_046/damage_to_houses_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    RIZAL: 2 rows
+    SARANGANI: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Rizal: 2 rows
+    Sarangani: 2 rows
+Duplicates in Structured_data/2024/Carina/SitRep_046/damage_to_agriculture_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    RIZAL: 3 rows
+    SULTAN KUDARAT: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Rizal: 3 rows
+    Sultan Kudarat: 2 rows
+
+=== 2024 / Enteng ===
+Duplicates in Structured_data/2024/Enteng/SitRep_022/affected_population_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    AURORA: 2 rows
+    QUEZON: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Aurora: 2 rows
+    Quezon: 2 rows
+Duplicates in Structured_data/2024/Enteng/SitRep_022/damage_to_houses_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    QUEZON: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Quezon: 2 rows
+Duplicates in Structured_data/2024/Enteng/SitRep_022/infrastructure_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    BILIRAN: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Biliran: 2 rows
+
+=== 2024 / Gener ===
+Duplicates in Structured_data/2024/Gener/SitRep_011/affected_population_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    ISABELA: 2 rows
+    SIQUIJOR: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Isabela: 2 rows
+    Siquijor: 2 rows
+
+=== 2024 / Helen ===
+Duplicates in Structured_data/2024/Helen/SitRep_015/affected_population_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    AURORA: 2 rows
+    ISABELA: 2 rows
+    SIQUIJOR: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Aurora: 2 rows
+    Isabela: 2 rows
+    Siquijor: 2 rows
+Duplicates in Structured_data/2024/Helen/SitRep_015/damage_to_houses_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    SIQUIJOR: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Siquijor: 2 rows
+
+=== 2024 / Igme ===
+Duplicates in Structured_data/2024/Igme/SitRep_024/affected_population_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    AURORA: 2 rows
+    ISABELA: 2 rows
+    SIQUIJOR: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Aurora: 2 rows
+    Isabela: 2 rows
+    Siquijor: 2 rows
+Duplicates in Structured_data/2024/Igme/SitRep_024/damage_to_houses_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    SIQUIJOR: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Siquijor: 2 rows
+
+=== 2024 / Kristine ===
+Duplicates in Structured_data/2024/Kristine/SitRep_016/affected_population_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    AURORA: 2 rows
+    BILIRAN: 2 rows
+    ISABELA: 2 rows
+    QUIRINO: 2 rows
+    ROMBLON: 2 rows
+    SULTAN KUDARAT: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Aurora: 2 rows
+    Biliran: 2 rows
+    Isabela: 2 rows
+    Quirino: 2 rows
+    Romblon: 2 rows
+    Sultan Kudarat: 2 rows
+Duplicates in Structured_data/2024/Kristine/SitRep_016/damage_to_houses_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    BILIRAN: 2 rows
+    ISABELA: 2 rows
+    QUEZON: 2 rows
+    RIZAL: 3 rows
+    SULTAN KUDARAT: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Biliran: 2 rows
+    Isabela: 2 rows
+    Quezon: 2 rows
+    Rizal: 3 rows
+    Sultan Kudarat: 2 rows
+Duplicates in Structured_data/2024/Kristine/SitRep_016/infrastructure_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    ZAMBALES: 5 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Zambales: 5 rows
+
+=== 2024 / Leon ===
+Duplicates in Structured_data/2024/Leon/SitRep_037/affected_population_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    AURORA: 2 rows
+    BILIRAN: 2 rows
+    ISABELA: 2 rows
+    QUEZON: 2 rows
+    QUIRINO: 2 rows
+    RIZAL: 2 rows
+    ROMBLON: 2 rows
+    SIQUIJOR: 2 rows
+    SULTAN KUDARAT: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Aurora: 2 rows
+    Biliran: 2 rows
+    Isabela: 2 rows
+    Quezon: 2 rows
+    Quirino: 2 rows
+    Rizal: 2 rows
+    Romblon: 2 rows
+    Siquijor: 2 rows
+    Sultan Kudarat: 2 rows
+Duplicates in Structured_data/2024/Leon/SitRep_037/damage_to_houses_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    BILIRAN: 2 rows
+    ISABELA: 2 rows
+    QUEZON: 2 rows
+    RIZAL: 4 rows
+    SULTAN KUDARAT: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Biliran: 2 rows
+    Isabela: 2 rows
+    Quezon: 2 rows
+    Rizal: 4 rows
+    Sultan Kudarat: 2 rows
+Duplicates in Structured_data/2024/Leon/SitRep_037/infrastructure_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    BULACAN: 5 rows
+    ROMBLON: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Bulacan: 5 rows
+    Romblon: 2 rows
+
+=== 2024 / Ofel ===
+Duplicates in Structured_data/2024/Ofel/SitRep_07/affected_population_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    AURORA: 2 rows
+    QUIRINO: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Aurora: 2 rows
+    Quirino: 2 rows
+Duplicates in Structured_data/2024/Ofel/SitRep_07/damage_to_houses_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    ABRA: 2 rows
+    AURORA: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Abra: 2 rows
+    Aurora: 2 rows
+
+=== 2024 / Pepito ===
+Duplicates in Structured_data/2024/Pepito/SitRep_034/affected_population_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    AURORA: 2 rows
+    BILIRAN: 2 rows
+    QUEZON: 2 rows
+    QUIRINO: 2 rows
+    ROMBLON: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Aurora: 2 rows
+    Biliran: 2 rows
+    Quezon: 2 rows
+    Quirino: 2 rows
+    Romblon: 2 rows
+Duplicates in Structured_data/2024/Pepito/SitRep_034/damage_to_houses_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    ABRA: 2 rows
+    AURORA: 2 rows
+    BENGUET: 2 rows
+    QUEZON: 3 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Abra: 2 rows
+    Aurora: 2 rows
+    Benguet: 2 rows
+    Quezon: 3 rows
+
+=== 2025 / Crising ===
+Duplicates in Structured_data/2025/Crising/SitRep_012/affected_population_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    ABRA: 2 rows
+    QUEZON: 2 rows
+    RIZAL: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Abra: 2 rows
+    Quezon: 2 rows
+    Rizal: 2 rows
+
+=== 2025 / Dante ===
+Duplicates in Structured_data/2025/Dante/SitRep_15/affected_population_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    ABRA: 2 rows
+    QUEZON: 2 rows
+    RIZAL: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Abra: 2 rows
+    Quezon: 2 rows
+    Rizal: 2 rows
+Duplicates in Structured_data/2025/Dante/SitRep_15/damage_to_houses_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    RIZAL: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Rizal: 2 rows
+
+=== 2025 / Emong ===
+Duplicates in Structured_data/2025/Emong/SitRep_051/affected_population_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    QUEZON: 2 rows
+    RIZAL: 2 rows
+    ROMBLON: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Quezon: 2 rows
+    Rizal: 2 rows
+    Romblon: 2 rows
+Duplicates in Structured_data/2025/Emong/SitRep_051/damage_to_houses_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    ROMBLON: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Romblon: 2 rows
+Duplicates in Structured_data/2025/Emong/SitRep_051/infrastructure_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    ROMBLON: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Romblon: 2 rows
+
+=== 2025 / Nando ===
+Duplicates in Structured_data/2025/Nando/SitRep_011/affected_population_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    RIZAL: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Rizal: 2 rows
+
+=== 2025 / Opong ===
+Duplicates in Structured_data/2025/Opong/SitRep_037/affected_population_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    QUEZON: 2 rows
+    RIZAL: 2 rows
+    ROMBLON: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Quezon: 2 rows
+    Rizal: 2 rows
+    Romblon: 2 rows
+Duplicates in Structured_data/2025/Opong/SitRep_037/damage_to_houses_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    ROMBLON: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Romblon: 2 rows
+Duplicates in Structured_data/2025/Opong/SitRep_037/infrastructure_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    ROMBLON: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Romblon: 2 rows

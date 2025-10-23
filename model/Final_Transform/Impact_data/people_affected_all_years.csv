@@ -1,0 +1,2366 @@
+Year,Storm,Province,Affected
+2010,Basyang,Aurora,187
+2010,Basyang,Bataan,68692
+2010,Basyang,Batangas,11605
+2010,Basyang,Bulacan,189
+2010,Basyang,Camarines Norte,52561
+2010,Basyang,Camarines Sur,14845
+2010,Basyang,Catanduanes,12885
+2010,Basyang,Cavite,247537
+2010,Basyang,Laguna,87977
+2010,Basyang,Metro Manila,2802
+2010,Basyang,Pampanga,221
+2010,Basyang,Quezon,19204
+2010,Basyang,Rizal,66678
+2010,Juan,Abra,8726
+2010,Juan,Apayao,35461
+2010,Juan,Aurora,2394
+2010,Juan,Bataan,20560
+2010,Juan,Benguet,30222
+2010,Juan,Bulacan,120
+2010,Juan,Cagayan,158267
+2010,Juan,Cavite,372
+2010,Juan,Ifugao,5797
+2010,Juan,Ilocos Norte,7982
+2010,Juan,Ilocos Sur,8771
+2010,Juan,Isabela,710460
+2010,Juan,Kalinga,214637
+2010,Juan,La Union,57543
+2010,Juan,Metro Manila,877
+2010,Juan,Mountain Province,25077
+2010,Juan,Nueva Ecija,27247
+2010,Juan,Nueva Vizcaya,6975
+2010,Juan,Pampanga,100664
+2010,Juan,Pangasinan,482392
+2010,Juan,Quirino,17142
+2010,Juan,Rizal,411
+2010,Juan,Tarlac,74621
+2010,Juan,Zambales,12266
+2011,Bebeng,Albay,85077
+2011,Bebeng,Bulacan,465
+2011,Bebeng,Camarines Norte,21275
+2011,Bebeng,Camarines Sur,196904
+2011,Bebeng,Cebu,39
+2011,Bebeng,Eastern Samar,14250
+2011,Bebeng,Leyte,6860
+2011,Bebeng,Masbate,6932
+2011,Bebeng,Metro Manila,535
+2011,Bebeng,Northern Samar,66366
+2011,Bebeng,Rizal,45
+2011,Bebeng,Samar,3020
+2011,Bebeng,Sorsogon,29781
+2011,Bebeng,Zambales,288
+2011,Chedeng,Albay,223110
+2011,Chedeng,Bukidnon,596
+2011,Chedeng,Camarines Norte,2710
+2011,Chedeng,Camarines Sur,146697
+2011,Chedeng,Catanduanes,13349
+2011,Chedeng,Davao Oriental,40
+2011,Chedeng,Davao del Norte,48015
+2011,Chedeng,Isabela,126
+2011,Chedeng,Metro Manila,2725
+2011,Chedeng,Sorsogon,1281
+2011,Chedeng,Zamboanga del Sur,8258
+2011,Dodong,Batangas,1086
+2011,Dodong,Cavite,40
+2011,Dodong,Metro Manila,25
+2011,Egay,Zambales,2478
+2011,Falcon,Albay,107253
+2011,Falcon,Bataan,190134
+2011,Falcon,Batangas,4512
+2011,Falcon,Bulacan,511207
+2011,Falcon,Camarines Sur,2820
+2011,Falcon,Cavite,8870
+2011,Falcon,Metro Manila,72687
+2011,Falcon,Nueva Ecija,40085
+2011,Falcon,Pampanga,592172
+2011,Falcon,Pangasinan,78580
+2011,Falcon,Rizal,91042
+2011,Falcon,Tarlac,67100
+2011,Falcon,Zambales,25914
+2011,Juaning,Albay,557448
+2011,Juaning,Aurora,6848
+2011,Juaning,Batangas,1230
+2011,Juaning,Bulacan,179
+2011,Juaning,Camarines Norte,37136
+2011,Juaning,Camarines Sur,319084
+2011,Juaning,Catanduanes,227
+2011,Juaning,Ifugao,212
+2011,Juaning,Isabela,1304
+2011,Juaning,Kalinga,3379
+2011,Juaning,La Union,5
+2011,Juaning,Lanao del Norte,3115
+2011,Juaning,Masbate,740
+2011,Juaning,Metro Manila,370
+2011,Juaning,Nueva Ecija,4603
+2011,Juaning,Nueva Vizcaya,425
+2011,Juaning,Pampanga,7358
+2011,Juaning,Pangasinan,1130
+2011,Juaning,Quezon,1338
+2011,Juaning,Quirino,20253
+2011,Juaning,Sorsogon,14782
+2011,Mina,Abra,15814
+2011,Mina,Albay,760
+2011,Mina,Apayao,20475
+2011,Mina,Benguet,3570
+2011,Mina,Cagayan,127775
+2011,Mina,Ilocos Norte,92641
+2011,Mina,Ilocos Sur,5154
+2011,Mina,Iloilo,20061
+2011,Mina,Isabela,11908
+2011,Mina,Kalinga,3089
+2011,Mina,La Union,17606
+2011,Mina,Metro Manila,275
+2011,Mina,Mountain Province,12298
+2011,Mina,Negros Occidental,9524
+2011,Mina,Nueva Vizcaya,155
+2011,Mina,Pangasinan,69939
+2011,Mina,Tarlac,210
+2011,Mina,Zambales,214
+2011,Pedring,Abra,129
+2011,Pedring,Albay,73324
+2011,Pedring,Antique,12
+2011,Pedring,Apayao,10178
+2011,Pedring,Aurora,57146
+2011,Pedring,Bataan,240659
+2011,Pedring,Batangas,4792
+2011,Pedring,Benguet,961
+2011,Pedring,Bulacan,587440
+2011,Pedring,Cagayan,72979
+2011,Pedring,Camarines Norte,95
+2011,Pedring,Camarines Sur,38535
+2011,Pedring,Catanduanes,2812
+2011,Pedring,Cavite,18048
+2011,Pedring,Ifugao,6347
+2011,Pedring,Ilocos Norte,45
+2011,Pedring,Ilocos Sur,1580
+2011,Pedring,Iloilo,309
+2011,Pedring,Isabela,191871
+2011,Pedring,Kalinga,22457
+2011,Pedring,La Union,10730
+2011,Pedring,Laguna,195
+2011,Pedring,Metro Manila,77096
+2011,Pedring,Mountain Province,1809
+2011,Pedring,Nueva Ecija,513320
+2011,Pedring,Nueva Vizcaya,36541
+2011,Pedring,Occidental Mindoro,10178
+2011,Pedring,Oriental Mindoro,236
+2011,Pedring,Pampanga,492763
+2011,Pedring,Pangasinan,99931
+2011,Pedring,Quezon,90
+2011,Pedring,Quirino,115747
+2011,Pedring,Rizal,109541
+2011,Pedring,Romblon,185
+2011,Pedring,Tarlac,111868
+2011,Pedring,Zambales,120806
+2011,Quiel,Apayao,102
+2011,Quiel,Aurora,14673
+2011,Quiel,Benguet,139
+2011,Quiel,Bulacan,68402
+2011,Quiel,Cagayan,34498
+2011,Quiel,Ifugao,211
+2011,Quiel,Ilocos Sur,20
+2011,Quiel,Isabela,260904
+2011,Quiel,Kalinga,2954
+2011,Quiel,La Union,8671
+2011,Quiel,Mountain Province,29
+2011,Quiel,Nueva Ecija,100633
+2011,Quiel,Nueva Vizcaya,52742
+2011,Quiel,Pampanga,89651
+2011,Quiel,Pangasinan,231932
+2011,Quiel,Quirino,55163
+2011,Quiel,Tarlac,173739
+2011,Quiel,Zambales,19300
+2011,Ramon,Capiz,38621
+2011,Ramon,Cebu,11390
+2011,Ramon,Dinagat Islands,184
+2011,Ramon,Iloilo,1546
+2011,Ramon,Misamis Oriental,1229
+2011,Ramon,Negros Occidental,15
+2011,Ramon,Occidental Mindoro,657
+2011,Ramon,Oriental Mindoro,1740
+2011,Ramon,Romblon,5305
+2011,Ramon,South Cotabato,232
+2011,Ramon,Southern Leyte,1832
+2011,Sendong,Agusan del Sur,320
+2011,Sendong,Bohol,10000
+2011,Sendong,Bukidnon,14531
+2011,Sendong,Davao de Oro,2510
+2011,Sendong,Davao del Norte,2570
+2011,Sendong,Lanao del Norte,483165
+2011,Sendong,Lanao del Sur,139879
+2011,Sendong,Misamis Oriental,423920
+2011,Sendong,Negros Oriental,72556
+2011,Sendong,Surigao del Sur,14328
+2011,Sendong,Zamboanga del Norte,4947
+2012,Ferdie,Bulacan,109
+2012,Ferdie,Cavite,175
+2012,Ferdie,Laguna,1
+2012,Ferdie,Metro Manila,784
+2012,Ferdie,Occidental Mindoro,3664
+2012,Ferdie,Rizal,385
+2012,Igme,Ilocos Sur,79
+2012,Igme,La Union,5527
+2012,Lawin,Palawan,273
+2012,Lawin,Zamboanga del Sur,7648
+2012,Marce,Occidental Mindoro,290
+2012,Marce,Zambales,32
+2012,Ofel,Batangas,2478
+2012,Ofel,Leyte,2274
+2012,Ofel,Marinduque,2236
+2012,Ofel,Masbate,4018
+2012,Ofel,Misamis Occidental,3000
+2012,Ofel,Occidental Mindoro,70
+2012,Ofel,Oriental Mindoro,38972
+2012,Ofel,Quezon,4294
+2012,Ofel,Romblon,5690
+2012,Ofel,Samar,6070
+2012,Ofel,Sarangani,605
+2012,Ofel,Southern Leyte,1887
+2012,Ofel,Zamboanga Sibugay,24555
+2012,Ofel,Zamboanga del Sur,20247
+2012,Pablo,Agusan del Norte,7022
+2012,Pablo,Agusan del Sur,239063
+2012,Pablo,Bohol,7869
+2012,Pablo,Bukidnon,230947
+2012,Pablo,Camiguin,1552
+2012,Pablo,Cebu,21459
+2012,Pablo,Cotabato,40955
+2012,Pablo,Davao Oriental,530098
+2012,Pablo,Davao de Oro,655373
+2012,Pablo,Davao del Norte,848798
+2012,Pablo,Davao del Sur,2812181
+2012,Pablo,Dinagat Islands,2814
+2012,Pablo,Guimaras,805
+2012,Pablo,Iloilo,581
+2012,Pablo,Lanao del Norte,145863
+2012,Pablo,Lanao del Sur,146285
+2012,Pablo,Leyte,1214
+2012,Pablo,Maguindanao,104337
+2012,Pablo,Misamis Occidental,21757
+2012,Pablo,Misamis Oriental,123075
+2012,Pablo,Negros Occidental,7076
+2012,Pablo,Negros Oriental,39114
+2012,Pablo,Northern Samar,5
+2012,Pablo,Palawan,6060
+2012,Pablo,Siquijor,22000
+2012,Pablo,South Cotabato,3143
+2012,Pablo,Southern Leyte,4665
+2012,Pablo,Sultan Kudarat,18720
+2012,Pablo,Surigao del Norte,42695
+2012,Pablo,Surigao del Sur,154900
+2012,Pablo,Zamboanga Sibugay,756
+2012,Pablo,Zamboanga del Norte,602
+2012,Pablo,Zamboanga del Sur,2214
+2012,Quinta,Aklan,55211
+2012,Quinta,Albay,14991
+2012,Quinta,Camarines Norte,330
+2012,Quinta,Capiz,67502
+2012,Quinta,Cebu,415
+2012,Quinta,Iloilo,234106
+2012,Quinta,Leyte,2424
+2012,Quinta,Negros Occidental,2224
+2012,Quinta,Palawan,90
+2013,Auring,Davao de Oro,556
+2013,Auring,Davao del Norte,7944
+2013,Auring,Oriental Mindoro,15
+2013,Auring,Palawan,946
+2013,Auring,Zamboanga del Norte,1136
+2013,Bising,Agusan del Norte,11470
+2013,Bising,Agusan del Sur,1014
+2013,Bising,Davao de Oro,300
+2013,Bising,Sarangani,90
+2013,Bising,South Cotabato,2805
+2013,Bising,Surigao del Sur,1122
+2013,Crising,Agusan del Norte,20300
+2013,Crising,Bohol,3745
+2013,Crising,Bukidnon,8075
+2013,Crising,Cotabato,68343
+2013,Crising,Davao Oriental,34688
+2013,Crising,Davao de Oro,15050
+2013,Crising,Davao del Norte,163042
+2013,Crising,Davao del Sur,7830
+2013,Crising,Lanao del Norte,369
+2013,Crising,Leyte,44
+2013,Crising,Maguindanao,27116
+2013,Crising,Oriental Mindoro,250
+2013,Crising,Zamboanga del Norte,11725
+2013,Gorio,Albay,1685
+2013,Gorio,Camarines Sur,343
+2013,Gorio,Iloilo,15
+2013,Gorio,Leyte,4081
+2013,Gorio,Oriental Mindoro,54
+2013,Gorio,Quezon,230
+2013,Gorio,Sorsogon,10
+2013,Labuyo,Albay,814
+2013,Labuyo,Aurora,61235
+2013,Labuyo,Benguet,885
+2013,Labuyo,Bulacan,29346
+2013,Labuyo,Ifugao,1053
+2013,Labuyo,Isabela,4061
+2013,Labuyo,Kalinga,31
+2013,Labuyo,La Union,2854
+2013,Labuyo,Mountain Province,54
+2013,Labuyo,Nueva Ecija,39584
+2013,Labuyo,Nueva Vizcaya,43584
+2013,Labuyo,Pampanga,5772
+2013,Labuyo,Pangasinan,18017
+2013,Labuyo,Quirino,114441
+2013,Labuyo,Sorsogon,42
+2013,Labuyo,Zambales,85720
+2013,Leon,Benguet,10490
+2013,Leon,Ilocos Norte,4566
+2013,Leon,Samar,2685
+2013,Odette,Antique,139
+2013,Odette,Apayao,49
+2013,Odette,Batanes,14651
+2013,Odette,Benguet,72
+2013,Odette,Cagayan,30575
+2013,Odette,Catanduanes,411
+2013,Odette,Guimaras,5
+2013,Odette,Ifugao,147
+2013,Odette,Ilocos Norte,24155
+2013,Odette,Iloilo,23
+2013,Odette,Kalinga,358
+2013,Odette,Mountain Province,21
+2013,Odette,Negros Occidental,76
+2013,Odette,Occidental Mindoro,8104
+2013,Odette,Tarlac,341
+2013,Vinta,Abra,10
+2013,Vinta,Apayao,26737
+2013,Vinta,Cagayan,231634
+2013,Vinta,Ilocos Norte,7311
+2013,Vinta,Isabela,77
+2013,Yolanda,Agusan del Norte,3439
+2013,Yolanda,Agusan del Sur,210
+2013,Yolanda,Aklan,535725
+2013,Yolanda,Albay,155972
+2013,Yolanda,Antique,405397
+2013,Yolanda,Batangas,5298
+2013,Yolanda,Biliran,187641
+2013,Yolanda,Bohol,1046035
+2013,Yolanda,Bukidnon,157
+2013,Yolanda,Camarines Norte,23083
+2013,Yolanda,Camarines Sur,166327
+2013,Yolanda,Camiguin,2750
+2013,Yolanda,Capiz,719685
+2013,Yolanda,Catanduanes,68609
+2013,Yolanda,Cavite,732
+2013,Yolanda,Cebu,3778881
+2013,Yolanda,Davao Oriental,2605
+2013,Yolanda,Davao de Oro,2380
+2013,Yolanda,Davao del Sur,15
+2013,Yolanda,Dinagat Islands,24405
+2013,Yolanda,Eastern Samar,497497
+2013,Yolanda,Guimaras,11593
+2013,Yolanda,Iloilo,1337714
+2013,Yolanda,Laguna,12058
+2013,Yolanda,Lanao del Norte,898
+2013,Yolanda,Leyte,2364023
+2013,Yolanda,Marinduque,8499
+2013,Yolanda,Masbate,104344
+2013,Yolanda,Misamis Oriental,15787
+2013,Yolanda,Negros Occidental,862914
+2013,Yolanda,Negros Oriental,1063015
+2013,Yolanda,Northern Samar,683254
+2013,Yolanda,Occidental Mindoro,45609
+2013,Yolanda,Oriental Mindoro,113041
+2013,Yolanda,Palawan,179708
+2013,Yolanda,Quezon,8824
+2013,Yolanda,Rizal,164
+2013,Yolanda,Romblon,119263
+2013,Yolanda,Samar,821989
+2013,Yolanda,Siquijor,22024
+2013,Yolanda,Sorsogon,173685
+2013,Yolanda,Southern Leyte,461030
+2013,Yolanda,Surigao del Norte,25645
+2013,Yolanda,Surigao del Sur,16257
+2014,Agaton,Agusan del Norte,160152
+2014,Agaton,Agusan del Sur,176705
+2014,Agaton,Bukidnon,3934
+2014,Agaton,Camiguin,34500
+2014,Agaton,Cotabato,13225
+2014,Agaton,Davao Oriental,236030
+2014,Agaton,Davao de Oro,115900
+2014,Agaton,Davao del Norte,98361
+2014,Agaton,Davao del Sur,163
+2014,Agaton,Dinagat Islands,12000
+2014,Agaton,Lanao del Norte,30231
+2014,Agaton,Maguindanao,13435
+2014,Agaton,Misamis Occidental,694
+2014,Agaton,Misamis Oriental,36631
+2014,Agaton,Surigao del Norte,51842
+2014,Agaton,Surigao del Sur,108595
+2014,Basyang,Agusan del Norte,31
+2014,Basyang,Antique,255
+2014,Basyang,Biliran,390
+2014,Basyang,Cebu,7096
+2014,Basyang,Dinagat Islands,11991
+2014,Basyang,Leyte,9580
+2014,Basyang,Negros Occidental,3812
+2014,Basyang,Southern Leyte,5399
+2014,Basyang,Surigao del Norte,9186
+2014,Caloy,Agusan del Sur,1625
+2014,Caloy,Davao de Oro,170
+2014,Caloy,Davao del Norte,16765
+2014,Caloy,Dinagat Islands,56
+2014,Caloy,Southern Leyte,713
+2014,Glenda,Albay,505327
+2014,Glenda,Aurora,189
+2014,Glenda,Bataan,182641
+2014,Glenda,Batangas,251942
+2014,Glenda,Bulacan,18562
+2014,Glenda,Camarines Norte,116504
+2014,Glenda,Camarines Sur,920408
+2014,Glenda,Catanduanes,20251
+2014,Glenda,Cavite,271939
+2014,Glenda,Eastern Samar,36240
+2014,Glenda,Ilocos Norte,14
+2014,Glenda,Laguna,322405
+2014,Glenda,Leyte,4472
+2014,Glenda,Marinduque,4733
+2014,Glenda,Masbate,59897
+2014,Glenda,Metro Manila,26508
+2014,Glenda,Northern Samar,350293
+2014,Glenda,Occidental Mindoro,26855
+2014,Glenda,Oriental Mindoro,1975
+2014,Glenda,Pampanga,4499
+2014,Glenda,Pangasinan,293
+2014,Glenda,Quezon,646830
+2014,Glenda,Rizal,106517
+2014,Glenda,Romblon,453
+2014,Glenda,Samar,155681
+2014,Glenda,Sorsogon,602778
+2014,Glenda,Tarlac,624
+2014,Glenda,Zambales,14886
+2014,Henry,Negros Occidental,785
+2014,Henry,Occidental Mindoro,46
+2014,Luis,Apayao,1955
+2014,Luis,Aurora,120
+2014,Luis,Bataan,37
+2014,Luis,Benguet,285
+2014,Luis,Bulacan,31382
+2014,Luis,Cagayan,34343
+2014,Luis,Ilocos Norte,147
+2014,Luis,Isabela,5112
+2014,Luis,Kalinga,11406
+2014,Luis,La Union,11826
+2014,Luis,Metro Manila,9799
+2014,Luis,Mountain Province,482
+2014,Luis,Negros Occidental,448
+2014,Luis,Nueva Ecija,31051
+2014,Luis,Nueva Vizcaya,181
+2014,Luis,Pampanga,27347
+2014,Luis,Pangasinan,294971
+2014,Luis,Rizal,6709
+2014,Luis,Tarlac,38925
+2014,Luis,Zambales,1841
+2014,Mario,Abra,57877
+2014,Mario,Apayao,165
+2014,Mario,Bataan,197
+2014,Mario,Batangas,440
+2014,Mario,Benguet,681
+2014,Mario,Bulacan,231922
+2014,Mario,Cagayan,117
+2014,Mario,Camarines Norte,2050
+2014,Mario,Camarines Sur,428122
+2014,Mario,Cavite,2563
+2014,Mario,Cebu,416885
+2014,Mario,Ifugao,599
+2014,Mario,Ilocos Norte,48471
+2014,Mario,Ilocos Sur,218004
+2014,Mario,Isabela,435
+2014,Mario,Kalinga,153
+2014,Mario,La Union,72229
+2014,Mario,Laguna,30331
+2014,Mario,Metro Manila,94957
+2014,Mario,Mountain Province,85
+2014,Mario,Nueva Ecija,27707
+2014,Mario,Nueva Vizcaya,1440
+2014,Mario,Occidental Mindoro,7899
+2014,Mario,Pampanga,54315
+2014,Mario,Pangasinan,230270
+2014,Mario,Rizal,81667
+2014,Mario,Tarlac,41673
+2014,Mario,Zambales,1999
+2014,Queenie,Bohol,5064
+2014,Queenie,Cebu,1038
+2014,Queenie,Davao del Sur,3
+2014,Queenie,Dinagat Islands,869
+2014,Queenie,Misamis Oriental,869
+2014,Queenie,Negros Occidental,1725
+2014,Queenie,Negros Oriental,1086
+2014,Queenie,Palawan,34640
+2014,Queenie,Southern Leyte,36
+2014,Queenie,Surigao del Norte,1300
+2014,Queenie,Surigao del Sur,219
+2014,Ruby,Agusan del Norte,9131
+2014,Ruby,Agusan del Sur,1610
+2014,Ruby,Aklan,75241
+2014,Ruby,Albay,401878
+2014,Ruby,Antique,74347
+2014,Ruby,Bataan,1899
+2014,Ruby,Batangas,10849
+2014,Ruby,Biliran,46831
+2014,Ruby,Bohol,26330
+2014,Ruby,Camarines Norte,36861
+2014,Ruby,Camarines Sur,219253
+2014,Ruby,Capiz,89305
+2014,Ruby,Catanduanes,59752
+2014,Ruby,Cavite,21679
+2014,Ruby,Cebu,125315
+2014,Ruby,Dinagat Islands,24069
+2014,Ruby,Eastern Samar,605040
+2014,Ruby,Guimaras,4638
+2014,Ruby,Iloilo,132525
+2014,Ruby,Laguna,8910
+2014,Ruby,Leyte,420909
+2014,Ruby,Marinduque,12950
+2014,Ruby,Masbate,267980
+2014,Ruby,Metro Manila,25040
+2014,Ruby,Negros Occidental,84888
+2014,Ruby,Negros Oriental,22635
+2014,Ruby,Northern Samar,473759
+2014,Ruby,Occidental Mindoro,40044
+2014,Ruby,Oriental Mindoro,74590
+2014,Ruby,Palawan,46717
+2014,Ruby,Quezon,89890
+2014,Ruby,Rizal,688
+2014,Ruby,Romblon,73595
+2014,Ruby,Samar,371806
+2014,Ruby,Siquijor,223
+2014,Ruby,Sorsogon,198576
+2014,Ruby,Southern Leyte,103192
+2014,Ruby,Surigao del Norte,59595
+2014,Ruby,Surigao del Sur,21137
+2014,Seniang,Agusan del Norte,48095
+2014,Seniang,Agusan del Sur,20961
+2014,Seniang,Antique,98
+2014,Seniang,Bohol,21694
+2014,Seniang,Bukidnon,7347
+2014,Seniang,Camiguin,344
+2014,Seniang,Capiz,1650
+2014,Seniang,Cebu,44247
+2014,Seniang,Davao Oriental,80
+2014,Seniang,Davao de Oro,10180
+2014,Seniang,Davao del Norte,1064
+2014,Seniang,Dinagat Islands,3149
+2014,Seniang,Lanao del Norte,451
+2014,Seniang,Leyte,231734
+2014,Seniang,Misamis Oriental,61187
+2014,Seniang,Negros Occidental,48719
+2014,Seniang,Palawan,2138
+2014,Seniang,Samar,30207
+2014,Seniang,Siquijor,54
+2014,Seniang,Southern Leyte,128
+2014,Seniang,Surigao del Norte,4300
+2014,Seniang,Surigao del Sur,64390
+2014,Seniang,Zamboanga del Sur,410
+2015,Amang,Albay,38898
+2015,Amang,Camarines Norte,3250
+2015,Amang,Camarines Sur,12986
+2015,Amang,Catanduanes,309
+2015,Amang,Cebu,176
+2015,Amang,Eastern Samar,2955
+2015,Amang,Northern Samar,42979
+2015,Amang,Samar,4039
+2015,Amang,Sorsogon,1216
+2015,Chedeng,Aurora,17
+2015,Chedeng,Isabela,27
+2015,Dodong,Cagayan,2921
+2015,Dodong,Isabela,1602
+2015,Egay,Apayao,267
+2015,Egay,Benguet,42
+2015,Egay,Ilocos Norte,1995
+2015,Egay,Ilocos Sur,542
+2015,Egay,Kalinga,315
+2015,Egay,La Union,51772
+2015,Egay,Palawan,634
+2015,Ineng,Abra,90951
+2015,Ineng,Apayao,10241
+2015,Ineng,Batanes,1387
+2015,Ineng,Benguet,26310
+2015,Ineng,Bulacan,76
+2015,Ineng,Cagayan,94226
+2015,Ineng,Ilocos Norte,81664
+2015,Ineng,Ilocos Sur,70876
+2015,Ineng,Kalinga,16676
+2015,Ineng,La Union,2976
+2015,Ineng,Laguna,461
+2015,Ineng,Mountain Province,1163
+2015,Ineng,Nueva Ecija,37
+2015,Ineng,Nueva Vizcaya,95
+2015,Ineng,Oriental Mindoro,15
+2015,Kabayan,Aurora,5413
+2015,Kabayan,Bulacan,2380
+2015,Kabayan,La Union,15
+2015,Kabayan,Nueva Ecija,51746
+2015,Kabayan,Zambales,14
+2015,Lando,Abra,7666
+2015,Lando,Apayao,1046
+2015,Lando,Aurora,109669
+2015,Lando,Bataan,15949
+2015,Lando,Batanes,3034
+2015,Lando,Benguet,8018
+2015,Lando,Bulacan,299297
+2015,Lando,Cagayan,151879
+2015,Lando,Camarines Norte,218
+2015,Lando,Catanduanes,9
+2015,Lando,Cavite,222
+2015,Lando,Ifugao,2602
+2015,Lando,Ilocos Norte,5182
+2015,Lando,Ilocos Sur,28905
+2015,Lando,Isabela,151798
+2015,Lando,Kalinga,8116
+2015,Lando,La Union,99874
+2015,Lando,Laguna,47
+2015,Lando,Metro Manila,6696
+2015,Lando,Mountain Province,751
+2015,Lando,Nueva Ecija,547564
+2015,Lando,Nueva Vizcaya,21049
+2015,Lando,Pampanga,203629
+2015,Lando,Pangasinan,992365
+2015,Lando,Quezon,38117
+2015,Lando,Quirino,12686
+2015,Lando,Rizal,3474
+2015,Lando,Tarlac,211252
+2015,Lando,Zambales,144971
+2015,Nona,Albay,169973
+2015,Nona,Aurora,13226
+2015,Nona,Bataan,19
+2015,Nona,Batangas,2075
+2015,Nona,Biliran,1615
+2015,Nona,Bulacan,90591
+2015,Nona,Camarines Norte,1936
+2015,Nona,Camarines Sur,57920
+2015,Nona,Catanduanes,6508
+2015,Nona,Cavite,398
+2015,Nona,Eastern Samar,7682
+2015,Nona,Laguna,192
+2015,Nona,Marinduque,6085
+2015,Nona,Masbate,116870
+2015,Nona,Northern Samar,45228
+2015,Nona,Nueva Ecija,78321
+2015,Nona,Occidental Mindoro,8010
+2015,Nona,Oriental Mindoro,434166
+2015,Nona,Palawan,5422
+2015,Nona,Pampanga,111263
+2015,Nona,Quezon,20330
+2015,Nona,Romblon,6031
+2015,Nona,Samar,12183
+2015,Nona,Sorsogon,159406
+2015,Nona,Tarlac,4069
+2015,Onyok,Agusan del Norte,148
+2015,Onyok,Agusan del Sur,3420
+2015,Onyok,Dinagat Islands,688
+2015,Onyok,Surigao del Norte,641
+2015,Onyok,Surigao del Sur,6414
+2016,Carina,Cagayan,356
+2016,Carina,Ilocos Norte,29
+2016,Carina,Ilocos Sur,8
+2016,Carina,Iloilo,103
+2016,Carina,Isabela,7933
+2016,Ferdie,Batanes,16518
+2016,Ferdie,Cagayan,25
+2016,Ferdie,Ilocos Norte,105
+2016,Helen,Bulacan,1559
+2016,Karen,Albay,6828
+2016,Karen,Aurora,77784
+2016,Karen,Benguet,152
+2016,Karen,Bulacan,735
+2016,Karen,Cagayan,946
+2016,Karen,Camarines Norte,7063
+2016,Karen,Camarines Sur,45343
+2016,Karen,Catanduanes,5640
+2016,Karen,Ifugao,39
+2016,Karen,Ilocos Norte,19079
+2016,Karen,Ilocos Sur,275
+2016,Karen,Isabela,10751
+2016,Karen,Kalinga,128
+2016,Karen,La Union,517
+2016,Karen,Mountain Province,7
+2016,Karen,Nueva Ecija,86207
+2016,Karen,Nueva Vizcaya,17766
+2016,Karen,Pampanga,1100
+2016,Karen,Pangasinan,18187
+2016,Karen,Quezon,1081
+2016,Karen,Quirino,126
+2016,Karen,Rizal,237
+2016,Karen,Sorsogon,1614
+2016,Karen,Tarlac,15467
+2016,Karen,Zambales,2293
+2016,Lawin,Abra,95713
+2016,Lawin,Apayao,9101
+2016,Lawin,Aurora,44311
+2016,Lawin,Bataan,4640
+2016,Lawin,Batangas,971
+2016,Lawin,Benguet,3367
+2016,Lawin,Bulacan,2441
+2016,Lawin,Cagayan,355551
+2016,Lawin,Camarines Norte,91
+2016,Lawin,Ifugao,3642
+2016,Lawin,Ilocos Norte,91224
+2016,Lawin,Ilocos Sur,94288
+2016,Lawin,Isabela,96279
+2016,Lawin,Kalinga,175376
+2016,Lawin,La Union,23139
+2016,Lawin,Mountain Province,32875
+2016,Lawin,Nueva Ecija,22865
+2016,Lawin,Nueva Vizcaya,7674
+2016,Lawin,Pampanga,40306
+2016,Lawin,Pangasinan,72065
+2016,Lawin,Quezon,724
+2016,Lawin,Quirino,3103
+2016,Lawin,Rizal,53
+2016,Lawin,Sorsogon,8761
+2016,Lawin,Tarlac,24084
+2016,Lawin,Zambales,1835
+2016,Marce,Aklan,1113
+2016,Marce,Antique,1741
+2016,Marce,Capiz,3115
+2016,Marce,Dinagat Islands,862
+2016,Marce,Iloilo,5493
+2016,Marce,Negros Occidental,32
+2016,Marce,Oriental Mindoro,1361
+2016,Marce,Romblon,91
+2016,Marce,Surigao del Norte,162
+2016,Marce,Surigao del Sur,339
+2016,Nina,Albay,667170
+2016,Nina,Batangas,7888
+2016,Nina,Camarines Norte,10364
+2016,Nina,Camarines Sur,920606
+2016,Nina,Catanduanes,159945
+2016,Nina,Cavite,896
+2016,Nina,Laguna,1472
+2016,Nina,Marinduque,180155
+2016,Nina,Masbate,5801
+2016,Nina,Northern Samar,17650
+2016,Nina,Occidental Mindoro,3170
+2016,Nina,Oriental Mindoro,65561
+2016,Nina,Quezon,168703
+2016,Nina,Rizal,43
+2016,Nina,Sorsogon,85597
+2017,Auring,Agusan del Norte,14324
+2017,Auring,Agusan del Sur,345
+2017,Auring,Cebu,68
+2017,Auring,Dinagat Islands,7344
+2017,Auring,Surigao del Norte,11393
+2017,Auring,Surigao del Sur,9597
+2017,Crising,Cebu,8489
+2017,Crising,Leyte,427
+2017,Jolina,Abra,133
+2017,Jolina,Aurora,1140
+2017,Jolina,Benguet,36
+2017,Jolina,Cagayan,64
+2017,Jolina,Ifugao,5
+2017,Jolina,Isabela,575
+2017,Jolina,La Union,137
+2017,Jolina,Mountain Province,24
+2017,Jolina,Nueva Vizcaya,1108
+2017,Jolina,Quirino,30
+2017,Jolina,Zambales,145
+2017,Maring,Batangas,1471
+2017,Maring,Bulacan,86
+2017,Maring,Cavite,1167
+2017,Maring,Laguna,8278
+2017,Maring,Metro Manila,1451
+2017,Maring,Quezon,25524
+2017,Maring,Rizal,2899
+2017,Maring,Zambales,90
+2017,Odette,Apayao,4720
+2017,Odette,Benguet,9
+2017,Odette,Cagayan,4500
+2017,Odette,Zambales,30
+2017,Ramil,Camarines Norte,231
+2017,Ramil,Camarines Sur,59
+2017,Ramil,Oriental Mindoro,15
+2017,Salome,Aurora,4239
+2017,Salome,Camarines Sur,233
+2017,Salome,Laguna,164
+2017,Salome,Quezon,1037
+2017,Tino,Davao del Sur,267
+2017,Tino,Palawan,230
+2017,Urduja,Aklan,1308
+2017,Urduja,Albay,7634
+2017,Urduja,Biliran,118599
+2017,Urduja,Camarines Norte,568
+2017,Urduja,Camarines Sur,1262
+2017,Urduja,Capiz,1380
+2017,Urduja,Cebu,24294
+2017,Urduja,Dinagat Islands,1668
+2017,Urduja,Eastern Samar,385156
+2017,Urduja,Iloilo,828
+2017,Urduja,Leyte,525254
+2017,Urduja,Marinduque,93
+2017,Urduja,Masbate,19257
+2017,Urduja,Northern Samar,249617
+2017,Urduja,Oriental Mindoro,1135
+2017,Urduja,Palawan,70
+2017,Urduja,Romblon,548
+2017,Urduja,Samar,508985
+2017,Urduja,Sorsogon,3958
+2017,Urduja,Southern Leyte,1281
+2017,Urduja,Surigao del Norte,5
+2017,Vinta,Agusan del Norte,2351
+2017,Vinta,Agusan del Sur,5674
+2017,Vinta,Bohol,68
+2017,Vinta,Bukidnon,19912
+2017,Vinta,Cotabato,116061
+2017,Vinta,Davao Occidental,460
+2017,Vinta,Davao Oriental,13768
+2017,Vinta,Davao de Oro,17034
+2017,Vinta,Davao del Norte,124613
+2017,Vinta,Davao del Sur,40040
+2017,Vinta,Dinagat Islands,1305
+2017,Vinta,Lanao del Norte,66883
+2017,Vinta,Lanao del Sur,92869
+2017,Vinta,Maguindanao,118267
+2017,Vinta,Misamis Occidental,10356
+2017,Vinta,Misamis Oriental,33635
+2017,Vinta,Negros Oriental,297
+2017,Vinta,Oriental Mindoro,719
+2017,Vinta,Palawan,24688
+2017,Vinta,Surigao del Norte,7844
+2017,Vinta,Surigao del Sur,19202
+2017,Vinta,Zamboanga Sibugay,18202
+2017,Vinta,Zamboanga del Norte,117199
+2017,Vinta,Zamboanga del Sur,20310
+2018,Agaton,Agusan del Norte,245
+2018,Agaton,Aklan,2642
+2018,Agaton,Biliran,421
+2018,Agaton,Bohol,1620
+2018,Agaton,Camiguin,210
+2018,Agaton,Capiz,43192
+2018,Agaton,Cebu,1951
+2018,Agaton,Dinagat Islands,79
+2018,Agaton,Eastern Samar,4489
+2018,Agaton,Iloilo,1848
+2018,Agaton,Lanao del Norte,6987
+2018,Agaton,Leyte,132
+2018,Agaton,Misamis Oriental,882
+2018,Agaton,Northern Samar,8783
+2018,Agaton,Palawan,9078
+2018,Agaton,Surigao del Norte,1068
+2018,Agaton,Surigao del Sur,281
+2018,Basyang,Agusan del Norte,2118
+2018,Basyang,Biliran,160
+2018,Basyang,Bohol,15325
+2018,Basyang,Capiz,13
+2018,Basyang,Cebu,2763
+2018,Basyang,Dinagat Islands,957
+2018,Basyang,Eastern Samar,81776
+2018,Basyang,Iloilo,39
+2018,Basyang,Leyte,33849
+2018,Basyang,Negros Occidental,38
+2018,Basyang,Negros Oriental,1645
+2018,Basyang,Palawan,1547
+2018,Basyang,Samar,25963
+2018,Basyang,Siquijor,78
+2018,Basyang,Southern Leyte,146
+2018,Basyang,Surigao del Norte,62543
+2018,Basyang,Surigao del Sur,25899
+2018,Ompong,Abra,186874
+2018,Ompong,Apayao,113929
+2018,Ompong,Aurora,41825
+2018,Ompong,Bataan,2110
+2018,Ompong,Batanes,52
+2018,Ompong,Batangas,1623
+2018,Ompong,Benguet,38870
+2018,Ompong,Bulacan,164975
+2018,Ompong,Cagayan,501113
+2018,Ompong,Cavite,7058
+2018,Ompong,Ifugao,5990
+2018,Ompong,Ilocos Norte,181365
+2018,Ompong,Ilocos Sur,461253
+2018,Ompong,Isabela,108842
+2018,Ompong,Kalinga,49921
+2018,Ompong,La Union,244466
+2018,Ompong,Laguna,2621
+2018,Ompong,Marinduque,1434
+2018,Ompong,Metro Manila,29885
+2018,Ompong,Mountain Province,3977
+2018,Ompong,Nueva Ecija,131658
+2018,Ompong,Nueva Vizcaya,10608
+2018,Ompong,Occidental Mindoro,4869
+2018,Ompong,Oriental Mindoro,1036
+2018,Ompong,Palawan,76
+2018,Ompong,Pampanga,189528
+2018,Ompong,Pangasinan,417118
+2018,Ompong,Quezon,5418
+2018,Ompong,Quirino,8486
+2018,Ompong,Rizal,14956
+2018,Ompong,Tarlac,85896
+2018,Ompong,Zambales,11230
+2018,Rosita,Abra,15121
+2018,Rosita,Apayao,1887
+2018,Rosita,Aurora,21493
+2018,Rosita,Benguet,5316
+2018,Rosita,Cagayan,14495
+2018,Rosita,Ifugao,10359
+2018,Rosita,Ilocos Norte,132
+2018,Rosita,Ilocos Sur,582
+2018,Rosita,Isabela,140523
+2018,Rosita,Kalinga,7511
+2018,Rosita,La Union,4991
+2018,Rosita,Mountain Province,34523
+2018,Rosita,Northern Samar,1338
+2018,Rosita,Nueva Ecija,280
+2018,Rosita,Nueva Vizcaya,5559
+2018,Rosita,Pangasinan,31524
+2018,Rosita,Quirino,8403
+2018,Rosita,Tarlac,25
+2018,Rosita,Zambales,10
+2018,Samuel,Biliran,1199
+2018,Samuel,Eastern Samar,67898
+2018,Samuel,Leyte,312
+2018,Samuel,Masbate,281
+2018,Samuel,Northern Samar,53704
+2018,Samuel,Samar,584
+2018,Samuel,Southern Leyte,235
+2018,Usman,Albay,19283
+2018,Usman,Batangas,47
+2018,Usman,Camarines Norte,43703
+2018,Usman,Camarines Sur,358793
+2018,Usman,Catanduanes,1873
+2018,Usman,Eastern Samar,1276
+2018,Usman,Laguna,322
+2018,Usman,Marinduque,298
+2018,Usman,Masbate,396
+2018,Usman,Northern Samar,294642
+2018,Usman,Oriental Mindoro,147857
+2018,Usman,Palawan,528
+2018,Usman,Quezon,1319
+2018,Usman,Samar,70700
+2018,Usman,Sorsogon,74941
+2019,Amang,Agusan del Norte,1442
+2019,Amang,Agusan del Sur,10344
+2019,Amang,Dinagat Islands,477
+2019,Amang,Surigao del Norte,3458
+2019,Amang,Surigao del Sur,853
+2019,Chedeng,Davao Occidental,1675
+2019,Chedeng,Davao Oriental,4971
+2019,Chedeng,Davao del Sur,15
+2019,Falcon,Abra,2
+2019,Falcon,Apayao,409
+2019,Falcon,Cagayan,502
+2019,Falcon,Ilocos Norte,5
+2019,Falcon,Mountain Province,84
+2019,Marilyn,Davao del Sur,135
+2019,Marilyn,South Cotabato,624
+2019,Marilyn,Sultan Kudarat,6470
+2019,Marilyn,Zamboanga del Norte,710
+2019,Marilyn,Zamboanga del Sur,7497
+2019,Ramon,Albay,1058
+2019,Ramon,Apayao,7583
+2019,Ramon,Cagayan,19340
+2019,Ramon,Camarines Norte,19
+2019,Ramon,Camarines Sur,2204
+2019,Ramon,Catanduanes,9
+2019,Ramon,Ilocos Norte,521
+2019,Ramon,Isabela,873
+2019,Ramon,Kalinga,24
+2019,Tisoy,Albay,355841
+2019,Tisoy,Aurora,5407
+2019,Tisoy,Bataan,3085
+2019,Tisoy,Batangas,4802
+2019,Tisoy,Bulacan,224
+2019,Tisoy,Camarines Norte,40705
+2019,Tisoy,Camarines Sur,271253
+2019,Tisoy,Catanduanes,29977
+2019,Tisoy,Cavite,32
+2019,Tisoy,Eastern Samar,60950
+2019,Tisoy,Laguna,805
+2019,Tisoy,Marinduque,5984
+2019,Tisoy,Masbate,172239
+2019,Tisoy,Mountain Province,8
+2019,Tisoy,Northern Samar,465877
+2019,Tisoy,Occidental Mindoro,16099
+2019,Tisoy,Oriental Mindoro,25339
+2019,Tisoy,Pampanga,416
+2019,Tisoy,Quezon,110575
+2019,Tisoy,Romblon,10865
+2019,Tisoy,Samar,50413
+2019,Tisoy,Sorsogon,348298
+2019,Tisoy,Surigao del Sur,51
+2019,Tisoy,Zambales,12861
+2019,Ursula,Aklan,510342
+2019,Ursula,Antique,81642
+2019,Ursula,Biliran,118852
+2019,Ursula,Capiz,625921
+2019,Ursula,Cebu,131435
+2019,Ursula,Dinagat Islands,1228
+2019,Ursula,Eastern Samar,230861
+2019,Ursula,Iloilo,273971
+2019,Ursula,Leyte,772162
+2019,Ursula,Marinduque,7
+2019,Ursula,Occidental Mindoro,119037
+2019,Ursula,Oriental Mindoro,19214
+2019,Ursula,Romblon,17059
+2019,Ursula,Samar,395023
+2019,Ursula,Surigao del Norte,123
+2020,Ambo,Aurora,3364.0
+2020,Ambo,Aurora,3364
+2020,Ambo,Benguet,132.0
+2020,Ambo,Benguet,132
+2020,Ambo,Bulacan,141.0
+2020,Ambo,Bulacan,141
+2020,Ambo,Eastern Samar,166473.0
+2020,Ambo,Eastern Samar,166473
+2020,Ambo,Ifugao,11.0
+2020,Ambo,Ifugao,11
+2020,Ambo,Ilocos Norte,6.0
+2020,Ambo,Ilocos Norte,6
+2020,Ambo,Northern Samar,402481.0
+2020,Ambo,Northern Samar,402481
+2020,Ambo,Nueva Vizcaya,102.0
+2020,Ambo,Nueva Vizcaya,102
+2020,Ambo,Samar,5861
+2020,Ofel,Camarines Norte,238.0
+2020,Ofel,Camarines Norte,238
+2020,Ofel,Camarines Sur,522
+2020,Ofel,Cebu,20330.0
+2020,Ofel,Cebu,20330
+2020,Ofel,Laguna,651.0
+2020,Ofel,Laguna,651
+2020,Ofel,Quezon,4944
+2020,Pepito,Aurora,1154
+2020,Pepito,Benguet,3.0
+2020,Pepito,Benguet,3
+2020,Pepito,Bulacan,23935
+2020,Pepito,Cagayan,665.0
+2020,Pepito,Cagayan,95
+2020,Pepito,Isabela,1999
+2020,Pepito,Laguna,9
+2020,Pepito,Nueva Ecija,1533
+2020,Pepito,Nueva Vizcaya,28
+2020,Pepito,Pampanga,68467
+2020,Pepito,Quezon,26396
+2020,Pepito,Quirino,141
+2020,Quinta,Albay,19237.0
+2020,Quinta,Albay,19237
+2020,Quinta,Antique,5022.0
+2020,Quinta,Antique,5022
+2020,Quinta,Aurora,218.0
+2020,Quinta,Aurora,218
+2020,Quinta,Batangas,30319
+2020,Quinta,Biliran,399.0
+2020,Quinta,Biliran,399
+2020,Quinta,Bulacan,117287
+2020,Quinta,Camarines Norte,4218
+2020,Quinta,Camarines Sur,78489
+2020,Quinta,Capiz,15
+2020,Quinta,Catanduanes,55428
+2020,Quinta,Cavite,631
+2020,Quinta,Iloilo,18323
+2020,Quinta,Laguna,5374
+2020,Quinta,Marinduque,68971
+2020,Quinta,Masbate,17142
+2020,Quinta,Negros Occidental,2222
+2020,Quinta,Negros Oriental,5102.0
+2020,Quinta,Negros Oriental,5102
+2020,Quinta,Nueva Ecija,5660
+2020,Quinta,Occidental Mindoro,38472
+2020,Quinta,Oriental Mindoro,146202
+2020,Quinta,Palawan,656
+2020,Quinta,Pampanga,154463
+2020,Quinta,Quezon,69166
+2020,Quinta,Rizal,55
+2020,Quinta,Romblon,5338
+2020,Quinta,Sorsogon,37315
+2020,Quinta,Tarlac,2651
+2020,Rolly,Albay,474401
+2020,Rolly,Apayao,440.0
+2020,Rolly,Apayao,440
+2020,Rolly,Aurora,13602
+2020,Rolly,Bataan,11549
+2020,Rolly,Batangas,83703
+2020,Rolly,Benguet,11.0
+2020,Rolly,Benguet,11
+2020,Rolly,Bulacan,80507
+2020,Rolly,Camarines Norte,38736.0
+2020,Rolly,Camarines Norte,38736
+2020,Rolly,Camarines Sur,169773
+2020,Rolly,Catanduanes,204229
+2020,Rolly,Cavite,12874
+2020,Rolly,Ifugao,23
+2020,Rolly,Isabela,146.0
+2020,Rolly,Isabela,146
+2020,Rolly,Kalinga,8.0
+2020,Rolly,Kalinga,8
+2020,Rolly,Laguna,33630
+2020,Rolly,Marinduque,32343.0
+2020,Rolly,Marinduque,32343
+2020,Rolly,Masbate,41407
+2020,Rolly,Metro Manila,20446
+2020,Rolly,Mountain Province,10
+2020,Rolly,Northern Samar,200.0
+2020,Rolly,Northern Samar,200
+2020,Rolly,Nueva Ecija,8453.0
+2020,Rolly,Nueva Ecija,8453
+2020,Rolly,Nueva Vizcaya,451
+2020,Rolly,Occidental Mindoro,35879
+2020,Rolly,Oriental Mindoro,35545
+2020,Rolly,Palawan,1728
+2020,Rolly,Pampanga,174959
+2020,Rolly,Quezon,354852
+2020,Rolly,Quirino,264
+2020,Rolly,Rizal,12517
+2020,Rolly,Romblon,13351
+2020,Rolly,Sorsogon,160160
+2020,Rolly,Tarlac,11413
+2020,Rolly,Zambales,2520
+2020,Ulysses,Abra,416.0
+2020,Ulysses,Abra,416
+2020,Ulysses,Albay,217807
+2020,Ulysses,Aurora,58609
+2020,Ulysses,Bataan,12295
+2020,Ulysses,Batangas,13719.0
+2020,Ulysses,Batangas,13719
+2020,Ulysses,Benguet,1546
+2020,Ulysses,Bulacan,1532103
+2020,Ulysses,Cagayan,464336
+2020,Ulysses,Camarines Norte,298165
+2020,Ulysses,Camarines Sur,555339
+2020,Ulysses,Catanduanes,9115
+2020,Ulysses,Cavite,14881
+2020,Ulysses,Ifugao,3440
+2020,Ulysses,Ilocos Norte,5659
+2020,Ulysses,Isabela,426282
+2020,Ulysses,Kalinga,1015
+2020,Ulysses,La Union,61
+2020,Ulysses,Laguna,50411
+2020,Ulysses,Masbate,27390
+2020,Ulysses,Metro Manila,54195
+2020,Ulysses,Mountain Province,615
+2020,Ulysses,Nueva Ecija,295763
+2020,Ulysses,Nueva Vizcaya,15585
+2020,Ulysses,Occidental Mindoro,4599
+2020,Ulysses,Oriental Mindoro,3792
+2020,Ulysses,Pampanga,386929
+2020,Ulysses,Pangasinan,101898
+2020,Ulysses,Quezon,308061
+2020,Ulysses,Quirino,7072
+2020,Ulysses,Rizal,243885
+2020,Ulysses,Romblon,292.0
+2020,Ulysses,Romblon,292
+2020,Ulysses,Sorsogon,30505
+2020,Ulysses,Tarlac,34973
+2020,Ulysses,Zambales,4071
+2020,Vicky,Agusan del Norte,6775
+2020,Vicky,Agusan del Sur,82694
+2020,Vicky,Bohol,60.0
+2020,Vicky,Bohol,60
+2020,Vicky,Cebu,1900
+2020,Vicky,Davao Oriental,20
+2020,Vicky,Davao de Oro,1268.0
+2020,Vicky,Davao de Oro,1268
+2020,Vicky,Davao del Norte,1530
+2020,Vicky,Dinagat Islands,10
+2020,Vicky,Leyte,38.0
+2020,Vicky,Leyte,38
+2020,Vicky,Negros Oriental,638
+2020,Vicky,Surigao del Norte,2232
+2020,Vicky,Surigao del Sur,78784
+2021,Auring,Agusan del Norte,15398.0
+2021,Auring,Agusan del Sur,9980.0
+2021,Auring,Camarines Sur,47.0
+2021,Auring,Davao Oriental,674.0
+2021,Auring,Davao de Oro,1796.0
+2021,Auring,Davao del Norte,975.0
+2021,Auring,Dinagat Islands,10157.0
+2021,Auring,Misamis Oriental,6653.0
+2021,Auring,Sorsogon,33.0
+2021,Auring,Southern Leyte,5.0
+2021,Auring,Surigao del Norte,39882.0
+2021,Auring,Surigao del Sur,186851.0
+2021,Bising,Agusan del Norte,199.0
+2021,Bising,Albay,57541.0
+2021,Bising,Biliran,255.0
+2021,Bising,Camarines Norte,450.0
+2021,Bising,Camarines Sur,19706.0
+2021,Bising,Catanduanes,58170.0
+2021,Bising,Eastern Samar,122668.0
+2021,Bising,Isabela,303.0
+2021,Bising,Leyte,6020.0
+2021,Bising,Masbate,287.0
+2021,Bising,Northern Samar,156654.0
+2021,Bising,Sorsogon,2392.0
+2021,Bising,Surigao del Norte,58.0
+2021,Crising,Zamboanga Sibugay,45075.0
+2021,Dante,Albay,1592.0
+2021,Dante,Bataan,126.0
+2021,Dante,Bohol,158.0
+2021,Dante,Camarines Sur,62.0
+2021,Dante,Cebu,762.0
+2021,Dante,Southern Leyte,83.0
+2021,Fabian,Abra,4046.0
+2021,Fabian,Bataan,603.0
+2021,Fabian,Batangas,5356.0
+2021,Fabian,Benguet,685.0
+2021,Fabian,Bulacan,52781.0
+2021,Fabian,Cavite,4227.0
+2021,Fabian,Iloilo,1202.0
+2021,Fabian,Kalinga,51.0
+2021,Fabian,La Union,12271.0
+2021,Fabian,Laguna,659.0
+2021,Fabian,Occidental Mindoro,78343.0
+2021,Fabian,Oriental Mindoro,51589.0
+2021,Fabian,Pampanga,71079.0
+2021,Fabian,Pangasinan,12922.0
+2021,Fabian,Rizal,16902.0
+2021,Fabian,Zambales,1327.0
+2021,Jolina,Aklan,9869.0
+2021,Jolina,Albay,12938.0
+2021,Jolina,Antique,2990.0
+2021,Jolina,Batangas,44033.0
+2021,Jolina,Biliran,3339.0
+2021,Jolina,Bulacan,7464.0
+2021,Jolina,Camarines Norte,17.0
+2021,Jolina,Camarines Sur,1419.0
+2021,Jolina,Capiz,796.0
+2021,Jolina,Cavite,5062.0
+2021,Jolina,Eastern Samar,188153.0
+2021,Jolina,Laguna,7890.0
+2021,Jolina,Leyte,8946.0
+2021,Jolina,Marinduque,12884.0
+2021,Jolina,Masbate,31168.0
+2021,Jolina,Negros Occidental,1525.0
+2021,Jolina,Oriental Mindoro,433.0
+2021,Jolina,Pampanga,18.0
+2021,Jolina,Quezon,31303.0
+2021,Jolina,Rizal,210.0
+2021,Jolina,Romblon,574.0
+2021,Jolina,Samar,94339.0
+2021,Jolina,Sorsogon,186.0
+2021,Jolina,South Cotabato,170.0
+2021,Kiko,Abra,220.0
+2021,Kiko,Apayao,168.0
+2021,Kiko,Bataan,3.0
+2021,Kiko,Batanes,20568.0
+2021,Kiko,Benguet,10.0
+2021,Kiko,Bulacan,4164.0
+2021,Kiko,Cagayan,6038.0
+2021,Kiko,Ilocos Norte,1813.0
+2021,Kiko,Isabela,802.0
+2021,Kiko,La Union,2768.0
+2021,Kiko,Occidental Mindoro,338.0
+2021,Kiko,Pampanga,23973.0
+2021,Lannie,Capiz,22.0
+2021,Lannie,Guimaras,161.0
+2021,Lannie,Palawan,300.0
+2021,Maring,Abra,143767.0
+2021,Maring,Agusan del Norte,2229.0
+2021,Maring,Antique,234.0
+2021,Maring,Apayao,279.0
+2021,Maring,Bataan,125.0
+2021,Maring,Batanes,2.0
+2021,Maring,Benguet,26799.0
+2021,Maring,Bulacan,15.0
+2021,Maring,Cagayan,78890.0
+2021,Maring,Cavite,22.0
+2021,Maring,Ifugao,21.0
+2021,Maring,Ilocos Norte,842.0
+2021,Maring,Ilocos Sur,298793.0
+2021,Maring,Iloilo,50.0
+2021,Maring,Isabela,62.0
+2021,Maring,La Union,304802.0
+2021,Maring,Nueva Vizcaya,180.0
+2021,Maring,Occidental Mindoro,91.0
+2021,Maring,Palawan,33931.0
+2021,Maring,Pangasinan,303907.0
+2021,Maring,Quezon,31.0
+2021,Maring,Rizal,344.0
+2021,Maring,Surigao del Sur,128.0
+2021,Maring,Zambales,15.0
+2021,Odette,Agusan del Norte,174000.0
+2021,Odette,Agusan del Sur,121169.0
+2021,Odette,Aklan,73033.0
+2021,Odette,Albay,1241.0
+2021,Odette,Antique,175933.0
+2021,Odette,Bohol,1334348.0
+2021,Odette,Bukidnon,24104.0
+2021,Odette,Camiguin,15461.0
+2021,Odette,Capiz,238960.0
+2021,Odette,Cebu,2486006.0
+2021,Odette,Cotabato,98164.0
+2021,Odette,Davao de Oro,848.0
+2021,Odette,Dinagat Islands,148587.0
+2021,Odette,Eastern Samar,243180.0
+2021,Odette,Guimaras,83037.0
+2021,Odette,Iloilo,688724.0
+2021,Odette,Isabela,71590.0
+2021,Odette,Lanao del Norte,18123.0
+2021,Odette,Lanao del Sur,36693.0
+2021,Odette,Leyte,582021.0
+2021,Odette,Marinduque,646.0
+2021,Odette,Masbate,3096.0
+2021,Odette,Misamis Occidental,6223.0
+2021,Odette,Misamis Oriental,106847.0
+2021,Odette,Negros Occidental,1504278.0
+2021,Odette,Negros Oriental,523283.0
+2021,Odette,Oriental Mindoro,3046.0
+2021,Odette,Palawan,395433.0
+2021,Odette,Quezon,160.0
+2021,Odette,Rizal,67.0
+2021,Odette,Romblon,912.0
+2021,Odette,Samar,10027.0
+2021,Odette,Siquijor,16592.0
+2021,Odette,Southern Leyte,462888.0
+2021,Odette,Surigao del Norte,641170.0
+2021,Odette,Surigao del Sur,346413.0
+2021,Odette,Zamboanga del Norte,495.0
+2021,Odette,Zamboanga del Sur,1115.0
+2022,Agaton,Agusan del Sur,30974.0
+2022,Agaton,Aklan,60294.0
+2022,Agaton,Antique,7380.0
+2022,Agaton,Aurora,6818.0
+2022,Agaton,Biliran,32477.0
+2022,Agaton,Bukidnon,1551.0
+2022,Agaton,Capiz,544642.0
+2022,Agaton,Cebu,20377.0
+2022,Agaton,Cotabato,111126.0
+2022,Agaton,Davao Oriental,72384.0
+2022,Agaton,Davao de Oro,16235.0
+2022,Agaton,Davao del Norte,30695.0
+2022,Agaton,Eastern Samar,17768.0
+2022,Agaton,Guimaras,19.0
+2022,Agaton,Leyte,369727.0
+2022,Agaton,Misamis Occidental,30.0
+2022,Agaton,Misamis Oriental,630.0
+2022,Agaton,Negros Occidental,91580.0
+2022,Agaton,Negros Oriental,64.0
+2022,Agaton,Northern Samar,16.0
+2022,Agaton,Quezon,72.0
+2022,Agaton,Samar,13.0
+2022,Agaton,Sarangani,219.0
+2022,Agaton,South Cotabato,11.0
+2022,Agaton,Southern Leyte,7251.0
+2022,Agaton,Sultan Kudarat,5162.0
+2022,Agaton,Surigao del Norte,22.0
+2022,Agaton,Surigao del Sur,265.0
+2022,Ester,Antique,5248.0
+2022,Ester,Negros Occidental,7970.0
+2022,Florita,Abra,2041.0
+2022,Florita,Apayao,1284.0
+2022,Florita,Aurora,73.0
+2022,Florita,Bataan,23.0
+2022,Florita,Benguet,86.0
+2022,Florita,Cagayan,14218.0
+2022,Florita,Cavite,7.0
+2022,Florita,Ilocos Norte,11059.0
+2022,Florita,Ilocos Sur,1254.0
+2022,Florita,Isabela,8491.0
+2022,Florita,Kalinga,1.0
+2022,Florita,La Union,1374.0
+2022,Florita,Nueva Vizcaya,10.0
+2022,Florita,Pangasinan,36778.0
+2022,Florita,Quezon,10.0
+2022,Florita,Rizal,1521.0
+2022,Florita,Tarlac,8.0
+2022,Florita,Zambales,1368.0
+2022,Henry,Abra,846.0
+2022,Henry,Benguet,622.0
+2022,Henry,Ilocos Norte,86.0
+2022,Henry,Ilocos Sur,532.0
+2022,Henry,La Union,121.0
+2022,Henry,Pangasinan,222.0
+2022,Henry,Zambales,13.0
+2022,Karding,Abra,360.0
+2022,Karding,Aurora,36661.0
+2022,Karding,Bataan,4440.0
+2022,Karding,Batangas,8973.0
+2022,Karding,Benguet,1110.0
+2022,Karding,Bulacan,349744.0
+2022,Karding,Cagayan,1084.0
+2022,Karding,Camarines Norte,3726.0
+2022,Karding,Camarines Sur,257.0
+2022,Karding,Cavite,9678.0
+2022,Karding,Ifugao,3.0
+2022,Karding,Isabela,409.0
+2022,Karding,Kalinga,180.0
+2022,Karding,La Union,509.0
+2022,Karding,Laguna,16884.0
+2022,Karding,Marinduque,1297.0
+2022,Karding,Nueva Ecija,738836.0
+2022,Karding,Nueva Vizcaya,1185.0
+2022,Karding,Oriental Mindoro,193.0
+2022,Karding,Palawan,322.0
+2022,Karding,Pampanga,89128.0
+2022,Karding,Pangasinan,3.532
+2022,Karding,Quezon,1745.0
+2022,Karding,Quirino,542.0
+2022,Karding,Rizal,280.0
+2022,Karding,Romblon,6.0
+2022,Karding,Tarlac,32991.0
+2022,Karding,Zambales,6300.0
+2022,Maymay,Apayao,1803.0
+2022,Maymay,Cagayan,41964.0
+2022,Maymay,Isabela,32.0
+2022,Maymay,Rizal,54.0
+2022,Neneng,Apayao,3400.0
+2022,Neneng,Benguet,2748.0
+2022,Neneng,Cagayan,157691.0
+2022,Neneng,Ilocos Norte,27469.0
+2022,Neneng,Ilocos Sur,11.0
+2022,Neneng,Pangasinan,5.0
+2022,Obet,Apayao,800.0
+2022,Obet,Cagayan,9.974
+2022,Obet,Ilocos Norte,120.0
+2022,Paeng,Abra,9.68
+2022,Paeng,Agusan del Norte,302.0
+2022,Paeng,Aklan,286028.0
+2022,Paeng,Albay,69076.0
+2022,Paeng,Antique,255531.0
+2022,Paeng,Apayao,250.0
+2022,Paeng,Aurora,13859.0
+2022,Paeng,Basilan,1994.0
+2022,Paeng,Bataan,68444.0
+2022,Paeng,Batangas,75308.0
+2022,Paeng,Benguet,13908.0
+2022,Paeng,Biliran,5718.0
+2022,Paeng,Bulacan,296027.0
+2022,Paeng,Cagayan,151950.0
+2022,Paeng,Camarines Norte,35810.0
+2022,Paeng,Camarines Sur,94111.0
+2022,Paeng,Capiz,450520.0
+2022,Paeng,Catanduanes,43079.0
+2022,Paeng,Cavite,534393.0
+2022,Paeng,Cebu,680.0
+2022,Paeng,Cotabato,58569.0
+2022,Paeng,Davao Occidental,7355.0
+2022,Paeng,Davao Oriental,1430.0
+2022,Paeng,Davao del Norte,289.0
+2022,Paeng,Dinagat Islands,1977.0
+2022,Paeng,Eastern Samar,166842.0
+2022,Paeng,Guimaras,7.464
+2022,Paeng,Ifugao,790.0
+2022,Paeng,Ilocos Sur,1021.0
+2022,Paeng,Iloilo,488405.0
+2022,Paeng,Isabela,171282.0
+2022,Paeng,Kalinga,10027.0
+2022,Paeng,La Union,3267.0
+2022,Paeng,Laguna,273203.0
+2022,Paeng,Lanao del Norte,1313.0
+2022,Paeng,Lanao del Sur,550.0
+2022,Paeng,Leyte,148845.0
+2022,Paeng,Marinduque,90931.0
+2022,Paeng,Masbate,11580.0
+2022,Paeng,Misamis Oriental,4791.0
+2022,Paeng,Negros Occidental,192663.0
+2022,Paeng,Negros Oriental,1019.0
+2022,Paeng,Northern Samar,43343.0
+2022,Paeng,Nueva Ecija,3253.0
+2022,Paeng,Nueva Vizcaya,5444.0
+2022,Paeng,Occidental Mindoro,17473.0
+2022,Paeng,Oriental Mindoro,83779.0
+2022,Paeng,Palawan,8556.0
+2022,Paeng,Pampanga,61055.0
+2022,Paeng,Pangasinan,33731.0
+2022,Paeng,Quezon,141217.0
+2022,Paeng,Quirino,3045.0
+2022,Paeng,Rizal,27907.0
+2022,Paeng,Romblon,16834.0
+2022,Paeng,Samar,22186.0
+2022,Paeng,Sarangani,10631.0
+2022,Paeng,Sorsogon,11864.0
+2022,Paeng,South Cotabato,1153.0
+2022,Paeng,Southern Leyte,11546.0
+2022,Paeng,Sultan Kudarat,132139.0
+2022,Paeng,Sulu,1289.0
+2022,Paeng,Surigao del Norte,2061.0
+2022,Paeng,Tarlac,1289.0
+2022,Paeng,Zambales,1740.0
+2022,Paeng,Zamboanga del Norte,3095.0
+2022,Paeng,Zamboanga del Sur,7751.0
+2023,Amang,Antique,10471.0
+2023,Amang,Bataan,329.0
+2023,Amang,Batangas,57.0
+2023,Amang,Bulacan,93228.0
+2023,Amang,Cavite,52.0
+2023,Amang,Guimaras,128.0
+2023,Amang,Iloilo,3995.0
+2023,Amang,La Union,174.0
+2023,Amang,Negros Occidental,8577.0
+2023,Amang,Palawan,130.0
+2023,Amang,Pampanga,120377.0
+2023,Amang,Pangasinan,1078.0
+2023,Amang,Rizal,84.0
+2023,Amang,Tarlac,5.0
+2023,Amang,Zambales,6139.0
+2023,Betty,Abra,20194.0
+2023,Betty,Aklan,191.0
+2023,Betty,Antique,8065.0
+2023,Betty,Apayao,46.0
+2023,Betty,Aurora,11361.0
+2023,Betty,Batanes,20.873
+2023,Betty,Benguet,1554.0
+2023,Betty,Cagayan,1938.0
+2023,Betty,Guimaras,4.0
+2023,Betty,Ifugao,12.0
+2023,Betty,Ilocos Norte,42.0
+2023,Betty,Ilocos Sur,4853.0
+2023,Betty,Iloilo,9980.0
+2023,Betty,Isabela,1.544
+2023,Betty,La Union,8.0
+2023,Betty,Negros Occidental,21215.0
+2023,Betty,Occidental Mindoro,1059.0
+2023,Betty,Palawan,1132.0
+2023,Betty,Pangasinan,14.0
+2023,Betty,Romblon,9.0
+2023,Egay,Abra,271469.0
+2023,Egay,Aklan,10458.0
+2023,Egay,Antique,17306.0
+2023,Egay,Apayao,61455.0
+2023,Egay,Aurora,45317.0
+2023,Egay,Bataan,72699.0
+2023,Egay,Batanes,3081.0
+2023,Egay,Batangas,17.0
+2023,Egay,Benguet,46982.0
+2023,Egay,Bulacan,564375.0
+2023,Egay,Cagayan,144346.0
+2023,Egay,Camarines Norte,483.0
+2023,Egay,Camarines Sur,487.0
+2023,Egay,Catanduanes,1196.0
+2023,Egay,Cavite,102.0
+2023,Egay,Cotabato,20510.0
+2023,Egay,Davao Occidental,3395.0
+2023,Egay,Davao Oriental,1359.0
+2023,Egay,Davao del Norte,7356.0
+2023,Egay,Davao del Sur,20.0
+2023,Egay,Guimaras,17062.0
+2023,Egay,Ifugao,2180.0
+2023,Egay,Ilocos Norte,234501.0
+2023,Egay,Ilocos Sur,289270.0
+2023,Egay,Iloilo,55507.0
+2023,Egay,Isabela,64.0
+2023,Egay,Kalinga,4700.0
+2023,Egay,La Union,74822.0
+2023,Egay,Masbate,968.0
+2023,Egay,Misamis Oriental,431.0
+2023,Egay,Negros Occidental,65490.0
+2023,Egay,Nueva Ecija,57666.0
+2023,Egay,Nueva Vizcaya,720.0
+2023,Egay,Occidental Mindoro,70007.0
+2023,Egay,Oriental Mindoro,1152.0
+2023,Egay,Palawan,24478.0
+2023,Egay,Pampanga,382723.0
+2023,Egay,Pangasinan,203410.0
+2023,Egay,Quezon,22.0
+2023,Egay,Quirino,12.0
+2023,Egay,Rizal,844.0
+2023,Egay,Sorsogon,6142.0
+2023,Egay,Tarlac,22053.0
+2023,Egay,Zambales,3533.0
+2023,Falcon,Abra,12367.0
+2023,Falcon,Aklan,95.0
+2023,Falcon,Albay,7210.0
+2023,Falcon,Antique,2341.0
+2023,Falcon,Apayao,12902.0
+2023,Falcon,Aurora,29.0
+2023,Falcon,Bataan,845039.0
+2023,Falcon,Batanes,17472.0
+2023,Falcon,Batangas,853.0
+2023,Falcon,Benguet,25957.0
+2023,Falcon,Biliran,15.0
+2023,Falcon,Bulacan,640857.0
+2023,Falcon,Cagayan,36494.0
+2023,Falcon,Cavite,16.0
+2023,Falcon,Davao Occidental,15.0
+2023,Falcon,Davao del Norte,1513.0
+2023,Falcon,Guimaras,1401.0
+2023,Falcon,Ifugao,188.0
+2023,Falcon,Ilocos Norte,49252.0
+2023,Falcon,Ilocos Sur,277657.0
+2023,Falcon,Iloilo,40797.0
+2023,Falcon,Isabela,2087.0
+2023,Falcon,Kalinga,194.0
+2023,Falcon,La Union,4961.0
+2023,Falcon,Negros Occidental,32193.0
+2023,Falcon,Nueva Ecija,8085.0
+2023,Falcon,Nueva Vizcaya,5117.0
+2023,Falcon,Occidental Mindoro,23986.0
+2023,Falcon,Pampanga,413648.0
+2023,Falcon,Pangasinan,334511.0
+2023,Falcon,Rizal,3947.0
+2023,Falcon,Tarlac,75234.0
+2023,Falcon,Zambales,36487.0
+2023,Goring,Abra,11710.0
+2023,Goring,Aklan,10.0
+2023,Goring,Antique,28270.0
+2023,Goring,Apayao,2075.0
+2023,Goring,Aurora,49.0
+2023,Goring,Bataan,251.0
+2023,Goring,Batanes,90.0
+2023,Goring,Batangas,2553.0
+2023,Goring,Benguet,88.0
+2023,Goring,Bulacan,22.0
+2023,Goring,Cagayan,51942.0
+2023,Goring,Cavite,1349.0
+2023,Goring,Guimaras,5012.0
+2023,Goring,Ilocos Sur,15461.0
+2023,Goring,Iloilo,160675.0
+2023,Goring,Isabela,2138.0
+2023,Goring,Laguna,20.0
+2023,Goring,Negros Occidental,96421.0
+2023,Goring,Nueva Vizcaya,9.0
+2023,Goring,Occidental Mindoro,5918.0
+2023,Goring,Palawan,94.0
+2023,Goring,Pampanga,10.0
+2023,Goring,Quirino,8.0
+2023,Goring,Rizal,520.0
+2023,Goring,Zambales,46.0
+2023,Hanna,Abra,7153.0
+2023,Hanna,Aklan,8.0
+2023,Hanna,Antique,30667.0
+2023,Hanna,Bataan,152.0
+2023,Hanna,Batangas,6090.0
+2023,Hanna,Benguet,58.0
+2023,Hanna,Bulacan,138.0
+2023,Hanna,Cagayan,40718.0
+2023,Hanna,Cavite,149.0
+2023,Hanna,Guimaras,393.0
+2023,Hanna,Iloilo,36144.0
+2023,Hanna,Kalinga,218.0
+2023,Hanna,Negros Occidental,114694.0
+2023,Hanna,Occidental Mindoro,1337.0
+2023,Hanna,Palawan,2675.0
+2023,Hanna,Pampanga,35.0
+2023,Hanna,Rizal,512.0
+2023,Hanna,Zambales,31.0
+2023,Ineng,Abra,2900.0
+2023,Ineng,Antique,20935.0
+2023,Ineng,Bataan,1187.0
+2023,Ineng,Benguet,426.0
+2023,Ineng,Bulacan,168140.0
+2023,Ineng,Guimaras,2057.0
+2023,Ineng,Ilocos Norte,35243.0
+2023,Ineng,Ilocos Sur,59901.0
+2023,Ineng,Iloilo,2926.0
+2023,Ineng,La Union,411.0
+2023,Ineng,Negros Occidental,41032.0
+2023,Ineng,Pampanga,186308.0
+2023,Ineng,Pangasinan,2611.0
+2023,Ineng,Rizal,200.0
+2023,Ineng,Zambales,230.0
+2023,Jenny,Aklan,9.0
+2023,Jenny,Batanes,160.0
+2023,Jenny,Iloilo,82.0
+2023,Kabayan,Agusan del Norte,1413.0
+2023,Kabayan,Agusan del Sur,69224.0
+2023,Kabayan,Bukidnon,3.0
+2023,Kabayan,Camiguin,156.0
+2023,Kabayan,Davao Oriental,69759.0
+2023,Kabayan,Dinagat Islands,1553.0
+2023,Kabayan,Iloilo,698.0
+2023,Kabayan,Laguna,46.0
+2023,Kabayan,Misamis Occidental,315.0
+2023,Kabayan,Misamis Oriental,53.0
+2023,Kabayan,Negros Occidental,285.0
+2023,Kabayan,Palawan,350.0
+2023,Kabayan,Rizal,2000.0
+2023,Kabayan,Southern Leyte,332.0
+2023,Kabayan,Surigao del Norte,2802.0
+2023,Kabayan,Surigao del Sur,276969.0
+2024,Aghon,Albay,1113.0
+2024,Aghon,Batangas,5031.0
+2024,Aghon,Camarines Norte,134.0
+2024,Aghon,Camarines Sur,980.0
+2024,Aghon,Catanduanes,585.0
+2024,Aghon,Cavite,108.0
+2024,Aghon,Cebu,629.0
+2024,Aghon,Eastern Samar,1958.0
+2024,Aghon,Marinduque,2654.0
+2024,Aghon,Masbate,204.0
+2024,Aghon,Northern Samar,53.0
+2024,Aghon,Occidental Mindoro,22.0
+2024,Aghon,Oriental Mindoro,833.0
+2024,Aghon,Quezon,89305.0
+2024,Aghon,Rizal,25.0
+2024,Aghon,Romblon,147.0
+2024,Aghon,Samar,20.0
+2024,Aghon,Sorsogon,7659.0
+2024,Butchoy,Agusan del Sur,24.0
+2024,Butchoy,Aklan,2624.0
+2024,Butchoy,Antique,1780.0
+2024,Butchoy,Basilan,16.0
+2024,Butchoy,Bukidnon,11677.0
+2024,Butchoy,Capiz,2072.0
+2024,Butchoy,Cotabato,113559.0
+2024,Butchoy,Davao Occidental,722.0
+2024,Butchoy,Iloilo,57.0
+2024,Butchoy,La Union,65.0
+2024,Butchoy,Lanao del Norte,65.0
+2024,Butchoy,Lanao del Sur,59395.0
+2024,Butchoy,Maguindanao del Norte,43605.0
+2024,Butchoy,Maguindanao del Sur,259065.0
+2024,Butchoy,Negros Occidental,108.0
+2024,Butchoy,Negros Oriental,62.0
+2024,Butchoy,Oriental Mindoro,36459.0
+2024,Butchoy,Romblon,130.0
+2024,Butchoy,Sarangani,222.0
+2024,Butchoy,South Cotabato,1955.0
+2024,Butchoy,Sultan Kudarat,101779.0
+2024,Butchoy,Surigao del Norte,78.0
+2024,Butchoy,Zamboanga del Norte,1914.0
+2024,Butchoy,Zamboanga del Sur,11400.0
+2024,Carina,Abra,84714.0
+2024,Carina,Aklan,19234.0
+2024,Carina,Albay,1311.0
+2024,Carina,Antique,10.847
+2024,Carina,Aurora,24238.0
+2024,Carina,Basilan,5.0
+2024,Carina,Bataan,753826.0
+2024,Carina,Batanes,10125.0
+2024,Carina,Batangas,31578.0
+2024,Carina,Benguet,35719.0
+2024,Carina,Bulacan,1707027.0
+2024,Carina,Cagayan,2266.0
+2024,Carina,Camarines Norte,1710.0
+2024,Carina,Camarines Sur,27783.0
+2024,Carina,Capiz,717.0
+2024,Carina,Catanduanes,4300.0
+2024,Carina,Cavite,194374.0
+2024,Carina,Cebu,32534.0
+2024,Carina,Cotabato,9435.0
+2024,Carina,Davao Occidental,590.0
+2024,Carina,Davao Oriental,295.0
+2024,Carina,Davao del Norte,132.0
+2024,Carina,Guimaras,106.0
+2024,Carina,Ilocos Norte,26453.0
+2024,Carina,Ilocos Sur,87962.0
+2024,Carina,Iloilo,12910.0
+2024,Carina,Isabela,2579.0
+2024,Carina,La Union,115373.0
+2024,Carina,Laguna,22786.0
+2024,Carina,Lanao del Norte,180.0
+2024,Carina,Leyte,8758.0
+2024,Carina,Maguindanao del Norte,42295.0
+2024,Carina,Maguindanao del Sur,735.0
+2024,Carina,Masbate,8.0
+2024,Carina,Misamis Oriental,159.0
+2024,Carina,Negros Occidental,8798.0
+2024,Carina,Negros Oriental,5.0
+2024,Carina,Nueva Ecija,168998.0
+2024,Carina,Nueva Vizcaya,145.0
+2024,Carina,Occidental Mindoro,51836.0
+2024,Carina,Oriental Mindoro,68435.0
+2024,Carina,Palawan,545.0
+2024,Carina,Pampanga,671706.0
+2024,Carina,Pangasinan,118839.0
+2024,Carina,Quezon,5992.0
+2024,Carina,Quirino,4621.0
+2024,Carina,Rizal,176729.0
+2024,Carina,Romblon,7706.0
+2024,Carina,Sarangani,17692.0
+2024,Carina,Sorsogon,21093.0
+2024,Carina,South Cotabato,18500.0
+2024,Carina,Southern Leyte,47.0
+2024,Carina,Sultan Kudarat,5000.0
+2024,Carina,Tarlac,106768.0
+2024,Carina,Zambales,12711.0
+2024,Carina,Zamboanga del Sur,7956.0
+2024,Enteng,Abra,4527.0
+2024,Enteng,Albay,93616.0
+2024,Enteng,Antique,1192.0
+2024,Enteng,Aurora,21591.0
+2024,Enteng,Bataan,37817.0
+2024,Enteng,Batangas,908.0
+2024,Enteng,Benguet,23.0
+2024,Enteng,Biliran,11.0
+2024,Enteng,Bulacan,379405.0
+2024,Enteng,Cagayan,225.0
+2024,Enteng,Camarines Norte,114458.0
+2024,Enteng,Camarines Sur,943190.0
+2024,Enteng,Catanduanes,9619.0
+2024,Enteng,Cavite,10753.0
+2024,Enteng,Cebu,74.0
+2024,Enteng,Eastern Samar,45239.0
+2024,Enteng,Ilocos Norte,1579.0
+2024,Enteng,Ilocos Sur,158.0
+2024,Enteng,Isabela,6541.0
+2024,Enteng,La Union,11689.0
+2024,Enteng,Laguna,47313.0
+2024,Enteng,Masbate,114.0
+2024,Enteng,Negros Occidental,7.0
+2024,Enteng,Northern Samar,156298.0
+2024,Enteng,Nueva Ecija,85465.0
+2024,Enteng,Nueva Vizcaya,40.0
+2024,Enteng,Pampanga,378034.0
+2024,Enteng,Pangasinan,91905.0
+2024,Enteng,Quezon,38.0
+2024,Enteng,Quirino,958.0
+2024,Enteng,Rizal,32379.0
+2024,Enteng,Samar,13665.0
+2024,Enteng,Sorsogon,33695.0
+2024,Enteng,Tarlac,23598.0
+2024,Enteng,Zambales,35078.0
+2024,Ferdie,Aklan,7.0
+2024,Ferdie,Albay,23391.0
+2024,Ferdie,Antique,8458.0
+2024,Ferdie,Camarines Sur,22606.0
+2024,Ferdie,Camiguin,113.0
+2024,Ferdie,Cotabato,725.0
+2024,Ferdie,Davao Occidental,14.0
+2024,Ferdie,Iloilo,21.0
+2024,Ferdie,Isabela,38.0
+2024,Ferdie,Lanao del Norte,190.0
+2024,Ferdie,Maguindanao del Norte,2620.0
+2024,Ferdie,Maguindanao del Sur,62340.0
+2024,Ferdie,Misamis Oriental,88.0
+2024,Ferdie,Negros Occidental,16993.0
+2024,Ferdie,Negros Oriental,796.0
+2024,Ferdie,Sorsogon,36356.0
+2024,Ferdie,Sultan Kudarat,24992.0
+2024,Ferdie,Zamboanga del Norte,35.0
+2024,Ferdie,Zamboanga del Sur,3805.0
+2024,Gener,Abra,4992.0
+2024,Gener,Aklan,41081.0
+2024,Gener,Albay,2602.0
+2024,Gener,Antique,94258.0
+2024,Gener,Aurora,22.0
+2024,Gener,Basilan,3794.0
+2024,Gener,Bohol,7298.0
+2024,Gener,Cagayan,3.0
+2024,Gener,Camarines Sur,22401.0
+2024,Gener,Camiguin,7.0
+2024,Gener,Cebu,2527.0
+2024,Gener,Cotabato,2805.0
+2024,Gener,Dinagat Islands,79.0
+2024,Gener,Guimaras,460.0
+2024,Gener,Isabela,2442.0
+2024,Gener,Lanao del Norte,37.0
+2024,Gener,Maguindanao del Norte,24812.0
+2024,Gener,Maguindanao del Sur,58010.0
+2024,Gener,Misamis Occidental,30.0
+2024,Gener,Misamis Oriental,1967.0
+2024,Gener,Negros Occidental,92903.0
+2024,Gener,Negros Oriental,3189.0
+2024,Gener,Nueva Vizcaya,1779.0
+2024,Gener,Occidental Mindoro,16439.0
+2024,Gener,Palawan,9996.0
+2024,Gener,Quezon,277.0
+2024,Gener,Quirino,7.0
+2024,Gener,Rizal,578.0
+2024,Gener,Sarangani,10.0
+2024,Gener,Siquijor,56.0
+2024,Helen,Aklan,14532.0
+2024,Helen,Antique,32150.0
+2024,Helen,Aurora,1.0
+2024,Helen,Bohol,19585.0
+2024,Helen,Bulacan,128084.0
+2024,Helen,Cagayan,1.0
+2024,Helen,Camarines Sur,461.0
+2024,Helen,Camiguin,156.0
+2024,Helen,Cotabato,205.0
+2024,Helen,Davao Oriental,74.0
+2024,Helen,Davao del Sur,13.0
+2024,Helen,Guimaras,4513.0
+2024,Helen,Iloilo,16356.0
+2024,Helen,Isabela,766.0
+2024,Helen,Kalinga,10.0
+2024,Helen,Lanao del Norte,138.0
+2024,Helen,Maguindanao del Norte,267.0
+2024,Helen,Maguindanao del Sur,51455.0
+2024,Helen,Misamis Occidental,18.0
+2024,Helen,Misamis Oriental,6758.0
+2024,Helen,Negros Occidental,123426.0
+2024,Helen,Negros Oriental,141.0
+2024,Helen,Nueva Vizcaya,401.0
+2024,Helen,Palawan,20224.0
+2024,Helen,Pampanga,222025.0
+2024,Helen,Quezon,6.0
+2024,Helen,Quirino,112.0
+2024,Helen,Romblon,86.0
+2024,Helen,Siquijor,21.0
+2024,Helen,Sultan Kudarat,390.0
+2024,Helen,Zamboanga Sibugay,4004.0
+2024,Helen,Zamboanga del Norte,7100.0
+2024,Helen,Zamboanga del Sur,3921.0
+2024,Igme,Aklan,5067.0
+2024,Igme,Albay,5030.0
+2024,Igme,Antique,567.0
+2024,Igme,Bulacan,162.0
+2024,Igme,Camarines Norte,141490.0
+2024,Igme,Camarines Sur,3658.0
+2024,Igme,Camiguin,224.0
+2024,Igme,Guimaras,555.0
+2024,Igme,Iloilo,5088.0
+2024,Igme,Isabela,2525.0
+2024,Igme,Lanao del Norte,4349.0
+2024,Igme,Maguindanao del Norte,20997.0
+2024,Igme,Maguindanao del Sur,80265.0
+2024,Igme,Misamis Oriental,5555.0
+2024,Igme,Negros Occidental,6265.0
+2024,Igme,Nueva Vizcaya,4962.0
+2024,Igme,Occidental Mindoro,5126.0
+2024,Igme,Oriental Mindoro,151.0
+2024,Igme,Palawan,34004.0
+2024,Igme,Pampanga,63.0
+2024,Igme,Romblon,404.0
+2024,Igme,Sorsogon,1650.0
+2024,Igme,Zambales,65.0
+2024,Igme,Zamboanga Sibugay,4.004
+2024,Igme,Zamboanga del Norte,7.157
+2024,Igme,Zamboanga del Sur,65.0
+2024,Julian,Abra,70625.0
+2024,Julian,Apayao,3433.0
+2024,Julian,Batanes,21431.0
+2024,Julian,Benguet,862.0
+2024,Julian,Cagayan,22046.0
+2024,Julian,Ifugao,12.0
+2024,Julian,Ilocos Norte,247973.0
+2024,Julian,Ilocos Sur,13893.0
+2024,Julian,La Union,354.0
+2024,Julian,Rizal,3.0
+2024,Kristine,Abra,5270.0
+2024,Kristine,Agusan del Norte,1651.0
+2024,Kristine,Aklan,62960.0
+2024,Kristine,Albay,546223.0
+2024,Kristine,Antique,6293.0
+2024,Kristine,Apayao,3905.0
+2024,Kristine,Aurora,49828.0
+2024,Kristine,Bataan,2838.0
+2024,Kristine,Batanes,27.0
+2024,Kristine,Batangas,84574.0
+2024,Kristine,Benguet,2281.0
+2024,Kristine,Biliran,6379.0
+2024,Kristine,Bohol,37908.0
+2024,Kristine,Bukidnon,32.0
+2024,Kristine,Bulacan,597795.0
+2024,Kristine,Cagayan,103884.0
+2024,Kristine,Camarines Norte,182561.0
+2024,Kristine,Camarines Sur,1427089.0
+2024,Kristine,Camiguin,271.0
+2024,Kristine,Capiz,1777.0
+2024,Kristine,Catanduanes,67340.0
+2024,Kristine,Cavite,53882.0
+2024,Kristine,Cotabato,86313.0
+2024,Kristine,Davao Occidental,20292.0
+2024,Kristine,Davao Oriental,11809.0
+2024,Kristine,Davao del Sur,25.0
+2024,Kristine,Dinagat Islands,26501.0
+2024,Kristine,Eastern Samar,64234.0
+2024,Kristine,Guimaras,1257.0
+2024,Kristine,Ifugao,750.0
+2024,Kristine,Ilocos Norte,28362.0
+2024,Kristine,Ilocos Sur,6890.0
+2024,Kristine,Iloilo,151064.0
+2024,Kristine,Isabela,105383.0
+2024,Kristine,Kalinga,3485.0
+2024,Kristine,La Union,18824.0
+2024,Kristine,Laguna,462776.0
+2024,Kristine,Lanao del Norte,507.0
+2024,Kristine,Lanao del Sur,340.0
+2024,Kristine,Leyte,8395.0
+2024,Kristine,Maguindanao del Norte,112195.0
+2024,Kristine,Maguindanao del Sur,388048.0
+2024,Kristine,Marinduque,16035.0
+2024,Kristine,Masbate,39309.0
+2024,Kristine,Misamis Occidental,13.0
+2024,Kristine,Misamis Oriental,5980.0
+2024,Kristine,Negros Occidental,110542.0
+2024,Kristine,Negros Oriental,17.0
+2024,Kristine,Northern Samar,49.0
+2024,Kristine,Nueva Ecija,119703.0
+2024,Kristine,Nueva Vizcaya,1469.0
+2024,Kristine,Occidental Mindoro,5336.0
+2024,Kristine,Oriental Mindoro,35064.0
+2024,Kristine,Pampanga,268723.0
+2024,Kristine,Pangasinan,267061.0
+2024,Kristine,Quezon,99.0
+2024,Kristine,Quirino,2101.0
+2024,Kristine,Rizal,87.0
+2024,Kristine,Romblon,6205.0
+2024,Kristine,Samar,366923.0
+2024,Kristine,Sarangani,190.0
+2024,Kristine,Sorsogon,65564.0
+2024,Kristine,South Cotabato,29.0
+2024,Kristine,Southern Leyte,8640.0
+2024,Kristine,Sultan Kudarat,45295.0
+2024,Kristine,Surigao del Norte,36289.0
+2024,Kristine,Surigao del Sur,1.0
+2024,Kristine,Tarlac,12896.0
+2024,Kristine,Zambales,4872.0
+2024,Kristine,Zamboanga Sibugay,70.0
+2024,Kristine,Zamboanga del Norte,17013.0
+2024,Kristine,Zamboanga del Sur,490.0
+2024,Leon,Abra,44.0
+2024,Leon,Aklan,9784.0
+2024,Leon,Albay,122798.0
+2024,Leon,Antique,52985.0
+2024,Leon,Apayao,7572.0
+2024,Leon,Aurora,4981.0
+2024,Leon,Batanes,21155.0
+2024,Leon,Batangas,284328.0
+2024,Leon,Benguet,604.0
+2024,Leon,Biliran,2392.0
+2024,Leon,Bohol,4975.0
+2024,Leon,Bukidnon,1.0
+2024,Leon,Bulacan,225.0
+2024,Leon,Cagayan,12580.0
+2024,Leon,Camarines Norte,146983.0
+2024,Leon,Camiguin,56.0
+2024,Leon,Capiz,14381.0
+2024,Leon,Catanduanes,41464.0
+2024,Leon,Cavite,207195.0
+2024,Leon,Cebu,6979.0
+2024,Leon,Cotabato,223.0
+2024,Leon,Davao Occidental,14593.0
+2024,Leon,Dinagat Islands,17183.0
+2024,Leon,Eastern Samar,54127.0
+2024,Leon,Guimaras,2884.0
+2024,Leon,Ifugao,1153.0
+2024,Leon,Ilocos Norte,28216.0
+2024,Leon,Ilocos Sur,2941.0
+2024,Leon,Iloilo,299.059
+2024,Leon,Isabela,49.0
+2024,Leon,Kalinga,652.0
+2024,Leon,La Union,20263.0
+2024,Leon,Laguna,303365.0
+2024,Leon,Lanao del Norte,3441.0
+2024,Leon,Lanao del Sur,4183.0
+2024,Leon,Leyte,5073.0
+2024,Leon,Marinduque,16077.0
+2024,Leon,Masbate,36797.0
+2024,Leon,Misamis Occidental,402.0
+2024,Leon,Misamis Oriental,3479.0
+2024,Leon,Negros Occidental,40770.0
+2024,Leon,Negros Oriental,997.0
+2024,Leon,Northern Samar,386310.0
+2024,Leon,Occidental Mindoro,8660.0
+2024,Leon,Oriental Mindoro,1762.0
+2024,Leon,Palawan,3037.0
+2024,Leon,Pampanga,79474.0
+2024,Leon,Pangasinan,79443.0
+2024,Leon,Quezon,247398.0
+2024,Leon,Quirino,233.0
+2024,Leon,Rizal,39565.0
+2024,Leon,Romblon,117.0
+2024,Leon,Samar,56621.0
+2024,Leon,Sarangani,5811.0
+2024,Leon,Siquijor,19.0
+2024,Leon,Sorsogon,157045.0
+2024,Leon,Southern Leyte,1012.0
+2024,Leon,Surigao del Norte,12888.0
+2024,Leon,Tarlac,240.0
+2024,Leon,Zamboanga del Norte,50362.0
+2024,Leon,Zamboanga del Sur,1315.0
+2024,Marce,Apayao,51038.0
+2024,Marce,Batanes,3461.0
+2024,Marce,Cagayan,272501.0
+2024,Marce,Ilocos Norte,44297.0
+2024,Marce,Ilocos Sur,1269.0
+2024,Marce,Kalinga,7.0
+2024,Marce,La Union,469.0
+2024,Marce,Rizal,42.0
+2024,Nika,Abra,165.0
+2024,Nika,Albay,3301.0
+2024,Nika,Aurora,329.0
+2024,Nika,Benguet,503.0
+2024,Nika,Cagayan,74.0
+2024,Nika,Catanduanes,1365.0
+2024,Nika,Ifugao,233.0
+2024,Nika,Ilocos Sur,1610.0
+2024,Nika,Isabela,1641.0
+2024,Nika,Kalinga,558.0
+2024,Nika,Nueva Vizcaya,79.0
+2024,Nika,Quezon,12.0
+2024,Nika,Quirino,383.0
+2024,Ofel,Abra,8197.0
+2024,Ofel,Albay,196.0
+2024,Ofel,Apayao,5442.0
+2024,Ofel,Aurora,36076.0
+2024,Ofel,Benguet,967.0
+2024,Ofel,Cagayan,27846.0
+2024,Ofel,Camarines Norte,118863.0
+2024,Ofel,Camarines Sur,25.0
+2024,Ofel,Catanduanes,32.0
+2024,Ofel,Ifugao,1417.0
+2024,Ofel,Ilocos Sur,11422.0
+2024,Ofel,Isabela,79801.0
+2024,Ofel,Kalinga,2678.0
+2024,Ofel,La Union,1224.0
+2024,Ofel,Nueva Vizcaya,2157.0
+2024,Ofel,Quezon,265.0
+2024,Ofel,Quirino,6265.0
+2024,Pepito,Abra,9403.0
+2024,Pepito,Albay,660255.0
+2024,Pepito,Apayao,5584.0
+2024,Pepito,Aurora,106151.0
+2024,Pepito,Bataan,3716.0
+2024,Pepito,Batanes,23.0
+2024,Pepito,Benguet,3853.0
+2024,Pepito,Biliran,18826.0
+2024,Pepito,Bulacan,12728.0
+2024,Pepito,Cagayan,209746.0
+2024,Pepito,Camarines Norte,111071.0
+2024,Pepito,Camarines Sur,605519.0
+2024,Pepito,Catanduanes,224711.0
+2024,Pepito,Eastern Samar,159819.0
+2024,Pepito,Ifugao,5886.0
+2024,Pepito,Ilocos Sur,9.0
+2024,Pepito,Isabela,221289.0
+2024,Pepito,Kalinga,4754.0
+2024,Pepito,La Union,5786.0
+2024,Pepito,Leyte,1100.0
+2024,Pepito,Marinduque,13851.0
+2024,Pepito,Masbate,89166.0
+2024,Pepito,Northern Samar,224414.0
+2024,Pepito,Nueva Ecija,132118.0
+2024,Pepito,Nueva Vizcaya,31369.0
+2024,Pepito,Occidental Mindoro,245.0
+2024,Pepito,Oriental Mindoro,2016.0
+2024,Pepito,Pampanga,54388.0
+2024,Pepito,Pangasinan,103784.0
+2024,Pepito,Quezon,205714.0
+2024,Pepito,Quirino,272930.0
+2024,Pepito,Rizal,434.0
+2024,Pepito,Romblon,3623.0
+2024,Pepito,Samar,4434.0
+2024,Pepito,Sorsogon,274653.0
+2024,Pepito,Tarlac,9618.0
+2024,Pepito,Zambales,4459.0
+2025,Auring,Bulacan,11016.0
+2025,Auring,Cebu,206.0
+2025,Auring,Cotabato,780.0
+2025,Auring,Davao Occidental,331.0
+2025,Auring,Davao de Oro,280.0
+2025,Auring,Misamis Oriental,1016.0
+2025,Auring,Tawi-Tawi,410.0
+2025,Auring,Zamboanga del Norte,20.0
+2025,Auring,Zamboanga del Sur,4568.0
+2025,Bising,Bataan,3.0
+2025,Bising,Benguet,335.0
+2025,Bising,Ilocos Sur,1959.0
+2025,Bising,Nueva Ecija,2971.0
+2025,Bising,Pampanga,92122.0
+2025,Bising,Zambales,6.0
+2025,Crising,Abra,25335.0
+2025,Crising,Agusan del Norte,51.0
+2025,Crising,Aklan,5949.0
+2025,Crising,Albay,112.0
+2025,Crising,Antique,74358.0
+2025,Crising,Apayao,128.0
+2025,Crising,Aurora,18222.0
+2025,Crising,Bataan,457.0
+2025,Crising,Batangas,1792.0
+2025,Crising,Benguet,506.0
+2025,Crising,Bohol,9589.0
+2025,Crising,Bulacan,366003.0
+2025,Crising,Cagayan,11253.0
+2025,Crising,Camarines Sur,34.0
+2025,Crising,Camiguin,117.0
+2025,Crising,Capiz,24374.0
+2025,Crising,Cavite,942.0
+2025,Crising,Cebu,4352.0
+2025,Crising,Davao Occidental,771.0
+2025,Crising,Davao del Sur,4.0
+2025,Crising,Dinagat Islands,32.0
+2025,Crising,Ifugao,25.0
+2025,Crising,Ilocos Sur,7.372
+2025,Crising,Isabela,1589.0
+2025,Crising,Kalinga,4.0
+2025,Crising,La Union,9783.0
+2025,Crising,Laguna,6771.0
+2025,Crising,Lanao del Norte,477.0
+2025,Crising,Lanao del Sur,11590.0
+2025,Crising,Maguindanao del Norte,16425.0
+2025,Crising,Maguindanao del Sur,3095.0
+2025,Crising,Masbate,4434.0
+2025,Crising,Misamis Oriental,18741.0
+2025,Crising,Negros Occidental,166335.0
+2025,Crising,Nueva Ecija,12119.0
+2025,Crising,Nueva Vizcaya,81.0
+2025,Crising,Occidental Mindoro,34482.0
+2025,Crising,Palawan,20755.0
+2025,Crising,Pampanga,215881.0
+2025,Crising,Pangasinan,95133.0
+2025,Crising,Quezon,298.0
+2025,Crising,Rizal,8192.0
+2025,Crising,Sarangani,113.0
+2025,Crising,South Cotabato,100.0
+2025,Crising,Sultan Kudarat,7282.0
+2025,Crising,Surigao del Norte,32.0
+2025,Crising,Tarlac,2626.0
+2025,Crising,Tawi-Tawi,1245.0
+2025,Crising,Zambales,1303.0
+2025,Crising,Zamboanga Sibugay,95.0
+2025,Crising,Zamboanga del Norte,40520.0
+2025,Crising,Zamboanga del Sur,3844.0
+2025,Dante,Albay,73886.0
+2025,Dante,Bataan,49623.0
+2025,Dante,Bohol,9.589
+2025,Dante,Bukidnon,11.0
+2025,Dante,Bulacan,150056.0
+2025,Dante,Camarines Norte,31125.0
+2025,Dante,Camarines Sur,8754.0
+2025,Dante,Camiguin,66.0
+2025,Dante,Catanduanes,29643.0
+2025,Dante,Isabela,338.0
+2025,Dante,Lanao del Norte,3.0
+2025,Dante,Negros Occidental,12446.0
+2025,Dante,Nueva Ecija,3467.0
+2025,Dante,Occidental Mindoro,3118.0
+2025,Dante,Pampanga,141990.0
+2025,Dante,Tarlac,15027.0
+2025,Dante,Zambales,521.0
+2025,Emong,Abra,24462.0
+2025,Emong,Agusan del Norte,104.0
+2025,Emong,Aklan,130970.0
+2025,Emong,Albay,246408.0
+2025,Emong,Antique,104692.0
+2025,Emong,Apayao,7360.0
+2025,Emong,Aurora,26503.0
+2025,Emong,Bataan,1701.0
+2025,Emong,Batanes,22161.0
+2025,Emong,Batangas,9925.0
+2025,Emong,Benguet,6567.0
+2025,Emong,Biliran,4686.0
+2025,Emong,Bohol,170.411
+2025,Emong,Bulacan,828.0
+2025,Emong,Cagayan,114732.0
+2025,Emong,Camarines Norte,530.0
+2025,Emong,Camarines Sur,396226.0
+2025,Emong,Capiz,95792.0
+2025,Emong,Catanduanes,71560.0
+2025,Emong,Cavite,3768.0
+2025,Emong,Cebu,2298.0
+2025,Emong,Cotabato,3120.0
+2025,Emong,Eastern Samar,18190.0
+2025,Emong,Guimaras,55699.0
+2025,Emong,Ifugao,190.0
+2025,Emong,Ilocos Sur,44531.628
+2025,Emong,Iloilo,144930.0
+2025,Emong,Isabela,8127.0
+2025,Emong,Kalinga,1480.0
+2025,Emong,La Union,6788.0
+2025,Emong,Laguna,2281.0
+2025,Emong,Lanao del Sur,15.0
+2025,Emong,Leyte,452.0
+2025,Emong,Maguindanao del Norte,16360.0
+2025,Emong,Maguindanao del Sur,308680.0
+2025,Emong,Marinduque,19987.0
+2025,Emong,Masbate,649370.0
+2025,Emong,Negros Occidental,38562.0
+2025,Emong,Northern Samar,3782.0
+2025,Emong,Nueva Ecija,10165.0
+2025,Emong,Nueva Vizcaya,1840.0
+2025,Emong,Occidental Mindoro,18349.0
+2025,Emong,Oriental Mindoro,255.025
+2025,Emong,Palawan,10711.0
+2025,Emong,Pampanga,172219.0
+2025,Emong,Pangasinan,196810.0
+2025,Emong,Quezon,18734.0
+2025,Emong,Quirino,571.0
+2025,Emong,Rizal,6183.0
+2025,Emong,Romblon,85375.0
+2025,Emong,Samar,543.0
+2025,Emong,Sorsogon,308693.0
+2025,Emong,Surigao del Norte,31.0
+2025,Emong,Tarlac,2710.0
+2025,Emong,Zambales,42464.0
+2025,Emong,Zamboanga del Sur,353.0
+2025,Isang,Albay,5852.0
+2025,Isang,Maguindanao del Norte,211.0
+2025,Isang,Maguindanao del Sur,24700.0
+2025,Isang,Quirino,113.0
+2025,Isang,South Cotabato,6180.0
+2025,Isang,Sultan Kudarat,5712.0
+2025,Jacinto,Agusan del Norte,285.0
+2025,Jacinto,Albay,19150.0
+2025,Jacinto,Camarines Sur,1695.0
+2025,Jacinto,Maguindanao del Sur,119910.0
+2025,Jacinto,Masbate,4554.0
+2025,Jacinto,Palawan,930.0
+2025,Jacinto,Quezon,24.0
+2025,Jacinto,Rizal,224.0
+2025,Jacinto,Sarangani,75.0
+2025,Jacinto,Sorsogon,1980.0
+2025,Jacinto,Sultan Kudarat,13532.0
+2025,Jacinto,Zamboanga del Norte,17520.0
+2025,Jacinto,Zamboanga del Sur,3461.0
+2025,Kiko,Antique,13418.0
+2025,Kiko,Pampanga,72507.0
+2025,Kiko,Quirino,2249.0
+2025,Lannie,Nueva Ecija,54.0
+2025,Lannie,Pampanga,83350.0
+2025,Lannie,Zambales,271.0
+2025,Mirasol,Aurora,203.0
+2025,Mirasol,Camarines Sur,85.0
+2025,Mirasol,Catanduanes,705.0
+2025,Mirasol,Quirino,10.0
+2025,Mirasol,Rizal,10.0
+2025,Nando,Abra,8769.0
+2025,Nando,Antique,314.0
+2025,Nando,Apayao,5378.0
+2025,Nando,Aurora,19021.0
+2025,Nando,Bataan,19.0
+2025,Nando,Batanes,13.0
+2025,Nando,Batangas,533.0
+2025,Nando,Benguet,568.0
+2025,Nando,Bulacan,146.0
+2025,Nando,Cagayan,3052.0
+2025,Nando,Camarines Sur,59841.0
+2025,Nando,Capiz,7.0
+2025,Nando,Catanduanes,22715.0
+2025,Nando,Cavite,240.0
+2025,Nando,Ifugao,170.0
+2025,Nando,Ilocos Norte,1489.0
+2025,Nando,Ilocos Sur,2994.0
+2025,Nando,Iloilo,1388.0
+2025,Nando,Isabela,2301.0
+2025,Nando,Kalinga,367.0
+2025,Nando,La Union,1467.0
+2025,Nando,Maguindanao del Sur,313086.0
+2025,Nando,Nueva Ecija,9336.0
+2025,Nando,Nueva Vizcaya,1659.0
+2025,Nando,Occidental Mindoro,230.0
+2025,Nando,Palawan,232.0
+2025,Nando,Pampanga,1110.0
+2025,Nando,Pangasinan,17348.0
+2025,Nando,Quezon,151.0
+2025,Nando,Quirino,591.0
+2025,Nando,Rizal,814.0
+2025,Nando,Tarlac,1813.0
+2025,Nando,Zambales,538.0
+2025,Nando,Zamboanga del Sur,342.0
+2025,Opong,Abra,41028.0
+2025,Opong,Agusan del Norte,155.0
+2025,Opong,Aklan,136919.0
+2025,Opong,Albay,320406.0
+2025,Opong,Antique,178736.0
+2025,Opong,Apayao,2110.0
+2025,Opong,Aurora,25501.0
+2025,Opong,Bataan,1682.0
+2025,Opong,Batanes,22148.0
+2025,Opong,Batangas,11184.0
+2025,Opong,Benguet,6505.0
+2025,Opong,Bohol,180.0
+2025,Opong,Bulacan,682.0
+2025,Opong,Cagayan,122933.0
+2025,Opong,Camarines Norte,31655.0
+2025,Opong,Camarines Sur,345088.0
+2025,Opong,Capiz,120159.0
+2025,Opong,Catanduanes,77783.0
+2025,Opong,Cavite,4470.0
+2025,Opong,Cebu,6650.0
+2025,Opong,Ifugao,45.0
+2025,Opong,Ilocos Sur,41545.0
+2025,Opong,Iloilo,143542.0
+2025,Opong,Isabela,7753.0
+2025,Opong,Kalinga,1117.0
+2025,Opong,La Union,15104.0
+2025,Opong,Laguna,9052.0
+2025,Opong,Maguindanao del Sur,311775.0
+2025,Opong,Masbate,653804.0
+2025,Opong,Nueva Ecija,829.0
+2025,Opong,Nueva Vizcaya,262.0
+2025,Opong,Occidental Mindoro,55719.0
+2025,Opong,Palawan,10479.0
+2025,Opong,Pampanga,171109.0
+2025,Opong,Pangasinan,274595.0
+2025,Opong,Quezon,18881.0
+2025,Opong,Rizal,5359.0
+2025,Opong,Tarlac,897.0
+2025,Opong,Zambales,43750.0
+2025,Opong,Zamboanga del Sur,11.0

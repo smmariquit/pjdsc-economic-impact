@@ -1,0 +1,19 @@
+Duplicates in Structured_data/2025/Emong/SitRep_051/affected_population_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    QUEZON: 2 rows
+    RIZAL: 2 rows
+    ROMBLON: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Quezon: 2 rows
+    Rizal: 2 rows
+    Romblon: 2 rows
+Duplicates in Structured_data/2025/Emong/SitRep_051/damage_to_houses_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    ROMBLON: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Romblon: 2 rows
+Duplicates in Structured_data/2025/Emong/SitRep_051/infrastructure_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    ROMBLON: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Romblon: 2 rows

@@ -1,0 +1,34 @@
+Duplicates in Structured_data/2021/Odette/SitRep_046/affected_population_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    BOHOL: 2 rows
+    LEYTE: 2 rows
+    SIQUIJOR: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Bohol: 2 rows
+    Leyte: 2 rows
+    Siquijor: 2 rows
+Duplicates in Structured_data/2021/Odette/SitRep_046/damage_to_houses_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    LEYTE: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Leyte: 2 rows
+Duplicates in Structured_data/2021/Odette/SitRep_046/damage_to_agriculture_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    BOHOL: 2 rows
+    CEBU: 2 rows
+    NEGROS ORIENTAL: 2 rows
+    QUEZON: 3 rows
+    SIQUIJOR: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Bohol: 2 rows
+    Cebu: 2 rows
+    Negros Oriental: 2 rows
+    Quezon: 3 rows
+    Siquijor: 2 rows
+Duplicates in Structured_data/2021/Odette/SitRep_046/infrastructure_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    BOHOL: 7 rows
+    RIZAL: 23 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Bohol: 7 rows
+    Rizal: 23 rows

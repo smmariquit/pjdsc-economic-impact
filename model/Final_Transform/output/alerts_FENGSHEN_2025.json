@@ -1,0 +1,676 @@
+{
+  "storm": "2025 FENGSHEN",
+  "forecast_source": "JTWC + Open-Meteo",
+  "forecast_period": "2025-10-22 to 2025-10-24",
+  "forecast_time": "2025-10-23T02:48:46.964651",
+  "feature_mode": "COMPLETE",
+  "confidence_level": "HIGH",
+  "total_provinces_at_risk": 83,
+  "total_predicted_affected": 48975,
+  "alerts": [
+    {
+      "province": "Sulu",
+      "impact_probability": 0.9998281002044678,
+      "predicted_affected": 2297,
+      "risk_score": 7.738616466522217,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Zamboanga del Norte",
+      "impact_probability": 0.9998364448547363,
+      "predicted_affected": 1789,
+      "risk_score": 7.48889684677124,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Maguindanao del Norte",
+      "impact_probability": 0.9997785687446594,
+      "predicted_affected": 1657,
+      "risk_score": 7.411865234375,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Sultan Kudarat",
+      "impact_probability": 0.9998032450675964,
+      "predicted_affected": 1475,
+      "risk_score": 7.296311378479004,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Capiz",
+      "impact_probability": 0.9997785687446594,
+      "predicted_affected": 1416,
+      "risk_score": 7.254841327667236,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Maguindanao del Sur",
+      "impact_probability": 0.9997655749320984,
+      "predicted_affected": 1397,
+      "risk_score": 7.241128444671631,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Cagayan",
+      "impact_probability": 0.9998751878738403,
+      "predicted_affected": 1336,
+      "risk_score": 7.19771671295166,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Leyte",
+      "impact_probability": 0.9998112320899963,
+      "predicted_affected": 1282,
+      "risk_score": 7.155739784240723,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Palawan",
+      "impact_probability": 0.9998714923858643,
+      "predicted_affected": 1243,
+      "risk_score": 7.125279426574707,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Davao de Oro",
+      "impact_probability": 0.999760091304779,
+      "predicted_affected": 1127,
+      "risk_score": 7.0268635749816895,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Zambales",
+      "impact_probability": 0.9998776912689209,
+      "predicted_affected": 1116,
+      "risk_score": 7.018279552459717,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Bohol",
+      "impact_probability": 0.99981290102005,
+      "predicted_affected": 1103,
+      "risk_score": 7.005426406860352,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Bataan",
+      "impact_probability": 0.999879002571106,
+      "predicted_affected": 1051,
+      "risk_score": 6.957726955413818,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Negros Oriental",
+      "impact_probability": 0.9998124241828918,
+      "predicted_affected": 1035,
+      "risk_score": 6.941906452178955,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Oriental Mindoro",
+      "impact_probability": 0.9998303651809692,
+      "predicted_affected": 965,
+      "risk_score": 6.8723649978637695,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Zamboanga del Sur",
+      "impact_probability": 0.9998112320899963,
+      "predicted_affected": 964,
+      "risk_score": 6.871155738830566,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "La Union",
+      "impact_probability": 0.9997772574424744,
+      "predicted_affected": 932,
+      "risk_score": 6.837458610534668,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Masbate",
+      "impact_probability": 0.999798595905304,
+      "predicted_affected": 927,
+      "risk_score": 6.832408905029297,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Misamis Oriental",
+      "impact_probability": 0.9998112320899963,
+      "predicted_affected": 921,
+      "risk_score": 6.82595682144165,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Lanao del Sur",
+      "impact_probability": 0.9998199343681335,
+      "predicted_affected": 911,
+      "risk_score": 6.814871788024902,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Nueva Ecija",
+      "impact_probability": 0.9998729228973389,
+      "predicted_affected": 906,
+      "risk_score": 6.809447765350342,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "South Cotabato",
+      "impact_probability": 0.9998112320899963,
+      "predicted_affected": 901,
+      "risk_score": 6.80373477935791,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Sorsogon",
+      "impact_probability": 0.9997785687446594,
+      "predicted_affected": 898,
+      "risk_score": 6.799976825714111,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Lanao del Norte",
+      "impact_probability": 0.99982088804245,
+      "predicted_affected": 860,
+      "risk_score": 6.757637023925781,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Cebu",
+      "impact_probability": 0.9998112320899963,
+      "predicted_affected": 832,
+      "risk_score": 6.724431991577148,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Agusan del Norte",
+      "impact_probability": 0.999760091304779,
+      "predicted_affected": 814,
+      "risk_score": 6.702288627624512,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Batangas",
+      "impact_probability": 0.9998526573181152,
+      "predicted_affected": 808,
+      "risk_score": 6.695304870605469,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Benguet",
+      "impact_probability": 0.9998127818107605,
+      "predicted_affected": 804,
+      "risk_score": 6.690828323364258,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Tarlac",
+      "impact_probability": 0.999860405921936,
+      "predicted_affected": 774,
+      "risk_score": 6.6528401374816895,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Metro Manila",
+      "impact_probability": 0.9998561143875122,
+      "predicted_affected": 769,
+      "risk_score": 6.645975112915039,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Isabela",
+      "impact_probability": 0.9998657703399658,
+      "predicted_affected": 754,
+      "risk_score": 6.626060962677002,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Davao del Norte",
+      "impact_probability": 0.9997807145118713,
+      "predicted_affected": 701,
+      "risk_score": 6.553159236907959,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Negros Occidental",
+      "impact_probability": 0.9998326301574707,
+      "predicted_affected": 671,
+      "risk_score": 6.509522438049316,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Quezon",
+      "impact_probability": 0.9998437166213989,
+      "predicted_affected": 662,
+      "risk_score": 6.49580717086792,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Samar",
+      "impact_probability": 0.9997840523719788,
+      "predicted_affected": 640,
+      "risk_score": 6.4626078605651855,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Davao del Sur",
+      "impact_probability": 0.9998112320899963,
+      "predicted_affected": 637,
+      "risk_score": 6.458544731140137,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Cotabato",
+      "impact_probability": 0.9998726844787598,
+      "predicted_affected": 585,
+      "risk_score": 6.372657775878906,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Agusan del Sur",
+      "impact_probability": 0.9997840523719788,
+      "predicted_affected": 574,
+      "risk_score": 6.353123664855957,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Iloilo",
+      "impact_probability": 0.9998112320899963,
+      "predicted_affected": 567,
+      "risk_score": 6.34100866317749,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Romblon",
+      "impact_probability": 0.99983811378479,
+      "predicted_affected": 560,
+      "risk_score": 6.329305171966553,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Bukidnon",
+      "impact_probability": 0.9998666048049927,
+      "predicted_affected": 525,
+      "risk_score": 6.265460014343262,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Aklan",
+      "impact_probability": 0.9997580647468567,
+      "predicted_affected": 516,
+      "risk_score": 6.248012542724609,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Basilan",
+      "impact_probability": 0.9997580647468567,
+      "predicted_affected": 509,
+      "risk_score": 6.233487606048584,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Camarines Sur",
+      "impact_probability": 0.9998112320899963,
+      "predicted_affected": 489,
+      "risk_score": 6.194710731506348,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Albay",
+      "impact_probability": 0.9998199343681335,
+      "predicted_affected": 453,
+      "risk_score": 6.118780136108398,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Zamboanga Sibugay",
+      "impact_probability": 0.999760091304779,
+      "predicted_affected": 443,
+      "risk_score": 6.094418048858643,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Pangasinan",
+      "impact_probability": 0.9998332262039185,
+      "predicted_affected": 419,
+      "risk_score": 6.040500640869141,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Northern Samar",
+      "impact_probability": 0.999760091304779,
+      "predicted_affected": 354,
+      "risk_score": 5.870916366577148,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Antique",
+      "impact_probability": 0.9997943043708801,
+      "predicted_affected": 335,
+      "risk_score": 5.818617343902588,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Catanduanes",
+      "impact_probability": 0.9997523427009583,
+      "predicted_affected": 323,
+      "risk_score": 5.7816243171691895,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Pampanga",
+      "impact_probability": 0.9998340606689453,
+      "predicted_affected": 279,
+      "risk_score": 5.636750221252441,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Bulacan",
+      "impact_probability": 0.9998340606689453,
+      "predicted_affected": 271,
+      "risk_score": 5.607091903686523,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Marinduque",
+      "impact_probability": 0.9998335838317871,
+      "predicted_affected": 269,
+      "risk_score": 5.598832607269287,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Guimaras",
+      "impact_probability": 0.9997649788856506,
+      "predicted_affected": 263,
+      "risk_score": 5.5763092041015625,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Misamis Occidental",
+      "impact_probability": 0.9997560381889343,
+      "predicted_affected": 219,
+      "risk_score": 5.3962225914001465,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Cavite",
+      "impact_probability": 0.9998605251312256,
+      "predicted_affected": 201,
+      "risk_score": 5.30800199508667,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Occidental Mindoro",
+      "impact_probability": 0.9998044371604919,
+      "predicted_affected": 195,
+      "risk_score": 5.278134346008301,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Laguna",
+      "impact_probability": 0.9998526573181152,
+      "predicted_affected": 186,
+      "risk_score": 5.232715606689453,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Camarines Norte",
+      "impact_probability": 0.999824583530426,
+      "predicted_affected": 184,
+      "risk_score": 5.221892833709717,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Aurora",
+      "impact_probability": 0.9998780488967896,
+      "predicted_affected": 181,
+      "risk_score": 5.208004951477051,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Eastern Samar",
+      "impact_probability": 0.9997627139091492,
+      "predicted_affected": 175,
+      "risk_score": 5.170684337615967,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Rizal",
+      "impact_probability": 0.9998630285263062,
+      "predicted_affected": 167,
+      "risk_score": 5.127556800842285,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Sarangani",
+      "impact_probability": 0.9997462630271912,
+      "predicted_affected": 165,
+      "risk_score": 5.116523742675781,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Quirino",
+      "impact_probability": 0.999834418296814,
+      "predicted_affected": 164,
+      "risk_score": 5.109726428985596,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Southern Leyte",
+      "impact_probability": 0.9997462630271912,
+      "predicted_affected": 149,
+      "risk_score": 5.015890121459961,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Ilocos Sur",
+      "impact_probability": 0.9997696280479431,
+      "predicted_affected": 147,
+      "risk_score": 5.001403331756592,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Biliran",
+      "impact_probability": 0.9997462630271912,
+      "predicted_affected": 147,
+      "risk_score": 5.000187873840332,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Surigao del Norte",
+      "impact_probability": 0.9997462630271912,
+      "predicted_affected": 139,
+      "risk_score": 4.941241264343262,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Surigao del Sur",
+      "impact_probability": 0.9997840523719788,
+      "predicted_affected": 130,
+      "risk_score": 4.874939918518066,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Ifugao",
+      "impact_probability": 0.9998645782470703,
+      "predicted_affected": 126,
+      "risk_score": 4.844993591308594,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Tawi-Tawi",
+      "impact_probability": 0.9997462630271912,
+      "predicted_affected": 120,
+      "risk_score": 4.797476768493652,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Kalinga",
+      "impact_probability": 0.9997614026069641,
+      "predicted_affected": 111,
+      "risk_score": 4.7243733406066895,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Davao Oriental",
+      "impact_probability": 0.9997627139091492,
+      "predicted_affected": 103,
+      "risk_score": 4.651989459991455,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Ilocos Norte",
+      "impact_probability": 0.9997960925102234,
+      "predicted_affected": 98,
+      "risk_score": 4.599697589874268,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Camiguin",
+      "impact_probability": 0.9997462630271912,
+      "predicted_affected": 95,
+      "risk_score": 4.571824073791504,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Nueva Vizcaya",
+      "impact_probability": 0.9998698234558105,
+      "predicted_affected": 95,
+      "risk_score": 4.571585178375244,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Mountain Province",
+      "impact_probability": 0.9997614026069641,
+      "predicted_affected": 93,
+      "risk_score": 4.549874782562256,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Abra",
+      "impact_probability": 0.9997614026069641,
+      "predicted_affected": 89,
+      "risk_score": 4.507590293884277,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Davao Occidental",
+      "impact_probability": 0.9997627139091492,
+      "predicted_affected": 87,
+      "risk_score": 4.476748943328857,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Apayao",
+      "impact_probability": 0.9997614026069641,
+      "predicted_affected": 71,
+      "risk_score": 4.283091068267822,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Dinagat Islands",
+      "impact_probability": 0.9997627139091492,
+      "predicted_affected": 70,
+      "risk_score": 4.271151065826416,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Siquijor",
+      "impact_probability": 0.9997542500495911,
+      "predicted_affected": 64,
+      "risk_score": 4.178195476531982,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    },
+    {
+      "province": "Batanes",
+      "impact_probability": 0.9998691082000732,
+      "predicted_affected": 56,
+      "risk_score": 4.058281898498535,
+      "alert_level": "CRITICAL",
+      "confidence": "HIGH"
+    }
+  ]
+}

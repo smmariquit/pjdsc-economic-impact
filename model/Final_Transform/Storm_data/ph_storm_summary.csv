@@ -1,0 +1,284 @@
+Year,Intl_Name,PH_Name,Peak_Category,Peak_Windspeed_kmh,Peak_Pressure_hPa,Date_Start,Date_End
+2010,Omais,Agaton,Tropical storm,65.0,998,2010-03-22,2010-03-26
+2010,Conson,Basyang,Typhoon,120.0,975,2010-07-11,2010-07-18
+2010,Chanthu,Caloy,Typhoon,130.0,970,2010-07-17,2010-07-23
+2010,,Domeng,Tropical storm,65.0,997,2010-08-03,2010-08-05
+2010,Lionrock,Florita,Severe tropical storm,95.0,985,2010-08-27,2010-09-04
+2010,Dianmu,Ester,Severe tropical storm,95.0,985,2010-08-06,2010-08-12
+2010,Kompasu,Glenda,Typhoon,150.0,960,2010-08-28,2010-09-02
+2010,Malou,Henry,Severe tropical storm,95.0,985,2010-09-01,2010-09-10
+2010,Fanapi,Inday,Very strong typhoon,175.0,930,2010-09-14,2010-09-21
+2010,Megi,Juan,Violent typhoon,230.0,885,2010-10-12,2010-10-24
+2010,Chaba,Katring,Very strong typhoon,175.0,930,2010-10-20,2010-10-31
+2011,02W,Amang,Tropical depression,55.0,1000,2011-04-03,2011-04-06
+2011,Songda,Chedeng,Violent typhoon,195.0,920,2011-05-19,2011-05-29
+2011,Aere,Bebeng,Tropical storm,75.0,992,2011-05-05,2011-05-12
+2011,Sarika,Dodong,Tropical storm,75.0,996,2011-06-08,2011-06-11
+2011,Meari,Falcon,Severe tropical storm,110.0,975,2011-06-20,2011-06-27
+2011,Haima,Egay,Tropical storm,75.0,985,2011-06-16,2011-06-25
+2011,Nock-ten,Juaning,Severe tropical storm,95.0,985,2011-07-24,2011-07-31
+2011,Ma-on,Ineng,Very strong typhoon,175.0,935,2011-07-11,2011-07-24
+2011,Tokage,Hanna,Tropical storm,65.0,1000,2011-07-13,2011-07-15
+2011,Muifa,Kabayan,Very strong typhoon,175.0,930,2011-07-25,2011-08-09
+2011,,Lando,Tropical depression,,1002,2011-07-31,2011-08-02
+2011,Nanmadol,Mina,Very strong typhoon,185.0,925,2011-08-21,2011-08-31
+2011,Roke,Onyok,Very strong typhoon,155.0,940,2011-09-08,2011-09-22
+2011,Kulap,Nonoy,Tropical storm,65.0,1000,2011-09-06,2011-09-11
+2011,Nesat,Pedring,Strong typhoon,150.0,950,2011-09-23,2011-09-30
+2011,Nalgae,Quiel,Very strong typhoon,175.0,935,2011-09-26,2011-10-05
+2011,Banyan,Ramon,Tropical storm,65.0,1002,2011-10-09,2011-10-14
+2011,Washi,Sendong,Severe tropical storm,95.0,992,2011-12-13,2011-12-19
+2012,Mawar,Ambo,Strong typhoon,140.0,960,2012-05-31,2012-06-06
+2012,Guchol,Butchoy,Very strong typhoon,185.0,930,2012-06-10,2012-06-20
+2012,Talim,Carina,Severe tropical storm,95.0,985,2012-06-16,2012-06-21
+2012,Doksuri,Dindo,Tropical storm,75.0,992,2012-06-25,2012-06-30
+2012,Saola,Gener,Strong typhoon,130.0,960,2012-07-26,2012-08-04
+2012,Vicente,Ferdie,Strong typhoon,150.0,950,2012-07-18,2012-07-25
+2012,Khanun,Enteng,Severe tropical storm,95.0,985,2012-07-14,2012-07-19
+2012,Tembin,Igme,Strong typhoon,150.0,950,2012-08-17,2012-08-30
+2012,Bolaven,Julian,Very strong typhoon,185.0,910,2012-08-19,2012-08-29
+2012,Kai-tak,Helen,Strong typhoon,120.0,970,2012-08-12,2012-08-18
+2012,Jelawat,Lawin,Violent typhoon,205.0,905,2012-09-20,2012-10-01
+2012,Gaemi,Marce,Severe tropical storm,95.0,990,2012-09-29,2012-10-07
+2012,Sanba,Karen,Violent typhoon,205.0,900,2012-09-10,2012-09-18
+2012,Prapiroon,Nina,Very strong typhoon,165.0,940,2012-10-05,2012-10-19
+2012,Son-Tinh,Ofel,Very strong typhoon,155.0,945,2012-10-21,2012-10-30
+2012,Bopha,Pablo,Very strong typhoon,185.0,930,2012-11-25,2012-12-09
+2012,Wukong,Quinta,Tropical storm,75.0,998,2012-12-24,2012-12-29
+2013,Sonamu,Auring,Severe tropical storm,95.0,990,2013-01-01,2013-01-10
+2013,,Bising,Tropical depression,55.0,1002,2013-01-06,2013-01-13
+2013,Shanshan,Crising,Tropical storm,65.0,1002,2013-02-18,2013-02-23
+2013,Yagi,Dante,Tropical storm,85.0,990,2013-06-06,2013-06-12
+2013,Rumbia,Gorio,Severe tropical storm,95.0,985,2013-06-27,2013-07-02
+2013,Bebinca,Fabian,Tropical storm,75.0,990,2013-06-19,2013-06-24
+2013,Leepi,Emong,Tropical storm,75.0,994,2013-06-16,2013-06-21
+2013,Soulik,Huaning,Very strong typhoon,185.0,925,2013-07-07,2013-07-14
+2013,Jebi,Jolina,Severe tropical storm,95.0,985,2013-07-28,2013-08-03
+2013,Cimaron,Isang,Tropical storm,75.0,1000,2013-07-15,2013-07-18
+2013,Mangkhut,Kiko,Tropical storm,75.0,992,2013-08-05,2013-08-08
+2013,Trami,Maring,Severe tropical storm,110.0,965,2013-08-16,2013-08-24
+2013,Kong-rey,Nando,Severe tropical storm,100.0,980,2013-08-25,2013-08-30
+2013,Utor,Labuyo,Violent typhoon,195.0,925,2013-08-08,2013-08-18
+2013,Usagi,Odette,Violent typhoon,205.0,910,2013-09-16,2013-09-24
+2013,Wutip,Paolo,Strong typhoon,120.0,965,2013-09-25,2013-10-01
+2013,Fitow,Quedan,Strong typhoon,140.0,960,2013-09-29,2013-10-07
+2013,Nari,Santi,Strong typhoon,140.0,965,2013-10-08,2013-10-16
+2013,Danas,Ramil,Very strong typhoon,165.0,935,2013-10-01,2013-10-09
+2013,Krosa,Vinta,Strong typhoon,140.0,970,2013-10-27,2013-11-05
+2013,Francisco,Urduja,Violent typhoon,195.0,920,2013-10-15,2013-10-26
+2013,Wipha,Tino,Very strong typhoon,165.0,930,2013-10-09,2013-10-16
+2013,Podul,Zoraida,Tropical storm,65.0,1000,2013-11-11,2013-11-15
+2013,Haiyan,Yolanda,Violent typhoon,230.0,895,2013-11-03,2013-11-11
+2013,30W,Wilma,Tropical depression,55.0,1004,2013-11-02,2013-11-07
+2014,Lingling,Agaton,Tropical storm,65.0,1002,2014-01-10,2014-01-20
+2014,Kajiki,Basyang,Tropical storm,65.0,1000,2014-01-29,2014-02-01
+2014,04W,Caloy,Tropical depression,,1004,2014-03-17,2014-03-24
+2014,Peipah,Domeng,Tropical storm,65.0,998,2014-04-02,2014-04-15
+2014,Mitag,Ester,Tropical storm,75.0,994,2014-06-09,2014-06-12
+2014,Matmo,Henry,Strong typhoon,130.0,965,2014-07-16,2014-07-25
+2014,Neoguri,Florita,Very strong typhoon,185.0,930,2014-07-02,2014-07-11
+2014,Rammasun,Glenda,Very strong typhoon,165.0,935,2014-07-09,2014-07-20
+2014,Halong,Jose,Violent typhoon,195.0,920,2014-07-27,2014-08-11
+2014,Nakri,Inday,Severe tropical storm,100.0,980,2014-07-28,2014-08-04
+2014,Fung-wong,Mario,Tropical storm,85.0,985,2014-09-17,2014-09-24
+2014,Phanfone,Neneng,Very strong typhoon,175.0,935,2014-09-28,2014-10-06
+2014,Kalmaegi,Luis,Strong typhoon,140.0,960,2014-09-11,2014-09-18
+2014,14W,Karding,Tropical depression,55.0,1004,2014-09-05,2014-09-08
+2014,Vongfong,Ompong,Violent typhoon,215.0,900,2014-10-02,2014-10-14
+2014,Nuri,Paeng,Violent typhoon,205.0,910,2014-10-30,2014-11-06
+2014,Sinlaku,Queenie,Tropical storm,85.0,990,2014-11-26,2014-11-30
+2014,Hagupit,Ruby,Violent typhoon,215.0,905,2014-11-30,2014-12-12
+2014,Jangmi,Seniang,Tropical storm,75.0,996,2014-12-28,2014-01-01
+2015,Mekkhala,Amang,Severe tropical storm,110.0,975,2015-01-13,2015-01-21
+2015,Bavi,Betty,Tropical storm,85.0,990,2015-03-10,2015-03-21
+2015,Maysak,Chedeng,Violent typhoon,195.0,910,2015-03-26,2015-04-07
+2015,Noul,Dodong,Violent typhoon,205.0,920,2015-05-02,2015-05-12
+2015,Chan-hom,Falcon,Very strong typhoon,165.0,935,2015-06-29,2015-07-13
+2015,Halola,Goring,Strong typhoon,150.0,955,2015-07-13,2015-07-26
+2015,Linfa,Egay,Severe tropical storm,95.0,980,2015-07-01,2015-07-10
+2015,Soudelor,Hanna,Violent typhoon,215.0,900,2015-07-29,2015-08-11
+2015,Goni,Ineng,Very strong typhoon,185.0,930,2015-08-13,2015-08-25
+2015,Dujuan,Jenny,Violent typhoon,205.0,925,2015-09-19,2015-09-30
+2015,Mujigae,Kabayan,Very strong typhoon,155.0,950,2015-09-30,2015-10-05
+2015,Koppu,Lando,Very strong typhoon,185.0,925,2015-10-12,2015-10-21
+2015,In-fa,Marilyn,Very strong typhoon,175.0,935,2015-11-16,2015-11-27
+2015,Melor,Nona,Very strong typhoon,175.0,935,2015-12-10,2015-12-17
+2015,29W,Onyok,Tropical depression,55.0,1002,2015-12-14,2015-12-19
+2016,,Ambo,Tropical depression,55.0,1004,2016-06-25,2016-06-28
+2016,Nepartak,Butchoy,Violent typhoon,205.0,900,2016-07-02,2016-07-10
+2016,Nida,Carina,Severe tropical storm,110.0,975,2016-07-29,2016-08-03
+2016,Lionrock,Dindo,Very strong typhoon,165.0,940,2016-08-17,2016-08-30
+2016,Namtheun,Enteng,Strong typhoon,130.0,955,2016-08-31,2016-09-05
+2016,Meranti,Ferdie,Violent typhoon,220.0,890,2016-09-08,2016-09-16
+2016,Malakas,Gener,Very strong typhoon,175.0,930,2016-09-11,2016-09-20
+2016,Megi,Helen,Very strong typhoon,155.0,945,2016-09-22,2016-09-29
+2016,Chaba,Igme,Violent typhoon,215.0,905,2016-09-24,2016-10-05
+2016,Aere,Julian,Severe tropical storm,110.0,975,2016-10-04,2016-10-14
+2016,Haima,Lawin,Violent typhoon,215.0,900,2016-10-14,2016-10-21
+2016,Sarika,Karen,Very strong typhoon,175.0,935,2016-10-13,2016-10-19
+2016,Tokage,Marce,Severe tropical storm,95.0,992,2016-11-24,2016-11-28
+2016,Nock-ten,Nina,Violent typhoon,195.0,915,2016-12-20,2016-12-28
+2017,01W,Auring,Tropical depression,55.0,1002,2017-01-07,2017-01-16
+2017,,Bising,Tropical depression,55.0,1000,2017-02-03,2017-02-07
+2017,02W,Crising,Tropical depression,55.0,1006,2017-04-13,2017-04-19
+2017,Muifa,Dante,Tropical storm,65.0,1002,2017-04-22,2017-04-29
+2017,Nanmadol,Emong,Severe tropical storm,100.0,985,2017-07-01,2017-07-04
+2017,Haitang,Huaning,Tropical storm,85.0,985,2017-07-27,2017-08-02
+2017,Nesat,Gorio,Strong typhoon,150.0,960,2017-07-25,2017-07-30
+2017,Roke,Fabian,Tropical storm,65.0,1002,2017-07-21,2017-07-23
+2017,Pakhar,Jolina,Severe tropical storm,100.0,985,2017-08-24,2017-08-27
+2017,Hato,Isang,Strong typhoon,140.0,965,2017-08-19,2017-08-24
+2017,Doksuri,Maring,Strong typhoon,150.0,955,2017-09-10,2017-09-16
+2017,22W,Nando,Tropical depression,55.0,1002,2017-09-23,2017-09-25
+2017,Guchol,Kiko,Tropical storm,65.0,1000,2017-09-03,2017-09-07
+2017,Talim,Lannie,Very strong typhoon,175.0,935,2017-09-08,2017-09-17
+2017,Khanun,Odette,Strong typhoon,140.0,955,2017-10-11,2017-10-16
+2017,Lan,Paolo,Very strong typhoon,185.0,915,2017-10-15,2017-10-23
+2017,Damrey,Ramil,Strong typhoon,130.0,970,2017-10-31,2017-11-04
+2017,Saola,Quedan,Severe tropical storm,110.0,975,2017-10-22,2017-10-29
+2017,Haikui,Salome,Tropical storm,75.0,998,2017-11-07,2017-11-13
+2017,Kirogi,Tino,Tropical storm,65.0,1000,2017-11-16,2017-11-19
+2017,Kai-tak,Urduja,Tropical storm,75.0,994,2017-12-13,2017-12-23
+2017,Tembin,Vinta,Strong typhoon,130.0,970,2017-12-20,2017-12-26
+2018,Bolaven,Agaton,Tropical storm,65.0,1002,2017-12-29,2018-01-04
+2018,Sanba,Basyang,Tropical storm,65.0,1000,2018-02-08,2018-02-16
+2018,Jelawat,Caloy,Violent typhoon,195.0,915,2018-03-24,2018-04-01
+2018,Maliksi,Domeng,Severe tropical storm,110.0,970,2018-06-03,2018-06-11
+2018,Prapiroon,Florita,Strong typhoon,120.0,960,2018-06-28,2018-07-04
+2018,Gaemi,Ester,Tropical storm,85.0,990,2018-06-13,2018-06-16
+2018,Son-Tinh,Henry,Tropical storm,75.0,994,2018-07-16,2018-07-24
+2018,Ampil,Inday,Severe tropical storm,95.0,985,2018-07-17,2018-07-24
+2018,13W,Josie,Tropical depression,55.0,996,2018-07-20,2018-07-23
+2018,Maria,Gardo,Violent typhoon,195.0,915,2018-07-03,2018-07-12
+2018,Yagi,Karding,Tropical storm,75.0,990,2018-08-06,2018-08-15
+2018,24W,Luis,Tropical depression,55.0,994,2018-08-21,2018-08-26
+2018,Jebi,Maymay,Violent typhoon,195.0,915,2018-08-26,2018-09-04
+2018,Mangkhut,Ompong,Violent typhoon,205.0,905,2018-09-06,2018-09-17
+2018,Kong-rey,Queenie,Violent typhoon,215.0,900,2018-09-28,2018-10-06
+2018,Barijat,Neneng,Tropical storm,75.0,998,2018-09-08,2018-09-13
+2018,Trami,Paeng,Violent typhoon,195.0,915,2018-09-20,2018-10-01
+2018,Yutu,Rosita,Violent typhoon,215.0,900,2018-10-21,2018-11-02
+2018,Usagi,Samuel,Severe tropical storm,110.0,990,2018-11-14,2018-11-26
+2018,Man-yi,Tomas,Strong typhoon,150.0,960,2018-11-20,2018-11-28
+2018,35W,Usman,Tropical depression,55.0,1000,2018-12-25,2018-12-29
+2019,01W,Amang,Tropical depression,55.0,1004,2019-01-04,2019-01-22
+2019,Wutip,Betty,Violent typhoon,195.0,920,2019-02-18,2019-03-02
+2019,03W,Chedeng,Tropical depression,,1006,2019-03-14,2019-03-19
+2019,Sepat,Dodong,Tropical storm,75.0,994,2019-06-24,2019-06-28
+2019,04W,Egay,Tropical depression,,1002,2019-06-27,2019-07-01
+2019,Danas,Falcon,Tropical storm,85.0,985,2019-07-14,2019-07-21
+2019,,Goring,Tropical depression,55.0,996,2019-07-17,2019-07-19
+2019,Lekima,Hanna,Violent typhoon,195.0,925,2019-08-02,2019-08-13
+2019,Bailu,Ineng,Severe tropical storm,95.0,985,2019-08-19,2019-08-26
+2019,Kajiki,Kabayan,Tropical storm,65.0,996,2019-08-30,2019-09-06
+2019,Podul,Jenny,Tropical storm,75.0,992,2019-08-24,2019-08-31
+2019,Lingling,Liwayway,Very strong typhoon,175.0,940,2019-08-31,2019-09-07
+2019,,Marilyn,Tropical depression,55.0,996,2019-09-10,2019-09-13
+2019,Tapah,Nimfa,Strong typhoon,120.0,970,2019-09-17,2019-09-22
+2019,Mitag,Onyok,Strong typhoon,140.0,965,2019-09-24,2019-10-03
+2019,Neoguri,Perla,Strong typhoon,140.0,970,2019-10-15,2019-10-21
+2019,Nakri,Quiel,Strong typhoon,120.0,975,2019-11-04,2019-11-11
+2019,Fung-wong,Sarah,Severe tropical storm,100.0,990,2019-11-17,2019-11-23
+2019,Kammuri,Tisoy,Very strong typhoon,165.0,950,2019-11-24,2019-12-06
+2019,Kalmaegi,Ramon,Strong typhoon,130.0,975,2019-11-09,2019-11-22
+2019,Phanfone,Ursula,Strong typhoon,150.0,970,2019-12-19,2019-12-29
+2020,Vongfong,Ambo,Very strong typhoon,155.0,960,2020-05-08,2020-05-18
+2020,Nuri,Butchoy,Tropical storm,75.0,996,2020-06-10,2020-06-14
+2020,Hagupit,Dindo,Typhoon,130.0,975,2020-07-30,2020-08-05
+2020,Mekkhala,Ferdie,Severe tropical storm,95.0,992,2020-08-09,2020-08-11
+2020,Higos,Helen,Severe tropical storm,100.0,992,2020-08-16,2020-08-20
+2020,Bavi,Igme,Very strong typhoon,155.0,950,2020-08-20,2020-08-27
+2020,Maysak,Julian,Very strong typhoon,175.0,935,2020-08-27,2020-09-03
+2020,Haishen,Kristine,Violent typhoon,195.0,910,2020-08-30,2020-09-07
+2020,06W,Gener,Tropical depression,55.0,1012,2020-08-08,2020-08-13
+2020,Jangmi,Enteng,Tropical storm,85.0,994,2020-08-06,2020-08-11
+2020,Noul,Leon,Tropical storm,85.0,994,2020-09-14,2020-09-18
+2020,Dolphin,Marce,Severe tropical storm,110.0,975,2020-09-19,2020-09-24
+2020,Nangka,Nika,Tropical storm,85.0,990,2020-10-11,2020-10-14
+2020,,Ofel,Tropical depression,45.0,1002,2020-10-13,2020-10-16
+2020,Molave,Quinta,Very strong typhoon,165.0,940,2020-10-22,2020-10-30
+2020,Goni,Rolly,Violent typhoon,220.0,905,2020-10-26,2020-11-06
+2020,Atsani,Siony,Severe tropical storm,95.0,992,2020-10-30,2020-11-07
+2020,Saudel,Pepito,Typhoon,120.0,975,2020-10-18,2020-10-25
+2020,Etau,Tonyo,Tropical storm,85.0,992,2020-11-06,2020-11-10
+2020,Vamco,Ulysses,Very strong typhoon,155.0,955,2020-11-08,2020-11-15
+2020,Krovanh,Vicky,Tropical storm,65.0,1000,2020-12-18,2020-12-24
+2021,Dujuan,Auring,Tropical storm,75.0,996,2021-02-16,2021-02-23
+2021,Surigae,Bising,Violent typhoon,220.0,895,2021-04-12,2021-04-24
+2021,03W,Crising,Tropical depression,55.0,1002,2021-05-12,2021-05-14
+2021,Choi-wan,Dante,Tropical storm,75.0,998,2021-05-29,2021-06-05
+2021,In-fa,Fabian,Very strong typhoon,155.0,950,2021-07-15,2021-07-29
+2021,07W,Emong,Tropical depression,55.0,1004,2021-07-03,2021-07-06
+2021,Lupit,Huaning,Tropical storm,85.0,984,2021-08-02,2021-08-09
+2021,Omais,Isang,Tropical storm,85.0,994,2021-08-10,2021-08-23
+2021,Mirinae,Gorio,Severe tropical storm,95.0,980,2021-08-03,2021-08-10
+2021,Conson,Jolina,Severe tropical storm,95.0,992,2021-09-05,2021-09-13
+2021,Chanthu,Kiko,Violent typhoon,215.0,905,2021-09-05,2021-09-18
+2021,Lionrock,Lannie,Tropical storm,65.0,994,2021-10-05,2021-10-10
+2021,Kompasu,Maring,Severe tropical storm,100.0,975,2021-10-07,2021-10-14
+2021,,Nando,Tropical depression,,1002,2021-10-07,2021-10-08
+2021,Rai,Odette,Violent typhoon,195.0,915,2021-12-11,2021-12-21
+2022,Malakas,Basyang,Very strong typhoon,165.0,945,2022-04-06,2022-04-15
+2022,Megi,Agaton,Tropical storm,75.0,996,2022-04-08,2022-04-12
+2022,Chaba,Caloy,Typhoon,130.0,965,2022-06-28,2022-07-05
+2022,Aere,Domeng,Tropical storm,85.0,994,2022-06-30,2022-07-04
+2022,Trases,Ester,Tropical storm,65.0,998,2022-07-29,2022-08-01
+2022,Hinnamnor,Henry,Violent typhoon,195.0,920,2022-08-27,2022-09-06
+2022,13W,Gardo,Tropical depression,55.0,998,2022-08-30,2022-09-01
+2022,Ma-on,Florita,Severe tropical storm,100.0,985,2022-08-20,2022-08-26
+2022,Nanmadol,Josie,Violent typhoon,195.0,910,2022-09-12,2022-09-19
+2022,Muifa,Inday,Very strong typhoon,155.0,950,2022-09-03,2022-09-15
+2022,Roke,Luis,Typhoon,130.0,975,2022-09-28,2022-10-01
+2022,Noru,Karding,Very strong typhoon,175.0,940,2022-09-21,2022-09-29
+2022,Nesat,Neneng,Typhoon,140.0,965,2022-10-14,2022-10-20
+2022,,Maymay,Tropical depression,,1002,2022-10-11,2022-10-12
+2022,25W,Obet,Tropical depression,55.0,1006,2022-10-18,2022-10-23
+2022,Nalgae,Paeng,Severe tropical storm,110.0,975,2022-10-26,2022-11-03
+2022,Banyan,Queenie,Tropical storm,75.0,1002,2022-10-28,2022-11-03
+2022,Pakhar,Rosal,Tropical storm,75.0,998,2022-12-10,2022-12-12
+2023,,Amang,Tropical depression,55.0,1004,2023-04-10,2023-04-13
+2023,Mawar,Betty,Violent typhoon,215.0,900,2023-05-19,2023-06-02
+2023,Guchol,Chedeng,Typhoon,150.0,960,2023-06-06,2023-06-12
+2023,Talim,Dodong,Severe tropical storm,110.0,970,2023-07-13,2023-07-18
+2023,Doksuri,Egay,Very strong typhoon,185.0,925,2023-07-20,2023-07-30
+2023,Khanun,Falcon,Very strong typhoon,175.0,930,2023-07-26,2023-08-10
+2023,Saola,Goring,Violent typhoon,195.0,920,2023-08-22,2023-09-03
+2023,Haikui,Hanna,Very strong typhoon,155.0,945,2023-08-27,2023-09-06
+2023,Yun-yeung,Ineng,Tropical storm,75.0,998,2023-09-04,2023-09-09
+2023,Koinu,Jenny,Very strong typhoon,165.0,940,2023-09-28,2023-10-09
+2023,Jelawat,Kabayan,Tropical storm,65.0,1002,2023-12-15,2023-12-18
+2024,Ewiniar,Aghon,Typhoon,140.0,970,2024-05-23,2024-05-30
+2024,Prapiroon,Butchoy,Severe tropical storm,100.0,985,2024-07-20,2024-07-25
+2024,Gaemi,Carina,Very strong typhoon,165.0,935,2024-07-19,2024-07-29
+2024,Jongdari,Dindo,Tropical storm,75.0,996,2024-08-18,2024-08-22
+2024,Yagi,Enteng,Violent typhoon,195.0,915,2024-08-31,2024-09-09
+2024,Pulasan,Helen,Tropical storm,85.0,992,2024-09-15,2024-09-21
+2024,Soulik,Gener,Tropical storm,65.0,992,2024-09-15,2024-09-20
+2024,Bebinca,Ferdie,Typhoon,140.0,965,2024-09-09,2024-09-18
+2024,Krathon,Julian,Violent typhoon,195.0,920,2024-09-26,2024-10-03
+2024,17W,Igme,Tropical depression,55.0,1002,2024-09-20,2024-09-22
+2024,Trami,Kristine,Severe tropical storm,110.0,970,2024-10-18,2024-10-29
+2024,Kong-rey,Leon,Very strong typhoon,185.0,925,2024-10-24,2024-11-01
+2024,Man-yi,Pepito,Violent typhoon,195.0,920,2024-11-07,2024-11-20
+2024,Toraji,Nika,Typhoon,130.0,980,2024-11-08,2024-11-15
+2024,Usagi,Ofel,Very strong typhoon,175.0,940,2024-11-09,2024-11-16
+2024,Yinxing,Marce,Very strong typhoon,185.0,945,2024-11-02,2024-11-12
+2024,,Querubin,Tropical depression,55.0,1004,2024-12-17,2024-12-19
+2024,Pabuk,Romina,Tropical storm,65.0,1000,2024-12-21,2024-12-25
+2025,,Auring,Tropical depression,55.0,1002,2025-06-11,2025-06-13
+2025,Wipha,Crising,Severe tropical storm,110.0,970,2025-07-16,2025-07-23
+2025,Francisco,Dante,Tropical storm,75.0,990,2025-07-22,2025-07-27
+2025,Co-may,Emong,Typhoon,120.0,975,2025-07-23,2025-08-03
+2025,Danas,Bising,Typhoon,140.0,965,2025-07-03,2025-07-11
+2025,Podul,Gorio,Typhoon,150.0,960,2025-08-06,2025-08-15
+2025,Kajiki,Isang,Typhoon,150.0,950,2025-08-22,2025-08-26
+2025,Nongfa,Jacinto,Tropical storm,75.0,996,2025-08-27,2025-08-31
+2025,Lingling,Huaning,Tropical storm,75.0,1000,2025-08-17,2025-08-23
+2025,Peipah,Kiko,Tropical storm,85.0,992,2025-09-02,2025-09-05
+2025,Ragasa,Nando,Violent typhoon,205.0,905,2025-09-17,2025-09-25
+2025,Tapah,Lannie,Typhoon,120.0,975,2025-09-05,2025-09-09
+2025,Mitag,Mirasol,Tropical storm,85.0,996,2025-09-16,2025-09-20
+2025,Bualoi,Opong,Typhoon,140.0,965,2025-09-22,2025-09-29
+2025,Matmo,Paolo,Typhoon,130.0,970,2025-10-01,2025-10-07
+2025,Nakri,Quedan,Typhoon,130.0,970,2025-10-06,2025-10-14
+2025,Fengshen,Ramil,Tropical storm,85.0,996,,

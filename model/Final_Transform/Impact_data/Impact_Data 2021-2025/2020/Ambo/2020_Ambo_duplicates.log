@@ -1,0 +1,7 @@
+Duplicates in Structured_data/2020/Ambo/SitRep_015/affected_population_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    AURORA: 2 rows
+    NORTHERN SAMAR: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Aurora: 2 rows
+    Northern Samar: 2 rows

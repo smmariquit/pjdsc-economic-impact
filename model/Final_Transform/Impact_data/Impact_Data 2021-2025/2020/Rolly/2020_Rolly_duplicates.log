@@ -1,0 +1,23 @@
+Duplicates in Structured_data/2020/Rolly/SitRep_012/infrastructure_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    ALBAY: 6 rows
+    BATANGAS: 2 rows
+    CAMARINES NORTE: 3 rows
+    CAMARINES SUR: 4 rows
+    CATANDUANES: 5 rows
+    MARINDUQUE: 2 rows
+    MASBATE: 2 rows
+    ORIENTAL MINDORO: 3 rows
+    QUEZON: 2 rows
+    SORSOGON: 3 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Albay: 6 rows
+    Batangas: 2 rows
+    Camarines Norte: 3 rows
+    Camarines Sur: 4 rows
+    Catanduanes: 5 rows
+    Marinduque: 2 rows
+    Masbate: 2 rows
+    Oriental Mindoro: 3 rows
+    Quezon: 2 rows
+    Sorsogon: 3 rows

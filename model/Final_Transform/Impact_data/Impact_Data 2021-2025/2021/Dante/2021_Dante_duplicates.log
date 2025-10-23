@@ -1,0 +1,5 @@
+Duplicates in Structured_data/2021/Dante/SitRep_013/damage_to_houses_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    BILIRAN: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Biliran: 2 rows

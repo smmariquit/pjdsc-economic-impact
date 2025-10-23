@@ -1,0 +1,1267 @@
+Year,Intl_Name,PH_Name,Province,Deaths,Affected,Houses destroyed,Houses damaged,Total Houses,Damage to Infrastructure (PhP),Damage to Agriculture + Fisheries (PhP),Category
+2010,Conson,Basyang,Metro Manila,2,2802,62,0,62,1705000,0,Strong typhoon
+2010,Conson,Basyang,Aurora,0,187,0,0,0,19300000,0,Strong typhoon
+2010,Conson,Basyang,Bataan,10,68692,232,2695,2927,4950000,579332,Strong typhoon
+2010,Conson,Basyang,Bulacan,3,189,0,0,0,23761000,0,Strong typhoon
+2010,Conson,Basyang,Pampanga,0,221,0,0,0,0,0,Strong typhoon
+2010,Conson,Basyang,Batangas,4,11605,102,1138,1240,15000000,0,Strong typhoon
+2010,Conson,Basyang,Cavite,12,247537,2558,32735,35293,0,11822730,Strong typhoon
+2010,Conson,Basyang,Laguna,10,87977,1516,8536,10052,3330000,47287410,Strong typhoon
+2010,Conson,Basyang,Quezon,35,19204,133,1764,1897,4585000,145210000,Strong typhoon
+2010,Conson,Basyang,Rizal,3,66678,2269,10917,13186,350000,26825503,Strong typhoon
+2010,Conson,Basyang,Camarines Norte,18,52561,480,7459,7939,53200000,5632999,Strong typhoon
+2010,Conson,Basyang,Camarines Sur,2,14845,1,119,120,0,150000,Strong typhoon
+2010,Conson,Basyang,Catanduanes,0,12885,25,544,569,8400000,401906,Strong typhoon
+2010,Conson,Basyang,Nueva Ecija,1,0,0,0,0,2400000,0,Strong typhoon
+2010,Conson,Basyang,Zambales,0,0,0,1,1,0,1500000,Strong typhoon
+2010,Megi,Juan,Metro Manila,1,877,0,0,0,0,0,Violent typhoon
+2010,Megi,Juan,Ilocos Norte,0,7982,0,85,85,36920000,151046117,Violent typhoon
+2010,Megi,Juan,Ilocos Sur,2,8771,12,225,237,2800000,165377858,Violent typhoon
+2010,Megi,Juan,La Union,2,57543,545,5560,6105,9175000,268300770,Violent typhoon
+2010,Megi,Juan,Pangasinan,10,482392,1095,8378,9473,9245000,2406270823,Violent typhoon
+2010,Megi,Juan,Cagayan,1,158267,1048,14737,15785,33900000,496408990,Violent typhoon
+2010,Megi,Juan,Isabela,2,710460,25186,72828,98014,205649000,2089965630,Violent typhoon
+2010,Megi,Juan,Nueva Vizcaya,0,6975,1,36,37,5150000,123488000,Violent typhoon
+2010,Megi,Juan,Quirino,0,17142,0,23,23,4000000,58083000,Violent typhoon
+2010,Megi,Juan,Aurora,0,2394,0,9,9,100000,44977172,Violent typhoon
+2010,Megi,Juan,Bataan,0,20560,2,20,22,3900000,109269882,Violent typhoon
+2010,Megi,Juan,Bulacan,0,120,0,0,0,0,579592911,Violent typhoon
+2010,Megi,Juan,Nueva Ecija,1,27247,4,22,26,17700000,1587045618,Violent typhoon
+2010,Megi,Juan,Pampanga,0,100664,13,10,23,150000,113428605,Violent typhoon
+2010,Megi,Juan,Tarlac,2,74621,13,117,130,6600000,645425917,Violent typhoon
+2010,Megi,Juan,Zambales,5,12266,43,388,431,11568750,80854150,Violent typhoon
+2010,Megi,Juan,Cavite,0,372,0,0,0,0,0,Violent typhoon
+2010,Megi,Juan,Rizal,0,411,0,0,0,0,0,Violent typhoon
+2010,Megi,Juan,Abra,0,8726,3,209,212,25425000,118312579,Violent typhoon
+2010,Megi,Juan,Apayao,0,35461,58,1089,1147,19050000,309963089,Violent typhoon
+2010,Megi,Juan,Benguet,2,30222,20,284,304,22080094,56457746,Violent typhoon
+2010,Megi,Juan,Ifugao,2,5797,69,322,391,9364900,381895213,Violent typhoon
+2010,Megi,Juan,Kalinga,1,214637,1778,12753,14531,13170000,442055166,Violent typhoon
+2010,Megi,Juan,Mountain Province,0,25077,158,1079,1237,19750000,117570528,Violent typhoon
+2011,Aere,Bebeng,Metro Manila,1,535,0,0,0,0,0,Tropical storm
+2011,Aere,Bebeng,Bulacan,1,465,4,37,41,0,0,Tropical storm
+2011,Aere,Bebeng,Catanduanes,2,0,0,0,0,1469000,14718889,Tropical storm
+2011,Aere,Bebeng,Camarines Sur,16,196904,12,1080,1092,330800000,534194064,Tropical storm
+2011,Aere,Bebeng,Albay,6,85077,0,0,0,280897990,310771168,Tropical storm
+2011,Aere,Bebeng,Sorsogon,1,29781,0,6596,6596,15150000,106982688,Tropical storm
+2011,Aere,Bebeng,Masbate,2,6932,0,11,11,30670000,35476650,Tropical storm
+2011,Aere,Bebeng,Negros Oriental,1,0,0,0,0,200000,0,Tropical storm
+2011,Aere,Bebeng,Leyte,1,6860,1,4,5,23500000,0,Tropical storm
+2011,Aere,Bebeng,Northern Samar,3,66366,9,1364,1373,28060000,0,Tropical storm
+2011,Aere,Bebeng,Samar,1,3020,18,129,147,0,0,Tropical storm
+2011,Aere,Bebeng,Zambales,0,288,0,0,0,0,12569360,Tropical storm
+2011,Aere,Bebeng,Rizal,0,45,0,0,0,0,0,Tropical storm
+2011,Aere,Bebeng,Camarines Norte,0,21275,20,868,888,508500000,16783466,Tropical storm
+2011,Aere,Bebeng,Cebu,0,39,0,0,0,0,0,Tropical storm
+2011,Aere,Bebeng,Eastern Samar,0,14250,0,45,45,0,0,Tropical storm
+2011,Songda,Chedeng,Metro Manila,0,2725,0,0,0,0,0,Violent typhoon
+2011,Songda,Chedeng,Isabela,0,126,0,0,0,0,0,Violent typhoon
+2011,Songda,Chedeng,Albay,0,223110,0,0,0,0,0,Violent typhoon
+2011,Songda,Chedeng,Camarines Norte,1,2710,0,0,0,0,0,Violent typhoon
+2011,Songda,Chedeng,Camarines Sur,0,146697,0,0,0,0,0,Violent typhoon
+2011,Songda,Chedeng,Catanduanes,1,13349,0,0,0,0,0,Violent typhoon
+2011,Songda,Chedeng,Sorsogon,0,1281,0,0,0,0,0,Violent typhoon
+2011,Songda,Chedeng,Zamboanga del Sur,0,8258,0,0,0,0,0,Violent typhoon
+2011,Songda,Chedeng,Bukidnon,0,596,56,43,99,0,1422000,Violent typhoon
+2011,Songda,Chedeng,Davao del Norte,0,48015,27,0,27,5488125,8823374,Violent typhoon
+2011,Songda,Chedeng,Davao Oriental,0,40,0,0,0,0,0,Violent typhoon
+2011,Songda,Chedeng,Benguet,2,0,0,0,0,0,0,Violent typhoon
+2011,Songda,Chedeng,Lanao del Sur,0,0,0,5,5,0,0,Violent typhoon
+2011,Dodong,,Batangas,1,1086,36,300,336,0,0,Tropical storm
+2011,Dodong,,Romblon,1,0,0,0,0,0,0,Tropical storm
+2011,Dodong,,Zambales,0,0,0,0,0,0,0,Tropical storm
+2011,Dodong,,Cavite,0,40,0,0,0,0,0,Tropical storm
+2011,Dodong,,Metro Manila,0,25,0,0,0,0,0,Tropical storm
+2011,Meari,Falcon,Metro Manila,0,72687,0,22,22,0,0,Severe tropical storm
+2011,Meari,Falcon,Pangasinan,0,78580,0,0,0,0,0,Severe tropical storm
+2011,Meari,Falcon,Bataan,4,190134,8,25,33,17635700,1301257,Severe tropical storm
+2011,Meari,Falcon,Bulacan,2,511207,61,33,94,70800000,80256771,Severe tropical storm
+2011,Meari,Falcon,Nueva Ecija,0,40085,0,0,0,48500000,34151272.25,Severe tropical storm
+2011,Meari,Falcon,Pampanga,3,592172,1,13,14,120030000,34212657,Severe tropical storm
+2011,Meari,Falcon,Tarlac,0,67100,4,7,11,95500000,40292760,Severe tropical storm
+2011,Meari,Falcon,Zambales,1,25914,26,31,57,22575000,14088224,Severe tropical storm
+2011,Meari,Falcon,Batangas,0,4512,36,1035,1071,0,0,Severe tropical storm
+2011,Meari,Falcon,Cavite,0,8870,0,0,0,0,0,Severe tropical storm
+2011,Meari,Falcon,Rizal,1,91042,0,0,0,0,900600,Severe tropical storm
+2011,Meari,Falcon,Albay,0,107253,4,25,29,30800000,15962630,Severe tropical storm
+2011,Meari,Falcon,Camarines Sur,0,2820,0,0,0,0,2209222.5,Severe tropical storm
+2011,Meari,Falcon,Mountain Province,1,0,0,0,0,0,0,Severe tropical storm
+2011,Meari,Falcon,Iloilo,0,0,25,24,49,0,0,Severe tropical storm
+2011,Juaning,,Nueva Ecija,1,4603,0,0,0,0,0,Severe tropical storm
+2011,Juaning,,Cavite,2,0,0,0,0,0,0,Severe tropical storm
+2011,Juaning,,Quezon,2,1338,1,33,34,0,0,Severe tropical storm
+2011,Juaning,,Marinduque,3,0,0,0,0,0,0,Severe tropical storm
+2011,Juaning,,Albay,14,557448,180,350,530,1200279900,71145449.66,Severe tropical storm
+2011,Juaning,,Catanduanes,6,227,0,0,0,13114000,9389830.58,Severe tropical storm
+2011,Juaning,,Camarines Sur,8,319084,2,0,2,19750000,98494579.09,Severe tropical storm
+2011,Juaning,,Camarines Norte,7,37136,315,4595,4910,0,9225826.4,Severe tropical storm
+2011,Juaning,,Masbate,12,740,0,0,0,8200000,35165094,Severe tropical storm
+2011,Juaning,,Sorsogon,2,14782,1,4,5,1550000,4296288.46,Severe tropical storm
+2011,Juaning,,Iloilo,1,0,0,0,0,0,0,Severe tropical storm
+2011,Juaning,,Siquijor,1,0,0,0,0,0,0,Severe tropical storm
+2011,Juaning,,Leyte,1,0,0,0,0,0,0,Severe tropical storm
+2011,Juaning,,Metro Manila,1,370,0,0,0,0,0,Severe tropical storm
+2011,Juaning,,Ifugao,4,212,5,20,25,0,15148036.57,Severe tropical storm
+2011,Juaning,,Benguet,1,0,0,0,0,0,0,Severe tropical storm
+2011,Juaning,,La Union,0,5,0,0,0,0,0,Severe tropical storm
+2011,Juaning,,Pangasinan,0,1130,0,0,0,0,0,Severe tropical storm
+2011,Juaning,,Isabela,0,1304,0,6,6,0,14343.78,Severe tropical storm
+2011,Juaning,,Quirino,0,20253,8,96,104,0,267834.51,Severe tropical storm
+2011,Juaning,,Nueva Vizcaya,0,425,0,8,8,0,1364.96,Severe tropical storm
+2011,Juaning,,Aurora,0,6848,64,266,330,0,0,Severe tropical storm
+2011,Juaning,,Bulacan,0,179,0,0,0,0,841905,Severe tropical storm
+2011,Juaning,,Pampanga,0,7358,5,0,5,0,0,Severe tropical storm
+2011,Juaning,,Batangas,0,1230,2,200,202,0,0,Severe tropical storm
+2011,Juaning,,Lanao del Norte,0,3115,0,0,0,0,0,Severe tropical storm
+2011,Juaning,,Kalinga,0,3379,6,43,49,0,0,Severe tropical storm
+2011,Juaning,,Rizal,0,0,0,6,6,0,0,Severe tropical storm
+2011,Juaning,,Cebu,0,0,0,4,4,0,0,Severe tropical storm
+2011,Nanmadol,Mina,Pangasinan,2,69939,10,13,23,61150000,100835231.1,Very strong typhoon
+2011,Nanmadol,Mina,Ilocos Sur,4,5154,4,16,20,6850000,60755064.47,Very strong typhoon
+2011,Nanmadol,Mina,Ilocos Norte,3,92641,35,143,178,68200000,78705904.03,Very strong typhoon
+2011,Nanmadol,Mina,La Union,1,17606,10,98,108,34485000,49689587.68,Very strong typhoon
+2011,Nanmadol,Mina,Zambales,4,214,4,7,11,0,0,Very strong typhoon
+2011,Nanmadol,Mina,Bulacan,2,0,0,0,0,0,0,Very strong typhoon
+2011,Nanmadol,Mina,Catanduanes,1,0,0,0,0,0,0,Very strong typhoon
+2011,Nanmadol,Mina,Iloilo,1,20061,3,0,3,0,0,Very strong typhoon
+2011,Nanmadol,Mina,Zamboanga del Sur,1,0,0,0,0,0,0,Very strong typhoon
+2011,Nanmadol,Mina,Benguet,10,3570,29,187,216,84955000,70208000,Very strong typhoon
+2011,Nanmadol,Mina,Abra,5,15814,4,114,118,26300000,49710000,Very strong typhoon
+2011,Nanmadol,Mina,Mountain Province,1,12298,2,126,128,56800000,35989000,Very strong typhoon
+2011,Nanmadol,Mina,Quezon,1,0,0,0,0,0,0,Very strong typhoon
+2011,Nanmadol,Mina,Metro Manila,0,275,0,0,0,0,0,Very strong typhoon
+2011,Nanmadol,Mina,Cagayan,0,127775,43,1823,1866,0,882560524,Very strong typhoon
+2011,Nanmadol,Mina,Isabela,0,11908,0,20,20,0,60381223.47,Very strong typhoon
+2011,Nanmadol,Mina,Nueva Vizcaya,0,155,0,34,34,0,2569875,Very strong typhoon
+2011,Nanmadol,Mina,Tarlac,0,210,0,0,0,0,688000,Very strong typhoon
+2011,Nanmadol,Mina,Albay,0,760,0,0,0,0,0,Very strong typhoon
+2011,Nanmadol,Mina,Negros Occidental,0,9524,10,0,10,0,0,Very strong typhoon
+2011,Nanmadol,Mina,Apayao,0,20475,4,296,300,22300000,171590000,Very strong typhoon
+2011,Nanmadol,Mina,Kalinga,0,3089,1,41,42,55587000,70970000,Very strong typhoon
+2011,Nesat,Pedring,Metro Manila,6,77096,0,0,0,122373000,1980000,Strong typhoon
+2011,Nesat,Pedring,Ilocos Norte,0,45,9,0,9,0,0,Strong typhoon
+2011,Nesat,Pedring,Ilocos Sur,0,1580,0,0,0,3750000,0,Strong typhoon
+2011,Nesat,Pedring,La Union,1,10730,20,1128,1148,1650000,102000,Strong typhoon
+2011,Nesat,Pedring,Pangasinan,2,99931,82,3373,3455,15058500,1757000,Strong typhoon
+2011,Nesat,Pedring,Cagayan,1,72979,0,0,0,149375527.8,24031621,Strong typhoon
+2011,Nesat,Pedring,Isabela,1,191871,1468,10374,11842,135762000,494561257.8,Strong typhoon
+2011,Nesat,Pedring,Nueva Vizcaya,5,36541,153,958,1111,78450000,3545250.73,Strong typhoon
+2011,Nesat,Pedring,Quirino,0,115747,1674,8492,10166,48790000,109374858.8,Strong typhoon
+2011,Nesat,Pedring,Aurora,0,57146,545,5743,6288,30390000,179136585,Strong typhoon
+2011,Nesat,Pedring,Bataan,1,240659,420,2354,2774,25750000,344163300,Strong typhoon
+2011,Nesat,Pedring,Bulacan,24,587440,877,2429,3306,157350000,2578473867,Strong typhoon
+2011,Nesat,Pedring,Nueva Ecija,11,513320,361,1769,2130,233039090,3988649826,Strong typhoon
+2011,Nesat,Pedring,Pampanga,8,492763,88,1093,1181,156537080,1891006011,Strong typhoon
+2011,Nesat,Pedring,Tarlac,0,111868,26,71,97,168100000,899767418,Strong typhoon
+2011,Nesat,Pedring,Zambales,8,120806,1244,5373,6617,120704540,249505362.8,Strong typhoon
+2011,Nesat,Pedring,Batangas,1,4792,9,81,90,0,6484012,Strong typhoon
+2011,Nesat,Pedring,Cavite,0,18048,80,281,361,0,19543379.2,Strong typhoon
+2011,Nesat,Pedring,Laguna,0,195,0,3,3,0,70323825,Strong typhoon
+2011,Nesat,Pedring,Quezon,0,90,0,0,0,3350000,46631400,Strong typhoon
+2011,Nesat,Pedring,Rizal,1,109541,2,12,14,0,28644603,Strong typhoon
+2011,Nesat,Pedring,Occidental Mindoro,3,10178,3,1,4,85000000,537947320,Strong typhoon
+2011,Nesat,Pedring,Oriental Mindoro,0,236,0,0,0,0,0,Strong typhoon
+2011,Nesat,Pedring,Romblon,0,185,1,5,6,0,0,Strong typhoon
+2011,Nesat,Pedring,Albay,0,73324,0,8,8,21044905,121367100.1,Strong typhoon
+2011,Nesat,Pedring,Camarines Norte,0,95,0,0,0,0,12496384.9,Strong typhoon
+2011,Nesat,Pedring,Camarines Sur,2,38535,5,786,791,16015000,286479075,Strong typhoon
+2011,Nesat,Pedring,Catanduanes,1,2812,12,42,54,20700500,17132463.92,Strong typhoon
+2011,Nesat,Pedring,Antique,0,12,1,0,1,10000000,0,Strong typhoon
+2011,Nesat,Pedring,Iloilo,0,309,12,64,76,36190000,1070000,Strong typhoon
+2011,Nesat,Pedring,Abra,0,129,2,35,37,14400000,25040640,Strong typhoon
+2011,Nesat,Pedring,Apayao,0,10178,0,10,10,2190000,43740654,Strong typhoon
+2011,Nesat,Pedring,Benguet,1,961,14,36,50,4864000,40621675,Strong typhoon
+2011,Nesat,Pedring,Ifugao,4,6347,90,1157,1247,0,370852250,Strong typhoon
+2011,Nesat,Pedring,Kalinga,0,22457,8,322,330,0,171867880,Strong typhoon
+2011,Nesat,Pedring,Mountain Province,0,1809,3,111,114,4650000,130865750,Strong typhoon
+2011,Nesat,Pedring,Palawan,2,0,0,0,0,0,0,Strong typhoon
+2011,Nesat,Pedring,Sorsogon,0,0,2,15,17,0,29054560.11,Strong typhoon
+2011,Nesat,Pedring,Negros Occidental,0,0,2,4,6,15000000,60320000,Strong typhoon
+2011,Nalgae,Quiel,Ilocos Sur,1,20,0,0,0,0,0,Very strong typhoon
+2011,Nalgae,Quiel,La Union,0,8671,35,554,589,0,0,Very strong typhoon
+2011,Nalgae,Quiel,Pangasinan,3,231932,85,2593,2678,0,0,Very strong typhoon
+2011,Nalgae,Quiel,Cagayan,1,34498,3,3,6,1875527.81,0,Very strong typhoon
+2011,Nalgae,Quiel,Isabela,0,260904,2315,10289,12604,15200000,0,Very strong typhoon
+2011,Nalgae,Quiel,Nueva Vizcaya,0,52742,0,0,0,35000000,0,Very strong typhoon
+2011,Nalgae,Quiel,Quirino,0,55163,73,136,209,63000000,0,Very strong typhoon
+2011,Nalgae,Quiel,Aurora,0,14673,0,0,0,0,0,Very strong typhoon
+2011,Nalgae,Quiel,Bulacan,0,68402,104,485,589,0,0,Very strong typhoon
+2011,Nalgae,Quiel,Nueva Ecija,0,100633,89,475,564,0,0,Very strong typhoon
+2011,Nalgae,Quiel,Pampanga,2,89651,10,568,578,0,0,Very strong typhoon
+2011,Nalgae,Quiel,Tarlac,7,173739,40,108,148,0,0,Very strong typhoon
+2011,Nalgae,Quiel,Zambales,0,19300,77,56,133,0,0,Very strong typhoon
+2011,Nalgae,Quiel,Apayao,0,102,0,1,1,0,0,Very strong typhoon
+2011,Nalgae,Quiel,Benguet,1,139,2,27,29,0,0,Very strong typhoon
+2011,Nalgae,Quiel,Ifugao,0,211,10,78,88,0,0,Very strong typhoon
+2011,Nalgae,Quiel,Kalinga,0,2954,2,9,11,0,0,Very strong typhoon
+2011,Nalgae,Quiel,Mountain Province,0,29,3,11,14,0,0,Very strong typhoon
+2011,Nalgae,Quiel,Bataan,3,0,0,0,0,0,0,Very strong typhoon
+2011,Banyan,Ramon,Iloilo,5,1546,4,0,4,0,0,Tropical storm
+2011,Banyan,Ramon,Cebu,2,11390,1,2,3,0,0,Tropical storm
+2011,Banyan,Ramon,Agusan del Norte,1,0,0,0,0,0,0,Tropical storm
+2011,Banyan,Ramon,Romblon,2,5305,12,19,31,0,0,Tropical storm
+2011,Banyan,Ramon,Oriental Mindoro,0,1740,10,7,17,0,0,Tropical storm
+2011,Banyan,Ramon,Capiz,0,38621,2,0,2,0,0,Tropical storm
+2011,Banyan,Ramon,Occidental Mindoro,0,657,0,0,0,0,0,Tropical storm
+2011,Banyan,Ramon,Negros Occidental,0,15,0,0,0,0,0,Tropical storm
+2011,Banyan,Ramon,Southern Leyte,0,1832,0,0,0,0,0,Tropical storm
+2011,Banyan,Ramon,Misamis Oriental,0,1229,0,0,0,0,0,Tropical storm
+2011,Banyan,Ramon,South Cotabato,0,232,0,0,0,0,0,Tropical storm
+2011,Banyan,Ramon,Dinagat Islands,0,184,0,0,0,0,0,Tropical storm
+2011,Washi,Sendong,Bohol,0,10000,0,0,0,0,0,Severe tropical storm
+2011,Washi,Sendong,Negros Oriental,38,72556,1499,6583,8082,0,0,Severe tropical storm
+2011,Washi,Sendong,Zamboanga del Norte,11,4947,9,0,9,0,0,Severe tropical storm
+2011,Washi,Sendong,Bukidnon,42,14531,342,112,454,31444000,41858791,Severe tropical storm
+2011,Washi,Sendong,Lanao del Norte,490,483165,5249,14874,20123,287171100,37447176,Severe tropical storm
+2011,Washi,Sendong,Misamis Oriental,674,423920,7469,13059,20528,894493047,191009635,Severe tropical storm
+2011,Washi,Sendong,Davao de Oro,5,2510,16,2,18,0,0,Severe tropical storm
+2011,Washi,Sendong,Davao del Norte,0,2570,0,0,0,0,0,Severe tropical storm
+2011,Washi,Sendong,Agusan del Sur,0,320,15,0,15,0,0,Severe tropical storm
+2011,Washi,Sendong,Surigao del Sur,1,14328,204,2708,2912,15436000,1551400,Severe tropical storm
+2011,Washi,Sendong,Lanao del Sur,4,139879,56,151,207,0,0,Severe tropical storm
+2011,Washi,Sendong,Camarines Sur,2,0,0,0,0,0,384715,Severe tropical storm
+2011,Washi,Sendong,Cebu,1,0,0,0,0,0,0,Severe tropical storm
+2011,Washi,Sendong,Misamis Occidental,0,0,24,63,87,204825000,588823,Severe tropical storm
+2012,Ferdie,,Rizal,2,385,0,0,0,0,0,Strong typhoon
+2012,Ferdie,,Camarines Sur,2,0,0,0,0,0,0,Strong typhoon
+2012,Ferdie,,Laguna,1,1,0,0,0,0,0,Strong typhoon
+2012,Ferdie,,La Union,1,0,0,0,0,0,0,Strong typhoon
+2012,Ferdie,,Metro Manila,0,784,0,0,0,0,0,Strong typhoon
+2012,Ferdie,,Bulacan,0,109,0,0,0,0,0,Strong typhoon
+2012,Ferdie,,Cavite,0,175,0,0,0,0,0,Strong typhoon
+2012,Ferdie,,Occidental Mindoro,0,3664,0,0,0,5400000,1032000,Strong typhoon
+2012,Igme,,La Union,4,5527,0,29,29,0,0,Strong typhoon
+2012,Igme,,Ilocos Sur,0,79,1,13,14,0,0,Strong typhoon
+2012,Igme,,Misamis Oriental,0,0,0,2,2,0,0,Strong typhoon
+2012,Igme,,Zamboanga del Sur,3,0,0,0,0,0,0,Strong typhoon
+2012,Igme,,Quezon,1,0,0,0,0,0,0,Strong typhoon
+2012,Jelawat,Lawin,Palawan,0,273,0,0,0,0,0,Violent typhoon
+2012,Jelawat,Lawin,Zamboanga del Sur,0,7648,0,0,0,0,0,Violent typhoon
+2012,Gaemi,Marce,Zambales,0,32,0,0,0,0,0,Severe tropical storm
+2012,Gaemi,Marce,Occidental Mindoro,0,290,0,0,0,0,0,Severe tropical storm
+2012,Son-Tinh,Ofel,Batangas,8,2478,26,104,130,0,0,Very strong typhoon
+2012,Son-Tinh,Ofel,Marinduque,2,2236,5,0,5,53000000,1899970,Very strong typhoon
+2012,Son-Tinh,Ofel,Oriental Mindoro,3,38972,113,1657,1770,0,0,Very strong typhoon
+2012,Son-Tinh,Ofel,Romblon,4,5690,28,201,229,8700000,0,Very strong typhoon
+2012,Son-Tinh,Ofel,Masbate,1,4018,27,411,438,0,2737650,Very strong typhoon
+2012,Son-Tinh,Ofel,Sorsogon,1,0,0,0,0,0,0,Very strong typhoon
+2012,Son-Tinh,Ofel,Cebu,2,0,0,0,0,0,0,Very strong typhoon
+2012,Son-Tinh,Ofel,Leyte,1,2274,0,0,0,0,0,Very strong typhoon
+2012,Son-Tinh,Ofel,Sarangani,1,605,0,0,0,0,0,Very strong typhoon
+2012,Son-Tinh,Ofel,Cotabato,4,0,0,0,0,0,0,Very strong typhoon
+2012,Son-Tinh,Ofel,Quezon,0,4294,35,168,203,0,0,Very strong typhoon
+2012,Son-Tinh,Ofel,Occidental Mindoro,0,70,0,14,14,0,0,Very strong typhoon
+2012,Son-Tinh,Ofel,Samar,0,6070,2,3,5,0,0,Very strong typhoon
+2012,Son-Tinh,Ofel,Southern Leyte,0,1887,0,0,0,0,0,Very strong typhoon
+2012,Son-Tinh,Ofel,Zamboanga del Sur,0,20247,0,0,0,0,0,Very strong typhoon
+2012,Son-Tinh,Ofel,Zamboanga Sibugay,0,24555,0,0,0,110000,21432000,Very strong typhoon
+2012,Son-Tinh,Ofel,Misamis Occidental,0,3000,0,0,0,0,0,Very strong typhoon
+2012,Bopha,Pablo,Palawan,3,6060,875,424,1299,431000000,162378015,Very strong typhoon
+2012,Bopha,Pablo,Guimaras,0,805,0,0,0,0,0,Very strong typhoon
+2012,Bopha,Pablo,Iloilo,0,581,0,0,0,0,0,Very strong typhoon
+2012,Bopha,Pablo,Negros Occidental,0,7076,75,603,678,5300000,1421000,Very strong typhoon
+2012,Bopha,Pablo,Bohol,0,7869,20,85,105,6450000,14560060,Very strong typhoon
+2012,Bopha,Pablo,Cebu,6,21459,423,2189,2612,11100000,3263555,Very strong typhoon
+2012,Bopha,Pablo,Negros Oriental,2,39114,395,2642,3037,0,969060,Very strong typhoon
+2012,Bopha,Pablo,Siquijor,2,22000,303,3373,3676,9000000,498220,Very strong typhoon
+2012,Bopha,Pablo,Leyte,0,1214,0,0,0,0,0,Very strong typhoon
+2012,Bopha,Pablo,Northern Samar,1,5,0,0,0,0,0,Very strong typhoon
+2012,Bopha,Pablo,Southern Leyte,1,4665,0,0,0,0,0,Very strong typhoon
+2012,Bopha,Pablo,Zamboanga del Norte,0,602,0,0,0,0,0,Very strong typhoon
+2012,Bopha,Pablo,Zamboanga del Sur,0,2214,0,0,0,0,1691370,Very strong typhoon
+2012,Bopha,Pablo,Zamboanga Sibugay,1,756,0,0,0,0,0,Very strong typhoon
+2012,Bopha,Pablo,Bukidnon,6,230947,1039,4968,6007,249304500,799150052,Very strong typhoon
+2012,Bopha,Pablo,Camiguin,0,1552,21,166,187,10031000,72155939.05,Very strong typhoon
+2012,Bopha,Pablo,Lanao del Norte,0,145863,168,1788,1956,11300000,129455258,Very strong typhoon
+2012,Bopha,Pablo,Misamis Occidental,2,21757,92,127,219,2900000,18450735,Very strong typhoon
+2012,Bopha,Pablo,Misamis Oriental,7,123075,455,4078,4533,40446000,816665308,Very strong typhoon
+2012,Bopha,Pablo,Davao de Oro,612,655373,38653,56401,95054,2420283500,14634898910,Very strong typhoon
+2012,Bopha,Pablo,Davao del Norte,0,848798,227,2862,3089,1120694510,7820338240,Very strong typhoon
+2012,Bopha,Pablo,Davao del Sur,0,2812181,101,288,389,0,0,Very strong typhoon
+2012,Bopha,Pablo,Davao Oriental,395,530098,21975,8270,30245,2802994800,4650386640,Very strong typhoon
+2012,Bopha,Pablo,Cotabato,0,40955,0,0,0,10500000,22581342,Very strong typhoon
+2012,Bopha,Pablo,South Cotabato,8,3143,3,10,13,0,0,Very strong typhoon
+2012,Bopha,Pablo,Sultan Kudarat,0,18720,0,0,0,16260000,0,Very strong typhoon
+2012,Bopha,Pablo,Agusan del Norte,0,7022,54,493,547,78976000,21197120,Very strong typhoon
+2012,Bopha,Pablo,Agusan del Sur,13,239063,18354,19290,37644,154959800,149996493,Very strong typhoon
+2012,Bopha,Pablo,Dinagat Islands,0,2814,1,5,6,0,0,Very strong typhoon
+2012,Bopha,Pablo,Surigao del Norte,1,42695,18,943,961,19275000,4736700,Very strong typhoon
+2012,Bopha,Pablo,Surigao del Sur,5,154900,6156,17776,23932,135732700,15212480,Very strong typhoon
+2012,Bopha,Pablo,Lanao del Sur,0,146285,256,368,624,0,2000000,Very strong typhoon
+2012,Bopha,Pablo,Maguindanao,0,104337,0,0,0,0,2500000,Very strong typhoon
+2012,Bopha,Pablo,Capiz,1,0,0,0,0,0,0,Very strong typhoon
+2012,Bopha,Pablo,Biliran,1,0,0,0,0,0,0,Very strong typhoon
+2012,Bopha,Pablo,La Union,0,0,1,1,2,0,0,Very strong typhoon
+2012,Bopha,Pablo,Pangasinan,0,0,1,1,2,0,0,Very strong typhoon
+2012,Wukong,Quinta,Palawan,0,90,0,0,0,0,0,Tropical storm
+2012,Wukong,Quinta,Albay,0,14991,0,0,0,0,3979566.25,Tropical storm
+2012,Wukong,Quinta,Camarines Norte,0,330,0,0,0,0,0,Tropical storm
+2012,Wukong,Quinta,Iloilo,12,234106,1596,3340,4936,370041000,27415480,Tropical storm
+2012,Wukong,Quinta,Negros Occidental,0,2224,10,56,66,3820000,313480,Tropical storm
+2012,Wukong,Quinta,Aklan,3,55211,284,913,1197,87268000,20805850,Tropical storm
+2012,Wukong,Quinta,Capiz,2,67502,35,120,155,77000000,15308099.08,Tropical storm
+2012,Wukong,Quinta,Cebu,0,415,6,80,86,0,0,Tropical storm
+2012,Wukong,Quinta,Leyte,1,2424,0,13,13,0,0,Tropical storm
+2012,Wukong,Quinta,Catanduanes,1,0,0,0,0,0,0,Tropical storm
+2012,Wukong,Quinta,Eastern Samar,4,0,0,0,0,0,0,Tropical storm
+2013,Sonamu,Auring,Palawan,2,946,57,122,179,0,0,Severe tropical storm
+2013,Sonamu,Auring,Zamboanga del Norte,0,1136,6,0,6,0,0,Severe tropical storm
+2013,Sonamu,Auring,Oriental Mindoro,0,15,0,0,0,0,0,Severe tropical storm
+2013,Sonamu,Auring,Davao de Oro,0,556,0,0,0,0,0,Severe tropical storm
+2013,Sonamu,Auring,Davao del Norte,0,7944,0,0,0,0,0,Severe tropical storm
+2013,Bising,,Davao de Oro,0,300,0,0,0,0,0,Tropical depression
+2013,Bising,,Sarangani,0,90,0,0,0,0,0,Tropical depression
+2013,Bising,,South Cotabato,0,2805,0,0,0,0,0,Tropical depression
+2013,Bising,,Agusan del Norte,0,11470,0,0,0,0,0,Tropical depression
+2013,Bising,,Agusan del Sur,0,1014,0,0,0,0,0,Tropical depression
+2013,Bising,,Surigao del Sur,0,1122,0,0,0,0,0,Tropical depression
+2013,Crising,,Davao de Oro,2,15050,0,0,0,0,0,Tropical storm
+2013,Crising,,Davao del Norte,6,163042,0,0,0,0,11241800,Tropical storm
+2013,Crising,,Davao Oriental,3,34688,0,0,0,0,0,Tropical storm
+2013,Crising,,Agusan del Sur,1,0,0,0,0,0,0,Tropical storm
+2013,Crising,,Oriental Mindoro,0,250,0,0,0,0,0,Tropical storm
+2013,Crising,,Bohol,0,3745,0,0,0,0,0,Tropical storm
+2013,Crising,,Leyte,0,44,0,0,0,0,0,Tropical storm
+2013,Crising,,Zamboanga del Norte,0,11725,0,0,0,0,0,Tropical storm
+2013,Crising,,Bukidnon,0,8075,0,0,0,0,0,Tropical storm
+2013,Crising,,Lanao del Norte,0,369,0,0,0,0,0,Tropical storm
+2013,Crising,,Davao del Sur,0,7830,0,0,0,0,0,Tropical storm
+2013,Crising,,Cotabato,0,68343,0,0,0,0,0,Tropical storm
+2013,Crising,,Agusan del Norte,0,20300,0,0,0,0,0,Tropical storm
+2013,Crising,,Maguindanao,0,27116,0,0,0,0,0,Tropical storm
+2013,Rumbia,Gorio,Iloilo,7,15,0,0,0,0,0,Severe tropical storm
+2013,Rumbia,Gorio,Quezon,0,230,0,0,0,0,0,Severe tropical storm
+2013,Rumbia,Gorio,Oriental Mindoro,0,54,0,0,0,0,0,Severe tropical storm
+2013,Rumbia,Gorio,Albay,0,1685,0,0,0,0,0,Severe tropical storm
+2013,Rumbia,Gorio,Camarines Sur,0,343,0,0,0,0,737894.3,Severe tropical storm
+2013,Rumbia,Gorio,Sorsogon,0,10,0,0,0,0,11000,Severe tropical storm
+2013,Rumbia,Gorio,Leyte,0,4081,0,0,0,0,0,Severe tropical storm
+2013,Utor,Labuyo,Pangasinan,3,18017,8,18,26,0,0,Violent typhoon
+2013,Utor,Labuyo,Nueva Vizcaya,1,43584,80,772,852,164412500,7484125,Violent typhoon
+2013,Utor,Labuyo,Isabela,1,4061,9,188,197,14060000,179992892.5,Violent typhoon
+2013,Utor,Labuyo,Aurora,2,61235,1868,9491,11359,42110000,388792210,Violent typhoon
+2013,Utor,Labuyo,Quezon,1,0,0,0,0,0,0,Violent typhoon
+2013,Utor,Labuyo,Cebu,2,0,0,0,0,0,0,Violent typhoon
+2013,Utor,Labuyo,Benguet,1,885,0,0,0,44672941.93,2397540.12,Violent typhoon
+2013,Utor,Labuyo,La Union,0,2854,2,2,4,2200000,11912070,Violent typhoon
+2013,Utor,Labuyo,Quirino,0,114441,588,7612,8200,53177000,209325755,Violent typhoon
+2013,Utor,Labuyo,Bulacan,0,29346,1,0,1,0,38430314,Violent typhoon
+2013,Utor,Labuyo,Nueva Ecija,0,39584,0,0,0,0,60782440,Violent typhoon
+2013,Utor,Labuyo,Pampanga,0,5772,3,6,9,0,2503324,Violent typhoon
+2013,Utor,Labuyo,Zambales,0,85720,22,348,370,86951143.75,63802284.75,Violent typhoon
+2013,Utor,Labuyo,Albay,0,814,0,0,0,0,0,Violent typhoon
+2013,Utor,Labuyo,Sorsogon,0,42,7,0,7,0,0,Violent typhoon
+2013,Utor,Labuyo,Ifugao,0,1053,4,149,153,16300000,25624469.66,Violent typhoon
+2013,Utor,Labuyo,Kalinga,0,31,0,6,6,5100000,85410.08,Violent typhoon
+2013,Utor,Labuyo,Mountain Province,0,54,0,13,13,137850000,2423024.42,Violent typhoon
+2013,Kong-Rey,Leon,Samar,1,2685,0,10,10,0,0,Severe tropical storm
+2013,Kong-Rey,Leon,Ilocos Norte,0,4566,0,0,0,0,0,Severe tropical storm
+2013,Kong-Rey,Leon,Benguet,0,10490,0,0,0,0,0,Severe tropical storm
+2013,Odette,,Aurora,2,0,0,0,0,0,0,Violent typhoon
+2013,Odette,,Batangas,1,0,0,0,0,0,0,Violent typhoon
+2013,Odette,,Ilocos Norte,1,24155,2,33,35,0,0,Violent typhoon
+2013,Odette,,Batanes,0,14651,174,1394,1568,0,0,Violent typhoon
+2013,Odette,,Cagayan,0,30575,365,1224,1589,0,0,Violent typhoon
+2013,Odette,,Tarlac,0,341,0,0,0,0,0,Violent typhoon
+2013,Odette,,Occidental Mindoro,0,8104,18,23,41,0,0,Violent typhoon
+2013,Odette,,Catanduanes,0,411,16,62,78,0,0,Violent typhoon
+2013,Odette,,Antique,0,139,3,5,8,0,0,Violent typhoon
+2013,Odette,,Guimaras,0,5,0,1,1,0,0,Violent typhoon
+2013,Odette,,Iloilo,0,23,1,4,5,0,0,Violent typhoon
+2013,Odette,,Negros Occidental,0,76,6,11,17,0,0,Violent typhoon
+2013,Odette,,Apayao,0,49,1,9,10,0,0,Violent typhoon
+2013,Odette,,Benguet,0,72,0,0,0,0,0,Violent typhoon
+2013,Odette,,Ifugao,0,147,0,29,29,0,0,Violent typhoon
+2013,Odette,,Kalinga,0,358,0,78,78,0,0,Violent typhoon
+2013,Odette,,Mountain Province,0,21,0,4,4,0,0,Violent typhoon
+2013,Krosa,Vinta,Ilocos Norte,1,7311,36,1050,1086,3974140,25389798.89,Strong typhoon
+2013,Krosa,Vinta,Cagayan,1,231634,3580,30078,33658,0,185329584,Strong typhoon
+2013,Krosa,Vinta,Apayao,1,26737,281,2498,2779,0,53125000,Strong typhoon
+2013,Krosa,Vinta,Abra,1,10,0,0,0,0,0,Strong typhoon
+2013,Krosa,Vinta,Isabela,0,77,0,0,0,0,0,Strong typhoon
+2013,Haiyan,Yolanda,Batangas,1,5298,28,770,798,34324034,18702800,Violent typhoon
+2013,Haiyan,Yolanda,Cavite,0,732,0,0,0,0,0,Violent typhoon
+2013,Haiyan,Yolanda,Laguna,0,12058,2,36,38,0,392640,Violent typhoon
+2013,Haiyan,Yolanda,Quezon,2,8824,4,0,4,0,11816309,Violent typhoon
+2013,Haiyan,Yolanda,Rizal,0,164,0,0,0,0,0,Violent typhoon
+2013,Haiyan,Yolanda,Marinduque,0,8499,5,158,163,0,49640,Violent typhoon
+2013,Haiyan,Yolanda,Occidental Mindoro,0,45609,654,2982,3636,188682000,125008083,Violent typhoon
+2013,Haiyan,Yolanda,Oriental Mindoro,0,113041,968,2616,3584,572359000,315141602,Violent typhoon
+2013,Haiyan,Yolanda,Palawan,19,179708,9410,9351,18761,346806705.4,357078968,Violent typhoon
+2013,Haiyan,Yolanda,Romblon,0,119263,574,7095,7669,192092000,31938543,Violent typhoon
+2013,Haiyan,Yolanda,Albay,1,155972,64,86,150,18480000,37138779.36,Violent typhoon
+2013,Haiyan,Yolanda,Camarines Norte,1,23083,0,0,0,10000000,4495726,Violent typhoon
+2013,Haiyan,Yolanda,Camarines Sur,0,166327,248,1063,1311,47795000,181536919.6,Violent typhoon
+2013,Haiyan,Yolanda,Catanduanes,0,68609,168,173,341,72898000,6431822.92,Violent typhoon
+2013,Haiyan,Yolanda,Masbate,4,104344,1462,6726,8188,359709000,85855582,Violent typhoon
+2013,Haiyan,Yolanda,Sorsogon,0,173685,146,2276,2422,14000000,32459735,Violent typhoon
+2013,Haiyan,Yolanda,Aklan,14,535725,34738,49161,83899,217070656,1817659254,Violent typhoon
+2013,Haiyan,Yolanda,Antique,13,405397,14711,32353,47064,143356679.5,1437516415,Violent typhoon
+2013,Haiyan,Yolanda,Capiz,86,719685,92118,38570,130688,1747469887,3860711994,Violent typhoon
+2013,Haiyan,Yolanda,Guimaras,0,11593,36,265,301,32400000,1937242046,Violent typhoon
+2013,Haiyan,Yolanda,Iloilo,179,1337714,74383,83046,157429,1213812761,4181167504,Violent typhoon
+2013,Haiyan,Yolanda,Negros Occidental,2,862914,13340,49728,63068,509295000,725358149.2,Violent typhoon
+2013,Haiyan,Yolanda,Bohol,1,1046035,197,1772,1969,110000,5540340,Violent typhoon
+2013,Haiyan,Yolanda,Cebu,73,3778881,62594,46601,109195,917383060.9,4759966536,Violent typhoon
+2013,Haiyan,Yolanda,Negros Oriental,0,1063015,49,106,155,0,1000000,Violent typhoon
+2013,Haiyan,Yolanda,Siquijor,0,22024,0,0,0,0,5590,Violent typhoon
+2013,Haiyan,Yolanda,Biliran,8,187641,5444,15081,20525,72732773.64,258870724,Violent typhoon
+2013,Haiyan,Yolanda,Eastern Samar,267,497497,30625,31116,61741,702625045.5,4685132032,Violent typhoon
+2013,Haiyan,Yolanda,Leyte,5402,2364023,201464,180346,381810,1026660946,49884765123,Violent typhoon
+2013,Haiyan,Yolanda,Northern Samar,0,683254,0,0,0,0,109292103.5,Violent typhoon
+2013,Haiyan,Yolanda,Samar,225,821989,6084,12231,18315,690246729.8,4086062925,Violent typhoon
+2013,Haiyan,Yolanda,Southern Leyte,0,461030,933,9532,10465,31486295.64,210999836.7,Violent typhoon
+2013,Haiyan,Yolanda,Bukidnon,0,157,0,0,0,0,0,Violent typhoon
+2013,Haiyan,Yolanda,Camiguin,0,2750,2,15,17,0,0,Violent typhoon
+2013,Haiyan,Yolanda,Lanao del Norte,0,898,0,0,0,0,0,Violent typhoon
+2013,Haiyan,Yolanda,Misamis Oriental,0,15787,0,3,3,0,0,Violent typhoon
+2013,Haiyan,Yolanda,Davao de Oro,0,2380,0,0,0,0,0,Violent typhoon
+2013,Haiyan,Yolanda,Davao del Sur,0,15,1,2,3,0,0,Violent typhoon
+2013,Haiyan,Yolanda,Davao Oriental,0,2605,10,6,16,0,0,Violent typhoon
+2013,Haiyan,Yolanda,Agusan del Norte,0,3439,0,0,0,0,105000000,Violent typhoon
+2013,Haiyan,Yolanda,Agusan del Sur,0,210,2,40,42,0,3000000,Violent typhoon
+2013,Haiyan,Yolanda,Dinagat Islands,0,24405,362,3405,3767,13237000,0,Violent typhoon
+2013,Haiyan,Yolanda,Surigao del Norte,0,25645,58,2714,2772,2200000,0,Violent typhoon
+2013,Haiyan,Yolanda,Surigao del Sur,1,16257,44,79,123,67000,80000000,Violent typhoon
+2013,Haiyan,Yolanda,Zamboanga Sibugay,1,0,0,0,0,0,0,Violent typhoon
+2014,Lingling,Agaton,Zamboanga del Norte,1,0,0,0,0,0,0,Tropical storm
+2014,Lingling,Agaton,Misamis Occidental,3,694,5,0,5,0,0,Tropical storm
+2014,Lingling,Agaton,Misamis Oriental,8,36631,46,210,256,105000000,0,Tropical storm
+2014,Lingling,Agaton,Davao de Oro,11,115900,21,6,27,17210000,78185843.28,Tropical storm
+2014,Lingling,Agaton,Davao Oriental,10,236030,908,572,1480,0,24914528.8,Tropical storm
+2014,Lingling,Agaton,Davao del Norte,3,98361,0,0,0,8800000,112625883,Tropical storm
+2014,Lingling,Agaton,Dinagat Islands,6,12000,0,22,22,19384800,759491,Tropical storm
+2014,Lingling,Agaton,Agusan del Sur,14,176705,79,87,166,1268921155,30086394.5,Tropical storm
+2014,Lingling,Agaton,Agusan del Norte,9,160152,63,112,175,498416220,13293188.88,Tropical storm
+2014,Lingling,Agaton,Surigao del Norte,3,51842,149,32,181,104104839,6036050,Tropical storm
+2014,Lingling,Agaton,Surigao del Sur,2,108595,137,520,657,548078152,21394129,Tropical storm
+2014,Lingling,Agaton,Bukidnon,0,3934,3,0,3,0,52000,Tropical storm
+2014,Lingling,Agaton,Camiguin,0,34500,0,1,1,2300000,192500,Tropical storm
+2014,Lingling,Agaton,Lanao del Norte,0,30231,281,677,958,102700000,32279788.65,Tropical storm
+2014,Lingling,Agaton,Davao del Sur,0,163,0,0,0,0,0,Tropical storm
+2014,Lingling,Agaton,Cotabato,0,13225,0,0,0,0,0,Tropical storm
+2014,Lingling,Agaton,Maguindanao,0,13435,0,0,0,0,0,Tropical storm
+2014,Lingling,Agaton,Camarines Sur,0,0,12,87,99,0,0,Tropical storm
+2014,Lingling,Agaton,Sorsogon,0,0,0,1,1,0,0,Tropical storm
+2014,Kajiki,Basyang,Cebu,5,7096,27,334,361,0,0,Tropical storm
+2014,Kajiki,Basyang,Southern Leyte,1,5399,0,0,0,0,0,Tropical storm
+2014,Kajiki,Basyang,Negros Occidental,0,3812,2,55,57,0,0,Tropical storm
+2014,Kajiki,Basyang,Agusan del Norte,0,31,2,5,7,0,0,Tropical storm
+2014,Kajiki,Basyang,Dinagat Islands,0,11991,2,0,2,0,0,Tropical storm
+2014,Kajiki,Basyang,Antique,0,255,0,0,0,0,0,Tropical storm
+2014,Kajiki,Basyang,Biliran,0,390,0,0,0,0,0,Tropical storm
+2014,Kajiki,Basyang,Leyte,0,9580,0,0,0,0,0,Tropical storm
+2014,Kajiki,Basyang,Surigao del Norte,0,9186,0,0,0,0,0,Tropical storm
+2014,Caloy,,Southern Leyte,0,713,0,0,0,0,0,Tropical depression
+2014,Caloy,,Davao del Norte,0,16765,0,0,0,0,0,Tropical depression
+2014,Caloy,,Davao de Oro,0,170,0,0,0,0,0,Tropical depression
+2014,Caloy,,Agusan del Sur,0,1625,0,0,0,0,0,Tropical depression
+2014,Caloy,,Dinagat Islands,0,56,0,0,0,0,0,Tropical depression
+2014,Rammasun,Glenda,Metro Manila,2,26508,47,95,142,55367600,100605650,Very strong typhoon
+2014,Rammasun,Glenda,Ilocos Norte,0,14,3,2,5,0,0,Very strong typhoon
+2014,Rammasun,Glenda,Pangasinan,0,293,0,0,0,0,1142550,Very strong typhoon
+2014,Rammasun,Glenda,Aurora,0,189,0,0,0,0,42000,Very strong typhoon
+2014,Rammasun,Glenda,Bataan,3,182641,513,3236,3749,62155000,485143645,Very strong typhoon
+2014,Rammasun,Glenda,Bulacan,1,18562,41,180,221,917116,51192776,Very strong typhoon
+2014,Rammasun,Glenda,Pampanga,3,4499,7,50,57,91000,1587654040,Very strong typhoon
+2014,Rammasun,Glenda,Tarlac,0,624,1,0,1,87080000,975000,Very strong typhoon
+2014,Rammasun,Glenda,Zambales,1,14886,180,905,1085,784770,2781800,Very strong typhoon
+2014,Rammasun,Glenda,Batangas,13,251942,5227,67449,72676,90000,1752259425,Very strong typhoon
+2014,Rammasun,Glenda,Cavite,8,271939,6150,36121,42271,100000,325703614,Very strong typhoon
+2014,Rammasun,Glenda,Laguna,21,322405,13592,49468,63060,148193400,4341974618,Very strong typhoon
+2014,Rammasun,Glenda,Quezon,29,646830,34702,109957,144659,962469719.4,14190938227,Very strong typhoon
+2014,Rammasun,Glenda,Rizal,3,106517,609,3526,4135,263038890,843581534,Very strong typhoon
+2014,Rammasun,Glenda,Marinduque,5,4733,39,1031,1070,124824180,81847300,Very strong typhoon
+2014,Rammasun,Glenda,Occidental Mindoro,1,26855,56,5483,5539,15823600,113093623,Very strong typhoon
+2014,Rammasun,Glenda,Oriental Mindoro,1,1975,30,387,417,0,48423091,Very strong typhoon
+2014,Rammasun,Glenda,Romblon,0,453,16,208,224,7722000,76673000,Very strong typhoon
+2014,Rammasun,Glenda,Albay,0,505327,4775,19920,24695,771785757.6,1406984728,Very strong typhoon
+2014,Rammasun,Glenda,Camarines Norte,0,116504,1617,11169,12786,106600000,102435128,Very strong typhoon
+2014,Rammasun,Glenda,Camarines Sur,4,920408,29688,123837,153525,392201356,3267967537,Very strong typhoon
+2014,Rammasun,Glenda,Catanduanes,0,20251,98,863,961,11209250,69891373,Very strong typhoon
+2014,Rammasun,Glenda,Masbate,0,59897,283,1279,1562,25000000,152115649,Very strong typhoon
+2014,Rammasun,Glenda,Sorsogon,3,602778,4997,24216,29213,193482640,4169973763,Very strong typhoon
+2014,Rammasun,Glenda,Eastern Samar,0,36240,240,3137,3377,4000000,327473529,Very strong typhoon
+2014,Rammasun,Glenda,Leyte,0,4472,0,0,0,0,30713854,Very strong typhoon
+2014,Rammasun,Glenda,Northern Samar,4,350293,6608,39764,46372,7450000,152821837,Very strong typhoon
+2014,Rammasun,Glenda,Samar,2,155681,2548,19330,21878,36700000,396602027,Very strong typhoon
+2014,Rammasun,Glenda,Iloilo,1,0,0,0,0,0,0,Very strong typhoon
+2014,Rammasun,Glenda,Biliran,1,0,0,0,0,0,6981708,Very strong typhoon
+2014,Matmo,Henry,Occidental Mindoro,0,46,0,0,0,0,0,Strong typhoon
+2014,Matmo,Henry,Negros Occidental,0,785,36,150,186,0,0,Strong typhoon
+2014,Matmo,Henry,Misamis Oriental,0,0,11,116,127,0,0,Strong typhoon
+2014,Luis,,Nueva Vizcaya,1,181,6,10,16,0,0,Strong typhoon
+2014,Luis,,Cagayan,1,34343,108,1485,1593,0,606529,Strong typhoon
+2014,Luis,,Pangasinan,3,294971,59,120,179,0,128364100.5,Strong typhoon
+2014,Luis,,Metro Manila,0,9799,0,0,0,0,0,Strong typhoon
+2014,Luis,,Ilocos Norte,0,147,0,22,22,0,11551053.28,Strong typhoon
+2014,Luis,,La Union,0,11826,2,39,41,24400000,21402718.67,Strong typhoon
+2014,Luis,,Isabela,0,5112,0,5,5,10500000,58819341.79,Strong typhoon
+2014,Luis,,Aurora,0,120,0,0,0,0,14396615,Strong typhoon
+2014,Luis,,Bataan,0,37,0,0,0,0,0,Strong typhoon
+2014,Luis,,Bulacan,0,31382,0,0,0,0,44948317.8,Strong typhoon
+2014,Luis,,Nueva Ecija,0,31051,0,0,0,650000,260153580.3,Strong typhoon
+2014,Luis,,Pampanga,0,27347,8,0,8,0,95936078,Strong typhoon
+2014,Luis,,Tarlac,0,38925,0,0,0,0,110170450.5,Strong typhoon
+2014,Luis,,Zambales,0,1841,2,20,22,0,16112783.64,Strong typhoon
+2014,Luis,,Rizal,0,6709,0,0,0,0,0,Strong typhoon
+2014,Luis,,Negros Occidental,0,448,0,0,0,0,0,Strong typhoon
+2014,Luis,,Apayao,0,1955,5,329,334,120000,200630930,Strong typhoon
+2014,Luis,,Benguet,0,285,1,16,17,5810000,9466180.26,Strong typhoon
+2014,Luis,,Kalinga,0,11406,3,99,102,4000000,85090807,Strong typhoon
+2014,Luis,,Mountain Province,0,482,0,0,0,17250000,25414396,Strong typhoon
+2014,Fung-Wong,Mario,Metro Manila,7,94957,0,0,0,252680,0,Tropical storm
+2014,Fung-Wong,Mario,Ilocos Norte,0,48471,179,1167,1346,239405000,502001803.1,Tropical storm
+2014,Fung-Wong,Mario,Ilocos Sur,1,218004,1878,4594,6472,62400000,84319758.27,Tropical storm
+2014,Fung-Wong,Mario,La Union,3,72229,82,1875,1957,102400000,84827753.9,Tropical storm
+2014,Fung-Wong,Mario,Pangasinan,0,230270,12,139,151,49000000,707823689.2,Tropical storm
+2014,Fung-Wong,Mario,Cagayan,0,117,0,0,0,0,365688470,Tropical storm
+2014,Fung-Wong,Mario,Isabela,0,435,0,0,0,0,89514370,Tropical storm
+2014,Fung-Wong,Mario,Nueva Vizcaya,0,1440,14,251,265,0,0,Tropical storm
+2014,Fung-Wong,Mario,Bataan,0,197,0,0,0,0,0,Tropical storm
+2014,Fung-Wong,Mario,Bulacan,0,231922,7,24,31,16000000,104669139.3,Tropical storm
+2014,Fung-Wong,Mario,Nueva Ecija,0,27707,0,0,0,40300000,288053123.2,Tropical storm
+2014,Fung-Wong,Mario,Pampanga,0,54315,1,5,6,0,135620555,Tropical storm
+2014,Fung-Wong,Mario,Tarlac,0,41673,0,0,0,0,279725916.5,Tropical storm
+2014,Fung-Wong,Mario,Zambales,0,1999,7,5,12,0,34362551.4,Tropical storm
+2014,Fung-Wong,Mario,Batangas,0,440,1,0,1,0,0,Tropical storm
+2014,Fung-Wong,Mario,Cavite,1,2563,0,0,0,0,0,Tropical storm
+2014,Fung-Wong,Mario,Laguna,1,30331,0,0,0,0,0,Tropical storm
+2014,Fung-Wong,Mario,Rizal,2,81667,5,2,7,0,0,Tropical storm
+2014,Fung-Wong,Mario,Occidental Mindoro,1,7899,3,1,4,0,0,Tropical storm
+2014,Fung-Wong,Mario,Camarines Norte,0,2050,0,0,0,0,0,Tropical storm
+2014,Fung-Wong,Mario,Camarines Sur,2,428122,1,0,1,0,0,Tropical storm
+2014,Fung-Wong,Mario,Cebu,0,416885,0,0,0,0,0,Tropical storm
+2014,Fung-Wong,Mario,Abra,0,57877,42,1012,1054,104210041,88863040,Tropical storm
+2014,Fung-Wong,Mario,Apayao,0,165,0,41,41,0,85795309,Tropical storm
+2014,Fung-Wong,Mario,Benguet,0,681,2,23,25,7250000,32591140,Tropical storm
+2014,Fung-Wong,Mario,Ifugao,0,599,9,138,147,2500000,9551376,Tropical storm
+2014,Fung-Wong,Mario,Kalinga,0,153,4,46,50,15000000,15974200,Tropical storm
+2014,Fung-Wong,Mario,Mountain Province,0,85,9,12,21,7000000,101858689,Tropical storm
+2014,Sinlaku,Queenie,Cebu,2,1038,2,89,91,0,0,Tropical storm
+2014,Sinlaku,Queenie,Bohol,1,5064,133,780,913,0,0,Tropical storm
+2014,Sinlaku,Queenie,Palawan,0,34640,91,1995,2086,0,0,Tropical storm
+2014,Sinlaku,Queenie,Negros Occidental,0,1725,100,300,400,0,0,Tropical storm
+2014,Sinlaku,Queenie,Negros Oriental,0,1086,17,87,104,0,0,Tropical storm
+2014,Sinlaku,Queenie,Southern Leyte,0,36,0,0,0,0,0,Tropical storm
+2014,Sinlaku,Queenie,Misamis Oriental,0,869,0,0,0,0,0,Tropical storm
+2014,Sinlaku,Queenie,Davao del Sur,0,3,0,0,0,0,0,Tropical storm
+2014,Sinlaku,Queenie,Dinagat Islands,0,869,0,0,0,0,0,Tropical storm
+2014,Sinlaku,Queenie,Surigao del Norte,0,1300,0,146,146,0,0,Tropical storm
+2014,Sinlaku,Queenie,Surigao del Sur,0,219,0,2,2,0,0,Tropical storm
+2014,Hagupit,Ruby,Metro Manila,0,25040,0,0,0,0,0,Violent typhoon
+2014,Hagupit,Ruby,Bataan,0,1899,0,0,0,0,0,Violent typhoon
+2014,Hagupit,Ruby,Batangas,1,10849,0,0,0,0,17611663,Violent typhoon
+2014,Hagupit,Ruby,Cavite,0,21679,0,0,0,0,560642,Violent typhoon
+2014,Hagupit,Ruby,Laguna,0,8910,1,0,1,0,2513710,Violent typhoon
+2014,Hagupit,Ruby,Quezon,1,89890,4,17,21,9626273,11500250,Violent typhoon
+2014,Hagupit,Ruby,Rizal,0,688,0,0,0,0,81888181,Violent typhoon
+2014,Hagupit,Ruby,Marinduque,0,12950,0,0,0,86500000,7317617,Violent typhoon
+2014,Hagupit,Ruby,Occidental Mindoro,0,40044,0,0,0,0,0,Violent typhoon
+2014,Hagupit,Ruby,Oriental Mindoro,1,74590,0,0,0,55530000,245895,Violent typhoon
+2014,Hagupit,Ruby,Palawan,0,46717,0,0,0,0,0,Violent typhoon
+2014,Hagupit,Ruby,Romblon,0,73595,20,245,265,86000000,10277900,Violent typhoon
+2014,Hagupit,Ruby,Albay,0,401878,0,18,18,514900000,149126132,Violent typhoon
+2014,Hagupit,Ruby,Camarines Norte,0,36861,2,0,2,0,31811472,Violent typhoon
+2014,Hagupit,Ruby,Camarines Sur,0,219253,160,3115,3275,53000000,925424922,Violent typhoon
+2014,Hagupit,Ruby,Catanduanes,0,59752,3,26,29,3048250,15897368,Violent typhoon
+2014,Hagupit,Ruby,Masbate,0,267980,1022,16616,17638,32700000,277118087,Violent typhoon
+2014,Hagupit,Ruby,Sorsogon,0,198576,300,7046,7346,0,13680666,Violent typhoon
+2014,Hagupit,Ruby,Aklan,0,75241,0,6,6,0,619000,Violent typhoon
+2014,Hagupit,Ruby,Antique,0,74347,0,0,0,0,15964028,Violent typhoon
+2014,Hagupit,Ruby,Capiz,0,89305,4,1026,1030,0,185858627,Violent typhoon
+2014,Hagupit,Ruby,Guimaras,0,4638,0,0,0,0,0,Violent typhoon
+2014,Hagupit,Ruby,Iloilo,0,132525,210,1111,1321,0,90706990,Violent typhoon
+2014,Hagupit,Ruby,Negros Occidental,0,84888,0,0,0,0,16370623,Violent typhoon
+2014,Hagupit,Ruby,Bohol,0,26330,0,0,0,0,0,Violent typhoon
+2014,Hagupit,Ruby,Cebu,1,125315,360,2711,3071,0,27597000,Violent typhoon
+2014,Hagupit,Ruby,Negros Oriental,0,22635,0,0,0,0,0,Violent typhoon
+2014,Hagupit,Ruby,Siquijor,0,223,0,0,0,0,33000,Violent typhoon
+2014,Hagupit,Ruby,Biliran,2,46831,132,1924,2056,32900000,148372016,Violent typhoon
+2014,Hagupit,Ruby,Eastern Samar,8,605040,19549,60041,79590,581300000,269665707,Violent typhoon
+2014,Hagupit,Ruby,Leyte,2,420909,1272,23071,24343,938550,1009704604,Violent typhoon
+2014,Hagupit,Ruby,Northern Samar,0,473759,6877,56490,63367,192980000,239744639,Violent typhoon
+2014,Hagupit,Ruby,Samar,8,371806,12666,75731,88397,151735000,258715246,Violent typhoon
+2014,Hagupit,Ruby,Southern Leyte,0,103192,5,46,51,14000000,943000,Violent typhoon
+2014,Hagupit,Ruby,Agusan del Norte,0,9131,0,0,0,0,0,Violent typhoon
+2014,Hagupit,Ruby,Agusan del Sur,0,1610,0,0,0,0,0,Violent typhoon
+2014,Hagupit,Ruby,Dinagat Islands,0,24069,0,0,0,0,0,Violent typhoon
+2014,Hagupit,Ruby,Surigao del Norte,0,59595,47,193,240,0,0,Violent typhoon
+2014,Hagupit,Ruby,Surigao del Sur,0,21137,0,0,0,0,0,Violent typhoon
+2014,Jangmi,Seniang,Antique,1,98,2,4,6,0,0,Tropical storm
+2014,Jangmi,Seniang,Negros Occidental,2,48719,13,87,100,0,489040,Tropical storm
+2014,Jangmi,Seniang,Bohol,5,21694,114,322,436,39934000,12570807,Tropical storm
+2014,Jangmi,Seniang,Cebu,16,44247,168,229,397,72600000,137465,Tropical storm
+2014,Jangmi,Seniang,Eastern Samar,0,0,17,26,43,28000000,96439295,Tropical storm
+2014,Jangmi,Seniang,Samar,20,30207,26,172,198,113000000,138328569,Tropical storm
+2014,Jangmi,Seniang,Leyte,12,231734,21,1188,1209,21386500,109169872,Tropical storm
+2014,Jangmi,Seniang,Zamboanga del Sur,0,410,60,21,81,0,0,Tropical storm
+2014,Jangmi,Seniang,Bukidnon,3,7347,16,135,151,11152500,15807999.75,Tropical storm
+2014,Jangmi,Seniang,Camiguin,0,344,0,15,15,0,0,Tropical storm
+2014,Jangmi,Seniang,Misamis Oriental,1,61187,137,129,266,70833900,63501317,Tropical storm
+2014,Jangmi,Seniang,Davao de Oro,2,10180,1,12,13,0,1220150,Tropical storm
+2014,Jangmi,Seniang,Agusan del Norte,2,48095,3,0,3,8750000,8643055,Tropical storm
+2014,Jangmi,Seniang,Dinagat Islands,0,3149,1,21,22,2000000,0,Tropical storm
+2014,Jangmi,Seniang,Agusan del Sur,2,20961,6,12,18,148120000,8066394,Tropical storm
+2014,Jangmi,Seniang,Surigao del Sur,0,64390,69,386,455,31905967.29,0,Tropical storm
+2014,Jangmi,Seniang,Palawan,0,2138,0,0,0,0,0,Tropical storm
+2014,Jangmi,Seniang,Capiz,0,1650,0,0,0,0,70124039,Tropical storm
+2014,Jangmi,Seniang,Siquijor,0,54,0,0,0,0,0,Tropical storm
+2014,Jangmi,Seniang,Southern Leyte,0,128,0,0,0,0,4779662,Tropical storm
+2014,Jangmi,Seniang,Lanao del Norte,0,451,0,0,0,0,0,Tropical storm
+2014,Jangmi,Seniang,Davao del Norte,0,1064,0,0,0,0,0,Tropical storm
+2014,Jangmi,Seniang,Davao Oriental,0,80,0,0,0,0,0,Tropical storm
+2014,Jangmi,Seniang,Surigao del Norte,0,4300,0,0,0,0,0,Tropical storm
+2015,Mekkhala,Amang,Catanduanes,1,309,2,5,7,0,0,Severe tropical storm
+2015,Mekkhala,Amang,Camarines Norte,0,3250,1,139,140,0,0,Severe tropical storm
+2015,Mekkhala,Amang,Albay,0,38898,15,0,15,0,0,Severe tropical storm
+2015,Mekkhala,Amang,Samar,0,4039,1,4,5,0,0,Severe tropical storm
+2015,Mekkhala,Amang,Biliran,0,0,0,1,1,0,0,Severe tropical storm
+2015,Mekkhala,Amang,Northern Samar,0,42979,29,341,370,0,0,Severe tropical storm
+2015,Mekkhala,Amang,Camarines Sur,0,12986,0,0,0,0,0,Severe tropical storm
+2015,Mekkhala,Amang,Sorsogon,0,1216,0,0,0,0,0,Severe tropical storm
+2015,Mekkhala,Amang,Cebu,0,176,0,0,0,0,0,Severe tropical storm
+2015,Mekkhala,Amang,Eastern Samar,1,2955,0,0,0,0,0,Severe tropical storm
+2015,Maysak,Chedeng,Isabela,0,27,0,0,0,0,0,Violent typhoon
+2015,Maysak,Chedeng,Aurora,0,17,0,0,0,0,0,Violent typhoon
+2015,Noul,Dodong,Cagayan,2,2921,0,0,0,0,0,Violent typhoon
+2015,Noul,Dodong,Isabela,0,1602,0,0,0,0,0,Violent typhoon
+2015,Noul,Dodong,Ilocos Norte,0,0,0,0,0,0,0,Violent typhoon
+2015,Linfa,Egay,Ilocos Norte,0,1995,1,34,35,0,0,Severe tropical storm
+2015,Linfa,Egay,Ilocos Sur,0,542,2,21,23,0,0,Severe tropical storm
+2015,Linfa,Egay,La Union,0,51772,2,136,138,0,0,Severe tropical storm
+2015,Linfa,Egay,Palawan,0,634,0,1,1,0,0,Severe tropical storm
+2015,Linfa,Egay,Benguet,0,42,0,1,1,0,0,Severe tropical storm
+2015,Linfa,Egay,Abra,0,0,1,4,5,0,0,Severe tropical storm
+2015,Linfa,Egay,Kalinga,0,315,1,1,2,0,0,Severe tropical storm
+2015,Linfa,Egay,Apayao,0,267,0,0,0,0,0,Severe tropical storm
+2015,Linfa,Egay,Metro Manila,0,0,0,0,0,0,0,Severe tropical storm
+2015,Ineng,,Ilocos Sur,1,70876,20,95,115,0,0,Very strong typhoon
+2015,Ineng,,Cagayan,1,94226,61,4504,4565,0,0,Very strong typhoon
+2015,Ineng,,Zambales,2,0,0,6,6,0,0,Very strong typhoon
+2015,Ineng,,Mountain Province,4,1163,5,33,38,0,0,Very strong typhoon
+2015,Ineng,,Benguet,21,26310,14,156,170,0,0,Very strong typhoon
+2015,Ineng,,Oriental Mindoro,0,15,0,0,0,0,0,Very strong typhoon
+2015,Ineng,,Ilocos Norte,1,81664,20,239,259,0,0,Very strong typhoon
+2015,Ineng,,Pangasinan,0,0,0,0,0,0,0,Very strong typhoon
+2015,Ineng,,Bataan,0,0,0,0,0,0,0,Very strong typhoon
+2015,Ineng,,Bulacan,0,76,0,0,0,0,0,Very strong typhoon
+2015,Ineng,,Pampanga,0,0,0,0,0,0,0,Very strong typhoon
+2015,Ineng,,Palawan,0,0,0,0,0,0,0,Very strong typhoon
+2015,Ineng,,Guimaras,0,0,0,0,0,0,0,Very strong typhoon
+2015,Ineng,,Metro Manila,0,0,0,0,0,0,0,Very strong typhoon
+2015,Ineng,,La Union,1,2976,0,11,11,0,0,Very strong typhoon
+2015,Ineng,,Kalinga,1,16676,18,146,164,0,0,Very strong typhoon
+2015,Ineng,,Abra,1,90951,1,4,5,0,0,Very strong typhoon
+2015,Ineng,,Batanes,0,1387,44,159,203,0,0,Very strong typhoon
+2015,Ineng,,Nueva Vizcaya,0,95,0,20,20,0,0,Very strong typhoon
+2015,Ineng,,Nueva Ecija,0,37,4,6,10,0,0,Very strong typhoon
+2015,Ineng,,Laguna,0,461,0,58,58,0,0,Very strong typhoon
+2015,Ineng,,Apayao,0,10241,1,117,118,0,0,Very strong typhoon
+2015,Mujigae,Kabayan,La Union,0,15,0,0,0,0,0,Very strong typhoon
+2015,Mujigae,Kabayan,Aurora,0,5413,87,435,522,0,0,Very strong typhoon
+2015,Mujigae,Kabayan,Bulacan,0,2380,0,18,18,0,0,Very strong typhoon
+2015,Mujigae,Kabayan,Nueva Ecija,0,51746,10,153,163,0,0,Very strong typhoon
+2015,Mujigae,Kabayan,Zambales,0,14,0,0,0,0,0,Very strong typhoon
+2015,Mujigae,Kabayan,Pangasinan,1,0,0,0,0,0,0,Very strong typhoon
+2015,Mujigae,Kabayan,Marinduque,0,0,0,0,0,0,0,Very strong typhoon
+2015,Koppu,Lando,Pangasinan,9,992365,11250,53137,64387,546342785,642090937,Very strong typhoon
+2015,Koppu,Lando,La Union,1,99874,423,8527,8950,311525000,147339189.5,Very strong typhoon
+2015,Koppu,Lando,Nueva Vizcaya,1,21049,126,1427,1553,91238500,292046300,Very strong typhoon
+2015,Koppu,Lando,Isabela,4,151798,620,899,1519,43919115,746203937.5,Very strong typhoon
+2015,Koppu,Lando,Cagayan,1,151879,4,24,28,129330000,826366262.5,Very strong typhoon
+2015,Koppu,Lando,Zambales,4,144971,46,874,920,240000000,270445986.6,Very strong typhoon
+2015,Koppu,Lando,Tarlac,1,211252,482,6304,6786,916960000,1005482650,Very strong typhoon
+2015,Koppu,Lando,Nueva Ecija,8,547564,987,11548,12535,89500000,3629349455,Very strong typhoon
+2015,Koppu,Lando,Aurora,2,109669,2695,20296,22991,81107000,603673473.6,Very strong typhoon
+2015,Koppu,Lando,Bulacan,1,299297,3,112,115,2015000,888913585.8,Very strong typhoon
+2015,Koppu,Lando,Laguna,1,47,0,0,0,0,40771995,Very strong typhoon
+2015,Koppu,Lando,Cavite,1,222,0,0,0,0,6394336,Very strong typhoon
+2015,Koppu,Lando,Benguet,18,0,0,0,0,87866531.74,183827512.1,Very strong typhoon
+2015,Koppu,Lando,Ifugao,3,0,43,499,542,10891545,30948199.9,Very strong typhoon
+2015,Koppu,Lando,Abra,1,7666,1,13,14,56910241.17,60851639.8,Very strong typhoon
+2015,Koppu,Lando,Metro Manila,2,6696,0,0,0,0,0,Very strong typhoon
+2015,Koppu,Lando,Ilocos Norte,0,5182,23,62,85,32950000,39146282.13,Very strong typhoon
+2015,Koppu,Lando,Ilocos Sur,0,28905,46,450,496,75000000,73694840,Very strong typhoon
+2015,Koppu,Lando,Batanes,0,3034,0,374,374,0,0,Very strong typhoon
+2015,Koppu,Lando,Quirino,0,12686,567,9380,9947,202760039.5,378035000,Very strong typhoon
+2015,Koppu,Lando,Bataan,0,15949,20,11,31,0,272780153,Very strong typhoon
+2015,Koppu,Lando,Pampanga,0,203629,48,463,511,0,378146856.8,Very strong typhoon
+2015,Koppu,Lando,Quezon,0,38117,1255,2900,4155,1000000,80356482.5,Very strong typhoon
+2015,Koppu,Lando,Rizal,0,3474,0,0,0,0,67671632,Very strong typhoon
+2015,Koppu,Lando,Camarines Norte,0,218,0,0,0,0,0,Very strong typhoon
+2015,Koppu,Lando,Catanduanes,0,9,0,0,0,1091500,2500000,Very strong typhoon
+2015,Koppu,Lando,Apayao,0,1046,10,152,162,210581590.1,104989459.3,Very strong typhoon
+2015,Koppu,Lando,Benguet,0,8018,127,862,989,87866531.74,183827512.1,Very strong typhoon
+2015,Koppu,Lando,Ifugao,0,2602,0,0,0,10891545,30948199.9,Very strong typhoon
+2015,Koppu,Lando,Kalinga,0,8116,17,481,498,270943505,71416885.55,Very strong typhoon
+2015,Koppu,Lando,Mountain Province,0,751,2,90,92,78694343.64,44678902.84,Very strong typhoon
+2015,Melor,Nona,Nueva Vizcaya,6,0,0,0,0,0,2176320,Very strong typhoon
+2015,Melor,Nona,Quezon,3,20330,0,836,836,203085000,2812277,Very strong typhoon
+2015,Melor,Nona,Romblon,3,6031,1667,4934,6601,11000000,2017800,Very strong typhoon
+2015,Melor,Nona,Oriental Mindoro,13,434166,32687,49744,82431,672630500,503379703.3,Very strong typhoon
+2015,Melor,Nona,Occidental Mindoro,1,8010,113,896,1009,3388888.88,3871200,Very strong typhoon
+2015,Melor,Nona,Albay,6,169973,102,555,657,58824885.27,17565210,Very strong typhoon
+2015,Melor,Nona,Masbate,3,116870,3179,5776,8955,570000,95385966.34,Very strong typhoon
+2015,Melor,Nona,Sorsogon,7,159406,29921,57737,87658,17880000,284463505.5,Very strong typhoon
+2015,Melor,Nona,Samar,1,12183,11,285,296,0,11928396,Very strong typhoon
+2015,Melor,Nona,Northern Samar,7,45228,42200,81021,123221,185465804,251113413,Very strong typhoon
+2015,Melor,Nona,Metro Manila,1,0,0,0,0,0,0,Very strong typhoon
+2015,Melor,Nona,Pangasinan,0,0,0,0,0,0,257717379.1,Very strong typhoon
+2015,Melor,Nona,Cagayan,0,0,0,0,0,0,88180370,Very strong typhoon
+2015,Melor,Nona,Isabela,0,0,0,0,0,0,1276821265,Very strong typhoon
+2015,Melor,Nona,Quirino,0,0,0,0,0,0,5270400,Very strong typhoon
+2015,Melor,Nona,Aurora,0,13226,9,8,17,136036000,189921670,Very strong typhoon
+2015,Melor,Nona,Bulacan,0,90591,0,0,0,0,57914340.08,Very strong typhoon
+2015,Melor,Nona,Nueva Ecija,0,78321,3,0,3,108241657.9,669813525.6,Very strong typhoon
+2015,Melor,Nona,Pampanga,0,111263,0,3,3,56066000,535647165.2,Very strong typhoon
+2015,Melor,Nona,Tarlac,0,4069,0,0,0,0,613580967.1,Very strong typhoon
+2015,Melor,Nona,Batangas,0,2075,7,117,124,68800000,0,Very strong typhoon
+2015,Melor,Nona,Cavite,0,398,8,0,8,0,58905,Very strong typhoon
+2015,Melor,Nona,Marinduque,0,6085,570,4555,5125,80200000,122340848,Very strong typhoon
+2015,Melor,Nona,Camarines Norte,0,1936,1,1,2,0,20525000,Very strong typhoon
+2015,Melor,Nona,Camarines Sur,0,57920,0,75,75,1500000,311490650.7,Very strong typhoon
+2015,Melor,Nona,Catanduanes,0,6508,17,8,25,9035948.16,11230720,Very strong typhoon
+2015,Melor,Nona,Eastern Samar,0,7682,44,1594,1638,0,16069224,Very strong typhoon
+2015,Melor,Nona,Bataan,0,19,0,0,0,0,1546050,Very strong typhoon
+2015,Melor,Nona,Laguna,0,192,0,0,0,1589900,0,Very strong typhoon
+2015,Melor,Nona,Palawan,0,5422,0,0,0,0,0,Very strong typhoon
+2015,Melor,Nona,Biliran,0,1615,0,0,0,0,2426843,Very strong typhoon
+2015,Onyok,,Agusan del Sur,0,3420,2,2,4,0,0,Tropical depression
+2015,Onyok,,Dinagat Islands,0,688,2,1,3,0,0,Tropical depression
+2015,Onyok,,Surigao del Norte,0,641,1,0,1,0,0,Tropical depression
+2015,Onyok,,Agusan del Norte,0,148,0,0,0,0,0,Tropical depression
+2015,Onyok,,Surigao del Sur,0,6414,0,0,0,0,0,Tropical depression
+2016,Nida,Carina,Iloilo,0,103,0,0,0,0,0,Severe tropical storm
+2016,Nida,Carina,Ilocos Norte,0,29,0,4,4,0,0,Severe tropical storm
+2016,Nida,Carina,Ilocos Sur,0,8,0,3,3,0,0,Severe tropical storm
+2016,Nida,Carina,Cagayan,0,356,0,0,0,0,0,Severe tropical storm
+2016,Nida,Carina,Isabela,0,7933,0,0,0,0,0,Severe tropical storm
+2016,Meranti,Ferdie,Batanes,0,16518,407,1834,2241,0,0,Violent typhoon
+2016,Meranti,Ferdie,Ilocos Norte,0,105,0,0,0,0,0,Violent typhoon
+2016,Meranti,Ferdie,Cagayan,0,25,0,0,0,0,0,Violent typhoon
+2016,Sarika,Karen,Laguna,0,0,0,0,0,0,0,Very strong typhoon
+2016,Sarika,Karen,Ilocos Norte,0,19079,0,20,20,0,0,Very strong typhoon
+2016,Sarika,Karen,La Union,0,517,21,25,46,0,24610252,Very strong typhoon
+2016,Sarika,Karen,Pangasinan,0,18187,19,148,167,0,184079521,Very strong typhoon
+2016,Sarika,Karen,Nueva Vizcaya,0,17766,431,2893,3324,300000,13762390,Very strong typhoon
+2016,Sarika,Karen,Aurora,0,77784,887,6817,7704,9100000,73069416,Very strong typhoon
+2016,Sarika,Karen,Nueva Ecija,0,86207,40,1007,1047,5500000,1169133748,Very strong typhoon
+2016,Sarika,Karen,Tarlac,0,15467,1,8,9,0,1047968255,Very strong typhoon
+2016,Sarika,Karen,Camarines Sur,0,45343,0,88,88,0,648906866.7,Very strong typhoon
+2016,Sarika,Karen,Camarines Norte,0,7063,22,316,338,0,158659421,Very strong typhoon
+2016,Sarika,Karen,Catanduanes,0,5640,0,1,1,20317500,19804668,Very strong typhoon
+2016,Sarika,Karen,Benguet,0,152,0,16,16,0,1153393,Very strong typhoon
+2016,Sarika,Karen,Ifugao,0,39,0,9,9,2500000,0,Very strong typhoon
+2016,Sarika,Karen,Kalinga,0,128,0,6,6,2200000,0,Very strong typhoon
+2016,Sarika,Karen,Ilocos Sur,0,275,0,0,0,0,0,Very strong typhoon
+2016,Sarika,Karen,Cagayan,0,946,0,0,0,93000000,0,Very strong typhoon
+2016,Sarika,Karen,Isabela,0,10751,0,0,0,0,193807780,Very strong typhoon
+2016,Sarika,Karen,Quirino,0,126,0,0,0,77500000,28290860,Very strong typhoon
+2016,Sarika,Karen,Bulacan,0,735,0,0,0,15000000,31637078,Very strong typhoon
+2016,Sarika,Karen,Pampanga,0,1100,0,0,0,5500000,2093458,Very strong typhoon
+2016,Sarika,Karen,Zambales,0,2293,0,0,0,0,847844,Very strong typhoon
+2016,Sarika,Karen,Quezon,0,1081,0,0,0,0,5918260,Very strong typhoon
+2016,Sarika,Karen,Rizal,0,237,0,0,0,0,2595050,Very strong typhoon
+2016,Sarika,Karen,Albay,0,6828,0,0,0,0,53179472,Very strong typhoon
+2016,Sarika,Karen,Sorsogon,0,1614,0,0,0,0,61544359.18,Very strong typhoon
+2016,Sarika,Karen,Mountain Province,0,7,0,0,0,350000,0,Very strong typhoon
+2016,Sarika,Karen,Bataan,0,0,0,0,0,0,7788000,Very strong typhoon
+2016,Haima,Lawin,Ilocos Norte,0,91224,1334,17441,18775,494900000,400662359,Violent typhoon
+2016,Haima,Lawin,Ilocos Sur,0,94288,699,9340,10039,587250000,229184030,Violent typhoon
+2016,Haima,Lawin,La Union,0,23139,49,866,915,35900000,51325349,Violent typhoon
+2016,Haima,Lawin,Pangasinan,0,72065,7,0,7,16078188,807000,Violent typhoon
+2016,Haima,Lawin,Cagayan,0,355551,5254,23175,28429,624975000,0,Violent typhoon
+2016,Haima,Lawin,Isabela,0,96279,5994,25567,31561,567050000,0,Violent typhoon
+2016,Haima,Lawin,Nueva Vizcaya,0,7674,36,125,161,148943000,0,Violent typhoon
+2016,Haima,Lawin,Quirino,0,3103,0,127,127,174493000,0,Violent typhoon
+2016,Haima,Lawin,Aurora,3,44311,0,4,4,3000000,0,Violent typhoon
+2016,Haima,Lawin,Bataan,0,4640,5,20,25,0,0,Violent typhoon
+2016,Haima,Lawin,Bulacan,0,2441,0,0,0,0,0,Violent typhoon
+2016,Haima,Lawin,Nueva Ecija,0,22865,0,0,0,3000000,0,Violent typhoon
+2016,Haima,Lawin,Pampanga,0,40306,0,0,0,0,0,Violent typhoon
+2016,Haima,Lawin,Tarlac,0,24084,1,6,7,0,0,Violent typhoon
+2016,Haima,Lawin,Zambales,0,1835,0,0,0,0,0,Violent typhoon
+2016,Haima,Lawin,Batangas,0,971,0,0,0,0,0,Violent typhoon
+2016,Haima,Lawin,Quezon,0,724,0,0,0,0,0,Violent typhoon
+2016,Haima,Lawin,Rizal,0,53,0,0,0,0,0,Violent typhoon
+2016,Haima,Lawin,Camarines Norte,0,91,0,0,0,0,0,Violent typhoon
+2016,Haima,Lawin,Sorsogon,0,8761,0,0,0,0,0,Violent typhoon
+2016,Haima,Lawin,Abra,0,95713,374,4689,5063,0,28002400,Violent typhoon
+2016,Haima,Lawin,Apayao,0,9101,311,1720,2031,0,91682262.14,Violent typhoon
+2016,Haima,Lawin,Benguet,6,3367,62,368,430,1199500,5001032.93,Violent typhoon
+2016,Haima,Lawin,Ifugao,2,3642,13,392,405,0,48241980.35,Violent typhoon
+2016,Haima,Lawin,Kalinga,6,175376,569,2156,2725,0,135576912.5,Violent typhoon
+2016,Haima,Lawin,Mountain Province,0,32875,11,281,292,629500,25408838.2,Violent typhoon
+2016,Tokage,Marce,Leyte,0,0,0,1,1,0,0,Severe tropical storm
+2016,Tokage,Marce,Oriental Mindoro,0,1361,0,0,0,0,0,Severe tropical storm
+2016,Tokage,Marce,Romblon,0,91,0,1,1,0,0,Severe tropical storm
+2016,Tokage,Marce,Negros Occidental,0,32,0,0,0,0,0,Severe tropical storm
+2016,Tokage,Marce,Iloilo,0,5493,0,9,9,0,0,Severe tropical storm
+2016,Tokage,Marce,Cebu,0,0,5,0,5,0,0,Severe tropical storm
+2016,Tokage,Marce,Aklan,0,1113,0,0,0,0,0,Severe tropical storm
+2016,Tokage,Marce,Antique,0,1741,0,0,0,0,0,Severe tropical storm
+2016,Tokage,Marce,Capiz,0,3115,0,0,0,0,0,Severe tropical storm
+2016,Tokage,Marce,Dinagat Islands,0,862,0,0,0,0,0,Severe tropical storm
+2016,Tokage,Marce,Surigao del Norte,0,162,0,0,0,0,0,Severe tropical storm
+2016,Tokage,Marce,Surigao del Sur,0,339,0,0,0,0,0,Severe tropical storm
+2016,Nock-Ten,Nina,Batangas,1,7888,250,1303,1553,0,72562760,Violent typhoon
+2016,Nock-Ten,Nina,Cavite,0,896,0,0,0,0,900984,Violent typhoon
+2016,Nock-Ten,Nina,Laguna,0,1472,0,0,0,0,1350000,Violent typhoon
+2016,Nock-Ten,Nina,Quezon,2,168703,4727,29405,34132,31680000,91736212.53,Violent typhoon
+2016,Nock-Ten,Nina,Rizal,0,43,0,0,0,0,650000,Violent typhoon
+2016,Nock-Ten,Nina,Marinduque,1,180155,5848,27676,33524,95447600,512650454,Violent typhoon
+2016,Nock-Ten,Nina,Occidental Mindoro,0,3170,6,333,339,33000000,216079488,Violent typhoon
+2016,Nock-Ten,Nina,Oriental Mindoro,2,65561,2750,8958,11708,173921810,539384397,Violent typhoon
+2016,Nock-Ten,Nina,Albay,4,667170,18902,44581,63483,216745000,637586052,Violent typhoon
+2016,Nock-Ten,Nina,Camarines Norte,0,10364,0,0,0,0,82324851,Violent typhoon
+2016,Nock-Ten,Nina,Camarines Sur,3,920606,43691,94088,137779,457839485,2549310988,Violent typhoon
+2016,Nock-Ten,Nina,Catanduanes,0,159945,9049,23133,32182,44600000,280366002,Violent typhoon
+2016,Nock-Ten,Nina,Masbate,0,5801,0,0,0,0,5631000,Violent typhoon
+2016,Nock-Ten,Nina,Sorsogon,0,85597,6,61,67,0,35873000,Violent typhoon
+2016,Nock-Ten,Nina,Northern Samar,0,17650,0,0,0,0,1336170,Violent typhoon
+2017,Pakhar,Jolina,Bataan,0,0,0,0,0,0,0,Severe tropical storm
+2017,Pakhar,Jolina,Camarines Sur,0,0,0,0,0,0,0,Severe tropical storm
+2017,Pakhar,Jolina,Metro Manila,0,0,0,0,0,0,0,Severe tropical storm
+2017,Pakhar,Jolina,La Union,0,137,0,0,0,0,0,Severe tropical storm
+2017,Pakhar,Jolina,Cagayan,0,64,0,0,0,0,0,Severe tropical storm
+2017,Pakhar,Jolina,Isabela,0,575,0,0,0,0,0,Severe tropical storm
+2017,Pakhar,Jolina,Nueva Vizcaya,0,1108,0,0,0,0,0,Severe tropical storm
+2017,Pakhar,Jolina,Quirino,0,30,0,0,0,0,0,Severe tropical storm
+2017,Pakhar,Jolina,Aurora,0,1140,0,0,0,0,0,Severe tropical storm
+2017,Pakhar,Jolina,Zambales,0,145,0,0,0,0,0,Severe tropical storm
+2017,Pakhar,Jolina,Abra,0,133,0,0,0,0,0,Severe tropical storm
+2017,Pakhar,Jolina,Benguet,0,36,0,0,0,0,0,Severe tropical storm
+2017,Pakhar,Jolina,Ifugao,0,5,0,0,0,0,0,Severe tropical storm
+2017,Pakhar,Jolina,Mountain Province,0,24,0,0,0,0,0,Severe tropical storm
+2017,Doksuri,Maring,Batangas,0,1471,54,70,124,29719566,14600423.25,Strong typhoon
+2017,Doksuri,Maring,Cavite,2,1167,3,6,9,3507950,15944014.64,Strong typhoon
+2017,Doksuri,Maring,Laguna,6,8278,122,531,653,25560000,27770749.77,Strong typhoon
+2017,Doksuri,Maring,Quezon,2,25524,150,886,1036,14560000,123055116.7,Strong typhoon
+2017,Doksuri,Maring,Metro Manila,3,1451,0,0,0,0,0,Strong typhoon
+2017,Doksuri,Maring,Bulacan,0,86,0,0,0,0,0,Strong typhoon
+2017,Doksuri,Maring,Zambales,0,90,0,0,0,0,0,Strong typhoon
+2017,Doksuri,Maring,Rizal,8,2899,0,0,0,0,12321110,Strong typhoon
+2017,Doksuri,Maring,Romblon,1,0,0,0,0,0,0,Strong typhoon
+2017,Doksuri,Maring,Marinduque,0,0,0,0,0,0,0,Strong typhoon
+2017,Doksuri,Maring,Occidental Mindoro,0,0,0,0,0,0,0,Strong typhoon
+2017,Khanun,Odette,Apayao,1,4720,1,0,1,0,0,Strong typhoon
+2017,Khanun,Odette,Benguet,0,9,1,0,1,0,0,Strong typhoon
+2017,Khanun,Odette,Cagayan,0,4500,0,0,0,0,0,Strong typhoon
+2017,Khanun,Odette,Zambales,0,30,0,0,0,0,0,Strong typhoon
+2017,Khanun,Odette,Occidental Mindoro,0,0,0,0,0,0,0,Strong typhoon
+2017,Khanun,Odette,Oriental Mindoro,0,0,0,0,0,0,0,Strong typhoon
+2017,Khanun,Odette,Ilocos Sur,0,0,0,0,0,0,0,Strong typhoon
+2017,Khanun,Odette,Romblon,0,0,0,0,0,0,0,Strong typhoon
+2017,Damrey,Ramil,Camarines Norte,0,231,0,0,0,0,0,Strong typhoon
+2017,Damrey,Ramil,Camarines Sur,0,59,0,0,0,0,0,Strong typhoon
+2017,Damrey,Ramil,Oriental Mindoro,0,15,0,0,0,0,0,Strong typhoon
+2017,Damrey,Ramil,Laguna,0,0,0,0,0,0,0,Strong typhoon
+2017,Damrey,Ramil,Batangas,2,0,0,0,0,0,0,Strong typhoon
+2017,Damrey,Ramil,Romblon,0,0,0,0,0,0,0,Strong typhoon
+2017,Damrey,Ramil,Albay,0,0,0,0,0,0,0,Strong typhoon
+2017,Damrey,Ramil,Palawan,3,0,0,0,0,0,0,Strong typhoon
+2017,Haikui,Salome,Aurora,0,4239,0,5,5,0,0,Tropical storm
+2017,Haikui,Salome,Quezon,0,1037,0,0,0,1500000,15857068.93,Tropical storm
+2017,Haikui,Salome,Laguna,0,164,0,0,0,0,218447000,Tropical storm
+2017,Haikui,Salome,Camarines Sur,0,233,0,0,0,0,0,Tropical storm
+2017,Haikui,Salome,Batangas,0,0,0,0,0,18032000,7000000,Tropical storm
+2017,Haikui,Salome,Marinduque,0,0,0,0,0,0,0,Tropical storm
+2017,Haikui,Salome,Romblon,0,0,0,0,0,0,0,Tropical storm
+2017,Haikui,Salome,Samar,0,0,0,0,0,0,0,Tropical storm
+2017,Haikui,Salome,Northern Samar,0,0,0,0,0,0,0,Tropical storm
+2017,Kai-Tak,Urduja,Marinduque,0,93,0,0,0,45100000,1441694,Tropical storm
+2017,Kai-Tak,Urduja,Oriental Mindoro,0,1135,0,0,0,237643321,415111515,Tropical storm
+2017,Kai-Tak,Urduja,Palawan,0,70,0,0,0,65258597.2,2677860,Tropical storm
+2017,Kai-Tak,Urduja,Romblon,2,548,0,0,0,260580000,1618999734,Tropical storm
+2017,Kai-Tak,Urduja,Albay,0,7634,0,0,0,0,20132252,Tropical storm
+2017,Kai-Tak,Urduja,Camarines Norte,0,568,0,0,0,0,8404347,Tropical storm
+2017,Kai-Tak,Urduja,Camarines Sur,0,1262,0,0,0,0,267934074,Tropical storm
+2017,Kai-Tak,Urduja,Masbate,4,19257,6,18,24,1000000,37746317,Tropical storm
+2017,Kai-Tak,Urduja,Sorsogon,0,3958,0,0,0,0,5613826,Tropical storm
+2017,Kai-Tak,Urduja,Aklan,0,1308,0,0,0,0,0,Tropical storm
+2017,Kai-Tak,Urduja,Capiz,0,1380,0,0,0,0,0,Tropical storm
+2017,Kai-Tak,Urduja,Iloilo,0,828,0,0,0,0,0,Tropical storm
+2017,Kai-Tak,Urduja,Cebu,0,24294,0,0,0,0,3623267,Tropical storm
+2017,Kai-Tak,Urduja,Biliran,28,118599,1692,4419,6111,488520000,273111604,Tropical storm
+2017,Kai-Tak,Urduja,Eastern Samar,1,385156,303,9050,9353,50000000,357968953,Tropical storm
+2017,Kai-Tak,Urduja,Leyte,6,525254,82,1050,1132,425319000,445177994,Tropical storm
+2017,Kai-Tak,Urduja,Northern Samar,0,249617,397,3567,3964,0,34991830,Tropical storm
+2017,Kai-Tak,Urduja,Samar,5,508985,264,14143,14407,574700000,223870119,Tropical storm
+2017,Kai-Tak,Urduja,Southern Leyte,0,1281,4,274,278,0,5495584,Tropical storm
+2017,Kai-Tak,Urduja,Dinagat Islands,0,1668,0,0,0,0,0,Tropical storm
+2017,Kai-Tak,Urduja,Surigao del Norte,0,5,0,0,0,0,0,Tropical storm
+2017,Kai-Tak,Urduja,Surigao del Sur,1,0,0,0,0,0,0,Tropical storm
+2017,Kai-Tak,Urduja,Antique,0,0,0,0,0,0,0,Tropical storm
+2017,Kai-Tak,Urduja,Agusan del Norte,0,0,0,17,17,0,0,Tropical storm
+2017,Tembin,Vinta,Davao de Oro,0,17034,16,1,17,0,54568755,Strong typhoon
+2017,Tembin,Vinta,Quezon,0,0,0,0,0,0,0,Strong typhoon
+2017,Tembin,Vinta,Oriental Mindoro,0,719,0,0,0,0,0,Strong typhoon
+2017,Tembin,Vinta,Palawan,0,24688,646,1014,1660,710000,5608700,Strong typhoon
+2017,Tembin,Vinta,Bohol,0,68,0,0,0,0,0,Strong typhoon
+2017,Tembin,Vinta,Negros Oriental,0,297,0,0,0,0,0,Strong typhoon
+2017,Tembin,Vinta,Zamboanga del Norte,31,117199,1516,1505,3021,0,124788058,Strong typhoon
+2017,Tembin,Vinta,Zamboanga del Sur,0,20310,8,0,8,17710000,90731982.13,Strong typhoon
+2017,Tembin,Vinta,Zamboanga Sibugay,0,18202,22,0,22,0,61789486,Strong typhoon
+2017,Tembin,Vinta,Bukidnon,2,19912,121,34,155,300000,6877155,Strong typhoon
+2017,Tembin,Vinta,Lanao del Norte,6,66883,830,1574,2404,151500000,109915763,Strong typhoon
+2017,Tembin,Vinta,Misamis Occidental,0,10356,0,8,8,0,2313004,Strong typhoon
+2017,Tembin,Vinta,Misamis Oriental,0,33635,112,1034,1146,0,0,Strong typhoon
+2017,Tembin,Vinta,Davao del Norte,0,124613,26,1,27,73185110,170104494,Strong typhoon
+2017,Tembin,Vinta,Davao del Sur,0,40040,361,223,584,0,125837,Strong typhoon
+2017,Tembin,Vinta,Davao Oriental,0,13768,0,0,0,0,11314751,Strong typhoon
+2017,Tembin,Vinta,Davao Occidental,0,460,0,0,0,0,0,Strong typhoon
+2017,Tembin,Vinta,Cotabato,0,116061,0,0,0,0,55840017,Strong typhoon
+2017,Tembin,Vinta,Agusan del Norte,0,2351,0,0,0,0,7078275,Strong typhoon
+2017,Tembin,Vinta,Agusan del Sur,0,5674,0,0,0,0,5591839,Strong typhoon
+2017,Tembin,Vinta,Dinagat Islands,0,1305,0,0,0,0,110000,Strong typhoon
+2017,Tembin,Vinta,Surigao del Norte,0,7844,0,0,0,0,9890040,Strong typhoon
+2017,Tembin,Vinta,Surigao del Sur,0,19202,0,0,0,0,45000,Strong typhoon
+2017,Tembin,Vinta,Lanao del Sur,0,92869,348,180,528,0,134933438,Strong typhoon
+2017,Tembin,Vinta,Maguindanao,0,118267,0,0,0,0,35749814,Strong typhoon
+2017,Tembin,Vinta,Zamboanga Sibugay,5,0,0,0,0,0,61789486,Strong typhoon
+2018,Bolaven,Agaton,Cebu,1,1951,2,21,23,0,0,Tropical storm
+2018,Bolaven,Agaton,Iloilo,1,1848,0,2,2,0,202892158.2,Tropical storm
+2018,Bolaven,Agaton,Aklan,1,2642,1,0,1,18634000,17456840.34,Tropical storm
+2018,Bolaven,Agaton,Palawan,0,9078,12,69,81,8846000,1145600,Tropical storm
+2018,Bolaven,Agaton,Bohol,0,1620,1,6,7,0,0,Tropical storm
+2018,Bolaven,Agaton,Southern Leyte,0,0,0,10,10,0,0,Tropical storm
+2018,Bolaven,Agaton,Lanao del Norte,0,6987,23,2,25,0,0,Tropical storm
+2018,Bolaven,Agaton,Dinagat Islands,0,79,0,4,4,0,0,Tropical storm
+2018,Bolaven,Agaton,Sulu,0,0,0,9,9,0,0,Tropical storm
+2018,Bolaven,Agaton,Capiz,0,43192,0,0,0,0,351091264.4,Tropical storm
+2018,Bolaven,Agaton,Biliran,0,421,0,0,0,0,0,Tropical storm
+2018,Bolaven,Agaton,Eastern Samar,0,4489,0,0,0,0,0,Tropical storm
+2018,Bolaven,Agaton,Leyte,0,132,0,0,0,0,0,Tropical storm
+2018,Bolaven,Agaton,Northern Samar,0,8783,0,0,0,0,0,Tropical storm
+2018,Bolaven,Agaton,Camiguin,0,210,0,0,0,0,0,Tropical storm
+2018,Bolaven,Agaton,Misamis Oriental,0,882,0,0,0,0,0,Tropical storm
+2018,Bolaven,Agaton,Agusan del Norte,0,245,0,0,0,0,0,Tropical storm
+2018,Bolaven,Agaton,Surigao del Norte,0,1068,0,0,0,0,0,Tropical storm
+2018,Bolaven,Agaton,Surigao del Sur,0,281,0,0,0,0,0,Tropical storm
+2018,Bolaven,Agaton,Camarines Sur,0,0,0,0,0,0,0,Tropical storm
+2018,Bolaven,Agaton,Sorsogon,0,0,0,0,0,0,0,Tropical storm
+2018,Sanba,Basyang,Iloilo,0,39,2,5,7,0,0,Tropical storm
+2018,Sanba,Basyang,Negros Occidental,0,38,2,2,4,0,0,Tropical storm
+2018,Sanba,Basyang,Bohol,0,15325,32,12,44,0,0,Tropical storm
+2018,Sanba,Basyang,Leyte,0,33849,7,0,7,0,15281902,Tropical storm
+2018,Sanba,Basyang,Southern Leyte,0,146,0,5,5,0,3060000,Tropical storm
+2018,Sanba,Basyang,Eastern Samar,0,81776,15,84,99,0,3647576,Tropical storm
+2018,Sanba,Basyang,Agusan del Norte,0,2118,14,3,17,0,1637891,Tropical storm
+2018,Sanba,Basyang,Surigao del Norte,0,62543,277,1078,1355,0,23256484,Tropical storm
+2018,Sanba,Basyang,Surigao del Sur,0,25899,80,42,122,0,99474493,Tropical storm
+2018,Sanba,Basyang,Palawan,0,1547,0,0,0,0,0,Tropical storm
+2018,Sanba,Basyang,Capiz,0,13,0,0,0,0,0,Tropical storm
+2018,Sanba,Basyang,Cebu,0,2763,0,0,0,0,0,Tropical storm
+2018,Sanba,Basyang,Negros Oriental,0,1645,0,0,0,0,0,Tropical storm
+2018,Sanba,Basyang,Siquijor,0,78,0,0,0,0,0,Tropical storm
+2018,Sanba,Basyang,Biliran,0,160,0,0,0,0,0,Tropical storm
+2018,Sanba,Basyang,Samar,0,25963,0,0,0,0,20838600,Tropical storm
+2018,Sanba,Basyang,Dinagat Islands,0,957,0,0,0,0,162685,Tropical storm
+2018,Mangkhut,Ompong,Metro Manila,0,29885,0,0,0,0,0,Violent typhoon
+2018,Mangkhut,Ompong,Ilocos Norte,0,181365,1297,27521,28818,1092495000,2098272090,Violent typhoon
+2018,Mangkhut,Ompong,Ilocos Sur,1,461253,1267,36405,37672,358769783.5,1862262186,Violent typhoon
+2018,Mangkhut,Ompong,La Union,0,244466,289,4494,4783,274202000,1231952999,Violent typhoon
+2018,Mangkhut,Ompong,Pangasinan,0,417118,199,1378,1577,801750000,1895648438,Violent typhoon
+2018,Mangkhut,Ompong,Batanes,0,52,0,0,0,0,17110248.52,Violent typhoon
+2018,Mangkhut,Ompong,Cagayan,5,501113,9561,79225,88786,2459852548,6278674482,Violent typhoon
+2018,Mangkhut,Ompong,Isabela,0,108842,207,3617,3824,638784450.8,7305683085,Violent typhoon
+2018,Mangkhut,Ompong,Nueva Vizcaya,4,10608,13,211,224,606858360,577601232.1,Violent typhoon
+2018,Mangkhut,Ompong,Quirino,0,8486,14,299,313,203693000,275075740.6,Violent typhoon
+2018,Mangkhut,Ompong,Aurora,0,41825,0,7,7,0,68276806.8,Violent typhoon
+2018,Mangkhut,Ompong,Bataan,0,2110,0,26,26,0,22912518.88,Violent typhoon
+2018,Mangkhut,Ompong,Bulacan,0,164975,6,112,118,0,49380322.65,Violent typhoon
+2018,Mangkhut,Ompong,Nueva Ecija,1,131658,16,178,194,58100000,1255942087,Violent typhoon
+2018,Mangkhut,Ompong,Pampanga,0,189528,0,13,13,17250000,151139334.3,Violent typhoon
+2018,Mangkhut,Ompong,Tarlac,0,85896,5,11,16,1909163400,390767145.8,Violent typhoon
+2018,Mangkhut,Ompong,Zambales,0,11230,95,1833,1928,0,120808844.2,Violent typhoon
+2018,Mangkhut,Ompong,Batangas,0,1623,0,0,0,0,737835,Violent typhoon
+2018,Mangkhut,Ompong,Cavite,0,7058,0,0,0,0,21459291.25,Violent typhoon
+2018,Mangkhut,Ompong,Laguna,0,2621,0,0,0,0,17427370,Violent typhoon
+2018,Mangkhut,Ompong,Quezon,0,5418,0,0,0,0,53838750.31,Violent typhoon
+2018,Mangkhut,Ompong,Rizal,0,14956,0,0,0,0,2069650,Violent typhoon
+2018,Mangkhut,Ompong,Marinduque,0,1434,0,0,0,0,0,Violent typhoon
+2018,Mangkhut,Ompong,Occidental Mindoro,0,4869,0,0,0,0,0,Violent typhoon
+2018,Mangkhut,Ompong,Oriental Mindoro,0,1036,0,0,0,0,0,Violent typhoon
+2018,Mangkhut,Ompong,Palawan,0,76,0,0,0,0,0,Violent typhoon
+2018,Mangkhut,Ompong,Abra,0,186874,505,18120,18625,254150074.8,464665969,Violent typhoon
+2018,Mangkhut,Ompong,Apayao,0,113929,725,15083,15808,973007620.7,2069470804,Violent typhoon
+2018,Mangkhut,Ompong,Benguet,65,38870,457,3145,3602,667680010.7,475977738.4,Violent typhoon
+2018,Mangkhut,Ompong,Ifugao,0,5990,26,686,712,211080000,1383668752,Violent typhoon
+2018,Mangkhut,Ompong,Kalinga,0,49921,96,2750,2846,220114585,2687720405,Violent typhoon
+2018,Mangkhut,Ompong,Mountain Province,6,3977,17,591,608,387183781,454367421.6,Violent typhoon
+2018,Mangkhut,Ompong,Antique,0,0,0,0,0,0,6914812,Violent typhoon
+2018,Mangkhut,Ompong,Ifugao,0,0,0,0,0,211080000,1383668752,Violent typhoon
+2018,Yutu,Rosita,Mountain Province,14,34523,82,882,964,0,399715.69,Violent typhoon
+2018,Yutu,Rosita,Kalinga,1,7511,26,196,222,0,302615283,Violent typhoon
+2018,Yutu,Rosita,Ifugao,4,10359,166,2199,2365,0,13112020.27,Violent typhoon
+2018,Yutu,Rosita,Nueva Vizcaya,0,5559,34,282,316,0,97978937,Violent typhoon
+2018,Yutu,Rosita,Isabela,0,140523,2260,18237,20497,0,1664898861,Violent typhoon
+2018,Yutu,Rosita,Cagayan,0,14495,0,0,0,0,165240085,Violent typhoon
+2018,Yutu,Rosita,Ilocos Norte,0,132,13,2,15,0,470000,Violent typhoon
+2018,Yutu,Rosita,Ilocos Sur,0,582,4,11,15,0,270000,Violent typhoon
+2018,Yutu,Rosita,La Union,0,4991,5,203,208,0,844508,Violent typhoon
+2018,Yutu,Rosita,Pangasinan,0,31524,1,28,29,0,108233324,Violent typhoon
+2018,Yutu,Rosita,Quirino,0,8403,130,1247,1377,0,22308250,Violent typhoon
+2018,Yutu,Rosita,Aurora,0,21493,31,644,675,0,10218016,Violent typhoon
+2018,Yutu,Rosita,Nueva Ecija,0,280,0,0,0,0,326617452,Violent typhoon
+2018,Yutu,Rosita,Tarlac,0,25,0,0,0,0,14211558,Violent typhoon
+2018,Yutu,Rosita,Zambales,0,10,0,0,0,0,35396130,Violent typhoon
+2018,Yutu,Rosita,Northern Samar,0,1338,5,104,109,0,0,Violent typhoon
+2018,Yutu,Rosita,Abra,0,15121,0,0,0,0,0,Violent typhoon
+2018,Yutu,Rosita,Apayao,0,1887,0,6,6,0,0,Violent typhoon
+2018,Yutu,Rosita,Benguet,0,5316,1,9,10,0,779938.27,Violent typhoon
+2018,Yutu,Rosita,Quezon,1,0,0,0,0,0,0,Violent typhoon
+2018,Usagi,Samuel,Northern Samar,0,53704,7,17,24,0,42710424,Severe tropical storm
+2018,Usagi,Samuel,Eastern Samar,0,67898,86,1630,1716,0,1084658,Severe tropical storm
+2018,Usagi,Samuel,Masbate,0,281,0,0,0,0,0,Severe tropical storm
+2018,Usagi,Samuel,Biliran,0,1199,0,0,0,0,4375296,Severe tropical storm
+2018,Usagi,Samuel,Leyte,0,312,0,0,0,0,0,Severe tropical storm
+2018,Usagi,Samuel,Samar,0,584,0,0,0,0,0,Severe tropical storm
+2018,Usagi,Samuel,Southern Leyte,0,235,0,0,0,0,0,Severe tropical storm
+2018,Usagi,Samuel,Palawan,0,0,0,0,0,0,0,Severe tropical storm
+2018,Usman,,Batangas,0,47,3,9,12,0,0,Tropical depression
+2018,Usman,,Laguna,0,322,2,0,2,1000000,0,Tropical depression
+2018,Usman,,Quezon,0,1319,3,5,8,95000000,0,Tropical depression
+2018,Usman,,Marinduque,0,298,0,0,0,0,0,Tropical depression
+2018,Usman,,Oriental Mindoro,3,147857,367,435,802,0,260501077.7,Tropical depression
+2018,Usman,,Palawan,0,528,0,0,0,0,0,Tropical depression
+2018,Usman,,Albay,0,19283,93,20,113,4737150584,288160546.2,Tropical depression
+2018,Usman,,Camarines Norte,0,43703,57,861,918,1242928400,300232056.4,Tropical depression
+2018,Usman,,Camarines Sur,5,358793,1921,5414,7335,2467270000,73708100.98,Tropical depression
+2018,Usman,,Catanduanes,0,1873,0,0,0,84059480.73,25394501.02,Tropical depression
+2018,Usman,,Masbate,0,396,0,0,0,25200000,26415745.9,Tropical depression
+2018,Usman,,Sorsogon,7,74941,0,3,3,79750000,66255704.18,Tropical depression
+2018,Usman,,Eastern Samar,0,1276,0,0,0,1000000,0,Tropical depression
+2018,Usman,,Northern Samar,8,294642,1236,11450,12686,26000000,0,Tropical depression
+2018,Usman,,Samar,5,70700,436,14259,14695,27500000,0,Tropical depression
+2018,Usman,,Capiz,0,0,0,0,0,0,0,Tropical depression
+2018,Usman,,Aklan,0,0,0,0,0,0,0,Tropical depression
+2019,Amang,,Agusan del Sur,0,10344,0,0,0,0,0,Tropical depression
+2019,Amang,,Surigao del Norte,0,3458,0,0,0,0,0,Tropical depression
+2019,Amang,,Agusan del Norte,0,1442,0,0,0,0,0,Tropical depression
+2019,Amang,,Surigao del Sur,0,853,0,0,0,0,0,Tropical depression
+2019,Amang,,Dinagat Islands,0,477,0,0,0,0,0,Tropical depression
+2019,Chedeng,,Davao Oriental,0,4971,4,15,19,0,0,Tropical depression
+2019,Chedeng,,Davao Occidental,0,1675,0,0,0,0,0,Tropical depression
+2019,Chedeng,,Davao del Sur,0,15,0,0,0,0,0,Tropical depression
+2019,Marilyn,,Zamboanga del Sur,0,7497,0,0,0,0,0,Tropical depression
+2019,Marilyn,,Sultan Kudarat,0,6470,22,58,80,0,0,Tropical depression
+2019,Marilyn,,Zamboanga del Norte,0,710,0,0,0,0,0,Tropical depression
+2019,Marilyn,,South Cotabato,0,624,22,97,119,0,0,Tropical depression
+2019,Marilyn,,Davao del Sur,0,135,0,0,0,0,0,Tropical depression
+2019,Marilyn,,Isabela,0,0,0,0,0,0,0,Tropical depression
+2019,Marilyn,,Pampanga,0,0,0,0,0,0,0,Tropical depression
+2019,Marilyn,,Bulacan,0,0,0,0,0,0,0,Tropical depression
+2019,Marilyn,,Negros Occidental,0,0,0,0,0,0,0,Tropical depression
+2019,Marilyn,,Zamboanga Sibugay,0,0,0,0,0,0,0,Tropical depression
+2019,Kalmaegi,Ramon,Cagayan,0,19340,0,0,0,0,35689392,Strong typhoon
+2019,Kalmaegi,Ramon,Apayao,0,7583,2,0,2,0,0,Strong typhoon
+2019,Kalmaegi,Ramon,Camarines Sur,0,2204,10,9,19,0,0,Strong typhoon
+2019,Kalmaegi,Ramon,Albay,0,1058,0,0,0,0,0,Strong typhoon
+2019,Kalmaegi,Ramon,Isabela,0,873,0,0,0,0,0,Strong typhoon
+2019,Kalmaegi,Ramon,Ilocos Norte,0,521,0,0,0,0,0,Strong typhoon
+2019,Kalmaegi,Ramon,Kalinga,0,24,1,0,1,0,0,Strong typhoon
+2019,Kalmaegi,Ramon,Camarines Norte,0,19,0,0,0,0,0,Strong typhoon
+2019,Kalmaegi,Ramon,Catanduanes,0,9,0,0,0,0,0,Strong typhoon
+2019,Kammuri,Tisoy,Northern Samar,0,465877,8140,78487,86627,0,160192726,Very strong typhoon
+2019,Kammuri,Tisoy,Albay,0,355841,17496,95076,112572,1645490505,426805290.2,Very strong typhoon
+2019,Kammuri,Tisoy,Sorsogon,0,348298,9257,49926,59183,605822304.4,765896328,Very strong typhoon
+2019,Kammuri,Tisoy,Camarines Sur,0,271253,9894,130962,140856,67431177.81,395231523.6,Very strong typhoon
+2019,Kammuri,Tisoy,Masbate,0,172239,6312,17442,23754,716775000,70307500,Very strong typhoon
+2019,Kammuri,Tisoy,Quezon,3,110575,8018,981,8999,0,627023355,Very strong typhoon
+2019,Kammuri,Tisoy,Eastern Samar,0,60950,23,2267,2290,0,37620648.02,Very strong typhoon
+2019,Kammuri,Tisoy,Samar,0,50413,440,8053,8493,0,50231106.02,Very strong typhoon
+2019,Kammuri,Tisoy,Camarines Norte,0,40705,1113,9548,10661,1089187260,22883563,Very strong typhoon
+2019,Kammuri,Tisoy,Catanduanes,0,29977,0,0,0,466500000,239834264,Very strong typhoon
+2019,Kammuri,Tisoy,Oriental Mindoro,0,25339,4335,35239,39574,294917880,93268800,Very strong typhoon
+2019,Kammuri,Tisoy,Occidental Mindoro,0,16099,465,3845,4310,113601824,62769600,Very strong typhoon
+2019,Kammuri,Tisoy,Zambales,0,12861,0,0,0,0,0,Very strong typhoon
+2019,Kammuri,Tisoy,Romblon,0,10865,1810,12470,14280,170642500,0,Very strong typhoon
+2019,Kammuri,Tisoy,Marinduque,0,5984,790,14109,14899,68206586.69,3127200,Very strong typhoon
+2019,Kammuri,Tisoy,Aurora,0,5407,1,120,121,0,0,Very strong typhoon
+2019,Kammuri,Tisoy,Batangas,0,4802,912,204,1116,0,38334949,Very strong typhoon
+2019,Kammuri,Tisoy,Bataan,0,3085,0,0,0,0,0,Very strong typhoon
+2019,Kammuri,Tisoy,Laguna,0,805,170,17,187,0,2759275,Very strong typhoon
+2019,Kammuri,Tisoy,Pampanga,0,416,0,0,0,0,0,Very strong typhoon
+2019,Kammuri,Tisoy,Bulacan,0,224,0,0,0,0,0,Very strong typhoon
+2019,Kammuri,Tisoy,Surigao del Sur,0,51,3,9,12,0,0,Very strong typhoon
+2019,Kammuri,Tisoy,Cavite,0,32,8,0,8,0,202720,Very strong typhoon
+2019,Kammuri,Tisoy,Mountain Province,0,8,0,1,1,0,0,Very strong typhoon
+2019,Kammuri,Tisoy,Leyte,1,0,235,2255,2490,0,61575,Very strong typhoon
+2019,Kammuri,Tisoy,Biliran,0,0,0,0,0,0,49803520.75,Very strong typhoon
+2019,Kammuri,Tisoy,Palawan,0,0,0,1,1,0,0,Very strong typhoon
+2019,Kammuri,Tisoy,Antique,0,0,2,4,6,0,0,Very strong typhoon
+2019,Kammuri,Tisoy,Capiz,0,0,0,0,0,0,0,Very strong typhoon
+2019,Phanfone,Ursula,Leyte,9,772162,7060,124672,131732,96350500,396656121,Strong typhoon
+2019,Phanfone,Ursula,Capiz,5,625921,14257,68404,82661,0,1358633341,Strong typhoon
+2019,Phanfone,Ursula,Aklan,8,510342,9884,105539,115423,0,134198870,Strong typhoon
+2019,Phanfone,Ursula,Samar,1,395023,3931,43737,47668,60000,8362476.75,Strong typhoon
+2019,Phanfone,Ursula,Iloilo,16,273971,5124,24846,29970,0,202503192.9,Strong typhoon
+2019,Phanfone,Ursula,Eastern Samar,5,230861,50125,42148,92273,600000,525666256.1,Strong typhoon
+2019,Phanfone,Ursula,Cebu,1,131435,5262,21025,26287,0,14981300,Strong typhoon
+2019,Phanfone,Ursula,Occidental Mindoro,4,119037,4719,20240,24959,290860248.7,46224114,Strong typhoon
+2019,Phanfone,Ursula,Biliran,2,118852,3013,24264,27277,10918101,121160604.4,Strong typhoon
+2019,Phanfone,Ursula,Antique,0,81642,5115,11064,16179,0,192681266,Strong typhoon
+2019,Phanfone,Ursula,Oriental Mindoro,5,19214,1597,5581,7178,879794138.7,22424283.39,Strong typhoon
+2019,Phanfone,Ursula,Romblon,0,17059,805,2373,3178,15969900,4197086,Strong typhoon
+2019,Phanfone,Ursula,Dinagat Islands,0,1228,0,0,0,0,0,Strong typhoon
+2019,Phanfone,Ursula,Surigao del Norte,0,123,0,0,0,0,0,Strong typhoon
+2019,Phanfone,Ursula,Marinduque,0,7,0,0,0,0,0,Strong typhoon
+2019,Phanfone,Ursula,Southern Leyte,1,0,0,0,0,20000,0,Strong typhoon
+2020,Vongfong,Ambo,Ilocos Norte,0,6,0,0,0,0,0,Very strong typhoon
+2020,Vongfong,Ambo,Nueva Vizcaya,0,102,0,0,0,0,0,Very strong typhoon
+2020,Vongfong,Ambo,Aurora,0,3364,0,0,0,0,44112779,Very strong typhoon
+2020,Vongfong,Ambo,Bulacan,0,141,4,2,6,0,11046899,Very strong typhoon
+2020,Vongfong,Ambo,Eastern Samar,0,166473,2966,11095,14061,0,96963079,Very strong typhoon
+2020,Vongfong,Ambo,Northern Samar,0,402481,4662,37169,41831,0,92373103,Very strong typhoon
+2020,Vongfong,Ambo,Samar,0,5861,18,1353,1371,0,2015300,Very strong typhoon
+2020,Vongfong,Ambo,Benguet,0,132,0,0,0,0,0,Very strong typhoon
+2020,Vongfong,Ambo,Ifugao,0,11,0,0,0,0,223734,Very strong typhoon
+2020,Molave,Quinta,Aurora,0,218,0,0,0,8000000,5561162,Very strong typhoon
+2020,Molave,Quinta,Bulacan,0,117287,0,0,0,0,16394837,Very strong typhoon
+2020,Molave,Quinta,Nueva Ecija,0,5660,0,0,0,0,16478823,Very strong typhoon
+2020,Molave,Quinta,Pampanga,0,154463,0,0,0,0,47762031,Very strong typhoon
+2020,Molave,Quinta,Tarlac,0,2651,0,0,0,0,16708739,Very strong typhoon
+2020,Molave,Quinta,Batangas,0,30319,221,2340,2561,20000000,155217658,Very strong typhoon
+2020,Molave,Quinta,Cavite,0,631,7,6,13,0,112283538,Very strong typhoon
+2020,Molave,Quinta,Laguna,0,5374,0,17,17,0,90832990,Very strong typhoon
+2020,Molave,Quinta,Quezon,0,69166,565,5190,5755,0,626491779,Very strong typhoon
+2020,Molave,Quinta,Rizal,0,55,0,0,0,0,8972123,Very strong typhoon
+2020,Molave,Quinta,Marinduque,0,68971,753,13388,14141,314147234.5,22810094,Very strong typhoon
+2020,Molave,Quinta,Occidental Mindoro,0,38472,1690,5826,7516,68227843.55,457588918,Very strong typhoon
+2020,Molave,Quinta,Oriental Mindoro,0,146202,4354,33299,37653,985343625.7,376616070,Very strong typhoon
+2020,Molave,Quinta,Palawan,0,656,0,0,0,0,0,Very strong typhoon
+2020,Molave,Quinta,Romblon,0,5338,17,424,441,36264400,19545120,Very strong typhoon
+2020,Molave,Quinta,Albay,0,19237,612,11960,12572,1164800,202205122,Very strong typhoon
+2020,Molave,Quinta,Camarines Norte,0,4218,0,9,9,0,12744324,Very strong typhoon
+2020,Molave,Quinta,Camarines Sur,0,78489,465,9155,9620,63283100,120477362,Very strong typhoon
+2020,Molave,Quinta,Catanduanes,0,55428,244,1162,1406,8591000,4057261,Very strong typhoon
+2020,Molave,Quinta,Masbate,0,17142,188,1513,1701,300000,12403782,Very strong typhoon
+2020,Molave,Quinta,Sorsogon,0,37315,8,325,333,47915000,43902747,Very strong typhoon
+2020,Molave,Quinta,Antique,0,5022,5,54,59,0,44932528,Very strong typhoon
+2020,Molave,Quinta,Capiz,0,15,0,0,0,0,30626548,Very strong typhoon
+2020,Molave,Quinta,Iloilo,0,18323,7,23,30,7350000,105093309,Very strong typhoon
+2020,Molave,Quinta,Negros Occidental,0,2222,3,42,45,0,45288067,Very strong typhoon
+2020,Molave,Quinta,Negros Oriental,0,5102,6,1,7,0,0,Very strong typhoon
+2020,Molave,Quinta,Biliran,0,399,2,0,2,0,686309,Very strong typhoon
+2020,Molave,Quinta,Zambales,0,0,0,0,0,0,143061,Very strong typhoon
+2020,Molave,Quinta,Samar,0,0,0,0,0,0,0,Very strong typhoon
+2020,Molave,Quinta,Apayao,0,0,0,0,0,0,0,Very strong typhoon
+2020,Molave,Quinta,Metro Manila,0,0,0,0,0,0,0,Very strong typhoon
+2020,Molave,Quinta,Aklan,0,0,0,0,0,0,1226045,Very strong typhoon
+2020,Goni,Rolly,Metro Manila,0,20446,0,0,0,0,0,Violent typhoon
+2020,Goni,Rolly,Isabela,0,146,0,0,0,0,0,Violent typhoon
+2020,Goni,Rolly,Nueva Vizcaya,0,451,0,0,0,0,0,Violent typhoon
+2020,Goni,Rolly,Quirino,0,264,0,0,0,0,0,Violent typhoon
+2020,Goni,Rolly,Aurora,0,13602,0,0,0,0,589480,Violent typhoon
+2020,Goni,Rolly,Bataan,0,11549,0,0,0,0,17776898,Violent typhoon
+2020,Goni,Rolly,Bulacan,0,80507,0,0,0,0,1177380,Violent typhoon
+2020,Goni,Rolly,Nueva Ecija,0,8453,0,0,0,0,4008046,Violent typhoon
+2020,Goni,Rolly,Pampanga,0,174959,0,0,0,0,39829260,Violent typhoon
+2020,Goni,Rolly,Tarlac,0,11413,0,0,0,0,4364420,Violent typhoon
+2020,Goni,Rolly,Zambales,0,2520,0,0,0,0,0,Violent typhoon
+2020,Goni,Rolly,Batangas,0,83703,426,5502,5928,8515000,384876554,Violent typhoon
+2020,Goni,Rolly,Cavite,0,12874,0,1,1,0,8402695,Violent typhoon
+2020,Goni,Rolly,Laguna,0,33630,27,213,240,0,45345328,Violent typhoon
+2020,Goni,Rolly,Quezon,0,354852,1427,16887,18314,1530000,872574084,Violent typhoon
+2020,Goni,Rolly,Rizal,0,12517,0,0,0,0,23983870,Violent typhoon
+2020,Goni,Rolly,Marinduque,0,32343,93,709,802,191997800.2,16300000,Violent typhoon
+2020,Goni,Rolly,Occidental Mindoro,0,35879,0,0,0,500000,0,Violent typhoon
+2020,Goni,Rolly,Oriental Mindoro,0,35545,0,2,2,4502000,0,Violent typhoon
+2020,Goni,Rolly,Palawan,0,1728,0,0,0,0,0,Violent typhoon
+2020,Goni,Rolly,Romblon,0,13351,0,0,0,0,0,Violent typhoon
+2020,Goni,Rolly,Albay,0,474401,17299,58975,76274,5475280050,1072067127,Violent typhoon
+2020,Goni,Rolly,Camarines Norte,0,38736,116,934,1050,114030000,89134968,Violent typhoon
+2020,Goni,Rolly,Camarines Sur,0,169773,4585,20232,24817,501369843.6,1131044075,Violent typhoon
+2020,Goni,Rolly,Catanduanes,0,204229,13029,22076,35105,776590000,1165523692,Violent typhoon
+2020,Goni,Rolly,Masbate,0,41407,0,2,2,11550000,49606538,Violent typhoon
+2020,Goni,Rolly,Sorsogon,0,160160,447,7789,8236,12150000,74328208,Violent typhoon
+2020,Goni,Rolly,Northern Samar,0,200,0,0,0,0,173491,Violent typhoon
+2020,Goni,Rolly,Apayao,0,440,0,2,2,0,0,Violent typhoon
+2020,Goni,Rolly,Benguet,0,11,0,0,0,0,2311856,Violent typhoon
+2020,Goni,Rolly,Ifugao,0,23,0,0,0,0,0,Violent typhoon
+2020,Goni,Rolly,Kalinga,0,8,0,0,0,0,0,Violent typhoon
+2020,Goni,Rolly,Mountain Province,0,10,0,0,0,0,3799800,Violent typhoon
+2020,Vamco,Ulysses,Metro Manila,0,54195,31,0,31,0,0,Very strong typhoon
+2020,Vamco,Ulysses,Pangasinan,2,101898,118,2816,2934,220995000,418568334,Very strong typhoon
+2020,Vamco,Ulysses,Cagayan,10,464336,172,475,647,2621213000,752361705,Very strong typhoon
+2020,Vamco,Ulysses,Isabela,4,426282,68,166,234,561324825,876796600,Very strong typhoon
+2020,Vamco,Ulysses,Nueva Vizcaya,3,15585,27,471,498,312130000,205542402,Very strong typhoon
+2020,Vamco,Ulysses,Quirino,3,7072,107,14,121,829250000,47725390,Very strong typhoon
+2020,Vamco,Ulysses,Bulacan,3,1532103,3834,28955,32789,423200000,355492979,Very strong typhoon
+2020,Vamco,Ulysses,Pampanga,1,386929,692,11038,11730,93700000,202828513,Very strong typhoon
+2020,Vamco,Ulysses,Laguna,0,50411,207,1533,1740,52960000,97398501,Very strong typhoon
+2020,Vamco,Ulysses,Batangas,0,13719,7,192,199,164590200,387622110,Very strong typhoon
+2020,Vamco,Ulysses,Quezon,0,308061,2319,20577,22896,1296160000,482921465,Very strong typhoon
+2020,Vamco,Ulysses,Rizal,6,243885,1731,3544,5275,17500000,238491494,Very strong typhoon
+2020,Vamco,Ulysses,Cavite,3,14881,0,0,0,532460000,43698461,Very strong typhoon
+2020,Vamco,Ulysses,Occidental Mindoro,0,4599,0,0,0,0,561500,Very strong typhoon
+2020,Vamco,Ulysses,Oriental Mindoro,0,3792,0,0,0,10000000,0,Very strong typhoon
+2020,Vamco,Ulysses,Camarines Norte,0,298165,4463,28930,33393,241205000,193172175,Very strong typhoon
+2020,Vamco,Ulysses,Camarines Sur,0,555339,9505,50641,60146,0,220735708,Very strong typhoon
+2020,Vamco,Ulysses,Sorsogon,0,30505,2,28,30,0,21976000,Very strong typhoon
+2020,Vamco,Ulysses,Apayao,0,0,0,0,0,66102950,75105543,Very strong typhoon
+2020,Vamco,Ulysses,Kalinga,0,1015,1,110,111,121470000,81672131,Very strong typhoon
+2020,Vamco,Ulysses,Aurora,0,58609,519,5422,5941,94200000,123607240,Very strong typhoon
+2020,Vamco,Ulysses,Ifugao,12,3440,29,294,323,100594376.9,188862255,Very strong typhoon
+2020,Vamco,Ulysses,Benguet,1,1546,21,346,367,104860000,183051745,Very strong typhoon
+2020,Vamco,Ulysses,Romblon,0,292,0,0,0,0,0,Very strong typhoon
+2020,Vamco,Ulysses,Ilocos Norte,0,5659,0,11,11,326300000,5988161,Very strong typhoon
+2020,Vamco,Ulysses,La Union,0,61,1,10,11,0,1271005,Very strong typhoon
+2020,Vamco,Ulysses,Bataan,0,12295,15,165,180,46000000,87131068,Very strong typhoon
+2020,Vamco,Ulysses,Nueva Ecija,1,295763,1832,18560,20392,296109651.3,304058513,Very strong typhoon
+2020,Vamco,Ulysses,Tarlac,0,34973,666,7022,7688,109500000,209357062,Very strong typhoon
+2020,Vamco,Ulysses,Zambales,1,4071,11,430,441,66300000,97348950,Very strong typhoon
+2020,Vamco,Ulysses,Albay,0,217807,86,756,842,0,2341895,Very strong typhoon
+2020,Vamco,Ulysses,Catanduanes,0,9115,0,0,0,0,0,Very strong typhoon
+2020,Vamco,Ulysses,Masbate,0,27390,46,39,85,0,32311605,Very strong typhoon
+2020,Vamco,Ulysses,Abra,1,416,0,11,11,4600000,8593193,Very strong typhoon
+2020,Vamco,Ulysses,Mountain Province,0,615,0,104,104,101928000,67556534,Very strong typhoon
+2020,Krovanh,Vicky,Negros Oriental,0,638,6,1,7,0,0,Tropical storm
+2020,Krovanh,Vicky,Cebu,0,1900,60,35,95,5000000,0,Tropical storm
+2020,Krovanh,Vicky,Surigao del Sur,0,78784,71,540,611,4731970.75,10789900,Tropical storm
+2020,Krovanh,Vicky,Agusan del Sur,0,82694,338,0,338,126720000,4439410,Tropical storm
+2020,Krovanh,Vicky,Davao de Oro,0,1268,0,1,1,6840000,21469638,Tropical storm
+2020,Krovanh,Vicky,Dinagat Islands,0,10,2,0,2,0,0,Tropical storm
+2020,Krovanh,Vicky,Bohol,0,60,0,0,0,0,0,Tropical storm
+2020,Krovanh,Vicky,Leyte,0,38,0,0,0,0,0,Tropical storm
+2020,Krovanh,Vicky,Davao del Norte,0,1530,0,0,0,0,0,Tropical storm
+2020,Krovanh,Vicky,Davao Oriental,0,20,0,0,0,0,0,Tropical storm
+2020,Krovanh,Vicky,Agusan del Norte,0,6775,0,0,0,0,10233940,Tropical storm
+2020,Krovanh,Vicky,Surigao del Norte,0,2232,0,0,0,6740000,4207830,Tropical storm
+2011,Egay,,Bataan,2,0,0,0,0,0,0,Tropical storm
+2011,Egay,,Zambales,0,2478,0,5,5,0,0,Tropical storm
+2016,Helen,,Bulacan,0,1559,0,0,0,0,0,Very strong typhoon
+2017,Auring,,Surigao del Sur,0,0,1,0,1,4940000,16365832,Tropical depression
+2017,Auring,,Agusan del Norte,0,14324,0,1,1,0,23637103,Tropical depression
+2017,Auring,,Cebu,0,68,0,0,0,0,0,Tropical depression
+2017,Auring,,Agusan del Sur,0,345,0,0,0,68000000,141081774,Tropical depression
+2017,Auring,,Dinagat Islands,0,7344,0,0,0,405000,488565,Tropical depression
+2017,Auring,,Surigao del Norte,0,11393,0,0,0,0,12745687,Tropical depression
+2017,Auring,,Surigao del Sur,0,9597,0,0,0,4940000,16365832,Tropical depression
+2017,Crising,,Cebu,9,8489,56,783,839,0,0,Tropical depression
+2017,Crising,,Leyte,1,427,0,0,0,0,0,Tropical depression
+2017,Kirogi,Tino,Palawan,0,230,1,2,3,0,0,Tropical storm
+2017,Kirogi,Tino,Davao del Sur,0,267,0,0,0,0,0,Tropical storm
+2019,Danas,Falcon,Ilocos Norte,0,5,0,1,1,914000000,0,Tropical storm
+2019,Danas,Falcon,Apayao,0,409,1,1,2,0,492320,Tropical storm
+2019,Danas,Falcon,Cagayan,0,502,0,0,0,118879500,36556039,Tropical storm
+2019,Danas,Falcon,Abra,0,2,0,0,0,0,0,Tropical storm
+2019,Danas,Falcon,Mountain Province,0,84,0,0,0,0,0,Tropical storm
+2020,Ofel,,Cebu,0,20330,7,0,7,0,0,Tropical depression
+2020,Ofel,,Laguna,0,651,0,0,0,0,0,Tropical depression
+2020,Ofel,,Quezon,0,4944,0,0,0,0,51562.5,Tropical depression
+2020,Ofel,,Camarines Norte,0,238,0,0,0,0,0,Tropical depression
+2020,Ofel,,Camarines Sur,0,522,0,0,0,0,0,Tropical depression
+2020,Saudel,Pepito,Quezon,0,26396,4,4,8,0,11913175,Strong typhoon
+2020,Saudel,Pepito,Benguet,0,3,0,1,1,0,0,Strong typhoon
+2020,Saudel,Pepito,Cagayan,0,95,0,0,0,0,13713536,Strong typhoon
+2020,Saudel,Pepito,Isabela,0,1999,0,0,0,29200000,21654930,Strong typhoon
+2020,Saudel,Pepito,Nueva Vizcaya,0,28,0,0,0,0,201600,Strong typhoon
+2020,Saudel,Pepito,Quirino,0,141,0,0,0,0,863522,Strong typhoon
+2020,Saudel,Pepito,Aurora,0,1154,0,0,0,0,912181,Strong typhoon
+2020,Saudel,Pepito,Bulacan,0,23935,0,0,0,0,7719292,Strong typhoon
+2020,Saudel,Pepito,Nueva Ecija,0,1533,0,0,0,0,13284456,Strong typhoon
+2020,Saudel,Pepito,Pampanga,0,68467,0,0,0,0,526176,Strong typhoon
+2020,Saudel,Pepito,Laguna,0,9,0,0,0,0,0,Strong typhoon

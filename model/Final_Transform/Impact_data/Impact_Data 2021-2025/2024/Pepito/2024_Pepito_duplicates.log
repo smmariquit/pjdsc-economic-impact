@@ -1,0 +1,24 @@
+Duplicates in Structured_data/2024/Pepito/SitRep_034/affected_population_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    AURORA: 2 rows
+    BILIRAN: 2 rows
+    QUEZON: 2 rows
+    QUIRINO: 2 rows
+    ROMBLON: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Aurora: 2 rows
+    Biliran: 2 rows
+    Quezon: 2 rows
+    Quirino: 2 rows
+    Romblon: 2 rows
+Duplicates in Structured_data/2024/Pepito/SitRep_034/damage_to_houses_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    ABRA: 2 rows
+    AURORA: 2 rows
+    BENGUET: 2 rows
+    QUEZON: 3 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Abra: 2 rows
+    Aurora: 2 rows
+    Benguet: 2 rows
+    Quezon: 3 rows

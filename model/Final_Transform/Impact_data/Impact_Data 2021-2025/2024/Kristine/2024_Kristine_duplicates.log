@@ -1,0 +1,33 @@
+Duplicates in Structured_data/2024/Kristine/SitRep_016/affected_population_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    AURORA: 2 rows
+    BILIRAN: 2 rows
+    ISABELA: 2 rows
+    QUIRINO: 2 rows
+    ROMBLON: 2 rows
+    SULTAN KUDARAT: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Aurora: 2 rows
+    Biliran: 2 rows
+    Isabela: 2 rows
+    Quirino: 2 rows
+    Romblon: 2 rows
+    Sultan Kudarat: 2 rows
+Duplicates in Structured_data/2024/Kristine/SitRep_016/damage_to_houses_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    BILIRAN: 2 rows
+    ISABELA: 2 rows
+    QUEZON: 2 rows
+    RIZAL: 3 rows
+    SULTAN KUDARAT: 2 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Biliran: 2 rows
+    Isabela: 2 rows
+    Quezon: 2 rows
+    Rizal: 3 rows
+    Sultan Kudarat: 2 rows
+Duplicates in Structured_data/2024/Kristine/SitRep_016/infrastructure_ml_ready_universal.csv:
+  Duplicate barangay_name entries (normalized) matching a province:
+    ZAMBALES: 5 rows
+  Duplicate Province entries in matched rows (before aggregation):
+    Zambales: 5 rows

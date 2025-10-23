@@ -1,0 +1,54 @@
+======================================================================
+STORM IMPACT PREDICTION SUMMARY
+======================================================================
+
+Storm: FENGSHEN (2025)
+Forecast period: 2025-10-22 to 2025-10-24
+Forecast source: JTWC + Open-Meteo
+Generated: 2025-10-23 02:48:46
+Feature mode: COMPLETE
+Confidence level: HIGH
+
+Provinces at risk:
+  >70% probability: 83
+  >50% probability: 83
+  >30% probability: 83
+
+Total predicted affected: 48,976 persons
+
+======================================================================
+TOP 20 PROVINCES AT RISK
+======================================================================
+
+Rank   Province                  Impact %     Predicted      
+----------------------------------------------------------------------
+1      Sulu                         100.0%           2,297
+2      Zamboanga del Norte          100.0%           1,789
+3      Maguindanao del Norte        100.0%           1,657
+4      Sultan Kudarat               100.0%           1,476
+5      Capiz                        100.0%           1,416
+6      Maguindanao del Sur          100.0%           1,397
+7      Cagayan                      100.0%           1,337
+8      Leyte                        100.0%           1,282
+9      Palawan                      100.0%           1,243
+10     Davao de Oro                 100.0%           1,127
+11     Zambales                     100.0%           1,117
+12     Bohol                        100.0%           1,103
+13     Bataan                       100.0%           1,051
+14     Negros Oriental              100.0%           1,035
+15     Oriental Mindoro             100.0%             965
+16     Zamboanga del Sur            100.0%             964
+17     La Union                     100.0%             933
+18     Masbate                      100.0%             928
+19     Misamis Oriental             100.0%             922
+20     Lanao del Sur                100.0%             911
+
+======================================================================
+FILES GENERATED
+======================================================================
+
+  Predictions CSV: predictions_FENGSHEN_2025.csv
+  Alerts JSON: alerts_FENGSHEN_2025.json
+  Weather data: weather_forecast_FENGSHEN_2025.csv
+  Storm track: track_FENGSHEN_2025.csv
+  Summary: summary_FENGSHEN_2025.txt
