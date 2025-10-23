@@ -795,8 +795,10 @@ def main():
                     total_affected = province_impacts['Affected'].sum()
                     avg_affected = province_impacts['Affected'].mean()
                     max_affected = province_impacts['Affected'].max()
-                    worst_storm = province_impacts.loc[province_impacts['Affected'].idxmax(), 'Storm']
-                    worst_year = province_impacts.loc[province_impacts['Affected'].idxmax(), 'Year']
+                    max_idx = province_impacts['Affected'].idxmax()
+                    worst_storm = str(province_impacts.loc[max_idx, 'Storm'])
+                    worst_year_raw = province_impacts.loc[max_idx, 'Year']
+                    worst_year = int(float(worst_year_raw)) if pd.notna(worst_year_raw) else 0
                     
                     # Display key metrics
                     col1, col2, col3, col4 = st.columns(4)
@@ -929,17 +931,6 @@ def main():
                                 risk_level = "🟢 Low"
                             
                             st.info(f"**Historical Risk Level**: {risk_level}")
-                    
-                    # Display ML prediction results if available (after historical data)
-                    if st.session_state.results_df is not None:
-                        st.markdown("---")
-                        display_ml_results(
-                            st.session_state.results_df,
-                            st.session_state.storm_name,
-                            st.session_state.year,
-                            st.session_state.track_df
-                        )
-    
                 
                 else:
                     st.info(f"ℹ️ No historical storm impact data found for {selected_province} in our records (2010-2024).")
@@ -955,6 +946,17 @@ def main():
             st.warning(f"⚠️ Coordinates not found for {selected_province}")
     except Exception as e:
         st.warning(f"Could not load map: {str(e)}")
+    
+    # Display ML prediction results if available (OUTSIDE map/historical data section)
+    if st.session_state.results_df is not None:
+        st.markdown("---")
+        st.markdown("## 🤖 Machine Learning Predictions")
+        display_ml_results(
+            st.session_state.results_df,
+            st.session_state.storm_name,
+            st.session_state.year,
+            st.session_state.track_df
+        )
     
     st.markdown("---")
     
