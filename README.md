@@ -17,15 +17,11 @@ Deployed on Streamlit, this Python app uses a machine learning model trained wit
 
 ```bash
 # Clone repository
-git clone <repository-url>
+git clone https://github.com/smmariquit/pjdsc-economic-impact
 cd pjdsc
 
 # Install dependencies
 pip install -r requirements.txt
-
-# Copy environment template (optional)
-cp .env.example .env
-# Edit .env and add your OpenAI API key for LGU insights
 ```
 
 ### Run the Streamlit App
