@@ -8,7 +8,7 @@ outputs/
 __pycache__/
 *.pyc
 .cache.sqlite
-.devcontainer/*
+.devcontainer/
 
 # IDE
 .vscode/
