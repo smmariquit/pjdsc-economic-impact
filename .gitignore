@@ -1,8 +1,5 @@
-.env
 # Restructured project outputs
 outputs/
-models/*/
-!models/*/.gitkeep
 
 # Environment
 .env
