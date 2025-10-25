@@ -1,12 +1,20 @@
 {
   "recent_storms": [
     {
-      "name": "Typhoon Nando (Sep 16, 2024)",
-      "file": "samples/nando_2024.txt",
+      "name": "Severe Tropical Storm Ramil (Oct 17, 2025)",
+      "file": "samples/ramil_2025.txt",
+      "ph_name": "Ramil",
+      "intl_name": "Fengshen",
+      "date": "2025-10-17",
+      "category": "Severe Tropical Storm"
+    },
+    {
+      "name": "Violent Typhoon Nando (Sep 17, 2025)",
+      "file": "samples/nando_2025.txt",
       "ph_name": "Nando",
       "intl_name": "Ragasa",
-      "date": "2024-09-16",
-      "category": "Super Typhoon"
+      "date": "2025-09-17",
+      "category": "Violent Typhoon"
     },
     {
       "name": "Typhoon Odette (Dec 16, 2021)",
