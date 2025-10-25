@@ -1,4 +1,0 @@
-split,samples,positives,unique_storms,total_affected
-train,18756,1881,226,116404792
-val,2241,220,27,15555035
-test,2656,225,32,10408070

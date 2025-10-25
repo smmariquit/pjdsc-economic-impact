@@ -26,20 +26,22 @@ load_dotenv()
 # USD to PHP conversion rate (approximate)
 USD_TO_PHP = 56.0  # 1 USD = 56 PHP (as of 2025)
 
-# Import Philippine location data
-from ph_locations import PH_REGIONS, REGION_NAMES
+# Get project root directory (two levels up from src/app/main.py)
+PROJECT_ROOT = Path(__file__).parent.parent.parent
 
-# Add model paths
-MODEL_PATH = Path("model/Final_Transform")
-sys.path.insert(0, str(MODEL_PATH))
-sys.path.insert(0, str(MODEL_PATH / "pipeline"))
-sys.path.insert(0, str(MODEL_PATH / "Feature_Engineering"))
+# Import Philippine location data from new location
+sys.path.insert(0, str(PROJECT_ROOT / "src"))
+from utils.locations import PH_REGIONS, REGION_NAMES
 
-# Import model pipeline components
+# Set data paths to new structure
+DATA_PATH = PROJECT_ROOT / "data"
+MODELS_PATH = PROJECT_ROOT / "models"
+
+# Import model pipeline components from new location
 try:
-    from parse_jtwc_forecast import parse_jtwc_forecast
-    from fetch_forecast_weather import fetch_weather_forecast
-    from unified_pipeline import StormFeaturePipeline
+    from pipeline.parse_jtwc_forecast import parse_jtwc_forecast
+    from pipeline.fetch_forecast_weather import fetch_weather_forecast
+    from pipeline.unified_pipeline import StormFeaturePipeline
     MODEL_AVAILABLE = True
 except ImportError as e:
     MODEL_AVAILABLE = False
@@ -50,7 +52,7 @@ def load_ml_models():
     """Load trained ML models for inference - ALL THREE IMPACT TYPES."""
     try:
         # Load MINIMAL models (6 features, sklearn RandomForest)
-        artifacts_dir = MODEL_PATH / "artifacts_minimal"
+        artifacts_dir = MODELS_PATH / "minimal"
         
         models = {}
         
@@ -81,7 +83,7 @@ def load_ml_models():
         return models
     except Exception as e:
         st.error(f"Error loading minimal models: {str(e)}")
-        st.info("💡 Run: `python model/Final_Transform/training/train_minimal_all.py` first!")
+        st.info("💡 Run: `python -m src.training.train_minimal_all` first!")
         return None
 
 
@@ -166,7 +168,7 @@ def add_group_prefixes(features_df: pd.DataFrame) -> pd.DataFrame:
 def load_historical_impact_data():
     """Load historical impact data to compute province-level statistics."""
     try:
-        impact_df = pd.read_csv(MODEL_PATH / "Impact_data" / "people_affected_all_years.csv")
+        impact_df = pd.read_csv(DATA_PATH / "raw" / "Impact_data" / "people_affected_all_years.csv")
         
         # Compute historical statistics by province
         hist_stats = impact_df.groupby('Province').agg({
@@ -189,7 +191,7 @@ def load_historical_impact_data():
 def load_historical_storm_data():
     """Load historical storm summary data from ph_storm_summary.csv."""
     try:
-        storm_df = pd.read_csv(MODEL_PATH / "Storm_data" / "ph_storm_summary.csv")
+        storm_df = pd.read_csv(DATA_PATH / "raw" / "Storm_data" / "ph_storm_summary.csv")
         return storm_df
     except Exception as e:
         st.warning(f"Could not load storm summary data: {e}")
@@ -579,27 +581,6 @@ RESOURCE REQUIREMENTS:
             cost_php = cost_usd * USD_TO_PHP
             st.metric("Economic Cost", f"₱{cost_php/1e6:.2f}M")
         
-        # Contextual insights based on risk level
-        # Updated thresholds: 30% is HIGH RISK
-        if prob > 50:
-            st.error(f"⚠️ **SEVERE IMPACT WARNING for {selected_province}**")
-            st.write(f"- {storm_name} poses a **very high risk** to your province")
-            st.write(f"- Expected to affect **{people:,.0f} people** and damage **{houses:,.0f} houses**")
-            st.write(f"- Immediate preparation and evacuation planning recommended")
-        elif prob > 30:
-            st.warning(f"⚠️ **HIGH IMPACT ALERT for {selected_province}**")
-            st.write(f"- {storm_name} poses a **high risk** to your province")
-            st.write(f"- Estimated **{people:,.0f} people** may be affected")
-            st.write(f"- Prepare emergency supplies and monitor storm updates closely")
-        elif prob > 20:
-            st.info(f"ℹ️ **MODERATE IMPACT EXPECTED for {selected_province}**")
-            st.write(f"- {storm_name} may cause **moderate impact** in your province")
-            st.write(f"- Stay alert and follow local weather advisories")
-        else:
-            st.success(f"**Impact Assessment for {selected_province}**")
-            st.write(f"- {storm_name} is expected to have **minimal impact** on your province")
-            st.write(f"- Continue monitoring but no immediate action required")
-        
         # Show province ranking
         province_rank = results_df[results_df['Province'] == selected_province].index[0] + 1
         total_provinces = len(results_df)
@@ -687,7 +668,7 @@ def main():
     """Main Streamlit application."""
     
     st.set_page_config(
-        page_title="Typhoon Impact Predictor",
+        page_title="BARLO: Typhoon Impact Predictor",
         page_icon="🌪️",
         layout="wide",
         initial_sidebar_state="expanded"
@@ -742,7 +723,7 @@ def main():
         
     # Display map with selected province highlighted
     try:
-        loc_df = pd.read_csv(MODEL_PATH / "Location_data" / "locations_latlng.csv")
+        loc_df = pd.read_csv(DATA_PATH / "raw" / "Location_data" / "locations_latlng.csv")
         
         # Get coordinates for selected province
         province_data = loc_df[loc_df['Province'] == selected_province]
@@ -914,7 +895,7 @@ def main():
             
             # Load impact data for the province
             try:
-                impact_df = pd.read_csv(MODEL_PATH / "Impact_data" / "people_affected_all_years.csv")
+                impact_df = pd.read_csv(DATA_PATH / "raw" / "Impact_data" / "people_affected_all_years.csv")
                 province_impacts = impact_df[impact_df['Province'] == selected_province].copy()
                 
                 if not province_impacts.empty:
@@ -950,7 +931,7 @@ def main():
                         st.metric("Total People Affected", f"{total_affected:,.0f}")
                     
                     with col3:
-                        st.metric("Average per Storm", f"{avg_affected:,.0f}")
+                        st.metric("Avg People Affected per Storm", f"{avg_affected:,.0f}")
                     
                     with col4:
                         st.metric("Worst Storm", f"{worst_storm} ({worst_year})")
@@ -966,12 +947,15 @@ def main():
                         }).reset_index()
                         yearly_impact.columns = ['Year', 'Total_Affected', 'Storm_Count']
                         
+                        # Line graph for people affected over time
                         fig1 = go.Figure()
-                        fig1.add_trace(go.Bar(
+                        fig1.add_trace(go.Scatter(
                             x=yearly_impact['Year'],
                             y=yearly_impact['Total_Affected'],
+                            mode='lines+markers',
                             name='People Affected',
-                            marker_color='indianred',
+                            line=dict(color='indianred', width=3),
+                            marker=dict(size=8, color='darkred'),
                             hovertemplate='Year: %{x}<br>Affected: %{y:,.0f}<extra></extra>'
                         ))
                         
@@ -979,19 +963,29 @@ def main():
                             title=f'People Affected in {selected_province} by Year',
                             xaxis_title='Year',
                             yaxis_title='People Affected',
-                            hovermode='x unified'
+                            hovermode='x unified',
+                            showlegend=False
                         )
                         st.plotly_chart(fig1, use_container_width=True)
                         
-                        # Number of storms per year
-                        fig2 = px.bar(
-                            yearly_impact,
-                            x='Year',
-                            y='Storm_Count',
+                        # Line graph for number of storms per year
+                        fig2 = go.Figure()
+                        fig2.add_trace(go.Scatter(
+                            x=yearly_impact['Year'],
+                            y=yearly_impact['Storm_Count'],
+                            mode='lines+markers',
+                            name='Number of Storms',
+                            line=dict(color='orange', width=3),
+                            marker=dict(size=8, color='darkorange'),
+                            hovertemplate='Year: %{x}<br>Storms: %{y}<extra></extra>'
+                        ))
+                        
+                        fig2.update_layout(
                             title=f'Number of Storms Impacting {selected_province} per Year',
-                            labels={'Storm_Count': 'Number of Storms'},
-                            color='Storm_Count',
-                            color_continuous_scale='Reds'
+                            xaxis_title='Year',
+                            yaxis_title='Number of Storms',
+                            hovermode='x unified',
+                            showlegend=False
                         )
                         st.plotly_chart(fig2, use_container_width=True)
                     
@@ -1060,17 +1054,6 @@ def main():
                             # Calculate risk level
                             avg_storms_per_year = total_storms / 15  # 2010-2024 = 15 years
                             st.metric("Average Storms per Year", f"{avg_storms_per_year:.1f}")
-                            
-                            if avg_storms_per_year > 5:
-                                risk_level = "🔴 Very High"
-                            elif avg_storms_per_year > 3:
-                                risk_level = "🟠 High"
-                            elif avg_storms_per_year > 1:
-                                risk_level = "🟡 Moderate"
-                            else:
-                                risk_level = "🟢 Low"
-                            
-                            st.info(f"**Historical Risk Level**: {risk_level}")
                 
                 else:
                     st.info(f"ℹ️ No historical storm impact data found for {selected_province} in our records (2010-2024).")
@@ -1090,7 +1073,6 @@ def main():
     # Display ML prediction results if available (OUTSIDE map/historical data section)
     if st.session_state.results_df is not None:
         st.markdown("---")
-        st.markdown("## 🤖 Machine Learning Predictions")
         display_ml_results(
             st.session_state.results_df,
             st.session_state.storm_name,
@@ -1119,13 +1101,11 @@ def main():
     
     # Load storm list
     try:
-        storm_list_file = MODEL_PATH / "forecasts" / "storm_list.json"
+        storm_list_file = DATA_PATH / "samples" / "storm_list.json"
         if storm_list_file.exists():
             with open(storm_list_file, 'r') as f:
                 storm_config = json.load(f)
                 recent_storms = storm_config['recent_storms']
-                # Sort by date in descending order (most recent first)
-                recent_storms = sorted(recent_storms, key=lambda x: x['date'], reverse=True)
         else:
             recent_storms = []
     except Exception as e:
@@ -1143,21 +1123,24 @@ def main():
     st.sidebar.subheader("📋 Historical Storms")
     
     if recent_storms:
+        # Sort storms by date (most recent first)
+        sorted_storms = sorted(recent_storms, key=lambda x: x['date'], reverse=True)
+        
         # Create dropdown options with storm names and dates
-        storm_options = [f"{s['ph_name']} ({s['date']})" for s in recent_storms]
+        storm_options = [f"{s['ph_name']} ({s['date']})" for s in sorted_storms]
         selected_storm_display = st.sidebar.selectbox(
             "Select a storm to analyze",
             options=storm_options,
             index=0,
-            help="Choose from 10 recent Philippine storms (2023-2024)"
+            help="Choose from recent Philippine storms (sorted by date, newest first)"
         )
         
         # Extract the selected storm data
         selected_index = storm_options.index(selected_storm_display)
-        storm_data = recent_storms[selected_index]
+        storm_data = sorted_storms[selected_index]
         
         # Load storm bulletin
-        forecast_file = MODEL_PATH / storm_data['file']
+        forecast_file = DATA_PATH / storm_data['file']
         if forecast_file.exists():
             with open(forecast_file, 'r') as f:
                 storm_bulletin = f.read()
@@ -1177,7 +1160,7 @@ def main():
     
     if st.sidebar.button("📡 Obtain Live Forecast", type="secondary", use_container_width=True):
         # Try to load a live forecast file (you can create one for current active storms)
-        live_forecast_file = MODEL_PATH / "forecasts" / "live_forecast.txt"
+        live_forecast_file = DATA_PATH / "samples" / "live_forecast.txt"
         
         if live_forecast_file.exists():
             with open(live_forecast_file, 'r') as f:
@@ -1207,7 +1190,7 @@ def main():
                 # Get the most recent storm (first in list)
                 latest_storm = recent_storms[0]
                 
-                forecast_file = MODEL_PATH / latest_storm['file']
+                forecast_file = DATA_PATH / latest_storm['file']
                 if forecast_file.exists():
                     with open(forecast_file, 'r') as f:
                         storm_bulletin = f.read()
@@ -1245,7 +1228,7 @@ def main():
                 selected_storm_name = storm_id.upper()
         
         elif manual_method == "Paste Bulletin Text":
-            st.info("Paste JTWC bulletin from https://www.metoc.navy.mil/jtwc/")
+            st.info("Paste JTWC bulletin from https://www.jtwc.navy.mil/")
             storm_bulletin = st.text_area(
                 "JTWC Bulletin",
                 height=200,
@@ -1329,7 +1312,7 @@ def main():
                     weather_df = fetch_weather_forecast(
                         start_date=start_date,
                         end_date=end_date,
-                        locations_file=str(MODEL_PATH / "Location_data" / "locations_latlng.csv")
+                        locations_file=str(DATA_PATH / "raw" / "Location_data" / "locations_latlng.csv")
                     )
                     
                     # Standardize column name for consistency
@@ -1343,7 +1326,7 @@ def main():
                     import shutil
                     
                     # Create temp directories
-                    temp_weather_dir = MODEL_PATH / "Weather_location_data" / str(year)
+                    temp_weather_dir = DATA_PATH / "raw" / "Weather_location_data" / str(year)
                     temp_weather_dir.mkdir(parents=True, exist_ok=True)
                     
                     # Save weather data (convert Province back to lowercase for pipeline compatibility)
@@ -1354,7 +1337,7 @@ def main():
                     weather_to_save.to_csv(weather_file, index=False)
                     
                     # Append track to storm data temporarily
-                    storm_data_file = MODEL_PATH / "Storm_data" / "ph_storm_data.csv"
+                    storm_data_file = DATA_PATH / "raw" / "Storm_data" / "ph_storm_data.csv"
                     original_storm_data = pd.read_csv(storm_data_file)
                     
                     # track_df already has PHNAME and SEASON set earlier
@@ -1367,7 +1350,7 @@ def main():
                     
                     try:
                         # Run feature pipeline
-                        pipeline = StormFeaturePipeline(base_dir=MODEL_PATH)
+                        pipeline = StormFeaturePipeline(base_dir=DATA_PATH / "raw")
                         features_df = pipeline.process_storm(year, storm_name, verbose=False)
                     finally:
                         # Restore original storm data
@@ -1477,7 +1460,7 @@ def main():
                 results_df['Impact_Probability_Persons'],
                 bins=[0, 10, 20, 30, 100],
                 labels=['Low', 'Moderate', 'High', 'Very High']
-            )
+            ).astype(str)  # Convert to string to avoid plotly categorical errors
             
             results_df = results_df.sort_values('Impact_Probability_Persons', ascending=False)
             
@@ -1513,6 +1496,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
