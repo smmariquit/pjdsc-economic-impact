@@ -2,15 +2,14 @@
 
 **We can forecast where a storm will go, but not how much it will destroy.**
 
-Predict a storm's economic impact from typhoon forecast data. Get insights on how to pre-emptively place logistics.
+Predict a storm's economic impact from typhoon forecast data. Get insights on how to pre-emptively place logistics. 
+Deployed on Streamlit, this Python app uses a machine learning model trained with PyTorch and skLearn on historical storm data
 
 ## Key Features
 
-- **Real-Time Forecasting**: Parse JTWC bulletins and generate predictions
-- **Dual Impact Models**: Predict both persons affected and houses damaged
-- **Interactive Dashboard**: Streamlit app with maps, charts, and insights
-- **Complete Feature Engineering**: 80+ engineered features from 6 feature groups
-- **Production Ready**: Single command execution, caching, error handling
+- **Live Forecast Impact Assessment** - Get the latest storm forecast from sources such [US Naval Meteorology and Oceanography Command](https://www.metoc.navy.mil/) and get insights hours before landfall.
+- **Economic Impact Modeling**: Calculate estimated economic, humanitarian, and  losses based on storm intensity, proximity, and direction, detected based on the plain language warnings of the [Joint Typhoon Warning Center](https://www.metoc.navy.mil/jtwc/jtwc.html)
+- **Comprehensive Insights**: Charts, maps, and tables for comprehensive analysis based on historical data.
 
 ## Quick Start
 
