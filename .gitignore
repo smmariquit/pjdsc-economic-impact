@@ -1,1 +1,17 @@
 .env
+# Restructured project outputs
+outputs/
+models/*/
+!models/*/.gitkeep
+
+# Environment
+.env
+
+# Cache
+__pycache__/
+*.pyc
+.cache.sqlite
+
+# IDE
+.vscode/
+.idea/
