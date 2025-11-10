@@ -43,7 +43,10 @@ def parse_latlon(lat_str: str, lon_str: str) -> Tuple[float, float]:
     return lat, lon
 
 
-def parse_timestamp(timestamp_str: str, year: int = None) -> datetime:
+from typing import Optional
+
+
+def parse_timestamp(timestamp_str: str, year: Optional[int] = None) -> datetime:
     """
     Parse JTWC timestamp like '190600Z' (day 19, hour 06, minute 00, Zulu time).
     
@@ -137,9 +140,18 @@ def parse_jtwc_forecast(forecast_input: str) -> pd.DataFrame:
     else:
         year = datetime.now().year
     
-    # Extract storm name
-    storm_name_match = re.search(r'TROPICAL (?:STORM|CYCLONE|DEPRESSION) \d+W \(([^)]+)\)', content)
-    storm_name = storm_name_match.group(1) if storm_name_match else "UNKNOWN"
+    # Extract storm name (robust to different JTWC subject formats)
+    storm_name = "UNKNOWN"
+    name_patterns = [
+        r'\b(?:SUPER\s+TYPHOON|TYPHOON|TROPICAL\s+(?:STORM|DEPRESSION|CYCLONE))\s+\d{1,2}W\s*\(([^)]+)\)',
+        r'\b\d{1,2}W\s*\(([^)]+)\)',
+        r'SUBJ:.*?\(([^)]+)\)'
+    ]
+    for pat in name_patterns:
+        m = re.search(pat, content, flags=re.IGNORECASE | re.DOTALL)
+        if m:
+            storm_name = m.group(1).strip().upper()
+            break
     
     # Parse WARNING POSITION (current position)
     warning_match = re.search(
@@ -189,6 +201,13 @@ def parse_jtwc_forecast(forecast_input: str) -> pd.DataFrame:
     
     # Convert to DataFrame
     df = pd.DataFrame(tracks)
+    # Ensure proper dtypes
+    if 'LAT' in df.columns:
+        df['LAT'] = pd.to_numeric(df['LAT'], errors='coerce')
+    if 'LON' in df.columns:
+        df['LON'] = pd.to_numeric(df['LON'], errors='coerce')
+    if 'datetime' in df.columns:
+        df['datetime'] = pd.to_datetime(df['datetime'], errors='coerce')
     
     if len(df) == 0:
         raise ValueError("No forecast positions found in file")
@@ -201,10 +220,17 @@ def parse_jtwc_forecast(forecast_input: str) -> pd.DataFrame:
     df['STORM_DIR'] = None
     
     for i in range(1, len(df)):
-        lat1, lon1 = df.loc[i-1, 'LAT'], df.loc[i-1, 'LON']
-        lat2, lon2 = df.loc[i, 'LAT'], df.loc[i, 'LON']
+        lat1 = float(df.loc[i-1, 'LAT']) if pd.notna(df.loc[i-1, 'LAT']) else 0.0
+        lon1 = float(df.loc[i-1, 'LON']) if pd.notna(df.loc[i-1, 'LON']) else 0.0
+        lat2 = float(df.loc[i, 'LAT']) if pd.notna(df.loc[i, 'LAT']) else lat1
+        lon2 = float(df.loc[i, 'LON']) if pd.notna(df.loc[i, 'LON']) else lon1
         dt1 = df.loc[i-1, 'datetime']
         dt2 = df.loc[i, 'datetime']
+        # Convert to python datetime if needed
+        if hasattr(dt1, 'to_pydatetime'):
+            dt1 = dt1.to_pydatetime()
+        if hasattr(dt2, 'to_pydatetime'):
+            dt2 = dt2.to_pydatetime()
         
         # Compute distance (km)
         from math import radians, sin, cos, sqrt, atan2, degrees

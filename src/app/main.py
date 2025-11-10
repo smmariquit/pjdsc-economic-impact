@@ -3,6 +3,7 @@ Philippines Typhoon Impact Predictor - ML-Powered Streamlit App
 Uses trained machine learning models to predict humanitarian and infrastructure impacts
 """
 
+import requests
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -10,6 +11,7 @@ from streamlit_folium import st_folium
 import plotly.express as px
 import plotly.graph_objects as go
 import folium
+import folium.map
 from pathlib import Path
 import sys
 import json
@@ -46,6 +48,69 @@ try:
 except ImportError as e:
     MODEL_AVAILABLE = False
     IMPORT_ERROR = str(e)
+
+
+def try_fetch_jtwc_bulletin(max_storm: int = 33,
+                             max_warning: int = 29,
+                             attempt_limit: int = 200,
+                             timeout: int = 3):
+    """Attempt to discover a live JTWC bulletin by iterating ids.
+
+    Pattern: wp<storm#><warning#>web.txt, e.g., wp3110web.txt
+    Returns (storm_id, text) on success, else (None, None).
+    """
+    import requests as _requests
+
+    base_url = "https://www.metoc.navy.mil/jtwc/products"
+
+    attempts = 0
+    # Search newest-first to find the most recent likely bulletin quickly
+    for storm_num in range(max_storm, 0, -1):
+        for warn_num in range(max_warning, 0, -1):
+            if attempts >= attempt_limit:
+                return None, None
+            storm_id = f"wp{storm_num:02d}{warn_num:02d}"
+            url = f"{base_url}/{storm_id}web.txt"
+            try:
+                print("Trying URL:", url)
+                # Fast HEAD probe to avoid downloading full body when missing
+                head = _requests.head(url, timeout=timeout, allow_redirects=True)
+                if head.status_code != 200:
+                    continue
+                # Stream GET and read only a small chunk to search marker
+                resp = _requests.get(url, timeout=timeout, stream=True)
+                content_chunks = []
+                bytes_read = 0
+                max_bytes = 65536  # 64 KB cap
+                for chunk in resp.iter_content(chunk_size=4096):
+                    if not chunk:
+                        break
+                    content_chunks.append(chunk)
+                    bytes_read += len(chunk)
+                    if bytes_read >= max_bytes:
+                        break
+                text = b''.join(content_chunks).decode(errors='ignore')
+                if "WARNING POSITION" in text.upper():
+                    # If we capped content, we might not have entire file; fetch full text now
+                    if bytes_read < max_bytes:
+                        full_text = text
+                    else:
+                        full_resp = _requests.get(url, timeout=timeout)
+                        full_text = full_resp.text
+                    return storm_id, full_text
+            except _requests.exceptions.RequestException:
+                # Ignore and continue
+                pass
+            finally:
+                attempts += 1
+
+    return None, None
+
+
+@st.cache_data(show_spinner=False, ttl=600)
+def cached_try_fetch_jtwc_bulletin():
+    """Cached wrapper to avoid repeated scans within a short window."""
+    return try_fetch_jtwc_bulletin()
 
 
 def load_ml_models():
@@ -810,6 +875,13 @@ def main():
                         weight=1,
                         opacity=0.3
                     ).add_to(province_map)
+
+                    folium.map.Marker(
+                        location=[row['LAT'], row['LON']],
+                        icon=folium.DivIcon(
+                            html=f'<div style="color: black">{hours_ahead}h</div>'
+                        )
+                    ).add_to(province_map)
                     
                     # Add forecast point marker
                     folium.CircleMarker(
@@ -919,7 +991,8 @@ def main():
                     max_idx = province_impacts['Affected'].idxmax()
                     worst_storm = str(province_impacts.loc[max_idx, 'Storm'])
                     worst_year_raw = province_impacts.loc[max_idx, 'Year']
-                    worst_year = int(float(worst_year_raw)) if pd.notna(worst_year_raw) else 0
+                    _year_numeric = pd.to_numeric(worst_year_raw, errors='coerce')
+                    worst_year = int(_year_numeric) if not pd.isna(_year_numeric) else 0
                     
                     # Display key metrics
                     col1, col2, col3, col4 = st.columns(4)
@@ -1118,43 +1191,7 @@ def main():
     selected_storm_name = None
     selected_storm_date = None
     run_prediction = False
-    
-    # Section 1: Historical Storms
-    st.sidebar.subheader("📋 Historical Storms")
-    
-    if recent_storms:
-        # Sort storms by date (most recent first)
-        sorted_storms = sorted(recent_storms, key=lambda x: x['date'], reverse=True)
-        
-        # Create dropdown options with storm names and dates
-        storm_options = [f"{s['ph_name']} ({s['date']})" for s in sorted_storms]
-        selected_storm_display = st.sidebar.selectbox(
-            "Select a storm to analyze",
-            options=storm_options,
-            index=0,
-            help="Choose from recent Philippine storms (sorted by date, newest first)"
-        )
-        
-        # Extract the selected storm data
-        selected_index = storm_options.index(selected_storm_display)
-        storm_data = sorted_storms[selected_index]
-        
-        # Load storm bulletin
-        forecast_file = DATA_PATH / storm_data['file']
-        if forecast_file.exists():
-            with open(forecast_file, 'r') as f:
-                storm_bulletin = f.read()
-            selected_storm_name = storm_data['ph_name']
-            selected_storm_date = storm_data['date']
-        
-        # Analyze Impact button
-        if st.sidebar.button("🚀 Analyze Impact", type="primary", use_container_width=True):
-            run_prediction = True
-    else:
-        st.sidebar.warning("⚠️ No historical storms available")
-    
-    st.sidebar.markdown("---")
-    
+    is_live_source = False
     # Section 2: Live Forecast
     st.sidebar.subheader("🌐 Live Forecast")
     
@@ -1182,8 +1219,23 @@ def main():
                 
                 st.sidebar.success(f"🔴 **LIVE: Typhoon {live_storm_name}**\n\n{live_storm_date}")
                 run_prediction = True
+                is_live_source = True
             except Exception as e:
                 st.sidebar.error(f"Error parsing live forecast: {e}")
+        elif not live_forecast_file.exists():
+            # No local live forecast file; try discovering a live JTWC product by iterating ids
+            with st.spinner("🔎 Searching for latest JTWC live bulletin..."):
+                storm_id_found, text = cached_try_fetch_jtwc_bulletin()
+            if storm_id_found and text:
+                storm_bulletin = text
+                selected_storm_name = None  # inferred later from parsed track
+                selected_storm_date = datetime.now().strftime("%b %d, %Y")
+                st.sidebar.success(f"Found live JTWC bulletin: {storm_id_found}web.txt")
+                run_prediction = True
+                is_live_source = True
+            else:
+                st.sidebar.info("No current storm in the Philippines.")
+                storm_bulletin = None
         else:
             # No live forecast file, use the most recent historical storm
             if recent_storms:
@@ -1204,8 +1256,42 @@ def main():
             else:
                 st.sidebar.warning("⚠️ No storm data available")
     
-    st.sidebar.markdown("---")
+    # Section 1: Historical Storms
+    st.sidebar.subheader("📋 Historical Storms")
     
+    if recent_storms:
+        # Sort storms by date (most recent first)
+        sorted_storms = sorted(recent_storms, key=lambda x: x['date'], reverse=True)
+        
+        # Create dropdown options with storm names and dates
+        storm_options = [f"{s['ph_name']} ({s['date']})" for s in sorted_storms]
+        selected_storm_display = st.sidebar.selectbox(
+            "Select a storm to analyze",
+            options=storm_options,
+            index=0,
+            help="Choose from recent Philippine storms (sorted by date, newest first)"
+        )
+        
+        # Extract the selected storm data
+        selected_index = storm_options.index(selected_storm_display)
+        storm_data = sorted_storms[selected_index]
+        
+        # Analyze Impact button (only load bulletin on click to avoid overriding LIVE)
+        forecast_file = DATA_PATH / storm_data['file']
+        if st.sidebar.button("🚀 Analyze Impact", type="primary", use_container_width=True):
+            if forecast_file.exists():
+                with open(forecast_file, 'r') as f:
+                    storm_bulletin = f.read()
+                selected_storm_name = storm_data['ph_name']
+                selected_storm_date = storm_data['date']
+                run_prediction = True
+            else:
+                st.sidebar.error("❌ Could not load selected storm bulletin")
+    else:
+        st.sidebar.warning("⚠️ No historical storms available")
+    
+    st.sidebar.markdown("---")
+
     # Section 3: Advanced Options (collapsible)
     with st.sidebar.expander("⚙️ Advanced Options"):
         st.write("**Manual Input Methods:**")
@@ -1267,19 +1353,47 @@ def main():
                         track_df = parse_jtwc_forecast(str(temp_file))
                         temp_file.unlink()  # Delete temp file
                     elif storm_id:
-                        # Fetch live
-                        import requests
+                        # Fetch live bulletin by storm_id from JTWC with robust error handling
+                        import requests as _requests
                         url = f"https://www.metoc.navy.mil/jtwc/products/{storm_id}web.txt"
-                        response = requests.get(url, timeout=10)
-                        response.raise_for_status()
-                        
+                        try:
+                            _resp = _requests.get(url, timeout=12)
+                            _resp.raise_for_status()
+                        except _requests.exceptions.RequestException as e:
+                            st.sidebar.error(f"Failed to fetch JTWC bulletin for {storm_id}: {e}")
+                            return
                         temp_file = Path("temp_bulletin.txt")
                         with open(temp_file, 'w') as f:
-                            f.write(response.text)
+                            f.write(_resp.text)
                         track_df = parse_jtwc_forecast(str(temp_file))
                         temp_file.unlink()
                     else:
                         st.sidebar.error("❌ No storm data provided")
+                        return
+
+                    # Region filter: Only proceed if track is within our AOI (avoid Africa etc.)
+                    # Define a conservative Western Pacific/Philippines bounding box
+                    # Latitude: -5 to 35 N, Longitude: 105 to 155 E
+                    LAT_MIN, LAT_MAX = -5.0, 35.0
+                    LON_MIN, LON_MAX = 105.0, 155.0
+
+                    if not {'LAT', 'LON'}.issubset(set(track_df.columns)):
+                        st.sidebar.error("Parsed track missing LAT/LON columns; cannot apply region filter.")
+                        return
+
+                    lat_min = float(track_df['LAT'].min())
+                    lat_max = float(track_df['LAT'].max())
+                    lon_min = float(track_df['LON'].min())
+                    lon_max = float(track_df['LON'].max())
+
+                    overlaps_lat = (lat_max >= LAT_MIN) and (lat_min <= LAT_MAX)
+                    overlaps_lon = (lon_max >= LON_MIN) and (lon_min <= LON_MAX)
+                    if not (overlaps_lat and overlaps_lon):
+                        if is_live_source:
+                            st.sidebar.info("No current storm in the Philippines.")
+                        else:
+                            st.sidebar.warning(
+                                "⛔ Storm track is outside the Western Pacific/Philippines region. Skipping processing.")
                         return
                     
                     # Extract storm info from track dataframe
