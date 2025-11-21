@@ -961,182 +961,6 @@ def main():
             except Exception as e:
                 st.error(f"Map rendering error: {str(e)}")
                 st.info("Map data is available but there was an issue displaying it. Try refreshing the page.")
-            
-            # Historical Storm Insights for Selected Province
-            st.subheader(f"📊 Historical Storm Impact: {selected_province} (2010-2024)")
-            
-            # Load impact data for the province
-            try:
-                impact_df = pd.read_csv(DATA_PATH / "raw" / "Impact_data" / "people_affected_all_years.csv")
-                province_impacts = impact_df[impact_df['Province'] == selected_province].copy()
-                
-                if not province_impacts.empty:
-                    # Load storm summary to get category information
-                    storm_df = load_historical_storm_data()
-                    
-                    # Merge to get storm details
-                    if storm_df is not None:
-                        province_impacts = province_impacts.merge(
-                            storm_df[['Year', 'PH_Name', 'Peak_Category', 'Peak_Windspeed_kmh']],
-                            left_on=['Year', 'Storm'],
-                            right_on=['Year', 'PH_Name'],
-                            how='left'
-                        )
-                    
-                    # Calculate statistics
-                    total_storms = len(province_impacts)
-                    total_affected = province_impacts['Affected'].sum()
-                    avg_affected = province_impacts['Affected'].mean()
-                    max_affected = province_impacts['Affected'].max()
-                    max_idx = province_impacts['Affected'].idxmax()
-                    worst_storm = str(province_impacts.loc[max_idx, 'Storm'])
-                    worst_year_raw = province_impacts.loc[max_idx, 'Year']
-                    _year_numeric = pd.to_numeric(worst_year_raw, errors='coerce')
-                    worst_year = int(_year_numeric) if not pd.isna(_year_numeric) else 0
-                    
-                    # Display key metrics
-                    col1, col2, col3, col4 = st.columns(4)
-                    
-                    with col1:
-                        st.metric("Storms Impacted", total_storms)
-                    
-                    with col2:
-                        st.metric("Total People Affected", f"{total_affected:,.0f}")
-                    
-                    with col3:
-                        st.metric("Avg People Affected per Storm", f"{avg_affected:,.0f}")
-                    
-                    with col4:
-                        st.metric("Worst Storm", f"{worst_storm} ({worst_year})")
-                    
-                    # Note: Using expanders instead of tabs below
-                    
-                    # Impact Over Time Expander
-                    with st.expander("📈 Impact Over Time", expanded=False):
-                        # Timeline of impacts
-                        yearly_impact = province_impacts.groupby('Year').agg({
-                            'Affected': 'sum',
-                            'Storm': 'count'
-                        }).reset_index()
-                        yearly_impact.columns = ['Year', 'Total_Affected', 'Storm_Count']
-                        
-                        # Line graph for people affected over time
-                        fig1 = go.Figure()
-                        fig1.add_trace(go.Scatter(
-                            x=yearly_impact['Year'],
-                            y=yearly_impact['Total_Affected'],
-                            mode='lines+markers',
-                            name='People Affected',
-                            line=dict(color='indianred', width=3),
-                            marker=dict(size=8, color='darkred'),
-                            hovertemplate='Year: %{x}<br>Affected: %{y:,.0f}<extra></extra>'
-                        ))
-                        
-                        fig1.update_layout(
-                            title=f'People Affected in {selected_province} by Year',
-                            xaxis_title='Year',
-                            yaxis_title='People Affected',
-                            hovermode='x unified',
-                            showlegend=False
-                        )
-                        st.plotly_chart(fig1, use_container_width=True)
-                        
-                        # Line graph for number of storms per year
-                        fig2 = go.Figure()
-                        fig2.add_trace(go.Scatter(
-                            x=yearly_impact['Year'],
-                            y=yearly_impact['Storm_Count'],
-                            mode='lines+markers',
-                            name='Number of Storms',
-                            line=dict(color='orange', width=3),
-                            marker=dict(size=8, color='darkorange'),
-                            hovertemplate='Year: %{x}<br>Storms: %{y}<extra></extra>'
-                        ))
-                        
-                        fig2.update_layout(
-                            title=f'Number of Storms Impacting {selected_province} per Year',
-                            xaxis_title='Year',
-                            yaxis_title='Number of Storms',
-                            hovermode='x unified',
-                            showlegend=False
-                        )
-                        st.plotly_chart(fig2, use_container_width=True)
-                    
-                    with st.expander("🌪️ Worst Storms", expanded=False):
-                        # Top 10 worst storms
-                        st.write(f"**Top 10 Most Damaging Storms in {selected_province}:**")
-                        
-                        worst_storms = province_impacts.nlargest(10, 'Affected')[
-                            ['Year', 'Storm', 'Peak_Category', 'Affected', 'Peak_Windspeed_kmh']
-                        ].copy()
-                        
-                        # Format for display
-                        st.dataframe(
-                            worst_storms,
-                            hide_index=True,
-                            column_config={
-                                'Year': 'Year',
-                                'Storm': 'Storm Name',
-                                'Peak_Category': 'Category',
-                                'Affected': st.column_config.NumberColumn(
-                                    'People Affected',
-                                    format='%d'
-                                ),
-                                'Peak_Windspeed_kmh': st.column_config.NumberColumn(
-                                    'Wind Speed',
-                                    format='%d km/h'
-                                )
-                            },
-                            use_container_width=True
-                        )
-                        
-                        # Chart of worst storms
-                        fig3 = px.bar(
-                            worst_storms.head(10),
-                            x='Storm',
-                            y='Affected',
-                            color='Peak_Category',
-                            title=f'Top 10 Most Damaging Storms',
-                            labels={'Affected': 'People Affected'}
-                        )
-                        fig3.update_xaxes(tickangle=45)
-                        st.plotly_chart(fig3, use_container_width=True)
-                    
-                    with st.expander(" Statistics", expanded=False):
-                        # Statistical summary
-                        st.write(f"**Impact Statistics for {selected_province}:**")
-                        
-                        col1, col2 = st.columns(2)
-                        
-                        with col1:
-                            st.metric("Total Storms (2010-2024)", total_storms)
-                            st.metric("Total People Affected", f"{total_affected:,.0f}")
-                            st.metric("Average Affected per Storm", f"{avg_affected:,.0f}")
-                            st.metric("Maximum in Single Storm", f"{max_affected:,.0f}")
-                        
-                        with col2:
-                            # Category breakdown
-                            if 'Peak_Category' in province_impacts.columns:
-                                category_dist = province_impacts['Peak_Category'].value_counts()
-                                
-                                st.write("**Storm Categories:**")
-                                for cat, count in category_dist.items():
-                                    if cat is not None and str(cat) != 'nan':
-                                        st.write(f"- {cat}: {count}")
-                            
-                            # Calculate risk level
-                            avg_storms_per_year = total_storms / 15  # 2010-2024 = 15 years
-                            st.metric("Average Storms per Year", f"{avg_storms_per_year:.1f}")
-                
-                else:
-                    st.info(f"ℹ️ No historical storm impact data found for {selected_province} in our records (2010-2024).")
-                    st.write("This could mean:")
-                    st.write("- The province has been fortunate to avoid major impacts")
-                    st.write("- Impact data was not recorded for this location")
-                    st.write("- The province name may differ in historical records")
-            
-            except Exception as e:
-                st.warning(f"⚠️ Could not load historical impact data: {str(e)}")
         
         else:
             st.warning(f"⚠️ Coordinates not found for {selected_province}")
@@ -1153,7 +977,181 @@ def main():
             st.session_state.track_df
         )
     
-    st.markdown("---")
+    # Historical Storm Insights for Selected Province
+    st.subheader(f"📊 Historical Storm Impact: {selected_province} (2010-2024)")
+    
+    # Load impact data for the province
+    try:
+        impact_df = pd.read_csv(DATA_PATH / "raw" / "Impact_data" / "people_affected_all_years.csv")
+        province_impacts = impact_df[impact_df['Province'] == selected_province].copy()
+        
+        if not province_impacts.empty:
+            # Load storm summary to get category information
+            storm_df = load_historical_storm_data()
+            
+            # Merge to get storm details
+            if storm_df is not None:
+                province_impacts = province_impacts.merge(
+                    storm_df[['Year', 'PH_Name', 'Peak_Category', 'Peak_Windspeed_kmh']],
+                    left_on=['Year', 'Storm'],
+                    right_on=['Year', 'PH_Name'],
+                    how='left'
+                )
+            
+            # Calculate statistics
+            total_storms = len(province_impacts)
+            total_affected = province_impacts['Affected'].sum()
+            avg_affected = province_impacts['Affected'].mean()
+            max_affected = province_impacts['Affected'].max()
+            max_idx = province_impacts['Affected'].idxmax()
+            worst_storm = str(province_impacts.loc[max_idx, 'Storm'])
+            worst_year_raw = province_impacts.loc[max_idx, 'Year']
+            _year_numeric = pd.to_numeric(worst_year_raw, errors='coerce')
+            worst_year = int(_year_numeric) if not pd.isna(_year_numeric) else 0
+            
+            # Display key metrics
+            col1, col2, col3, col4 = st.columns(4)
+            
+            with col1:
+                st.metric("Storms Impacted", total_storms)
+            
+            with col2:
+                st.metric("Total People Affected", f"{total_affected:,.0f}")
+            
+            with col3:
+                st.metric("Avg People Affected per Storm", f"{avg_affected:,.0f}")
+            
+            with col4:
+                st.metric("Worst Storm", f"{worst_storm} ({worst_year})")
+            
+            # Note: Using expanders instead of tabs below
+            
+            # Impact Over Time Expander
+            with st.expander("📈 Impact Over Time", expanded=False):
+                # Timeline of impacts
+                yearly_impact = province_impacts.groupby('Year').agg({
+                    'Affected': 'sum',
+                    'Storm': 'count'
+                }).reset_index()
+                yearly_impact.columns = ['Year', 'Total_Affected', 'Storm_Count']
+                
+                # Line graph for people affected over time
+                fig1 = go.Figure()
+                fig1.add_trace(go.Scatter(
+                    x=yearly_impact['Year'],
+                    y=yearly_impact['Total_Affected'],
+                    mode='lines+markers',
+                    name='People Affected',
+                    line=dict(color='indianred', width=3),
+                    marker=dict(size=8, color='darkred'),
+                    hovertemplate='Year: %{x}<br>Affected: %{y:,.0f}<extra></extra>'
+                ))
+                
+                fig1.update_layout(
+                    title=f'People Affected in {selected_province} by Year',
+                    xaxis_title='Year',
+                    yaxis_title='People Affected',
+                    hovermode='x unified',
+                    showlegend=False
+                )
+                st.plotly_chart(fig1, use_container_width=True)
+                
+                # Line graph for number of storms per year
+                fig2 = go.Figure()
+                fig2.add_trace(go.Scatter(
+                    x=yearly_impact['Year'],
+                    y=yearly_impact['Storm_Count'],
+                    mode='lines+markers',
+                    name='Number of Storms',
+                    line=dict(color='orange', width=3),
+                    marker=dict(size=8, color='darkorange'),
+                    hovertemplate='Year: %{x}<br>Storms: %{y}<extra></extra>'
+                ))
+                
+                fig2.update_layout(
+                    title=f'Number of Storms Impacting {selected_province} per Year',
+                    xaxis_title='Year',
+                    yaxis_title='Number of Storms',
+                    hovermode='x unified',
+                    showlegend=False
+                )
+                st.plotly_chart(fig2, use_container_width=True)
+            
+            with st.expander("🌪️ Worst Storms", expanded=False):
+                # Top 10 worst storms
+                st.write(f"**Top 10 Most Damaging Storms in {selected_province}:**")
+                
+                worst_storms = province_impacts.nlargest(10, 'Affected')[
+                    ['Year', 'Storm', 'Peak_Category', 'Affected', 'Peak_Windspeed_kmh']
+                ].copy()
+                
+                # Format for display
+                st.dataframe(
+                    worst_storms,
+                    hide_index=True,
+                    column_config={
+                        'Year': 'Year',
+                        'Storm': 'Storm Name',
+                        'Peak_Category': 'Category',
+                        'Affected': st.column_config.NumberColumn(
+                            'People Affected',
+                            format='%d'
+                        ),
+                        'Peak_Windspeed_kmh': st.column_config.NumberColumn(
+                            'Wind Speed',
+                            format='%d km/h'
+                        )
+                    },
+                    use_container_width=True
+                )
+                
+                # Chart of worst storms
+                fig3 = px.bar(
+                    worst_storms.head(10),
+                    x='Storm',
+                    y='Affected',
+                    color='Peak_Category',
+                    title=f'Top 10 Most Damaging Storms',
+                    labels={'Affected': 'People Affected'}
+                )
+                fig3.update_xaxes(tickangle=45)
+                st.plotly_chart(fig3, use_container_width=True)
+            
+            with st.expander(" Statistics", expanded=False):
+                # Statistical summary
+                st.write(f"**Impact Statistics for {selected_province}:**")
+                
+                col1, col2 = st.columns(2)
+                
+                with col1:
+                    st.metric("Total Storms (2010-2024)", total_storms)
+                    st.metric("Total People Affected", f"{total_affected:,.0f}")
+                    st.metric("Average Affected per Storm", f"{avg_affected:,.0f}")
+                    st.metric("Maximum in Single Storm", f"{max_affected:,.0f}")
+                
+                with col2:
+                    # Category breakdown
+                    if 'Peak_Category' in province_impacts.columns:
+                        category_dist = province_impacts['Peak_Category'].value_counts()
+                        
+                        st.write("**Storm Categories:**")
+                        for cat, count in category_dist.items():
+                            if cat is not None and str(cat) != 'nan':
+                                st.write(f"- {cat}: {count}")
+                    
+                    # Calculate risk level
+                    avg_storms_per_year = total_storms / 15  # 2010-2024 = 15 years
+                    st.metric("Average Storms per Year", f"{avg_storms_per_year:.1f}")
+        
+        else:
+            st.info(f"ℹ️ No historical storm impact data found for {selected_province} in our records (2010-2024).")
+            st.write("This could mean:")
+            st.write("- The province has been fortunate to avoid major impacts")
+            st.write("- Impact data was not recorded for this location")
+            st.write("- The province name may differ in historical records")
+    
+    except Exception as e:
+        st.warning(f"⚠️ Could not load historical impact data: {str(e)}")
     
     if not MODEL_AVAILABLE:
         st.error(f"⚠️ Model pipeline not found. Import error: {IMPORT_ERROR}")
