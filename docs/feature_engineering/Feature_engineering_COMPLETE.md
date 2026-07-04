@@ -7,15 +7,15 @@
 ### **Key Principles**
 
 1. **Forecast Compatibility**: All features must work with BOTH:
-   - Dense historical tracks (3-6hr intervals, complete lifecycle)
-   - Sparse forecast tracks (12-24hr intervals, only future positions)
+ - Dense historical tracks (3-6hr intervals, complete lifecycle)
+ - Sparse forecast tracks (12-24hr intervals, only future positions)
 
 2. **Aggregation Strategy**: Temporal sequences → Single feature vector per storm-province pair
 
 3. **Missing Data Handling**: Features must gracefully handle:
-   - Missing storm intensity data (wind/pressure)
-   - Incomplete wind radii
-   - Variable-length storm tracks
+ - Missing storm intensity data (wind/pressure)
+ - Incomplete wind radii
+ - Variable-length storm tracks
 
 4. **Target Alignment**: Features describe the ENTIRE storm event (not point-in-time), matching cumulative impact reports
 
@@ -182,7 +182,7 @@ def compute_historical_vulnerability_features(province_name, current_storm_date,
 
 **Purpose**: Capture seasonal patterns and temporal context of typhoon occurrence
 
-**Why These Matter**: Typhoon impacts vary significantly by season (peak season storms vs. early/late season), time of year (harvest season, school calendar), and climate patterns (ENSO phases).
+**Why These Matter**: Typhoon impacts vary by season (peak season storms vs. early/late season), time of year (harvest season, school calendar), and climate patterns (ENSO phases).
 
 ---
 
@@ -473,7 +473,6 @@ def circular_std(angles):
 | Forward Motion | 6 | mean_forward_speed, is_slow_moving, speed_at_closest |
 | Track Shape | 4 | direction_variability, is_recurving, track_sinuosity |
 
-
 ---
 
 ## 🔗 **GROUP 7: INTERACTION FEATURES**
@@ -593,7 +592,6 @@ def compute_province_storm_interactions(province_features, distance_features, we
 
 ---
 
-
 ---
 
 ## **GROUP 7 SUMMARY: 11 Interaction Features**
@@ -603,7 +601,6 @@ def compute_province_storm_interactions(province_features, distance_features, we
 | Distance × Intensity | 3 | proximity_intensity_product, intensity_per_km |
 | Distance × Weather | 3 | close_approach_rainfall, rainfall_distance_ratio |
 | Province × Storm | 3 | population_at_risk, coastal_proximity_hazard |
-
 
 ---
 
@@ -879,5 +876,4 @@ Based on domain knowledge and similar projects:
 
 **Total: 104 Features across 7 Groups**
 **Ready for Implementation!**
-
 
