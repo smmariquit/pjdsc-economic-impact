@@ -6,12 +6,12 @@ This guide covers **advanced model training** with hyperparameter optimization t
 
 ### **What's New?**
 
-✅ **Randomized Search CV** - Automated hyperparameter tuning  
-✅ **Cross-Validation** - Better generalization (3-5 folds)  
-✅ **Extended Search Space** - 9 hyperparameters per model  
-✅ **Feature Importance Analysis** - Understand what drives predictions  
-✅ **Comprehensive Metrics** - More evaluation metrics (MAPE, R², etc.)  
-✅ **Better Regularization** - L1/L2 penalties, min_child_weight, gamma  
+✅ **Randomized Search CV** - Automated hyperparameter tuning 
+✅ **Cross-Validation** - Better generalization (3-5 folds) 
+✅ **Extended Search Space** - 9 hyperparameters per model 
+✅ **Feature Importance Analysis** - Understand what drives predictions 
+✅ **full Metrics** - More evaluation metrics (MAPE, R², etc.) 
+✅ **Better Regularization** - L1/L2 penalties, min_child_weight, gamma 
 
 ---
 
@@ -20,19 +20,19 @@ This guide covers **advanced model training** with hyperparameter optimization t
 ### **Current Model Issues**
 
 1. **Classifier "Too Perfect"** (99.8% AUC-PR)
-   - Possible overfitting on training data
-   - May not generalize to truly novel storms
-   - Need better regularization
+ - Possible overfitting on training data
+ - May not generalize to truly novel storms
+ - Need better regularization
 
 2. **Regressor Moderate Performance** (RMSE 2.63 for houses, 0.58 for persons)
-   - High variance in predictions
-   - Could benefit from better hyperparameters
-   - May need different tree depth/learning rate
+ - High variance in predictions
+ - Could benefit from better hyperparameters
+ - May need different tree depth/learning rate
 
 3. **No Systematic Tuning**
-   - Current params chosen manually
-   - Not optimized for this specific dataset
-   - Missing optimal configuration
+ - Current params chosen manually
+ - Not optimized for this specific dataset
+ - Missing optimal configuration
 
 ---
 
@@ -52,7 +52,7 @@ This guide covers **advanced model training** with hyperparameter optimization t
 | `min_child_weight` | [1, 3, 5] | Minimum sum of instance weight |
 | `gamma` | [0, 0.1, 0.3, 0.5] | Minimum loss reduction |
 
-**Total Combinations:** ~100,000 possible configurations  
+**Total Combinations:** ~100,000 possible configurations 
 **Search Method:** Randomized (50-100 iterations with cross-validation)
 
 ### **Regressor Parameters**
@@ -296,7 +296,7 @@ head -20 artifacts_optimized/feature_importance_regressor.csv
 | Recall | 0.9876 | 0.9850-0.9900 | ± 0.5% |
 | F1-Score | 0.9762 | 0.9780-0.9850 | +0.5-1% |
 
-**Note:** Baseline already very high, improvements may be marginal.  
+**Note:** Baseline already very high, improvements may be marginal. 
 **Goal:** Better generalization, not just higher test scores.
 
 ### **Regressor**
@@ -409,7 +409,7 @@ python -m training.train_optimized \
 ## 📚 **Next Steps After Optimization**
 
 1. **Replace baseline models** with optimized ones:
-   ```bash
+ ```bash
    # Backup old models
    mv artifacts artifacts_baseline
    mv artifacts_optimized artifacts
@@ -419,7 +419,7 @@ python -m training.train_optimized \
    ```
 
 2. **Test with deployment pipeline**:
-   ```bash
+ ```bash
    python pipeline/deploy_both_models.py --storm-id wp3025
    ```
 
@@ -433,12 +433,12 @@ python -m training.train_optimized \
 
 **Optimization is successful if:**
 
-✅ Regressor RMSE improves by >5%  
-✅ Regressor R² increases by >3%  
-✅ No significant drop in classifier metrics  
-✅ Cross-validation scores stable (low std)  
-✅ Feature importance makes sense  
-✅ Models generalize to test set  
+✅ Regressor RMSE improves by >5% 
+✅ Regressor R² increases by >3% 
+✅ No significant drop in classifier metrics 
+✅ Cross-validation scores stable (low std) 
+✅ Feature importance makes sense 
+✅ Models generalize to test set 
 
 ---
 
@@ -462,5 +462,4 @@ python -m training.train_optimized \
 ---
 
 **Ready to optimize? Start with the fast tuning option and scale up!** 🚀
-
 
