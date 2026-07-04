@@ -9,7 +9,7 @@ This pipeline processes storm location data to generate **26 GROUP 1 features** 
 ### 1. `distance_feature_engineering.py`
 Main feature engineering script with modular functions for:
 - ✅ Basic Distance Metrics (5 features)
-- ✅ Duration Thresholds (5 features)  
+- ✅ Duration Thresholds (5 features) 
 - ✅ Forecast Horizons (5 features)
 - ✅ Integrated Proximity (3 features)
 - ✅ Approach/Departure Dynamics (4 features)
@@ -186,7 +186,7 @@ Batch process all storms in directory.
 **Returns:** DataFrame with all features
 
 #### `extract_features_for_deployment(distances, bearings, timestamps, time_interval_hours)`
-Streamlined function for real-time deployment.
+simplify function for real-time deployment.
 
 **Args:**
 - `distances`: List of distances (km)
@@ -291,8 +291,8 @@ features_df = pd.read_csv('distance_features_group1.csv')
 
 - **Missing Values**: Indicated by `-999` (e.g., when forecast horizon not available)
 - **Time Intervals**: Adjust `time_interval_hours` based on data resolution
-  - Historical data: 3 hours (typical)
-  - Forecast data: 6-12 hours (JTWC format)
+ - Historical data: 3 hours (typical)
+ - Forecast data: 6-12 hours (JTWC format)
 - **Distance Calculations**: Uses Haversine formula for great-circle distance
 - **Bearing Calculations**: 0° = North, 90° = East, 180° = South, 270° = West
 
@@ -307,8 +307,8 @@ This module is designed to work with:
 
 ---
 
-**Author:** Feature Engineering Pipeline  
-**Version:** 1.0  
-**Last Updated:** 2024  
+**Author:** Feature Engineering Pipeline 
+**Version:** 1.0 
+**Last Updated:** 2024 
 **License:** MIT
 
