@@ -99,7 +99,6 @@ def compute_concurrent_storm_features(current_storm_id, current_storm_date, all_
 | `days_since_last_storm` | Time since previous storm exited PAR | Days | Recovery time |
 | `storms_past_30_days` | Recent storm frequency | Count | Cumulative stress |
 
-
 **Implementation:**
 ```python
 def compute_recent_storm_history(province_name, current_storm_date, impact_history, storm_history):
