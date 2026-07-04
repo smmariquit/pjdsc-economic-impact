@@ -7,15 +7,15 @@
 ### **Key Principles**
 
 1. **Forecast Compatibility**: All features must work with BOTH:
-   - Dense historical tracks (3-6hr intervals, complete lifecycle)
-   - Sparse forecast tracks (12-24hr intervals, only future positions)
+ - Dense historical tracks (3-6hr intervals, complete lifecycle)
+ - Sparse forecast tracks (12-24hr intervals, only future positions)
 
 2. **Aggregation Strategy**: Temporal sequences → Single feature vector per storm-province pair
 
 3. **Missing Data Handling**: Features must gracefully handle:
-   - Missing storm intensity data (wind/pressure)
-   - Incomplete wind radii
-   - Variable-length storm tracks
+ - Missing storm intensity data (wind/pressure)
+ - Incomplete wind radii
+ - Variable-length storm tracks
 
 4. **Target Alignment**: Features describe the ENTIRE storm event (not point-in-time), matching cumulative impact reports
 
@@ -637,7 +637,6 @@ def compute_intensity_at_critical_moments(track_points, closest_approach_idx):
 | `is_intensifying` | Is storm strengthening toward closest approach? | Boolean | ~50% |
 | `wind_change_approaching_kt` | Wind speed change during approach | Wind_closest - Wind_entry | ~50% |
 | `intensification_rate_kt_per_day` | Rate of intensification | ΔWind / Δtime | ~50% |
-
 
 **Implementation:**
 ```python
