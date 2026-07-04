@@ -40,7 +40,7 @@ python pipeline/complete_forecast_pipeline.py \
 
 ### **Advanced: Separate Fetch (Optional)**
 
-  ```bash
+ ```bash
   # If you want to fetch bulletin separately
   python fetch_jtwc_bulletin.py --storm-id wp3025
 
@@ -86,7 +86,7 @@ python pipeline/example_deployment.py --year 2024 --storm Kristine
 
 ### **Single Model Output** (legacy):
 - `predictions_STORM_YEAR.csv` - Persons only
-- `alerts_STORM_YEAR.json` - Alert format  
+- `alerts_STORM_YEAR.json` - Alert format 
 - `summary_STORM_YEAR.txt` - Report
 
 ---
