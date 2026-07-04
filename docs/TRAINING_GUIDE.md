@@ -69,19 +69,19 @@ Each contains:
 
 | Parameter | Description | Default | Options |
 |-----------|-------------|---------|---------|
-| `--split_mode` | How to split data | `stratified_storm` | `stratified_storm`, `temporal` |
-| `--random_state` | Random seed | `42` | Any integer |
-| `--train_frac` | Training fraction | `0.8` | 0.0-1.0 |
-| `--val_frac` | Validation fraction | `0.1` | 0.0-1.0 |
-| `--test_frac` | Test fraction | `0.1` | 0.0-1.0 |
-| `--out_dir` | Output directory | `artifacts` | Any path |
+| `, split_mode` | How to split data | `stratified_storm` | `stratified_storm`, `temporal` |
+| `, random_state` | Random seed | `42` | Any integer |
+| `, train_frac` | Training fraction | `0.8` | 0.0-1.0 |
+| `, val_frac` | Validation fraction | `0.1` | 0.0-1.0 |
+| `, test_frac` | Test fraction | `0.1` | 0.0-1.0 |
+| `, out_dir` | Output directory | `artifacts` | Any path |
 
 **For temporal split only:**
 | Parameter | Description | Format |
 |-----------|-------------|--------|
-| `--train_range` | Training years | `YYYY-YYYY` (e.g., `2010-2018`) |
-| `--val_range` | Validation years | `YYYY-YYYY` (e.g., `2019-2020`) |
-| `--test_range` | Test years | `YYYY-YYYY` (e.g., `2021-2024`) |
+| `, train_range` | Training years | `YYYY-YYYY` (e.g., `2010-2018`) |
+| `, val_range` | Validation years | `YYYY-YYYY` (e.g., `2019-2020`) |
+| `, test_range` | Test years | `YYYY-YYYY` (e.g., `2021-2024`) |
 
 ---
 
@@ -90,35 +90,35 @@ Each contains:
 ### **What Happens During Training:**
 
 1. **Load Features** (6 groups, 75+ features)
-   - Distance features (group1): 26 features
-   - Weather features (group2): 20 features
-   - Intensity features (group3): 7 features
-   - Motion features (group6): 10 features
-   - Interaction features (group7): 6 features
-   - Multi-storm features (group8): 6 features
+ - Distance features (group1): 26 features
+ - Weather features (group2): 20 features
+ - Intensity features (group3): 7 features
+ - Motion features (group6): 10 features
+ - Interaction features (group7): 6 features
+ - Multi-storm features (group8): 6 features
 
 2. **Add Contextual Data**
-   - Population (yearly, per province)
-   - Population density
-   - Historical vulnerability (leakage-free):
-     - `hist_storms` - # of impactful years in past
-     - `hist_avg_affected` - average affected per past storm
-     - `hist_max_affected` - worst historical impact
+ - Population (yearly, per province)
+ - Population density
+ - Historical vulnerability (leakage-free):
+ - `hist_storms` - # of impactful years in past
+ - `hist_avg_affected` - average affected per past storm
+ - `hist_max_affected` - worst historical impact
 
 3. **Stratified Storm Split** (80/10/10)
-   - Groups storms by severity (none/minor/moderate/major)
-   - Randomly assigns storms to train/val/test within each severity bin
-   - Ensures all splits have balanced mix of storm types
-   - Entire storm-province sets stay together
+ - Groups storms by severity (none/minor/moderate/major)
+ - Randomly assigns storms to train/val/test within each severity bin
+ - Ensures all splits have balanced mix of storm types
+ - Entire storm-province sets stay together
 
 4. **Stage 1: Binary Classification**
-   - **Model**: XGBoost Classifier
-   - **Target**: `has_impact` (0 or 1)
-   - **Handling class imbalance**:
-     - `scale_pos_weight` = ratio of negatives to positives
-     - Optimize for AUC-PR (not accuracy)
-   - **Hyperparameters**:
-     ```python
+ - **Model**: XGBoost Classifier
+ - **Target**: `has_impact` (0 or 1)
+ - **Handling class imbalance**:
+ - `scale_pos_weight` = ratio of negatives to positives
+ - Optimize for AUC-PR (not accuracy)
+ - **Hyperparameters**:
+ ```python
      n_estimators=400
      max_depth=6
      learning_rate=0.05
@@ -127,11 +127,11 @@ Each contains:
      ```
 
 5. **Stage 2: Regression (on positives only)**
-   - **Model**: XGBoost Regressor
-   - **Target**: `log1p(Affected)` - log-transformed affected persons
-   - **Training data**: Only rows where `has_impact=1`
-   - **Hyperparameters**:
-     ```python
+ - **Model**: XGBoost Regressor
+ - **Target**: `log1p(Affected)` - log-transformed affected persons
+ - **Training data**: Only rows where `has_impact=1`
+ - **Hyperparameters**:
+ ```python
      n_estimators=600
      max_depth=8
      learning_rate=0.05
@@ -140,15 +140,15 @@ Each contains:
      ```
 
 6. **Preprocessing Pipeline** (built into models)
-   - Median imputation for missing values
-   - Standard scaling (zero mean, unit variance)
-   - Applied to both models automatically
+ - Median imputation for missing values
+ - Standard scaling (zero mean, unit variance)
+ - Applied to both models automatically
 
 7. **Save Artifacts**
-   - Trained models (`.joblib` format)
-   - Feature list (`.json`)
-   - Metrics (`.json`)
-   - Split summary (`.csv`)
+ - Trained models (`.joblib` format)
+ - Feature list (`.json`)
+ - Metrics (`.json`)
+ - Split summary (`.csv`)
 
 ---
 
@@ -236,7 +236,7 @@ def train_classifier(X, y, feature_cols):
 ### **Next Steps:**
 
 1. **Evaluate on specific storms:**
-   ```python
+ ```python
    import joblib
    import pandas as pd
    
@@ -248,7 +248,7 @@ def train_classifier(X, y, feature_cols):
    ```
 
 2. **Feature importance analysis:**
-   ```python
+ ```python
    import joblib
    import json
    
@@ -262,9 +262,9 @@ def train_classifier(X, y, feature_cols):
    ```
 
 3. **Deploy for real-time predictions:**
-   - See `DEPLOYMENT_READINESS.md`
-   - Set up JTWC API ingestion
-   - Configure Open-Meteo real-time weather
+ - See `DEPLOYMENT_READINESS.md`
+ - Set up JTWC API ingestion
+ - Configure Open-Meteo real-time weather
 
 ---
 
