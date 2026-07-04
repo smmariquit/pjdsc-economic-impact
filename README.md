@@ -3,7 +3,7 @@
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
 ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
-![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit, learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
 
 **We can forecast where a storm will go, but not how much it will destroy.**
 
@@ -14,7 +14,7 @@ Deployed on Streamlit, this Python app uses a machine learning model trained wit
 
 - **Live Forecast Impact Assessment** - Get the latest storm forecast from sources such [US Naval Meteorology and Oceanography Command](https://www.metoc.navy.mil/) and get insights hours before landfall.
 - **Economic Impact Modeling**: Calculate estimated economic, humanitarian, and losses based on storm intensity, proximity, and direction, detected based on the plain language warnings of the [Joint Typhoon Warning Center](https://www.metoc.navy.mil/jtwc/jtwc.html)
-- **Comprehensive Insights**: Charts, maps, and tables for comprehensive analysis based on historical data.
+- **full Insights**: Charts, maps, and tables for full analysis based on historical data.
 
 ## ML Pipeline
 
