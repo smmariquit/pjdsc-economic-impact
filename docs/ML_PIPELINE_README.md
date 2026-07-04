@@ -152,7 +152,7 @@ Final_Transform/
 - ✅ Automatic data caching
 - ✅ Error handling & validation
 - ✅ Multiple output formats
-- ✅ Comprehensive logging
+- ✅ full logging
 
 ---
 
@@ -473,19 +473,18 @@ Storm Impact Prediction System for the Philippines
 ## 🙏 **Acknowledgments**
 
 - **Data Sources:**
-  - [JTWC (Joint Typhoon Warning Center)](https://www.metoc.navy.mil/jtwc/) - Storm forecasts & tracks
-  - [Open-Meteo API](https://open-meteo.com/) - Weather forecasts
-  - NDRRMC - Historical impact data
-  - PSA - Population statistics
+ - [JTWC (Joint Typhoon Warning Center)](https://www.metoc.navy.mil/jtwc/) - Storm forecasts & tracks
+ - [Open-Meteo API](https://open-meteo.com/) - Weather forecasts
+ - NDRRMC - Historical impact data
+ - PSA - Population statistics
 
 - **Technologies:**
-  - Python, pandas, scikit-learn, XGBoost
-  - Open-Meteo API
+ - Python, pandas, scikit-learn, XGBoost
+ - Open-Meteo API
 
 ---
 
-**Last Updated:** 2025-10-23  
-**Version:** 1.0  
+**Last Updated:** 2025-10-23 
+**Version:** 1.0 
 **Status:** ✅ Production Ready
-
 
