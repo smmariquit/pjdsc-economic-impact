@@ -153,7 +153,7 @@ Each record represents **one province's meteorological conditions on one day dur
 
 ### **Additional Derived Fields** (can be computed):
 - `temperature_2m_max` - Maximum temperature
-- `temperature_2m_min` - Minimum temperature  
+- `temperature_2m_min` - Minimum temperature 
 - `soil_moisture_*` - Soil saturation levels
 - `surface_pressure` - Atmospheric pressure
 
@@ -287,7 +287,7 @@ From this temporal sequence, we can compute:
 - **Pairs with No Significant Impact**: ~19,000 (81%)
 
 **Notable Characteristics:**
-- Published dataset emphasizes comprehensive coverage of both high-impact and low-impact events
+- Published dataset emphasizes full coverage of both high-impact and low-impact events
 - Addresses common limitation of disaster databases that omit small-scale events
 - Province-level resolution captures spatial heterogeneity in vulnerability and exposure
 
@@ -303,7 +303,6 @@ Each record represents **cumulative post-event impact for one province from one 
 | **Year** | Year of impact | Integer | 2010-2025 |
 | **Affected_Persons** | Total affected population | Integer | Displaced, evacuated, needing aid |
 | **Destroyed_Houses** | Completely destroyed structures | Integer | Total destruction (not damaged) |
-
 
 ### **Important Characteristics**
 
@@ -383,15 +382,11 @@ Destroyed Houses: 4,891
 | **latitude** | Geographic centroid | Degrees N | GIS centroid | Static |
 | **longitude** | Geographic centroid | Degrees E | GIS centroid | Static |
 
-
-
 | Field | Description |
 |-------|-------------|
 | **year** | Year |
 | **population** | Total population |
 | **population_density** | People per km² |
-
-
 
 ### **Derived Historical Features** (can be computed from impact data):
 
@@ -505,88 +500,88 @@ The system transforms raw temporal data (storm tracks, weather observations) int
 - **Input**: Storm track coordinates × province centroid
 - **Method**: Haversine distance calculation for each track point
 - **Key Features**:
-  - `min_distance_km` - Closest approach distance
-  - `mean_distance_km`, `max_distance_km`, `distance_range_km`, `distance_std_km`
-  - `hours_under_50km`, `hours_under_100km`, `hours_under_200km`, `hours_under_300km`, `hours_under_500km` - Duration within danger zones
-  - `distance_at_current`, `distance_at_12hr`, `distance_at_24hr`, `distance_at_48hr`, `distance_at_72hr` - Temporal snapshots
-  - `integrated_proximity` - Cumulative exposure (distance-weighted time)
-  - `weighted_exposure_hours` - Time-weighted proximity
-  - `proximity_peak` - Inverse distance at closest approach
-  - `approach_speed_kmh`, `departure_speed_kmh` - Rate of approach/departure
-  - `time_approaching_hours`, `time_departing_hours` - Approach vs retreat duration
-  - `bearing_at_closest_deg`, `bearing_variability_deg` - Directional characteristics
-  - `did_cross_province` - Binary flag for direct landfall
-  - `approach_angle_deg` - Angle of approach to province
+ - `min_distance_km` - Closest approach distance
+ - `mean_distance_km`, `max_distance_km`, `distance_range_km`, `distance_std_km`
+ - `hours_under_50km`, `hours_under_100km`, `hours_under_200km`, `hours_under_300km`, `hours_under_500km` - Duration within danger zones
+ - `distance_at_current`, `distance_at_12hr`, `distance_at_24hr`, `distance_at_48hr`, `distance_at_72hr` - Temporal snapshots
+ - `integrated_proximity` - Cumulative exposure (distance-weighted time)
+ - `weighted_exposure_hours` - Time-weighted proximity
+ - `proximity_peak` - Inverse distance at closest approach
+ - `approach_speed_kmh`, `departure_speed_kmh` - Rate of approach/departure
+ - `time_approaching_hours`, `time_departing_hours` - Approach vs retreat duration
+ - `bearing_at_closest_deg`, `bearing_variability_deg` - Directional characteristics
+ - `did_cross_province` - Binary flag for direct landfall
+ - `approach_angle_deg` - Angle of approach to province
 
 **GROUP 2: Weather Exposure Features (20 features)**
 - **Purpose**: Actual meteorological conditions experienced by province
 - **Input**: Open-Meteo daily weather data for storm duration
 - **Method**: Statistical aggregation of time series
 - **Key Features**:
-  - `max_wind_gust_kmh`, `max_wind_speed_kmh` - Peak wind conditions
-  - `total_precipitation_mm`, `total_precipitation_hours` - Cumulative rainfall
-  - `days_with_rain`, `consecutive_rain_days`, `max_daily_precip_mm`, `max_hourly_precip_mm`
-  - `mean_daily_precipitation_mm`, `precip_variability`, `precipitation_concentration_index`
-  - `days_with_heavy_rain`, `days_with_very_heavy_rain` - Rainfall intensity thresholds
-  - `days_with_strong_wind`, `days_with_damaging_wind` - Wind intensity thresholds
-  - `wind_gust_persistence_score` - Duration of dangerous winds
-  - `wind_rain_product` - Combined wind-rain hazard
-  - `compound_hazard_score`, `compound_hazard_days` - Multi-hazard metrics
-  - `rain_during_closest_approach` - Precipitation timing
+ - `max_wind_gust_kmh`, `max_wind_speed_kmh` - Peak wind conditions
+ - `total_precipitation_mm`, `total_precipitation_hours` - Cumulative rainfall
+ - `days_with_rain`, `consecutive_rain_days`, `max_daily_precip_mm`, `max_hourly_precip_mm`
+ - `mean_daily_precipitation_mm`, `precip_variability`, `precipitation_concentration_index`
+ - `days_with_heavy_rain`, `days_with_very_heavy_rain` - Rainfall intensity thresholds
+ - `days_with_strong_wind`, `days_with_damaging_wind` - Wind intensity thresholds
+ - `wind_gust_persistence_score` - Duration of dangerous winds
+ - `wind_rain_product` - Combined wind-rain hazard
+ - `compound_hazard_score`, `compound_hazard_days` - Multi-hazard metrics
+ - `rain_during_closest_approach` - Precipitation timing
 
 **GROUP 3: Storm Intensity Features (7 features)**
 - **Purpose**: Storm's intrinsic strength characteristics
 - **Input**: Storm track intensity data (when available)
 - **Key Features**:
-  - `max_wind_in_track_kt`, `min_pressure_in_track_hpa` - Peak storm intensity
-  - `wind_at_closest_approach_kt`, `pressure_at_closest_hpa` - Intensity at critical moment
-  - `wind_change_approaching_kt` - Intensification before arrival
-  - `intensification_rate_kt_per_day` - Rate of strengthening
-  - `is_intensifying` - Binary flag for strengthening storms
+ - `max_wind_in_track_kt`, `min_pressure_in_track_hpa` - Peak storm intensity
+ - `wind_at_closest_approach_kt`, `pressure_at_closest_hpa` - Intensity at critical moment
+ - `wind_change_approaching_kt` - Intensification before arrival
+ - `intensification_rate_kt_per_day` - Rate of strengthening
+ - `is_intensifying` - Binary flag for strengthening storms
 
 **GROUP 6: Storm Motion Features (10 features)**
 - **Purpose**: Storm movement characteristics
 - **Input**: Storm track position time series
 - **Method**: Compute forward speed and direction between consecutive points
 - **Key Features**:
-  - `mean_forward_speed`, `max_forward_speed`, `min_forward_speed` - Translation speed stats
-  - `speed_at_closest_approach` - Movement speed at closest point
-  - `mean_direction`, `direction_variability` - Track consistency
-  - `track_sinuosity` - Path complexity (meandering vs straight)
-  - `is_slow_moving`, `is_fast_moving` - Speed categories
-  - `is_recurving` - Track curvature flag
+ - `mean_forward_speed`, `max_forward_speed`, `min_forward_speed` - Translation speed stats
+ - `speed_at_closest_approach` - Movement speed at closest point
+ - `mean_direction`, `direction_variability` - Track consistency
+ - `track_sinuosity` - Path complexity (meandering vs straight)
+ - `is_slow_moving`, `is_fast_moving` - Speed categories
+ - `is_recurving` - Track curvature flag
 
 **GROUP 7: Interaction Features (6 features)**
 - **Purpose**: Combined effects of distance, weather, and intensity
 - **Input**: Products/ratios of Group 1, 2, 3 features
 - **Key Features**:
-  - `min_distance_x_max_wind` - Proximity-intensity product
-  - `proximity_intensity_product` - Combined threat metric
-  - `intensity_per_km` - Intensity normalized by distance
-  - `rainfall_distance_ratio` - Precipitation efficiency
-  - `close_approach_rainfall`, `distant_rainfall` - Distance-conditioned rain
+ - `min_distance_x_max_wind` - Proximity-intensity product
+ - `proximity_intensity_product` - Combined threat metric
+ - `intensity_per_km` - Intensity normalized by distance
+ - `rainfall_distance_ratio` - Precipitation efficiency
+ - `close_approach_rainfall`, `distant_rainfall` - Distance-conditioned rain
 
 **GROUP 8: Multi-Storm Features (6 features)**
 - **Purpose**: Context of concurrent or recent storms
 - **Input**: Historical storm database
 - **Method**: Query storms within temporal/spatial windows
 - **Key Features**:
-  - `has_concurrent_storm` - Binary flag for simultaneous storms
-  - `concurrent_storms_count` - Number of active storms
-  - `nearest_concurrent_storm_distance` - Proximity of other storms
-  - `concurrent_storms_combined_intensity` - Multi-storm threat
-  - `days_since_last_storm` - Recovery time indicator
-  - `storms_past_30_days` - Recent storm frequency
+ - `has_concurrent_storm` - Binary flag for simultaneous storms
+ - `concurrent_storms_count` - Number of active storms
+ - `nearest_concurrent_storm_distance` - Proximity of other storms
+ - `concurrent_storms_combined_intensity` - Multi-storm threat
+ - `days_since_last_storm` - Recovery time indicator
+ - `storms_past_30_days` - Recent storm frequency
 
 **Additional Features (5 features)**
 - **Population & Demographics (2)**:
-  - `population` - Total population (PSA data)
-  - `population_density` - People per km²
-  
+ - `population` - Total population (PSA data)
+ - `population_density` - People per km²
+ 
 - **Historical Vulnerability (3)**:
-  - `hist_storms` - Number of past impact events (leakage-safe)
-  - `hist_avg_affected` - Average historical impact magnitude
-  - `hist_max_affected` - Worst historical impact
+ - `hist_storms` - Number of past impact events (leakage-safe)
+ - `hist_avg_affected` - Average historical impact magnitude
+ - `hist_max_affected` - Worst historical impact
 
 ### **Feature Engineering Pipeline**
 
@@ -729,10 +724,10 @@ All 80 features can be computed from:
 - **Why Storm-Level**: Prevents data leakage (all provinces from same storm stay together)
 - **Why Stratified**: Ensures balanced representation of impact severities
 - **Stratification Bins**:
-  - None (0 affected)
-  - Minor (1-10K affected)
-  - Moderate (10K-100K affected)
-  - Major (>100K affected)
+ - None (0 affected)
+ - Minor (1-10K affected)
+ - Moderate (10K-100K affected)
+ - Major (>100K affected)
 
 **Split Sizes:**
 - **Training**: 80% of storms (226 storms, 18,756 observations)
@@ -741,7 +736,7 @@ All 80 features can be computed from:
 
 **Why Not Temporal Split**: 
 - Data is sparse in early years (2010-2014)
-- More comprehensive data collection in recent years
+- More full data collection in recent years
 - Random split ensures high-quality recent data in training
 - Still maintains leakage-safety via storm-level grouping
 
@@ -755,8 +750,8 @@ All 80 features can be computed from:
 - **Period**: 2010-2024 (15 years)
 - **Total Storms**: 285 tropical cyclones with impact data
 - **Data Sources**:
-  - 2010-2020: Galloway et al. (2025) published dataset
-  - 2021-2024: NDRRMC official reports
+ - 2010-2020: Galloway et al. (2025) published dataset
+ - 2021-2024: NDRRMC official reports
 
 **Training Data Structure:**
 - **Total Observations**: 23,653 storm-province pairs (285 storms × 83 provinces)
@@ -912,20 +907,20 @@ Question: "How many people affected? How many houses destroyed?"
 When a new typhoon enters PAR:
 
 1. **JTWC Warning** (text or structured data):
-   - Current position (lat/lon)
-   - Current intensity (wind speed)
-   - Forecast positions: +12hr, +24hr, +36hr, +48hr, +72hr, +96hr, +120hr
-   - Forecast intensities at each position
-   - Wind radii by quadrant (34kt, 50kt, 64kt)
-   - Position uncertainty radius
+ - Current position (lat/lon)
+ - Current intensity (wind speed)
+ - Forecast positions: +12hr, +24hr, +36hr, +48hr, +72hr, +96hr, +120hr
+ - Forecast intensities at each position
+ - Wind radii by quadrant (34kt, 50kt, 64kt)
+ - Position uncertainty radius
 
 2. **Real-time Weather Data** (from Open-Meteo API):
-   - Current observed conditions per province
-   - Short-term weather forecast (next 5-7 days)
+ - Current observed conditions per province
+ - Short-term weather forecast (next 5-7 days)
 
 3. **Province Characteristics** (static database):
-   - Population, density, coastal status
-   - Historical vulnerability metrics
+ - Population, density, coastal status
+ - Historical vulnerability metrics
 
 ### **Output from System**
 
@@ -966,18 +961,18 @@ For each of 81 provinces:
 
 **Input Sources:**
 1. **JTWC Forecast Bulletin** (live, updated every 6 hours)
-   - Current position and intensity
-   - Forecast track: +12hr, +24hr, +36hr, +48hr, +72hr, +96hr, +120hr
-   - Fetched automatically via web scraping
+ - Current position and intensity
+ - Forecast track: +12hr, +24hr, +36hr, +48hr, +72hr, +96hr, +120hr
+ - Fetched automatically via web scraping
 
 2. **Open-Meteo Weather API** (16-day forecast)
-   - Province-level wind and precipitation forecasts
-   - Fetched automatically via API
+ - Province-level wind and precipitation forecasts
+ - Fetched automatically via API
 
 3. **Static Databases** (pre-loaded)
-   - Province coordinates (83 provinces)
-   - Population data (PSA, annual updates)
-   - Historical impact archive (for vulnerability features)
+ - Province coordinates (83 provinces)
+ - Population data (PSA, annual updates)
+ - Historical impact archive (for vulnerability features)
 
 **Pipeline Execution (Dual Model - Recommended):**
 ```bash
@@ -1027,9 +1022,9 @@ This project integrates **multiple high-quality data sources** spanning 15 years
 
 ### **Data Sources**
 ✅ **Impact Data**:
-   - Galloway et al. (2025) published dataset (2010-2020) - [Nature Hazards](https://link.springer.com/article/10.1007/s11069-025-07394-x)
-   - NDRRMC official reports (2021-2024)
-   - 23,653 storm-province observations
+ - Galloway et al. (2025) published dataset (2010-2020) - [Nature Hazards](https://link.springer.com/article/10.1007/s11069-025-07394-x)
+ - NDRRMC official reports (2021-2024)
+ - 23,653 storm-province observations
 
 ✅ **Storm Tracks**: IBTrACS/JTWC best track database
 
@@ -1043,15 +1038,15 @@ This project integrates **multiple high-quality data sources** spanning 15 years
 ✅ **Features**: 80 engineered features across 8 groups
 ✅ **Models**: Two independent two-stage XGBoost pipelines (persons + houses)
 ✅ **Performance**: 
-   - **Persons**: 98.3% AUC-PR, 98.8% recall, 75% R²
-   - **Houses**: 99.8% AUC-PR, 98.8% recall, 65% R²
+ - **Persons**: 98.3% AUC-PR, 98.8% recall, 75% R²
+ - **Houses**: 99.8% AUC-PR, 98.8% recall, 65% R²
 ✅ **Deployment**: One-command dual prediction from live JTWC data
 
 ### **Impact**
 The system enables disaster managers to:
 - **Identify** which provinces need resources most urgently
 - **Estimate** humanitarian needs (food, water, shelter, medical supplies)
-- **Trigger** early evacuations and emergency response protocols  
+- **Trigger** early evacuations and emergency response protocols 
 - **Allocate** emergency budgets efficiently
 - **Coordinate** with international aid organizations
 
