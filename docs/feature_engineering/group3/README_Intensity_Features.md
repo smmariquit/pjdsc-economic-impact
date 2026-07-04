@@ -12,7 +12,7 @@ This pipeline processes JTWC storm track data to generate **7 GROUP 3 features**
 Main feature engineering script with modular functions for:
 - ✅ Intensity at Critical Moments (4 features)
 - ✅ Intensity Evolution Features (3 features)
-- ✅ Robust missing data handling
+- ✅ stable missing data handling
 - ✅ Wind standardization (1-min USA → 10-min TOKYO equivalent)
 
 ### 2. `intensity_features_group3.csv`
@@ -177,7 +177,7 @@ Batch process all storms.
 **Returns:** DataFrame with all features
 
 #### `extract_intensity_features_for_deployment(track_data, closest_approach_idx=None)`
-Streamlined function for real-time deployment.
+simplify function for real-time deployment.
 
 **Args:**
 - `track_data`: DataFrame with TOKYO_WIND, USA_WIND, TOKYO_PRES, etc.
@@ -287,7 +287,7 @@ importance = pd.DataFrame({
 3. **GROUP 3 (Intensity)**: 40-70% complete, bonus when available ⭐
 
 ### Recommendation
-**Always use GROUP 1 + GROUP 2 as baseline.**  
+**Always use GROUP 1 + GROUP 2 as baseline.** 
 Add GROUP 3 as supplementary features that improve predictions when available.
 
 ---
@@ -340,11 +340,9 @@ graph TD
 
 ---
 
-**Author:** Feature Engineering Pipeline  
-**Version:** 1.0  
-**Last Updated:** 2024  
-**License:** MIT  
+**Author:** Feature Engineering Pipeline 
+**Version:** 1.0 
+**Last Updated:** 2024 
+**License:** MIT 
 **Data Source:** JTWC Best Track Data
-
-
 
