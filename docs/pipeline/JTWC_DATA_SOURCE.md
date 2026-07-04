@@ -167,7 +167,7 @@ def fetch_live_forecast(storm_id):
 As of the [latest update from JTWC](https://www.metoc.navy.mil/jtwc/products/wp3025web.txt):
 
 - **Date:** October 22, 2025, 15:00Z
-- **Storm:** Tropical Storm 30W (FENGSHEN)  
+- **Storm:** Tropical Storm 30W (FENGSHEN) 
 - **Location:** 17.2°N, 109.6°E (northeast of Da Nang, Vietnam)
 - **Winds:** 45 kt (weakening)
 - **Status:** Moving west-southwest, dissipating over land
@@ -404,8 +404,7 @@ URL: https://www.metoc.navy.mil/jtwc/
 
 ---
 
-**Last Updated:** 2025-10-23  
-**JTWC URL:** https://www.metoc.navy.mil/jtwc/products/wp3025web.txt  
+**Last Updated:** 2025-10-23 
+**JTWC URL:** https://www.metoc.navy.mil/jtwc/products/wp3025web.txt 
 **Sample File:** `storm_forecast.txt` (2025-10-19 snapshot)
-
 
