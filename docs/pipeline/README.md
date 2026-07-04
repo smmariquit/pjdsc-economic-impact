@@ -15,20 +15,20 @@ RAW DATA → FEATURE ENGINEERING → MODEL INPUT
 ### **Required Files:**
 
 1. **Storm Track** (from `Storm_data/ph_storm_data.csv`)
-   - Contains: LAT, LON, datetime, wind, pressure, etc.
-   - Format: 3-6 hour intervals
+ - Contains: LAT, LON, datetime, wind, pressure, etc.
+ - Format: 3-6 hour intervals
 
 2. **Weather Data** (from `Weather_location_data/{year}/{year}_{storm}.csv`)
-   - Contains: Daily wind, precipitation per province
-   - Format: One row per province per day
+ - Contains: Daily wind, precipitation per province
+ - Format: One row per province per day
 
 3. **Static Data:**
-   - Population: `Population_data/population_density_all_years.csv`
-   - Locations: `Location_data/locations_latlng.csv`
+ - Population: `Population_data/population_density_all_years.csv`
+ - Locations: `Location_data/locations_latlng.csv`
 
 4. **Historical Context** (for Group8 only):
-   - Past storms from `Storm_data/ph_storm_data.csv`
-   - Automatically extracted for past 90 days
+ - Past storms from `Storm_data/ph_storm_data.csv`
+ - Automatically extracted for past 90 days
 
 ---
 
@@ -221,7 +221,7 @@ Year,Storm,Province,group1__min_distance_km,group2__max_wind_gust_kmh,...,Popula
 - Check filename matches Philippine name exactly
 
 ### **Missing Group8 features**
-- Use `--no-group8` flag if historical data unavailable
+- Use `, no-group8` flag if historical data unavailable
 - Group8 requires past 90 days of storm data
 
 ---
