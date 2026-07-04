@@ -185,7 +185,7 @@ Batch process all storms in directory.
 **Returns:** DataFrame with all features
 
 #### `extract_weather_features_for_deployment(dates, wind_gusts, wind_speeds, precipitation_sums, precipitation_hours, closest_approach_date)`
-Streamlined function for real-time deployment.
+simplify function for real-time deployment.
 
 **Args:**
 - `dates`: List of date strings
@@ -318,7 +318,7 @@ plt.show()
 Used to determine `closest_approach_date` for temporal distribution features.
 
 ### GROUP 1: Distance & Proximity Features
-Combine with weather features for comprehensive impact prediction:
+Combine with weather features for full impact prediction:
 - Spatial relationship (GROUP 1) + Actual hazards (GROUP 2) = Best predictions
 
 ### Future Groups
@@ -400,8 +400,8 @@ ml_ready_df = pd.merge(
 
 ---
 
-**Author:** Feature Engineering Pipeline  
-**Version:** 1.0  
-**Last Updated:** 2024  
+**Author:** Feature Engineering Pipeline 
+**Version:** 1.0 
+**Last Updated:** 2024 
 **License:** MIT
 
